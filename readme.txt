@@ -11,7 +11,7 @@ FCChat displays a highly customizable, full featured, real time chat in the side
 
 == Description ==
 
-FCChat displays a highly customizable, full featured, real time chat in the sidebar. Didn't I already say that? This version of FCChat has been modified for use with wordpress.
+FCChat displays a highly customizable, full featured, real time chat in the sidebar. This version of FCChat has been modified for use with wordpress.
 
 == Installation ==
 
