@@ -20,7 +20,7 @@ var FCChatConfig = {
 	
 	forum_proxy:"",
 	default_on:true,
-	autoLogin:false,
+	autoLogin:true,
 	no_chat_history:false,
 	showTyping:true,
 	display_timestamp:false,
