@@ -135,13 +135,17 @@ jGo.config = {
 				onSelect : function(target) {
 					var e = _s.selectHandlers;
 					for ( var fn in e) {
-						e[fn][1].call(_s, target);
+						if(e.hasOwnProperty(fn)){
+							e[fn][1].call(_s, target);
+						}
 					}
 				},
 				onClose : function(target) {
 					var e = _s.closeHandlers;
 					for ( var fn in e) {
-						e[fn][1].call(_s, target);
+						if(e.hasOwnProperty(fn)){
+							e[fn][1].call(_s, target);
+						}
 					}
 				},
 				selectHandlers : [ [
@@ -152,11 +156,15 @@ jGo.config = {
 								_s.selectedObject.isSelected = false;
 							}
 							for ( var n in _s.members) {
-								for ( var ent in _w.classes[n][path][n]) {
-									if (Number(_w.classes[n][path][n][ent]
-											.getZPos()) > Number(target
-											.getZPos())) {
-										_w.classes[n][path][n][ent].decZPos();
+								if(_s.members.hasOwnProperty(n)){
+									for ( var ent in _w.classes[n][path][n]) {
+										if(_w.classes[n][path][n].hasOwnProperty(ent)){
+											if (Number(_w.classes[n][path][n][ent]
+													.getZPos()) > Number(target
+													.getZPos())) {
+												_w.classes[n][path][n][ent].decZPos();
+											}
+										}
 									}
 								}
 							}
@@ -172,12 +180,16 @@ jGo.config = {
 							if (target.isSelected == true) {
 								_s.selectedObject = null;
 							}
-							for ( var n in _s.members) {
-								for ( var ent in _w.classes[n][path][n]) {
-									if (Number(_w.classes[n][path][n][ent]
-											.getZPos()) > Number(target
-											.getZPos())) {
-										_w.classes[n][path][n][ent].decZPos();
+							for( var n in _s.members){
+								if(_s.members.hasOwnProperty(n)){
+									for ( var ent in _w.classes[n][path][n]) {
+										if(_w.classes[n][path][n].hasOwnProperty(ent)){
+											if (Number(_w.classes[n][path][n][ent]
+													.getZPos()) > Number(target
+													.getZPos())) {
+												_w.classes[n][path][n][ent].decZPos();
+											}
+										}
 									}
 								}
 							}
@@ -188,11 +200,13 @@ jGo.config = {
 		// Methods
 		checkTemplate : function(w, template, group) {
 			for (ent in template) {
-				if (!(template[ent] in w)) {
-					throw Error("Cannot be added to " + group
-							+ ". Class must implement the " + template[ent]
-							+ " property.");
-					return false;
+				if(template.hasOwnProperty(ent)){
+					if (!(template[ent] in w)) {
+						throw Error("Cannot be added to " + group
+								+ ". Class must implement the " + template[ent]
+								+ " property.");
+						return false;
+					}
 				}
 			}
 			return true;
@@ -250,8 +264,10 @@ jGo.config = {
 			EventHandler : function(type, name, scope, obj, method) {
 				var e = _e[eventHandlers][type];
 				for ( var fn in e) {
-					if (e[fn][0] == name) {
-						return false;
+					if(e.hasOwnProperty(fn)){
+						if (e[fn][0] == name) {
+							return false;
+						}
 					}
 				}
 				if (!capture[type]) {
@@ -264,8 +280,10 @@ jGo.config = {
 			removeHandler : function(type, name) {
 				var e = _e[eventHandlers][type];
 				for ( var fn in e) {
-					if (e[fn][0] == name) {
-						e.splice(fn, 1);
+					if(e.hasOwnProperty(fn)){
+						if (e[fn][0] == name) {
+							e.splice(fn, 1);
+						}
 					}
 				}
 			},
@@ -301,7 +319,9 @@ jGo.config = {
 					var pathArray = classpath.split('.');
 					var obj = _w[type];
 					for (ent in pathArray) {
-						obj = obj[pathArray[ent]];
+						if(pathArray.hasOwnProperty(ent)){
+							obj = obj[pathArray[ent]];
+						}
 					}
 					obj[name] = [];
 					_w.classes[name] = {};
@@ -340,23 +360,25 @@ jGo.config = {
 					_w.classes[n][path][n][id] = w;
 					w.create(id, params);
 					if (w.type in _s.members) {
-						_s.selectableElements++;
-						w.setZPos(_en.z_index_base + 2*_s.selectableElements);
-						var fn = w.select;
-						w.select = ( function(obj, fn) {
-							return function() {
-								_s.onSelect(obj);
-								fn.apply(obj, arguments);
-							};
-						})(w, fn);
-						w.select();
-						fn = w.close;
-						w.close = ( function(obj, fn) {
-							return function() {
-								_s.onClose(obj);
-								fn.apply(obj, arguments);
-							};
-						})(w, fn);
+						if(_s.members.hasOwnProperty(w.type)){
+							_s.selectableElements++;
+							w.setZPos(_en.z_index_base + 2*_s.selectableElements);
+							var fn = w.select;
+							w.select = ( function(obj, fn) {
+								return function() {
+									_s.onSelect(obj);
+									fn.apply(obj, arguments);
+								};
+							})(w, fn);
+							w.select();
+							fn = w.close;
+							w.close = ( function(obj, fn) {
+								return function() {
+									_s.onClose(obj);
+									fn.apply(obj, arguments);
+								};
+							})(w, fn);
+						}
 					}
 
 					w.destroy = function() {
@@ -368,7 +390,9 @@ jGo.config = {
 
 			destroyWidget : function(w) {
 				if (w.type in _s.members) {
-					_s.selectableElements--;
+					if(_s.members.hasOwnProperty(w.type)){
+						_s.selectableElements--;
+					}
 				}
 				delete _w.classes[w.type][path][w.type][w.id];
 			},
@@ -530,8 +554,10 @@ jGo.config = {
 			if (s){
 				s.loaded = 1;
 				for (x in s.fns){
-					if(s.fns[x].fn){
-						s.fns[x].fn.call(s.fns[x].obj,s.fns[x].data);
+					if(s.fns.hasOwnProperty(x)){
+						if(s.fns[x].fn){
+							s.fns[x].fn.call(s.fns[x].obj,s.fns[x].data);
+						}
 					}
 				}
 				if(type && type == "external"){
