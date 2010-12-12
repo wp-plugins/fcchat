@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.0.1
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 
 FCChat displays a highly customizable, full featured, real time chat in the sidebar.
 
@@ -51,6 +51,10 @@ Fixed a bug in which modification of Javascript's Array.prototype by an external
 Login panel is now appended to the document when autoLogin is false. This should prevent it from being hidden under
 surrounding elements.
 Added rounded borders to the login panel and alert panel.
+
+= 2.1.2 =
+
+Updated the user authentification system. Fixed a bug in which the 'Open Chat' and 'Off' buttons were malfunctioning when the 'default_on' option was set to false.
 
 == Upgrade Notice ==
 
