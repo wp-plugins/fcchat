@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.0.1
-Stable tag: 2.1.2
+Stable tag: 2.1.3
 
 FCChat displays a highly customizable, full featured, real time chat in the sidebar.
 
@@ -56,6 +56,13 @@ Added rounded borders to the login panel and alert panel.
 
 Updated the user authentification system. Fixed a bug in which the 'Open Chat' and 'Off' buttons were malfunctioning when the 'default_on' option was set to false.
 
+= 2.1.3 =
+
+Fixed a bug that occurred using IE8. In split screen mode, A javascript error was preventing the scroll bar from scrolling.
+Disabled the 'Read/Refresh Config File' button in the adminstration panel, which was not functioning properly. This bug will be fixed in a future version.
+
 == Upgrade Notice ==
 
-= 2.1.1 =
+= 2.1.3 =
+
+To upgrade from any previous version to the current version, first, make backup copies of the 3 configuration files in your old installation (fcchat/config/config.js, fcchat/html/config/config.php, fcchat/html/config/config.asp). Next uninstall the old version and install the current version. Finally, copy your old configuration setting manually to the current version.
