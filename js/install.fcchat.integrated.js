@@ -3,8 +3,8 @@ var fc_chat= new fcchat();
 
 //var n;
 if(!FCChatConfig.default_on){
-	if(jGo.cookie.getCookie("fc_tglChat")!='on'){
-		jGo.cookie.setCookie("fc_tglChat",'off',null,'/',FCChatConfig.domain);
+	if(jGo.cookie.getCookie("fc_tglChat")!='1'){
+		jGo.cookie.setCookie("fc_tglChat",'0',null,'/',FCChatConfig.domain);
 	}
 }
 if(!FCChatConfig.display_timestamp&&jGo.cookie.getCookie("fc_DTM")!='inline'){
@@ -73,8 +73,13 @@ function addLoadListener(fn)
  }
 }
 addLoadListener(fc_chat.loader);
-
+jQuery(window).unload(function() {
+	if(fc_chat.getPause()==1){
+		jGo.cookie.setCookie("fc_pauseChat", "0", null, "/", FCChatConfig.domain);
+	}
+});
 if (top==self){
 	if(FCChatConfig.styles.chat_toolbox.absolute_positioning&&!FCChatConfig.noshow){fc_chat.writeBox()}
-	if(jGo.cookie.getCookie('fc_tglChat')=='off'){fc_chat.obtn='On';}
+	if(jGo.cookie.getCookie('fc_tglChat')=='0'){fc_chat.setTgl(0);fc_chat.obtn='On';FCChatConfig.sessionText=FCChatConfig.offText;}
+	if(jGo.cookie.getCookie('fc_pauseChat')=='1'){FCChatConfig.sessionText=FCChatConfig.pauseText;}
 }
