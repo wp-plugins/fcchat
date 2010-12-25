@@ -13,7 +13,7 @@ var FCChatConfig = {
 	
 	//VERSION
 	
-	version:"2.1.4",
+	version:"2.1.5",
 	subversion:"wp",
 	
 	//ENVIRONMENT
