@@ -13,7 +13,7 @@ var FCChatConfig = {
 	
 	//VERSION
 	
-	version:"2.1.5",
+	version:"2.1.6",
 	subversion:"wp",
 	
 	//ENVIRONMENT
@@ -41,12 +41,25 @@ var FCChatConfig = {
 	dir: window["fc_chat_path"] || "/FCChat/",
 	alt_dir: window["fc_chat_path"] || "/FCChat/",
 	
-	//ROOMS
+	//CHAT ROOMS (50 max)
 	
-	chatRooms:"The Lobby,The Lounge,Romper Room,Help Desk",
-	lockedRooms:"",
-	disabled_rooms:"", 
-	open_in_room:0, 
+	chatRooms:[
+	     "The Lobby",
+	     "Fun Room",
+	     "Help Desk",
+	     "Private Room"
+	],
+	
+	chatRoomDescriptions:[
+	     "A cool place to hang out",
+	     "",
+	     "",
+	     "Members Only"
+	],		
+	
+	lockedRooms:"3", //comma separated list of room indexes 0,1,2,3 etc
+	disabled_rooms:"", //room indexes
+	open_in_room:0,    //room index
 	
 	//MESSAGES
 	
@@ -124,7 +137,7 @@ var FCChatConfig = {
 		chat_window:{
 			external_template:"",
 			frame:{
-				logo:"FastcatLogo.gif",
+				logo:"fastcatlogo.gif",
 				background_color:"gray",
 				opacity:.75
 			},
@@ -324,7 +337,26 @@ var FCChatConfig = {
 					}
 				},
 				options_panel:{
-					border:"1px solid #444444",
+					outer_border:"1px solid #444444",
+					inner_border:"1px solid silver",
+					background_color:"gray",
+					panel_font_css: "color:lightblue;font-family:arial;font-weight:bold;font-style:italic;font-size:12px",
+					functions:{
+						font_css:"color:white;font-size:12px;text-decoration:none",
+						border:"1px solid silver"
+					},
+					selectors:{
+						border:"3px solid silver",
+						background_color:"#aaaaaa",
+						hover_color:"#b0b0b0",
+						selected_color:"#aaaa77",
+						font_css:"color:#333333;font-family:arial;font-weight:normal;font-size:10px",
+						separator:"1px solid silver"
+					},
+					room_selector:{
+						room_name_font_css:"font-size:12px;font-weight:bold;color:white;",
+						disabled_room_name_font_css:"font-size:12px;font-weight:bold;color:#dddddd;"
+					},
 					font_size_selector:{
 						smallest:6,
 						largest:16
@@ -332,6 +364,14 @@ var FCChatConfig = {
 					color_selector:{
 						color_names:["default","black","blue","red","purple","green","yellow","orange","white"],
 						color_values:["#fff","black","blue","red","purple","green","yellow","orange","white"]
+					},
+					remove_block_button:{
+						default_css:"border:1px solid silver; padding:2px 12px 2px 11px; font:10px arial;",
+						states:{
+							link_css:"color:white",
+							hover_css:"color:lightblue",
+							disabled_css:"color:#bbbbbb;border:1px solid #bbbbbb;"
+						}
 					}
 				},
 				smileys_panel:{
@@ -346,6 +386,15 @@ var FCChatConfig = {
 					font:{
 						textfield_description_css:"font-family:arial;font-size:8pt;color:darkgray;font-style:italic;font-weight:bold;",
 						smalltext_css:"margin-right:10px;font-family:arial;font-size:8pt;color:white;"
+					},
+					textfield_css:"background-color:#dddddd;"
+				},
+				room_password_panel:{
+					background_color:"#444444",
+					border:"3px solid silver",
+					font:{
+						textfield_description_css:"font-family:arial;font-size:8pt;color:darkgray;font-style:italic;font-weight:bold;",
+						smalltext_css:"font-style:italic;margin-right:10px;font-family:arial;font-size:8pt;color:white;"
 					},
 					textfield_css:"background-color:#dddddd;"
 				},

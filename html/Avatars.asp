@@ -102,13 +102,13 @@ Function listTheFiles(directory)
 End Function
 
 Dim startdoc
-startdoc="<script>function useCurrentAvatar(){window.parent.fc_chat.newAvatar('',3,'" & flext & "','" & rspln & "','" & rspln2 & "')};var gravatar;function useGravatar(){ gravatar= document.getElementById('fc_gravatar').value;document.getElementById('fc_gravatar').value='';if(gravatar.indexOf('gravatar.com/')==-1){return false}if(gravatar.indexOf('http://')!=0){gravatar='http://'+gravatar}var tester=new Image();tester.onload=isGood;tester.onerror=isBad;tester.src=gravatar}function isGood(){window.parent.fc_chat.newAvatar('/'+gravatar,4,'" & flext & "','" & rspln & "','" & rspln2 & "')}function isBad(){return false}</script><style>BODY {background-color: white;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 2px solid;font-size:16'>Select Avatar</div><div id='wait1' style='margin-top:100px;display:none'><center>Please wait...</center></div><div id='content1'>"
+startdoc="<script>function useCurrentAvatar(){window.parent.fc_chat.newAvatar('',3,'" & flext & "','" & rspln & "','" & rspln2 & "')};var gravatar;function useGravatar(){ gravatar= document.getElementById('fc_gravatar').value;document.getElementById('fc_gravatar').value='';if(gravatar.indexOf('gravatar.com/')==-1){return false}if(gravatar.indexOf('http://')!=0){gravatar='http://'+gravatar}var tester=new Image();tester.onload=isGood;tester.onerror=isBad;tester.src=gravatar}function isGood(){window.parent.fc_chat.newAvatar('/'+gravatar,4,'" & flext & "','" & rspln & "','" & rspln2 & "')}function isBad(){return false}</script><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 2px solid;font-size:16'><b><i>Select Avatar</i></b></div><div id='wait1' style='margin-top:100px;display:none'><center>Please wait...</center></div><div id='content1'>"
 
 
 function write_upload_option()
 %>
     <form name="frmSend" method="POST" enctype="multipart/form-data" action="" onSubmit="return onSubmitForm();">
-	<br><font color=blue face=arial><b>Option <%=arr(i)%>:</b></font><font face=arial> Upload a new avatar. The maximum width and height for avatars is <%=MAX_HEIGHT%>px.</font><br><br>
+	<br><font color=#444444 face=arial><b>Option <%=arr(i)%>:</b></font><font face=arial> Upload a new avatar. The maximum width and height for avatars is <%=MAX_HEIGHT%>px.</font><br><br>
     <input name="attach1" type="file" size=35><br>
     <input style="margin-top:4" type=submit value="Upload"><br>
     (Jpg, gif, and png formats only. Max size: <%=MAX_IMAGE_SIZE%>KB)
@@ -161,7 +161,7 @@ function SaveFiles
     if (UBound(ks) <> -1) then
         if errorstring = "" then
        		for each fileKey in Upload.UploadedFiles.keys
-            		SaveFiles = "<script>function relayAvatar(){window.parent.fc_chat.newAvatar('" & theFile & "',1,'" & flext & "','" & rspln & "','" & rspln2 & "');}function useCurrentAvatar(){window.parent.fc_chat.newAvatar('',3)};var gravatar;function useGravatar(){ gravatar= document.getElementById('fc_gravatar').value;document.getElementById('fc_gravatar').value='';if(gravatar.indexOf('gravatar.com/')==-1){return false}if(gravatar.indexOf('http://')!=0){gravatar='http://'+gravatar}var tester=new Image();tester.onload=isGood;tester.onerror=isBad;tester.src=gravatar}function isGood(){window.parent.fc_chat.newAvatar('/'+gravatar,4,'" & flext & "','" & rspln & "','" & rspln2 & "')}function isBad(){return false}</script><style>BODY {background-color: white;font-family:arial; font-size:12}</style><body onload=""setTimeout('relayAvatar()',1000);""><br><div style='border-bottom: #A91905 2px solid;font-size:16'>Upload Avatars</div><div id='wait1' style='margin-top:100px'><center>Please wait...</center></div><div id='content1' style='display:none'><br><font face=arial><b>" & Upload.UploadedFiles(fileKey).FileName & " (" & Upload.UploadedFiles(fileKey).Length & "KB)</font><font color=blue face=arial> You have successfully uploaded a new avatar!</b></font><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+""html/Avatars.asp?id=" & userID & """)'>Back</a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'>Finish</a><br><br>"
+            		SaveFiles = "<script>function relayAvatar(){window.parent.fc_chat.newAvatar('" & theFile & "',1,'" & flext & "','" & rspln & "','" & rspln2 & "');}function useCurrentAvatar(){window.parent.fc_chat.newAvatar('',3)};var gravatar;function useGravatar(){ gravatar= document.getElementById('fc_gravatar').value;document.getElementById('fc_gravatar').value='';if(gravatar.indexOf('gravatar.com/')==-1){return false}if(gravatar.indexOf('http://')!=0){gravatar='http://'+gravatar}var tester=new Image();tester.onload=isGood;tester.onerror=isBad;tester.src=gravatar}function isGood(){window.parent.fc_chat.newAvatar('/'+gravatar,4,'" & flext & "','" & rspln & "','" & rspln2 & "')}function isBad(){return false}</script><style>BODY {background-color: white;font-family:arial; font-size:12}</style><body onload=""setTimeout('relayAvatar()',1000);""><br><div style='border-bottom: #A91905 2px solid;font-size:16'>Upload Avatars</div><div id='wait1' style='margin-top:100px'><center>Please wait...</center></div><div id='content1' style='display:none'><br><font face=arial><b>" & Upload.UploadedFiles(fileKey).FileName & " (" & Upload.UploadedFiles(fileKey).Length & "KB)</font><font face=arial> You have successfully uploaded a new avatar!</b></font><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+""html/Avatars.asp?id=" & userID & """)'>Back</a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'>Finish</a><br><br>"
         	next
 	else
 		SaveFiles = startdoc & errorstring
@@ -209,15 +209,15 @@ if Request.ServerVariables("REQUEST_METHOD") <> "POST" then
 		i = i + 1
 	End If
 	if (USE_GRAVATAR=1) Then
-		option2="<br><font color=blue face=arial><b>Option " & arr(i) & ":</b></font><font face=arial> Use your <a href='http://gravatar.com' target=_blank>Gravatar</a> avatar.</font><br><br><div style='margin-left:20px'><INPUT id='fc_gravatar' TYPE=text NAME='gravatar' VALUE='' style='width:200px'> <input type='button' name='Submit' value='Submit' onclick='useGravatar();'><br>Link to gravatar Image.<br>(ie http://www.gravatar.com/avatar/1234.png)</div><br>"
+		option2="<br><font color=#444444 face=arial><b>Option " & arr(i) & ":</b></font><font face=arial> Use your <a href='http://gravatar.com' target=_blank>Gravatar</a> avatar.</font><br><br><div style='margin-left:20px'><INPUT id='fc_gravatar' TYPE=text NAME='gravatar' VALUE='' style='width:200px'> <input type='button' name='Submit' value='Submit' onclick='useGravatar();'><br>Link to gravatar Image.<br>(ie http://www.gravatar.com/avatar/1234.png)</div><br>"
 		i = i + 1
 	End If
 	if (USE_BOARD_AVATARS=1) Then
-		option3="<br><font color=blue face=arial><b>Option " & arr(i) & ":</b></font><font face=arial> Use your current forum avatar.</font><div style='margin-left:20px'><INPUT TYPE=checkbox NAME='current' VALUE='1' onclick='useCurrentAvatar();'>Use my current avatar.</div><br>"
+		option3="<br><font color=#444444 face=arial><b>Option " & arr(i) & ":</b></font><font face=arial> Use your current forum avatar.</font><div style='margin-left:20px'><INPUT TYPE=checkbox NAME='current' VALUE='1' onclick='useCurrentAvatar();'>Use my current avatar.</div><br>"
 		i = i + 1
 	End If
 	if (USE_GALLERY=1) Then
-		option4="<br><font color=blue face=arial><b>Option " & arr(i) & ":</b></font><font face=arial> Select an avatar from the gallery below.</font>"
+		option4="<br><font color=#444444 face=arial><b>Option " & arr(i) & ":</b></font><font face=arial> Select an avatar from the gallery below.</font>"
 		i = i + 1
 		If listTheFiles(AVATAR_DIRECTORY)<>0 Then
 			option4 = option4 & "<br>" & filetable
@@ -227,9 +227,9 @@ if Request.ServerVariables("REQUEST_METHOD") <> "POST" then
 
 
 
-	'optionsconfig="<font color=blue face=arial><b>Option Two:"
+	'optionsconfig="<font color=#444444 face=arial><b>Option Two:"
 	'If USE_BOARD_AVATARS=1 Then
-	'	optionsConfig="<font color=blue face=arial><b>Option Two:</b></font><font face=arial> Use your current forum avatar.</font><div style='margin-left:20px'><INPUT TYPE=checkbox NAME=current VALUE=1 onclick='useCurrentAvatar();'>Use my current avatar.</div><br><br><font color=blue face=arial><b>Option Three:"
+	'	optionsConfig="<font color=#444444 face=arial><b>Option Two:</b></font><font face=arial> Use your current forum avatar.</font><div style='margin-left:20px'><INPUT TYPE=checkbox NAME=current VALUE=1 onclick='useCurrentAvatar();'>Use my current avatar.</div><br><br><font color=#444444 face=arial><b>Option Three:"
 	'End If
        ' OutputForm()
 	'response.write "<br>" & optionsconfig & "</b></font><font face=arial> Select an avatar from the gallery below.</font>"
@@ -245,15 +245,15 @@ else
 		i = i + 1
 	End If
 	if (USE_GRAVATAR=1) Then
-		option2="<br><font color=blue face=arial><b>Option " & arr(i) & ":</b></font><font face=arial> Use your current forum avatar.</font><div style='margin-left:20px'><INPUT TYPE=checkbox NAME='current' VALUE='1' onclick='useCurrentAvatar();'>Use my current avatar.</div><br>"
+		option2="<br><font color=#444444 face=arial><b>Option " & arr(i) & ":</b></font><font face=arial> Use your current forum avatar.</font><div style='margin-left:20px'><INPUT TYPE=checkbox NAME='current' VALUE='1' onclick='useCurrentAvatar();'>Use my current avatar.</div><br>"
 		i = i + 1
 	End If
 	if (USE_BOARD_AVATARS=1) Then
-		option3="<br><font color=blue face=arial><b>Option " & arr(i) & ":</b></font><font face=arial> Use your current forum avatar.</font><div style='margin-left:20px'><INPUT TYPE=checkbox NAME='current' VALUE='1' onclick='useCurrentAvatar();'>Use my current avatar.</div><br>"
+		option3="<br><font color=#444444 face=arial><b>Option " & arr(i) & ":</b></font><font face=arial> Use your current forum avatar.</font><div style='margin-left:20px'><INPUT TYPE=checkbox NAME='current' VALUE='1' onclick='useCurrentAvatar();'>Use my current avatar.</div><br>"
 		i = i + 1
 	End If
 	if (USE_GALLERY=1) Then
-		option4="<br><font color=blue face=arial><b>Option " & arr(i) & ":</b></font><font face=arial> Select an avatar from the gallery below.</font>"
+		option4="<br><font color=#444444 face=arial><b>Option " & arr(i) & ":</b></font><font face=arial> Select an avatar from the gallery below.</font>"
 		i = i + 1
 		If listTheFiles(AVATAR_DIRECTORY)<>0 Then
 			option4 = option4 & "<br>" & filetable

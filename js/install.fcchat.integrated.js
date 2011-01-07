@@ -10,7 +10,7 @@ if(!FCChatConfig.default_on){
 if(!FCChatConfig.display_timestamp&&jGo.cookie.getCookie("fc_DTM")!='inline'){
 	jGo.cookie.setCookie("fc_DTM", 'none', null, "/", FCChatConfig.domain);
 }
-fc_chat.loadChatRooms(FCChatConfig.chatRooms,FCChatConfig.lockedRooms);
+fc_chat.loadChatRooms();
 if (!document.all){
  document.addEventListener( "mousemove", fc_chat.mtrack, true );
 }else{

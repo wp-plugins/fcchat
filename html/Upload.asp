@@ -26,7 +26,7 @@ avatars=false
 function OutputForm()
 %>
     <form name="frmSend" method="POST" enctype="multipart/form-data" action="" onSubmit="return onSubmitForm();">
-	<br><font color= blue><B>Step One:</B> </font> Upload the image file you want to use in your chat messages.<br><br>
+	<br><font color= #444444><B>Step One:</B> </font> Upload the image file you want to use in your chat messages.<br><br>
     <input name="attach1" type="file" size=35><br>
     <br> 
     <input style="margin-top:4" type=submit value="Upload"><br><br>
@@ -80,7 +80,7 @@ function SaveFiles
     if (UBound(ks) <> -1) then
         if errorstring = "" then
        		for each fileKey in Upload.UploadedFiles.keys
-            		SaveFiles = "<br><font face=arial><b>" & Upload.UploadedFiles(fileKey).FileName & " (" & Upload.UploadedFiles(fileKey).Length & "KB)</font><font color=blue face=arial> Uploaded Successfully!</b><br><br><b>Step 2:</b></font><font face=arial> In order to use this image in your chat messages, simply copy and paste the following...<br><br><b> [[" & Upload.UploadedFiles(fileKey).FileName & "]]</b> <br><br>...into the chat box below.<br><br><font color=blue face=arial> Please Note:</b></font><font face=arial>  You may include a maximum of three images in any single chat message.<br></small><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+""html/Upload.asp?id=" & userID & """)'>Back</a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'>Finish</a><br><br>"
+            		SaveFiles = "<br><font color=#444444 face=arial><b>" & Upload.UploadedFiles(fileKey).FileName & " (" & Upload.UploadedFiles(fileKey).Length & "KB)</font><font color=#444444 face=arial> Uploaded Successfully!</b><br><br><b>Step 2:</b></font><font face=arial> In order to use this image in your chat messages, simply copy and paste the following...<br><br><font face=arial><span style='font-size:16px'><b> [[" & Upload.UploadedFiles(fileKey).FileName & "]]</b></span> </font><br><br>...into the chat box below.<br><br><font color=#444444 face=arial><b>Please Note:</b></font><font face=arial> You may include a maximum of three images in any single chat message.<br></small><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+""html/Upload.asp?id=" & userID & """)'>Back</a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'>Finish</a><br><br>"
         	next
 	else
 		SaveFiles = errorstring
@@ -96,7 +96,7 @@ end function
 <HEAD>
 <TITLE>Free ASP Upload</TITLE>
 <style>
-BODY {background-color: white;font-family:arial; font-size:12}
+BODY {background-color: #bbbbbb;font-family:arial; font-size:12}
 </style>
 <script>
 function onSubmitForm() {
@@ -113,7 +113,7 @@ function onSubmitForm() {
 
 <BODY>
 <br>
-<div style="border-bottom: #A91905 2px solid;font-size:16">Share Images</div>
+<div style="border-bottom: #A91905 2px solid;font-size:16"><b><i>Share Images</i></b></div>
 <%
 Dim diagnostics
 if Request.ServerVariables("REQUEST_METHOD") <> "POST" then

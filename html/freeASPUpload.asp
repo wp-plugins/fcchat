@@ -78,16 +78,16 @@ Class FreeASPUpload
 					Set fl1 = objFSO.GetFile(fileItem.Path)
 					If gfxSpex(fl1.Path, w, h, c, strType) = true Then
           					If w>MAX_WIDTH Then
-							errorstring="<br><font color=blue face=arial><b>Maximum allowed width of avatars is " & MAX_WIDTH & "px!</font><font face=arial> Please Try again.</font></b><br>"
+							errorstring="<br><b>Maximum allowed width of avatars is " & MAX_WIDTH & "px! Please Try again.</b><br>"
 							del=1
 						Else
 							If h>MAX_HEIGHT Then
-								errorstring="<br><font color=blue face=arial><b>Maximum allowed height of avatars is " & MAX_WIDTH & "px!</font><font face=arial> Please Try again.</font></b><br>"
+								errorstring="<br><b>Maximum allowed height of avatars is " & MAX_WIDTH & "px! Please Try again.</b><br>"
 								del=1
 							End If
 						End If
      					Else
-       				   		errorstring="<br><font color=blue face=arial><b>Not a valid file type!</font><font face=arial> Please Try again.</font></b><br>"
+       				   		errorstring="<br><b>Not a valid file type! Please Try again.</b><br>"
 						del=1
        					End If
 				End If
@@ -111,24 +111,24 @@ Class FreeASPUpload
 		MyPath = Server.MapPath("images")
 		Set MyFolder = MyFileSize.GetFolder(MyPath)
 		If MyFolder.Size > MAX_DIR_SIZE Then
-			reason="<br><font color=blue face=arial><b>The image file repository is full!</font><font face=arial> Please Try again.</font></b><br>"
+			reason="<br><b>The image file repository is full! Please Try again.</b><br>"
 		End If
 		If instr(1,fileItem.FileName,"[[")=0 and instr(1,fileItem.FileName,"]]")=0 Then
 			checkFiles=0
 		Else
-			reason="<br><font color=blue face=arial><b>Image file names cannot contain the following: [[ , ]]</font><font face=arial> Please Try again.</font></b><br>"
+			reason="<br><b>Image file names cannot contain the following: [[ , ]] Please Try again.</b><br>"
 		End If
 		If fileItem.ContentType="image/gif" or fileItem.ContentType="image/pjpeg" or fileItem.ContentType="image/jpeg" or fileItem.ContentType="image/jpg" Then
 			checkFiles=0
 		Else
-			reason="<br><font color=blue face=arial><b>Bad Filetype!</font><font face=arial> Please Try again.</font></b><br>"
+			reason="<br><b>Bad Filetype! Please Try again.</b><br>"
 		End If
 		If (fileItem.Length)>MAX_FILE_SIZE Then
-			reason="<br><font color=blue face=arial><b>You have exceeded the size limit for image files!</font><font face=arial> Please Try again.</font></b><br>"
+			reason="<br><b>You have exceeded the size limit for image files! Please Try again.</b><br>"
 		End If
 		userID=Request.queryString("ID")
 		if(userID="" Or Not isNumeric(userID)) Then
-			reason="<br><font color=blue face=arial><b>Invalid User!</font><font face=arial> Please Try again.</font></b><br>"
+			reason="<br><b>Invalid User! Please Try again.</b><br>"
 		End If
 		If reason="" Then
 			checkFiles=0

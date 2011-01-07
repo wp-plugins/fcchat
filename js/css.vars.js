@@ -14,6 +14,7 @@
 	var fc_sr_btn = FCChatConfig.styles.chat_window.main_panel.send_to_room_button;
 	var fc_sp_btn = FCChatConfig.styles.chat_window.main_panel.send_private_button;
 	var fc_usp_btn = FCChatConfig.styles.chat_window.main_panel.user_pop_up_panel.send_private_button;
+	var fc_blk_btn = FCChatConfig.styles.chat_window.main_panel.options_panel.remove_block_button;
 	var fc_widgets = FCChatConfig.styles.chat_window.main_panel.widgets.border;
 	var fc_uwidgets = FCChatConfig.styles.chat_window.main_panel.user_pop_up_panel.widgets.border;
 	
@@ -95,8 +96,15 @@
 	fc_rule+"div.fc_uspbtn a:visited, "+fc_rule2+"div.fc_uspbtn a:visited{"+fc_usp_btn.states.link_css+"}" +
 	fc_rule+"div.fc_uspbtn a:hover, "+fc_rule2+"div.fc_uspbtn a:hover{"+fc_usp_btn.states.hover_css+"}" +
 	fc_rule+"div.fc_uspbtn_dis a, "+fc_rule2+"div.fc_uspbtn_dis a{"+fc_usp_btn.default_css+";display:block;float:left;margin:0 5px 0 0;text-align:center;text-decoration:none;}" +
-	fc_rule+"div.fc_uspbtn_dis a.fc_uspbtn_disa, "+fc_rule2+"div.fc_uspbtn_dis a.fc_uspbtn_disa{"+fc_usp_btn.states.disabled_css+";cursor:default;}";
+	fc_rule+"div.fc_uspbtn_dis a.fc_uspbtn_disa, "+fc_rule2+"div.fc_uspbtn_dis a.fc_uspbtn_disa{"+fc_usp_btn.states.disabled_css+";cursor:default;}" +
 	
+	//remove block button
+	fc_rule+"div.fc_blkbtn a, "+fc_rule2+"div.fc_blkbtn a{"+fc_blk_btn.default_css+";display:block;float:left;margin:0 5px 0 0;text-align:center;text-decoration:none;}" +
+	fc_rule+"div.fc_blkbtn a:link, "+fc_rule2+"div.fc_blkbtn a:link{"+fc_blk_btn.states.link_css+"}" +
+	fc_rule+"div.fc_blkbtn a:visited, "+fc_rule2+"div.fc_blkbtn a:visited{"+fc_blk_btn.states.link_css+"}" +
+	fc_rule+"div.fc_blkbtn a:hover, "+fc_rule2+"div.fc_blkbtn a:hover{"+fc_blk_btn.states.hover_css+"}" +
+	fc_rule+"div.fc_blkbtn_dis a, "+fc_rule2+"div.fc_blkbtn_dis a{"+fc_blk_btn.default_css+";display:block;float:left;margin:0 5px 0 0;text-align:center;text-decoration:none;}" +
+	fc_rule+"div.fc_blkbtn_dis a.fc_blkbtn_disa, "+fc_rule2+"div.fc_blkbtn_dis a.fc_blkbtn_disa{"+fc_blk_btn.states.disabled_css+";cursor:default;}";
 	
 	FCChatConfig.dynamicStyles=firstPart+
 	//fc_rule+"*.fc_a1:link, "+fc_rule2+"*.fc_a1:link{font-size:"+fc_cwfs+"pt;}"+

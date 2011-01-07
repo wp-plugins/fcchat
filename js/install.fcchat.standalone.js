@@ -14,6 +14,7 @@ if(!FCChatConfig.display_timestamp&&jGo.cookie.getCookie("fc_DTM")!='inline'){
 	jGo.cookie.setCookie("fc_DTM", 'none', null, "/", FCChatConfig.domain);
 }
 var fc_sc=jGo.cookie.getCookie(FCChatConfig.user_cookie);if((fc_sc!=null)&&(fc_sc!="")&&(fc_sc!="0")){fc_chat.uid=fc_sc}
+
 if (fc_chat.uid=='-1' || fc_chat.uid==-1){
 	fc_chat.inSession=0;
 	if(!FCChatConfig.auto_connect){
@@ -21,7 +22,7 @@ if (fc_chat.uid=='-1' || fc_chat.uid==-1){
 	}
 }
 jGo.cookie.setCookie(FCChatConfig.user_cookie,fc_chat.uid,null,'/',FCChatConfig.domain);
-fc_chat.loadChatRooms(FCChatConfig.chatRooms,FCChatConfig.lockedRooms);
+fc_chat.loadChatRooms();
 if (!document.all){
  document.addEventListener( "mousemove", fc_chat.mtrack, true );
 }else{

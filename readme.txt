@@ -5,15 +5,15 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.0.1
-Stable tag: 2.1.5
+Stable tag: 2.1.6
 
 FCChat displays a highly customizable, full featured, real time chat in the sidebar.
 
 == Description ==
 
-FCChat displays a highly customizable, full featured, real time chat in the sidebar. This version of FCChat has been modified for use with wordpress. New in version 2.1.5 is the ability to keep the chat open on when page while browsing other pages in a seperate tab or window. 
+FCChat displays a highly customizable, full featured, real time chat in the sidebar. This version of FCChat has been modified for use with wordpress. New in version 2.1.6: User profiles. Compatability with ipad/iphone/ipod (OS 4.2 and above). A new options panel layout.
 
-The next version will be fully compatable with ipad/iphone/ipod (OS 4.2 and above) We will also be introducing a simple user profile system.
+The next version will introduce user defined temporary rooms. It will provide embed code that you may use to open the chat directly from your articles, like "Chat about this topic now". 
 
 IMPORTANT: If you are upgrading from a previous version, you must clear your browser cache and cookies or the chat may not connect properly.
 
@@ -73,8 +73,12 @@ New features added: 1) Split the autoLogin configuration variable into two varia
 
 Critical Bug Fix: A bug was fixed that was preventing users from signing in while the chat window was open.
 
+= 2.1.6 =
+
+Bug Fix: A bug was fixed that was preventing the logo from showing up in the left hand corner of the window on linix based systems. User profiles introduced. Room descriptions introduced. Compatibility with iPhone/iPod/iPad introduced. FCChat (with the exception of the video chat) no longer requires Flash, and is now fully compatable with browsers using the HTML5.0 websocket protocol. The options panel layout was upgraded in order to prepare it for future expansion.
+
 == Upgrade Notice ==
 
-= 2.1.5 =
+= 2.1.6 =
 
 To upgrade from any previous version to the current version, first, make backup copies of the 3 configuration files in your old installation (fcchat/config/config.js, fcchat/html/config/config.php, fcchat/html/config/config.asp) and place them in a safe place where they will not be deleted. Next uninstall the old version and install the current version. Finally, copy your old configuration setting manually to the current version's configuration files. Of course, if you made no alterations to the config files in your previous installation, you may just simply install the new version. Refresh your browser's cache and cookies after upgrading to insure that the browser is displaying the new installation correctly.
