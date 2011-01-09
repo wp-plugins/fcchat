@@ -3,7 +3,7 @@
 Plugin Name: FCChat Widget
 Plugin URI: http://www.fastcatsoftware.com
 Description: Add full featured chat to the sidebar.
-Version: 2.1.6
+Version: 2.1.7
 Author: Fastcat Software
 Author URI: http://www.fastcatsoftware.com
 License: GPL2
@@ -89,12 +89,17 @@ function fcchat_widget_init() {
 			'chatid' => ''
 		);
         }
+
+	//Echo widget to sidebar
         function fcchat_widget($args) {
+  		extract($args);
 		$options = array_merge(fcchat_widget_options(), get_option('fcchat_widget'));
 		$plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );
-		echo '<h3 class="widget-title">'. $options['title'] . '</h3>';
-		echo '<div id="fc_package"><script type="text/javascript" src="'.$plugin_url.'/js/install.prep.js"></script><script type="text/javascript" >FCChatConfig.chat_id="'. $options['chatid'] . '";FCChatConfig.host="'. $options['host'] . '";</script></div><script type="text/javascript" src="'.$plugin_url.'/js/embed.js"></script>';
-	  }
+  		echo $before_widget;
+  		echo $before_title . $options['title'] . $after_title;
+  		echo '<div id="fc_package"><script type="text/javascript" src="'.$plugin_url.'/js/install.prep.js"></script><script type="text/javascript" >FCChatConfig.chat_id="'. $options['chatid'] . '";FCChatConfig.host="'. $options['host'] . '";</script></div><script type="text/javascript" src="'.$plugin_url.'/js/embed.js"></script>';
+  		echo $after_widget;
+	}
                 
         //widget control form
         function fcchat_widget_control() {
@@ -113,11 +118,15 @@ function fcchat_widget_init() {
 			update_option('fcchat_widget', $options);
 		}
         
-                // title option
-		    echo '<p style="text-align:left"><b>Step 1:</b> <a href="http://fastcatsoftware.com/chat/wp-activation.aspx" TARGET="_blank" >Click here to activate your chat</a></p>';
-		    echo '<p style="text-align:left"><b>Upgrade notice:</b>This applies to those of you who are upgrading from a previous version. Though it is possible to use this version with your old chat ID, if you want to enjoy all the new features available in version 2.1.6, you must obtain a new chat ID from the link above.</p>';
+                //Go to activation page
+		echo '<p style="text-align:left"><b>Step 1:</b> <a href="http://fastcatsoftware.com/chat/wp-activation.aspx" TARGET="_blank" >Click here to activate your chat</a></p>';
+		   
+		//Upgrade notice 
+		echo '<p style="text-align:left"><b>Upgrade notice:</b>This applies to those of you who are upgrading from a previous version. Though it is possible to use this version with your old chat ID, if you want to enjoy all the new features available in version 2.1.6, you must obtain a new chat ID from the link above.</p>';
 		    echo '<p style="text-align:left"><b>Step 2:</b> Enter your activation info below, and press save.</p>';
-                echo '<p style="text-align:left"><label for="fcchat-title">Title: <input style="width: 200px;" id="fcchat-title" name="fcchat-title" type="text" value="'.$options['title'].'" /></label></p>';
+		
+		//Title                
+		echo '<p style="text-align:left"><label for="fcchat-title">Title: <input style="width: 200px;" id="fcchat-title" name="fcchat-title" type="text" value="'.$options['title'].'" /></label></p>';
                                         
                 //Host
                  echo '<p style="text-align:left"><label for="fcchat-host">Host: <br/><input id="fcchat-host" name="fcchat-host" type="text" value="'.$options['host'].'" /></label></p>';
@@ -125,11 +134,11 @@ function fcchat_widget_init() {
                 //Chat ID
                 echo '<p style="text-align:left"><label for="fcchat-chatid">Chat ID: <br/><input id="fcchat-chatid" name="fcchat-chatid" type="text" value="'.$options['chatid'].'" /></label></p>';
                 
-		    //Links
-		    echo '<p style="text-align:left">Here are some other helpful links:</p>';
-		    echo '<p style="text-align:left"><a href="http://www.fastcatsoftware.com/chat/userguide/Step6.asp" TARGET="_blank" >FCChat Configuration Topics</a></p>';
-		    echo '<p style="text-align:left"><a href="http://www.fastcatsoftware.com/chat/Manual.html" TARGET="_blank" >FCChat Manual</a></p>';
-		    echo '<p style="text-align:left">If you need assistance, or have any ideas on making this product better, please contact us at <a href="mailto:support@fastcatsoftware.com">support@fastcatsoftware.com</a></p>';
+		//Links
+		echo '<p style="text-align:left">Here are some other helpful links:</p>';
+		echo '<p style="text-align:left"><a href="http://www.fastcatsoftware.com/chat/userguide/Step6.asp" TARGET="_blank" >FCChat Configuration Topics</a></p>';
+		echo '<p style="text-align:left"><a href="http://www.fastcatsoftware.com/chat/Manual.html" TARGET="_blank" >FCChat Manual</a></p>';
+		echo '<p style="text-align:left">If you need assistance, or have any ideas on making this product better, please contact us at <a href="mailto:support@fastcatsoftware.com">support@fastcatsoftware.com</a></p>';
 
                 // Submit
                 echo '<input type="hidden" id="fcchat-submit" name="fcchat-submit" value="1" />';
