@@ -13,7 +13,7 @@ var FCChatConfig = {
 	
 	//VERSION
 	
-	version:"2.1.7",
+	version:"2.1.8",
 	subversion:"wp",
 	
 	//ENVIRONMENT
@@ -25,6 +25,7 @@ var FCChatConfig = {
 	no_chat_history:false,
 	showTyping:true,
 	display_timestamp:false,
+	sounds_on:true,
 	show_online_count:true,
 	allow_split_screen_mode:true,
 	allow_web:true,
@@ -42,25 +43,8 @@ var FCChatConfig = {
 	alt_dir: window["fc_chat_path"] || "/FCChat/",
 	
 	//CHAT ROOMS (50 max)
-	
-	chatRooms:[
-	     "The Lobby",
-	     "Fun Room",
-	     "Help Desk",
-	     "Private Room"
-	],
-	
-	chatRoomDescriptions:[
-	     "A cool place to hang out",
-	     "",
-	     "",
-	     "Members Only"
-	],		
-	
-	lockedRooms:"3", //comma separated list of room indexes 0,1,2,3 etc
-	disabled_rooms:"", //room indexes
 	open_in_room:0,    //room index
-	
+
 	//MESSAGES
 	
 	startText:"To begin chatting, press the <b>Open Button.&nbsp;</b>",
@@ -71,6 +55,7 @@ var FCChatConfig = {
 	loadingChatText:"<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Loading Chat...Please wait...</font>",
 	loadingRoomText:"<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Loading Room...Please wait...</font>",
 	chat_toolbox_connectionLostText:"<font style='color:red;font-weight:700'>Connection lost...</font> <a href='javascript:fc_chat.reqRecon()'>Reconnect</a>",
+	roomClosedText:"<font style='color:red;font-weight:700'>Sorry, the room has closed...</font><br><center><a href='javascript:fc_chat.reqRecon()'>Reconnect</a> <a href='javascript:fc_chat.closeChat()'>Close</a></center>",
 	alert_panel_connectionLostText:"<font style='color:red;font-weight:700'>Connection lost...</font> <a href='javascript:fc_chat.reqRecon()'>Reconnect</a> <a href='javascript:fc_chat.closeChat()'>Close</a>",
 	alert_panel_loginText:"To enter, please <b>Login</b> first. <a href='javascript:fc_chat.closeChat()'>Close</a>",
 	disabled_roomText:"You must be a member to enter this room.",
@@ -275,8 +260,9 @@ var FCChatConfig = {
 						weight:500,
 						color:{
 							typing_color:"#eeeeee",
-							idle_color:"#777777",
-							mod_color:"#000000"
+							idle_color:"#eeeeee",
+							mod_color:"#eeeeee",
+							title_color:"#eeeeee"
 						},
 						screen_name_states:{
 							online:{
@@ -446,7 +432,6 @@ var FCChatConfig = {
 	video_window1_color:"darkOliveGreen",
 	video_window2_color:"darkOliveGreen",
 	
-	disallow_video_in_rooms:"",
 	show_a_v_icon:false,
 	
 	//COOKIES

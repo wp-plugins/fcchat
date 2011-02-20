@@ -28,6 +28,7 @@ if(FCChatConfig.flashEnabled){
 }else{
 	document.write("<script type='text/javascript' src='" + FCChatConfig.dir + "js/fcchat.websocket.min.js'></script>");
 }
+document.write("<script type='text/javascript' src='" + FCChatConfig.dir + "js/jquery.sound.min.js'></script>");
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/css.vars.js'></script>");
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/page.init.js'></script>");
 

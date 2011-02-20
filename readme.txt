@@ -5,24 +5,41 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.0.1
-Stable tag: 2.1.7
+Stable tag: 2.1.8
 
 FCChat displays a highly customizable, full featured, real time chat in the sidebar.
 
 == Description ==
 
-FCChat displays a highly customizable, full featured, real time chat in the sidebar. This version of FCChat has been modified for use with wordpress. New in version 2.1.7: Better Wordpress theme support for the sidebar plugin. User profiles. Compatability with ipad/iphone/ipod (OS 4.2 and above). A new options panel layout.
+FCChat displays a highly customizable, full featured, real time chat in the sidebar. This version of FCChat has been modified for use with wordpress.
 
-The next version will introduce user defined temporary rooms. It will provide embed code that you may use to open the chat directly from your articles, like "Chat about this topic now". 
+FEATURES INCLUDE:
+Real time text chat
+Video Chat (Premium Subscription Required)
+Public rooms/Private Rooms
+Instant messaging/Private Chat
+Upload Images
+User profiles
+Assign Titles to users
+Customizable smileys/avatars
+Customizable sounds
+Customizable style template
+Administration/moderation panel
 
-IMPORTANT: If you are upgrading from a previous version, you must clear your browser cache and cookies or the chat may not connect properly.
+
+A one time $0.99 fee (payable through Paypal) is required to activate the chat service. After that, you may use the basic service for as long as you wish free of monthly charge. The basic service includes all of the above features except the video chat. The basic service is limited to 10 simulaneous connections to the chat server, which is more than sufficient for a small personal site. If you are in any way dissatisfied with the service, you may request a refund within 60 days of purchase.
+
+
+
+IMPORTANT: Those of you who are upgrading from a previous version must obtain a new chat ID in order to use version 2.1.8.  In addition, after upgrading, you must clear your browser cache and cookies or the chat may not connect properly.
 
 == Installation ==
 
 1. Old-school: upload the `FCChat` folder to the `/wp-content/plugins/` directory via FTP.  Hipster: Add the FCChat Widget via the WordPress Plugins menu.
 1. Activate the Plugin
 1. Add the Widget to the desired sidebar in the WordPress Widgets menu.
-1. Configure the `FCChat Widget' options by clicking on the widget once added to the sidebar.
+1. Open the `FCChat Widget' options dialog by clicking on the widget once added to the sidebar.
+1. Follow the Steps listed in the dialog in order to activate the chat service.
 1. Rate the plugin and verify that it works at wordpress.org.
 1. Leave a comment regarding bugs, feature request, cocktail recipes at http://www.fastcatsoftware.com
 
@@ -81,9 +98,15 @@ Bug Fix: A bug was fixed that was preventing the logo from showing up in the lef
 
 Upgraded the widget to be more compatable with Wordpress theming.
 
+= 2.1.8 =
+
+Added sound effects. Rooms are now created/edited/deleted through the administration panel. Added "Change password" function in administration panel. Added "Promote to Administrator" function in administration panel. Added titles that can be assigned to user accounts.
+
 
 == Upgrade Notice ==
 
-= 2.1.7 =
+= 2.1.8 =
+
+*Version 2.1.8 requires that you obtain a new chat ID.
 
 To upgrade from any previous version to the current version, first, make backup copies of the 3 configuration files in your old installation (fcchat/config/config.js, fcchat/html/config/config.php, fcchat/html/config/config.asp) and place them in a safe place where they will not be deleted. Next uninstall the old version and install the current version. Finally, copy your old configuration setting manually to the current version's configuration files. Of course, if you made no alterations to the config files in your previous installation, you may just simply install the new version. Refresh your browser's cache and cookies after upgrading to insure that the browser is displaying the new installation correctly.
