@@ -14,16 +14,27 @@ FCChat displays a highly customizable, full featured, real time chat in the side
 FCChat displays a highly customizable, full featured, real time chat in the sidebar. This version of FCChat has been modified for use with wordpress.
 
 FEATURES INCLUDE:
+
 Real time text chat
+
 Video Chat (Premium Subscription Required)
+
 Public rooms/Private Rooms
+
 Instant messaging/Private Chat
+
 Upload Images
+
 User profiles
+
 Assign Titles to users
+
 Customizable smileys/avatars
+
 Customizable sounds
+
 Customizable style template
+
 Administration/moderation panel
 
 
