@@ -10,7 +10,6 @@ if(!FCChatConfig.default_on){
 if(jGo.cookie.getCookie("fc_data")==null||jGo.cookie.getCookie("fc_data").split('&').length<2){
 	fc_chat.init_cdata();
 }
-fc_chat.loadChatRooms();
 if (!document.all){
  document.addEventListener( "mousemove", fc_chat.mtrack, true );
 }else{
