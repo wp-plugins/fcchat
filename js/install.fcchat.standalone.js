@@ -22,7 +22,6 @@ if (fc_chat.uid=='-1' || fc_chat.uid==-1){
 	}
 }
 jGo.cookie.setCookie(FCChatConfig.user_cookie,fc_chat.uid,null,'/',FCChatConfig.domain);
-fc_chat.loadChatRooms();
 if (!document.all){
  document.addEventListener( "mousemove", fc_chat.mtrack, true );
 }else{
