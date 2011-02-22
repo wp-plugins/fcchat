@@ -23,11 +23,11 @@ Public rooms/Private Rooms
 
 Instant messaging/Private Chat
 
-Upload Images
+Upload images
 
 User profiles
 
-Assign Titles to users
+Assign titles to users
 
 Customizable smileys/avatars
 
