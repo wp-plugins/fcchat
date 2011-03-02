@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.0.1
-Stable tag: 2.1.8
+Stable tag: 2.1.9
 
 FCChat displays a highly customizable, full featured, real time chat in the sidebar.
 
@@ -125,11 +125,15 @@ Upgraded the widget to be more compatable with Wordpress theming.
 
 Added sound effects. Rooms are now created/edited/deleted through the administration panel. Added "Change password" function in administration panel. Added "Promote to Administrator" function in administration panel. Added titles that can be assigned to user accounts.
 
+= 2.1.9 =
+
+Fixed a bug in the sound system that was preventing sounds from loading properly in ie. Fixed a bug in which defered scripts were causing failure to load on certain sites. Made the transition from the window mode to the split-screen mode more efficient.
+
 
 == Upgrade Notice ==
 
-= 2.1.8 =
+= 2.1.9 =
 
-*Version 2.1.8 requires that you obtain a new chat ID.
+*Version 2.1.9 requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
 
 To upgrade from any previous version to the current version, first, make backup copies of the 3 configuration files in your old installation (fcchat/config/config.js, fcchat/html/config/config.php, fcchat/html/config/config.asp) and place them in a safe place where they will not be deleted. Next uninstall the old version and install the current version. Finally, copy your old configuration setting manually to the current version's configuration files. Of course, if you made no alterations to the config files in your previous installation, you may just simply install the new version. Refresh your browser's cache and cookies after upgrading to insure that the browser is displaying the new installation correctly.

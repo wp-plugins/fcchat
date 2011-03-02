@@ -442,11 +442,11 @@ var FCChatConfig = {
 	mod_cookie:"fc_ChatToken",
 	
 	//loading phrases
-	load_standalone:(!window["jGo"]||jGo.scripts.loadState('jGo.DefaultWindow.init.min.js') == 'not.loaded'?"{<script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></script>":"") +
-	"<script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.cookie.min.js'></" +
-	"script><script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.MD5.min.js'></" +
-	"script><script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.standalone.min.js'></" +
-	"script><script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/install.fcchat.standalone.js'></" + 
+	load_standalone:(!window["jGo"]||jGo.scripts.loadState('jGo.DefaultWindow.init.min.js') == 'not.loaded'?"<script  type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></script>":"") +
+	"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.cookie.min.js'></" +
+	"script><script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.MD5.min.js'></" +
+	"script><script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.standalone.min.js'></" +
+	"script><script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/install.fcchat.standalone.js'></" + 
 	"script>",
 	load_integrated:"<script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") +
 	"jGo/js/jGo.DefaultWindow.init.min.js'></" +
