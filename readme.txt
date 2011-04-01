@@ -60,15 +60,15 @@ IMPORTANT: Those of you who are upgrading from a previous version must obtain a 
 
 Here:
 
-http://fastcatsoftware.com/wordpress
+http://www.fastcatsoftware.com/wordpress
 
 = How do I use/configure/administrate FCChat? =
 
 Here are some places to look for information:
 
-http://fastcatsoftware.com/chat/userguide/Index.html
+http://www.fastcatsoftware.com/chat/userguide/Index.html
 
-http://fastcatsoftware.com/chat/Manual.html
+http://www.fastcatsoftware.com/chat/Manual.html
 
 = How do I contact you if I have questions? =
 
