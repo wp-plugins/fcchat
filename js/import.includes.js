@@ -32,5 +32,16 @@ document.write("<script type='text/javascript' src='" + FCChatConfig.dir + "js/j
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/css.vars.js'></script>");
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/page.init.js'></script>");
 
-	
+function fc_chat_load_from_link(elem){
+	try{
+		if(fc_chat && fc_chat.try_connection() =="1"){
+			jQuery("span.fc_chat_link_msg").remove();
+			fc_chat.open_chat_box(1);
+		}else{
+			alert(FCChatConfig.link_not_ready);
+		}
+	}catch(e){
+		alert(FCChatConfig.link_not_ready);
+	}
+};
 

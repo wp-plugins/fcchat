@@ -3,7 +3,7 @@
 Plugin Name: FCChat Widget
 Plugin URI: http://www.fastcatsoftware.com
 Description: Add full featured chat to the sidebar.
-Version: 2.1.9
+Version: 2.1.10
 Author: Fastcat Software
 Author URI: http://www.fastcatsoftware.com
 License: GPL2
@@ -32,7 +32,7 @@ function add_header_script(){
         if (!is_admin()){
 		    wp_register_script('fc-chat-import-google.loader', $plugin_url.'/js/import.google.loader.js');
                 wp_enqueue_script('fc-chat-import-google.loader');
-		    wp_register_script('fc-chat-import-config', $plugin_url.'/js/import.config.php?path='.$plugin_url.'&t=1');
+		    wp_register_script('fc-chat-import-config', $plugin_url.'/js/import.config.php?path='.str_replace(".", ";", $plugin_url).'&t=1');
                 wp_enqueue_script('fc-chat-import-config');
 		    wp_register_script('fc-chat-import-libs', $plugin_url.'/js/import.libs.js');
                 wp_enqueue_script('fc-chat-import-libs');
@@ -122,7 +122,7 @@ function fcchat_widget_init() {
 		echo '<p style="text-align:left"><b>Step 1:</b> <a href="http://www.fastcatsoftware.com/chat/wp-activation.aspx" TARGET="_blank" >Click here to activate your chat</a></p>';
 		   
 		//Upgrade notice 
-		echo '<p style="text-align:left"><b>Upgrade notice:</b>Upgrading to version 2.1.9 from a version prior to 2.1.8 requires that you obtain a new chat ID from the link above.</p>';
+		echo '<p style="text-align:left"><b>Upgrade notice:</b>Upgrading to version 2.1.10 from a version prior to 2.1.8 requires that you obtain a new chat ID from the link above.</p>';
 		    echo '<p style="text-align:left"><b>Step 2:</b> Enter your activation info below, and press save.</p>';
 		
 		//Title                

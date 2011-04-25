@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.0.1
-Stable tag: 2.1.9
+Stable tag: 2.1.10
 
 FCChat displays a highly customizable, full featured, real time chat in the sidebar.
 
@@ -17,7 +17,7 @@ FEATURES INCLUDE:
 
 Real time text chat
 
-Video Chat (Premium Subscription Required)
+Video Chat/Video Conferencing (6 Simulaneous Cams/Premium Subscription Required)
 
 Public rooms/Private Rooms
 
@@ -38,7 +38,9 @@ Customizable style template
 Administration/moderation panel
 
 
-A one time $0.99 fee (payable through Paypal) is required to activate the chat service. After that, you may use the basic service for as long as you wish free of monthly charge. The basic service includes all of the above features except the video chat. The basic service is limited to 10 simulaneous connections to the chat server, which is more than sufficient for a small personal site. If you are in any way dissatisfied with the service, you may request a refund within 60 days of purchase.
+Basic Service -- A one time $0.99 fee (payable through Paypal) is required to activate the chat service. After that, you may use the basic service for as long as you wish free of monthly charge. The basic service includes all of the above features except the video chat. The basic service is limited to 10 simulaneous connections to the chat server, which is more than sufficient for a small personal site. If you are in any way dissatisfied with the service, you may request a refund within 60 days of purchase.
+
+Premium Service -- The premium service starts at $0.99/month (payable through Paypal). It includes all the features of the basic service plus the 6 simultaneous cam video chat/video conferencing service. In addition, your connection bandwidth is increased to 20 simulatneous users for the level one premium service.
 
 
 
@@ -129,11 +131,14 @@ Added sound effects. Rooms are now created/edited/deleted through the administra
 
 Fixed a bug in the sound system that was preventing sounds from loading properly in ie. Fixed a bug in which defered scripts were causing failure to load on certain sites. Made the transition from the window mode to the split-screen mode more efficient.
 
+= 2.1.10 =
+
+Changed the name of the required script 'jGo/js/jgo.cookie.min.js' to 'jgo/js/jgo.c.min.js'. Some hosting environments were blocking the loading of the file due to the fact that the keyword 'cookie', in the filename, was being misinterpreted as a security threat. Upgraded the videochat container, making it compatable with the wordpress environment. Added the option of opening the chat window through a text link. Resolved a cross domain incompatablity issue that arose when sites were accessed without the full domain name: ie. http://yahoo.com instead of http://www.yahoo.com.
 
 == Upgrade Notice ==
 
-= 2.1.9 =
+= 2.1.10 =
 
-*Version 2.1.9 requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
+*Version 2.1.10 requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
 
 To upgrade from any previous version to the current version, first, make backup copies of the 3 configuration files in your old installation (fcchat/config/config.js, fcchat/html/config/config.php, fcchat/html/config/config.asp) and place them in a safe place where they will not be deleted. Next uninstall the old version and install the current version. Finally, copy your old configuration setting manually to the current version's configuration files. Of course, if you made no alterations to the config files in your previous installation, you may just simply install the new version. Refresh your browser's cache and cookies after upgrading to insure that the browser is displaying the new installation correctly.
