@@ -6,14 +6,14 @@ var FCChatConfig = {
 		
 	//CONNECTION
 	
-	chat_id:"1000_00000000000",
+	chat_id:"1",
 	host:"",
 	port:443,
 	policy_port:443,
 	
 	//VERSION
 	
-	version:"2.1.10",
+	version:"2.1.11",
 	subversion:"wp",
 	
 	//ENVIRONMENT
