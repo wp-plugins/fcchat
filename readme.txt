@@ -38,10 +38,7 @@ Customizable style template
 Administration/moderation panel
 
 
-Basic Service -- A one time $0.99 fee (payable through Paypal) is required to activate the chat service. After that, you may use the basic service for as long as you wish free of monthly charge. The basic service includes all of the above features except the video chat. The basic service is limited to 10 simulaneous connections to the chat server, which is more than sufficient for a small personal site. If you are in any way dissatisfied with the service, you may request a refund within 60 days of purchase.
-
-Premium Service -- The premium service starts at $0.99/month (payable through Paypal). It includes all the features of the basic service plus the 6 simultaneous cam video chat/video conferencing service. In addition, your connection bandwidth is increased to 20 simulatneous users for the level one premium service.
-
+Service activation -- Service activation comes with a 7 day free trial period. If you wish to continue the service, a small monthly fee applies.
 
 
 IMPORTANT: Those of you who are upgrading from a previous version must obtain a new chat ID in order to use version 2.1.8.  In addition, after upgrading, you must clear your browser cache and cookies or the chat may not connect properly.

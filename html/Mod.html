@@ -33,7 +33,7 @@ else if (dec && (keychar == "."))
 else
    return false;
 }
-
+var fc_chat_path = "";
 //-->
 </SCRIPT>
 <!-- Begin Fastcat Header Insert -->
@@ -246,7 +246,7 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 		</td>
 	</tr>
 	<tr>
-			<td colspan=3>
+			<td colspan=4>
 				<span style='color:darkblue;font-weight:bold;font-style:italic'>
 						Update Select Server Configuration Variables:<hr style='width:100%;color:lightblue;'>
 				</span>
@@ -263,8 +263,10 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 					<option value=2>yes</option>
 				</select>
 			</td>
-			<td width=300px>
+			<td>
 				<input id='setconfigvalue0' type='button' name='setconfigvalue0' value='Set' disabled Onclick='fc_chat.adminUpdateConfigField(0)'>
+			</td>
+			<td width=300px>
 			</td>
 		</tr>
 		<tr>	
@@ -278,8 +280,10 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 					<option value=2>yes</option>
 				</select>
 			</td>
-			<td width=100%>
+			<td >
 				<input id='setconfigvalue1' type='button' name='setconfigvalue1' value='Set' disabled Onclick='fc_chat.adminUpdateConfigField(1)'>
+			</td>
+			<td width=100%>
 			</td>
 		</tr>
 		<tr>	
@@ -293,8 +297,10 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 					<option value=2>yes</option>
 				</select>
 			</td>
-			<td width=100%>
+			<td >
 				<input id='setconfigvalue2' type='button' name='setconfigvalue2' value='Set' disabled Onclick='fc_chat.adminUpdateConfigField(2)'>
+			</td >
+			<td width=100%>
 			</td>
 		</tr>
 		<tr>	
@@ -308,8 +314,11 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 					<option value=2>yes</option>
 				</select>
 			</td>
-			<td width=100%>
+			<td>
 				<input id='setconfigvalue3' type='button' name='setconfigvalue3' value='Set' disabled Onclick='fc_chat.adminUpdateConfigField(3)'>
+			</td>
+			<td width=100%>
+				ID: <input type='text' id='adminid' maxLength='20' onKeyPress="return numbersonly(this, event)" style='margin-top:0px;width:60;'>
 			</td>
 		</tr>
 </table>
@@ -334,7 +343,7 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 		</tr>
 	</table></div>
 </div>
-<script defer="defer" type="text/javascript" src="../jGo/js/jGo.DefaultWindow.init.min.js"></script><script defer="defer" type="text/javascript" src="../jGo/js/jGo.cookie.min.js"></script><script defer="defer" type="text/javascript" src="../jGo/js/jGo.MD5.min.js"></script>
+<script defer="defer" type="text/javascript" src="../jGo/js/jGo.DefaultWindow.init.min.js"></script><script defer="defer" type="text/javascript" src="../jGo/js/jGo.c.min.js"></script><script defer="defer" type="text/javascript" src="../jGo/js/jGo.MD5.min.js"></script>
 <script defer="defer" language="JavaScript" src="../js/fcchat.moderation.min.js"></script>
 <script defer="defer" language="JavaScript" src="../js/install.fcchat.standalone.js"></script>
 <script>
