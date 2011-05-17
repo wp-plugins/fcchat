@@ -7,7 +7,7 @@ Requires at least: 2.7
 Tested up to: 3.0.1
 Stable tag: 2.1.11
 
-FCChat displays a highly customizable, full featured, real time chat in the sidebar.
+A real time chat and video conferencing plugin.
 
 == Description ==
 
@@ -17,7 +17,7 @@ FEATURES INCLUDE:
 
 Real time text chat
 
-Video Chat/Video Conferencing (6 Simulaneous Cams/Premium Subscription Required)
+Video Chat/Video Conferencing (6 Simulaneous Cams)
 
 Public rooms/Private Rooms
 
