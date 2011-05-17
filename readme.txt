@@ -7,7 +7,7 @@ Requires at least: 2.7
 Tested up to: 3.0.1
 Stable tag: 2.1.11
 
-A real time chat and video conferencing plugin.
+A full featured, real time chat and video conferencing plugin.
 
 == Description ==
 
