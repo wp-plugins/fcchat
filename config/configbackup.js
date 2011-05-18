@@ -425,8 +425,8 @@ var FCChatConfig = {
 	
 	video_enabled:false,
 	max_video_streams:30,
-	capture_width:80,
-	capture_height:60,
+	capture_width:120,
+	capture_height:90,
 	fps:8,
 	quality:85,
 	
