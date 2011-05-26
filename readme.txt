@@ -136,6 +136,10 @@ Changed the name of the required script 'jGo/js/jgo.cookie.min.js' to 'jgo/js/jg
 
 Fixed a bug in the administration panel that was preventing some configuration variables from being set properly. Added the ability to link the chat directly to wordpress user accounts.
 
+= 2.1.11.1 =
+
+Improved compatability with IE9.
+
 == Upgrade Notice ==
 
 = 2.1.11 =
