@@ -140,6 +140,11 @@ Fixed a bug in the administration panel that was preventing some configuration v
 
 Improved compatability with IE9.
 
+= 2.1.11.2 =
+
+Fixed a bug which was causing the video chat window to open in the wrong location while in split-screen mode.
+
+
 == Upgrade Notice ==
 
 = 2.1.11 =
