@@ -18,7 +18,7 @@ var fc_sc=jGo.cookie.getCookie(FCChatConfig.user_cookie);if((fc_sc!=null)&&(fc_s
 if (fc_chat.uid=='-1' || fc_chat.uid==-1){
 	fc_chat.inSession=0;
 	if(!FCChatConfig.auto_connect){
-		FCChatConfig.sessionText=FCChatConfig.startText;
+		FCChatConfig.txt.session_msg=FCChatConfig.startText;
 	}
 }
 jGo.cookie.setCookie(FCChatConfig.user_cookie,fc_chat.uid,null,'/',FCChatConfig.domain);
@@ -91,6 +91,6 @@ jQuery(window).unload(function() {
 });
 if (top==self){
 	if(FCChatConfig.styles.chat_toolbox.absolute_positioning&&!FCChatConfig.noshow){fc_chat.writeBox()}
-	if(jGo.cookie.getCookie('fc_tglChat')=='0'){fc_chat.setTgl(0);fc_chat.obtn='On';FCChatConfig.sessionText=FCChatConfig.offText;}
-	if(jGo.cookie.getCookie('fc_pauseChat')=='1'){FCChatConfig.sessionText=FCChatConfig.pauseText;}
+	if(jGo.cookie.getCookie('fc_tglChat')=='0'){fc_chat.setTgl(0);fc_chat.obtn=FCChatConfig.txt.on;FCChatConfig.txt.session_msg=FCChatConfig.txt.off_msg;}
+	if(jGo.cookie.getCookie('fc_pauseChat')=='1'){FCChatConfig.txt.session_msg=FCChatConfig.txt.pause_msg;}
 }

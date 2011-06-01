@@ -26,11 +26,12 @@ avatars=false
 function OutputForm()
 %>
     <form name="frmSend" method="POST" enctype="multipart/form-data" action="" onSubmit="return onSubmitForm();">
-	<br><font color= #444444><B>Step One:</B> </font> Upload the image file you want to use in your chat messages.<br><br>
+	<br><font color= #444444><B><script>document.write(window.parent.FCChatConfig.txt.up_step1)</script></B> </font> <script>document.write(window.parent.FCChatConfig.txt.up_upload)</script><br><br>
     <input name="attach1" type="file" size=35><br>
     <br> 
-    <input style="margin-top:4" type=submit value="Upload"><br><br>
-    (Jpg, gif, and png formats only. Max size: 100KB)
+    <input style="margin-top:4" type=submit id="submitbutton" value=""><br><br>
+<script>document.getElementById("submitbutton").value=window.parent.FCChatConfig.txt.up_upload_button</script>
+    <script>document.write(window.parent.FCChatConfig.txt.up_upload_types)</script> <%=MAX_IMAGE_SIZE%>KB)
     </form>
 <%
 end function
@@ -80,13 +81,13 @@ function SaveFiles
     if (UBound(ks) <> -1) then
         if errorstring = "" then
        		for each fileKey in Upload.UploadedFiles.keys
-            		SaveFiles = "<br><font color=#444444 face=arial><b>" & Upload.UploadedFiles(fileKey).FileName & " (" & Upload.UploadedFiles(fileKey).Length & "KB)</font><font color=#444444 face=arial> Uploaded Successfully!</b><br><br><b>Step 2:</b></font><font face=arial> In order to use this image in your chat messages, simply copy and paste the following...<br><br><font face=arial><span style='font-size:16px'><b> [[" & Upload.UploadedFiles(fileKey).FileName & "]]</b></span> </font><br><br>...into the chat box below.<br><br><font color=#444444 face=arial><b>Please Note:</b></font><font face=arial> You may include a maximum of three images in any single chat message.<br></small><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+""html/Upload.asp?id=" & userID & """)'>Back</a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'>Finish</a><br><br>"
+            		SaveFiles = "<br><font color=#444444 face=arial><b>" & Upload.UploadedFiles(fileKey).FileName & " (" & Upload.UploadedFiles(fileKey).Length & " bytes)</font><font color=#444444 face=arial> <script>document.write(window.parent.FCChatConfig.txt.up_success)</script></b><br><br><b><script>document.write(window.parent.FCChatConfig.txt.up_step2)</script></b></font><font face=arial> <script>document.write(window.parent.FCChatConfig.txt.up_copy)</script><br><br><font face=arial><span style='font-size:16px'><b> [[" & Upload.UploadedFiles(fileKey).FileName & "]]</b></span> </font><br><br><script>document.write(window.parent.FCChatConfig.txt.up_into)</script><br><br><font color=#444444 face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_please_note)</script></b></font><font face=arial> <script>document.write(window.parent.FCChatConfig.txt.up_max_images)</script><br></small><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+""html/Upload.asp?id=" & userID & """)'><script>document.write(window.parent.FCChatConfig.txt.up_back)</script></a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.FCChatConfig.txt.up_finish)</script></a><br><br>"
         	next
 	else
-		SaveFiles = errorstring
+		SaveFiles = "<br><b><script>document.write(window.parent.FCChatConfig.txt." & errorstring & ")</script></b>"
 	end if
     else
-        SaveFiles = "<br>The file name specified in the upload form does not correspond to a valid file in the system."
+        SaveFiles = "<br><b><script>document.write(window.parent.FCChatConfig.txt.up_not_valid)</script></b>"
         errorstring="-1"
     end if
 end function

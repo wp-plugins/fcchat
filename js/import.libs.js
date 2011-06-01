@@ -19,5 +19,4 @@ if (!window["jGo"] || window["jGo"].version < 1.0) {
 		document.write("<link rel='stylesheet' href='" + FCChatConfig.dir
 				+ "jGo/css/jGo.min.css' type='text/css'>");
 	}
-
 }

@@ -183,14 +183,14 @@ $errorstring='';
 $filename='';
 $newname='';
 //checks if the form has been submitted
-$startdoc="<html><script>function useCurrentAvatar(){window.parent.fc_chat.newAvatar('',3,'".$flext."','".$rspln."','".$rspln2."')};var gravatar;function useGravatar(){ gravatar= document.getElementById('fc_gravatar').value;document.getElementById('fc_gravatar').value='';if(gravatar.indexOf('gravatar.com/')==-1){return false}if(gravatar.indexOf('http://')!=0){gravatar='http://'+gravatar}var tester=new Image();tester.onload=isGood;tester.onerror=isBad;tester.src=gravatar}function isGood(){window.parent.fc_chat.newAvatar('/'+gravatar,4,'".$flext."','".$rspln."','".$rspln2."')}function isBad(){return false}</script><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 2px solid;font-size:16'><b><i>Select Avatar</i></b></div><div id='wait1' style='margin-top:100px;display:none'><center>Please wait...</center></div><div id='content1'>";
+$startdoc="<html><script>function useCurrentAvatar(){window.parent.fc_chat.newAvatar('',3,'".$flext."','".$rspln."','".$rspln2."')};var gravatar;function useGravatar(){ gravatar= document.getElementById('fc_gravatar').value;document.getElementById('fc_gravatar').value='';if(gravatar.indexOf('gravatar.com/')==-1){return false}if(gravatar.indexOf('http://')!=0){gravatar='http://'+gravatar}var tester=new Image();tester.onload=isGood;tester.onerror=isBad;tester.src=gravatar}function isGood(){window.parent.fc_chat.newAvatar('/'+gravatar,4,'".$flext."','".$rspln."','".$rspln2."')}function isBad(){return false}</script><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 2px solid;font-size:16'><b><i><script>document.write(window.parent.FCChatConfig.txt.av_select)</script></i></b></div><div id='wait1' style='margin-top:100px;display:none'><center><script>document.write(window.parent.FCChatConfig.txt.av_wait)</script></center></div><div id='content1'>";
 
  if(isset($_POST['Submit'])) 
  {
 	//reads the user
 	$id=$_GET['id'];
 	if(!is_numeric($id)){
-		$errorstring='<br><font color=red face=arial><b>Invalid User!</font><font face=arial> Please Try again.</font></b><br><br>';
+		$errorstring='<br><font color=red face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_invalid_user)</script></font></b><br><br>';
 		$errors=1;
 	}else{
  		//reads the name of the file the user submitted for uploading
@@ -208,7 +208,7 @@ $startdoc="<html><script>function useCurrentAvatar(){window.parent.fc_chat.newAv
  			if (($extension != "jpg") && ($extension != "jpeg") && ($extension != "png") && ($extension != "gif")) 
  			{
 				//print error message
- 				$errorstring='<br><font color=red face=arial><b>Bad Filetype!</font><font face=arial> Please Try again.</font></b><br><br>';
+ 				$errorstring='<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_bad_file_type)</script></font></b><br><br>';
  				$errors=1;
  			}
  			else
@@ -221,10 +221,10 @@ $startdoc="<html><script>function useCurrentAvatar(){window.parent.fc_chat.newAv
 				//compare the size with the maxim size we defined and print error if bigger
 				if ($size > MAX_FILE_SIZE*1024)
 				{
-					$errorstring='<br><font face=arial><b>You have exceeded the size limit for image files!</font><font face=arial> Please Try again.</font></b><br><br>';
+					$errorstring='<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_exceded_size)</script></font></b><br><br>';
 					$errors=1;
 				}else if (recursive_directory_size(AVATAR_DIRECTORY,FALSE)>MAX_DIR_SIZE){
-					$errorstring='<br><font face=arial><b>The image file repository is full!</font><font face=arial> Please Try again.</font></b><br><br>';
+					$errorstring='<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_full)</script></b><br><br>';
 					$errors=1;
 				}else{
 						
@@ -246,23 +246,23 @@ $startdoc="<html><script>function useCurrentAvatar(){window.parent.fc_chat.newAv
 	
 					if (!$copied) 
 					{
-						$errorstring='<br><font face=arial><b>Upload Unsuccessful!</b></font><font face=arial> Try again</font><br><br>';
+						$errorstring='<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_unsuccessful)</script></b></font><br><br>';
 						$errors=1;
 					}else{
 						//Check height and width
 						if($width<=MAX_WIDTH&&$height<=MAX_HEIGHT){	
 							$base = basename($newname);
-							$startdoc="<html><script>function relayAvatar(){window.parent.fc_chat.newAvatar('".$base."',1,'".$flext."','".$rspln."','".$rspln2."');}function useCurrentAvatar(){window.parent.fc_chat.newAvatar('',3,'".$flext."','".$rspln."','".$rspln2."')};var gravatar;function useGravatar(){ gravatar= document.getElementById('fc_gravatar').value;document.getElementById('fc_gravatar').value='';if(gravatar.indexOf('gravatar.com/')==-1){return false}if(gravatar.indexOf('http://')!=0){gravatar='http://'+gravatar}var tester=new Image();tester.onload=isGood;tester.onerror=isBad;tester.src=gravatar}function isGood(){window.parent.fc_chat.newAvatar('/'+gravatar,4,'".$flext."','".$rspln."','".$rspln2."')}function isBad(){return false}</script><style>BODY {background-color: white;font-family:arial; font-size:12}</style><body onload=\"setTimeout('relayAvatar()',1000);\"><br><div style='border-bottom: #A91905 2px solid;font-size:16'>Upload Avatars</div><div id='wait1' style='margin-top:100px'><center>Please wait...</center></div><div id='content1' style='display:none'>";
+							$startdoc="<html><script>function relayAvatar(){window.parent.fc_chat.newAvatar('".$base."',1,'".$flext."','".$rspln."','".$rspln2."');}function useCurrentAvatar(){window.parent.fc_chat.newAvatar('',3,'".$flext."','".$rspln."','".$rspln2."')};var gravatar;function useGravatar(){ gravatar= document.getElementById('fc_gravatar').value;document.getElementById('fc_gravatar').value='';if(gravatar.indexOf('gravatar.com/')==-1){return false}if(gravatar.indexOf('http://')!=0){gravatar='http://'+gravatar}var tester=new Image();tester.onload=isGood;tester.onerror=isBad;tester.src=gravatar}function isGood(){window.parent.fc_chat.newAvatar('/'+gravatar,4,'".$flext."','".$rspln."','".$rspln2."')}function isBad(){return false}</script><style>BODY {background-color: white;font-family:arial; font-size:12}</style><body onload=\"setTimeout('relayAvatar()',1000);\"><br><div style='border-bottom: #A91905 2px solid;font-size:16'><script>document.write(window.parent.FCChatConfig.txt.av_upload)</script></div><div id='wait1' style='margin-top:100px'><center><script>document.write(window.parent.FCChatConfig.txt.av_wait)</script></center></div><div id='content1' style='display:none'>";
 						}else{
 							$deleted=user_avatar_delete($newname);
-							$errorstring='<br><font face=arial><b>The width and height of the images can be no larger than '.MAX_WIDTH.'px and '.MAX_HEIGHT.'px respectively!</b></font><font face=arial> Try again</font><br><br>';
+							$errorstring='<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.av_width)</script>'.MAX_WIDTH.'<script>document.write(window.parent.FCChatConfig.txt.av_and)</script> '.MAX_HEIGHT.'<script>document.write(window.parent.FCChatConfig.txt.av_respectively)</script></font><br><br>';
 							$errors=1;
 						}
 					}
 				}
 			}
 		}else{
-			$errorstring='<br><font face=arial><b>No image selected.</font><font face=arial> Please Try again.</font></b><br><br>';
+			$errorstring='<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_no_image)</script></font></b><br><br>';
  			$errors=1;
 		}
 	}
@@ -271,28 +271,28 @@ $startdoc="<html><script>function useCurrentAvatar(){window.parent.fc_chat.newAv
 //If no errors registred, print the success message
  if(isset($_POST['Submit']) && !$errors) 
  {
- 	echo $startdoc."<br><font face=arial><b>".$filename."</font><font face=arial> You have successfully uploaded a new avatar!</b></font><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+\"html/Avatars.php?id=".$id."\")'>Back</a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'>Finish</a><br><br>";
+ 	echo $startdoc."<br><font face=arial><b>".$filename."</font><font face=arial> <script>document.write(window.parent.FCChatConfig.txt.av_success)</script></b></font><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+\"html/Avatars.php?id=".$id."\")'><script>document.write(window.parent.FCChatConfig.txt.up_back)</script></a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.FCChatConfig.txt.up_finish)</script></a><br><br>";
  }else{
-	$arr = array(1 => "One", 2 => "Two" ,3 => "Three", 4 => "Four");
+	$arr = array(1 => "av_one", 2 => "av_two" ,3 => "av_three", 4 => "av_four");
 	$i=1;
 	$option1='';
 	$option2='';
   	$option3='';
 	$option4='';
 	if(ALLOW_UPLOADS){
-		$option1 = '<form name="newad" method="post" enctype="multipart/form-data" action=""><br><font color=#444444 face=arial><b>Option '.$arr[$i].':</b></font><font face=arial> Upload a new avatar. The maximum width and height for avatars is '.MAX_HEIGHT.'px.</font><table style="margin-left:20px"><tr><td><input type="file" name="image" ></td></tr><tr><td><input name="Submit" type="submit" value="Upload image"></td></tr><tr><td><font face=arial><small>(jpg,gif,and png only. Maximum size: '.MAX_FILE_SIZE.'KB)</small></font></td></tr></table> </form>';
+		$option1 = '<form name="newad" method="post" enctype="multipart/form-data" action=""><br><font color=#444444 face=arial><b><script>document.write(window.parent.FCChatConfig.txt.'.$arr[$i].')</script></b></font><font face=arial> <script>document.write(window.parent.FCChatConfig.txt.av_upload_new)</script>  '.MAX_HEIGHT.'<script>document.write(window.parent.FCChatConfig.txt.av_px)</script>.</font><br><br><table style="margin-left:20px"><tr><td><input type="file" name="image" ></td></tr><tr><td><input name="Submit" type="submit" value="" id="submitbutton"></td></tr><tr><td><script>document.getElementById("submitbutton").value=window.parent.FCChatConfig.txt.up_upload_button</script><font face=arial><small><script>document.write(window.parent.FCChatConfig.txt.up_upload_types)</script>'.MAX_FILE_SIZE.'KB)</small></font></td></tr></table> </form>';
 		$i++;
 	}
 	if(USE_GRAVATAR){
-		$option2='<br><font color=#444444 face=arial><b>Option '.$arr[$i].':</b></font><font face=arial> Use your <a href="http://gravatar.com" target=_blank>Gravatar</a> avatar.</font><br><br><div style="margin-left:20px"><INPUT id="fc_gravatar" TYPE=text NAME="gravatar" VALUE="" style="width:200px"> <input type="button" name="Submit" value="Submit" onclick="useGravatar();"><br>Link to gravatar Image.<br>(ie http://www.gravatar.com/avatar/1234.png)</div><br>';
+		$option2='<br><font color=#444444 face=arial><b><script>document.write(window.parent.FCChatConfig.txt.'.$arr[$i].')</script></b></font><font face=arial> <script>document.write(window.parent.FCChatConfig.txt.av_use_your)</script> <a href="http://gravatar.com" target=_blank>Gravatar</a> <script>document.write(window.parent.FCChatConfig.txt.av_avatar)</script>.</font><br><br><div style="margin-left:20px"><INPUT id="fc_gravatar" TYPE=text NAME="gravatar" VALUE="" style="width:200px"> <input type="button" name="Submit" value="" id="submitbutton2" onclick="useGravatar();"><script>document.getElementById("submitbutton2").value=window.parent.FCChatConfig.txt.av_submit_button</script><br><script>document.write(window.parent.FCChatConfig.txt.av_gravatar_ex)</script></div><br>';
 		$i++;
 	}
 	if(USE_BOARD_AVATARS){
-		$option3='<br><font color=#444444 face=arial><b>Option '.$arr[$i].':</b></font><font face=arial> Use your current forum avatar.</font><div style="margin-left:20px"><INPUT TYPE=checkbox NAME="current" VALUE="1" onclick="useCurrentAvatar();">Use my current avatar.</div><br>';
+		$option3='<br><font color=#444444 face=arial><b><script>document.write(window.parent.FCChatConfig.txt.'.$arr[$i].')</script></b></font><font face=arial> <script>document.write(window.parent.FCChatConfig.txt.av_forum_avatar)</script>.</font><br><br><div style="margin-left:20px"><INPUT TYPE=checkbox NAME="current" VALUE="1" onclick="useCurrentAvatar();"><script>document.write(window.parent.FCChatConfig.txt.av_use_current)</script>.</div><br>';
 		$i++;
 	}
 	if(USE_GALLERY){
-		$option4='<br><font color=#444444 face=arial><b>Option '.$arr[$i].':</b></font><font face=arial> Select an avatar from the gallery below.</font>';
+		$option4='<br><font color=#444444 face=arial><b><script>document.write(window.parent.FCChatConfig.txt.'.$arr[$i].')</script></b></font><font face=arial> <script>document.write(window.parent.FCChatConfig.txt.av_gallery)</script>. </font><br>';
 		$i++;
 		if(list_files(AVATAR_DIRECTORY)!=0){
 			$option4 = $option4.'<br>'.$filetable;

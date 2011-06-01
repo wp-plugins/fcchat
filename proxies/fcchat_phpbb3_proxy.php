@@ -27,10 +27,10 @@ if (isset($_COOKIE[$config['cookie_name'] . "_u"])){
 */
 
 if (isset($_COOKIE[$config['cookie_name'] . "_sid"])){
-	$session_id = $_COOKIE[$config['cookie_name'] . "_sid"];
+	$session_id = mysql_real_escape_string($_COOKIE[$config['cookie_name'] . "_sid"]);
 }
 if (isset($_GET['sid'])){
-	$session_id = $_GET['sid'];
+	$session_id = mysql_real_escape_string($_GET['sid']);
 }
 
 $request = ( isset($_POST['f']) ) ? (int) $_POST['f'] : 0;

@@ -1,11 +1,9 @@
 jGo.scripts.importClass('jGo.browser.min.js', 'static', this,
 			null);
-if(FCChatConfig.styles.chat_toolbox.external_template!=''){
-	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "templates/" + FCChatConfig.styles.chat_toolbox.external_template + "'></script>");
-}
-if(FCChatConfig.styles.chat_window.external_template!=''){
-	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "templates/" + FCChatConfig.styles.chat_window.external_template + "'></script>");
-}
+
+document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "languages/" + FCChatConfig.language_template + "'></script>");
+document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.style_template + "'></script>");
+
 if(FCChatConfig.flashEnabled=='test'){
 	FCChatConfig.flashEnabled=false;
 	if (navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"])
@@ -23,6 +21,7 @@ if(FCChatConfig.websocketEnabled=='test'){
 		FCChatConfig.websocketEnabled=true;
 	}
 }
+
 if(FCChatConfig.flashEnabled){
 	document.write("<script type='text/javascript' src='" + FCChatConfig.dir + "js/flash.tag.min.js'></script>");
 }else{
@@ -38,10 +37,10 @@ function fc_chat_load_from_link(elem){
 			jQuery("span.fc_chat_link_msg").remove();
 			fc_chat.open_chat_box(1);
 		}else{
-			alert(FCChatConfig.link_not_ready);
+			alert(FCChatConfig.txt.link_not_ready);
 		}
 	}catch(e){
-		alert(FCChatConfig.link_not_ready);
+		alert(FCChatConfig.txt.link_not_ready);
 	}
 };
 

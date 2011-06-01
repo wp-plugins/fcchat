@@ -69,7 +69,7 @@ function numbersonly(myfield, e, dec){
 };
 function saveProfile(){
 	$('saving').style.color='red';
-	$('saving').innerHTML='Saving...';
+	$('saving').innerHTML=window.parent.FCChatConfig.txt.pr_saving;
 	var age = parseInt($('agetxt').value.substr(0,3));
 	if(isNaN(age))age=0;
 	var sex = 0;
@@ -95,7 +95,7 @@ function saveProfile(){
 function finishedSaving(user){
 	if(insave){
 		$('saving').style.color='green';
-		$('saving').innerHTML='Saved!';
+		$('saving').innerHTML=window.parent.FCChatConfig.txt.pr_saved;
 		insave=false;
 	}
 };
@@ -109,10 +109,10 @@ function writeProfile(user,profile){
 			sex=profile.substr(0,1);
 			if(sex=='1'){
 				$('sexradio1').checked=true;
-				$('sex').innerHTML='Male';
+				$('sex').innerHTML=window.parent.FCChatConfig.txt.pr_male;
 			}else if(sex=='2'){
 				$('sexradio2').checked=true;
-				$('sex').innerHTML='Female';
+				$('sex').innerHTML=window.parent.FCChatConfig.txt.pr_female
 			}
 			age=profile.substr(1,3).replace(/^\s*/, "").replace(/\s*$/, "");
 			age=(age==''?'?':age);
@@ -160,71 +160,72 @@ var args = getArgs();
 </HEAD>
 <BODY>
 <br>
-<div style="border-bottom: #A91905 2px solid;font-size:16;color:black"><b><i>User Profile</i></b></div>
+<div style="border-bottom: #A91905 2px solid;font-size:16;color:black"><b><i><script>document.write(window.parent.FCChatConfig.txt.pr_profile)</script></i></b></div>
 <br>
 <script>
 document.write("<div style='width:360px'><img src='" + args['loc'] + "' border=0>&nbsp;")
-document.write("<b>" + args['nm'] + "&nbsp;&nbsp;&nbsp;" +(args['g']=='0'?"<span id='loading' style='color:green;font-style:italic'>(Loading...)</span>":"") + "</b></div><br>");
+document.write("<b>" + args['nm'] + "&nbsp;&nbsp;&nbsp;" +(args['g']=='0'?"<span id='loading' style='color:green;font-style:italic'>("+window.parent.FCChatConfig.txt.pr_loading+")</span>":"") + "</b></div><br>");
 </script>
 
 <div id='displayprofile' style='display:none'>
-<span style='font-style:italic'><b>Age</b></span>
+<span style='font-style:italic'><b><script>document.write(window.parent.FCChatConfig.txt.pr_age)</script></b></span>
 <div id='age' class='infobox' style='font-weight:bold;'>
 ?
 </div>
 <br>
-<span style='font-style:italic'><b>Gender</b></span>
+<span style='font-style:italic'><b><script>document.write(window.parent.FCChatConfig.txt.pr_gender)</script></b></span>
 <div id='sex' class='infobox' style='font-weight:bold;'>
 ?
 </div>
 <br>
-<span style='font-style:italic'><b>Location</b></span>
+<span style='font-style:italic'><b><script>document.write(window.parent.FCChatConfig.txt.pr_location)</script></b></span>
 <div id='location' class='infobox' style='font-weight:bold;'>
 ?
 </div>
 <br>
-<span style='font-style:italic'><b>About Me</b></span>
+<span style='font-style:italic'><b><script>document.write(window.parent.FCChatConfig.txt.pr_about_me)</script></b></span>
 <div id='aboutme' class='infobox' style='font-weight:bold;'>
 &nbsp;
 </div>
 <br><br>
-<span id='noprofile' style='display:none;font-weight:bold;font-style:italic'>Sorry, no profile yet.
+<span id='noprofile' style='display:none;font-weight:bold;font-style:italic'><script>document.write(window.parent.FCChatConfig.txt.pr_sorry)</script>
 </span>
-&nbsp;<a href='javascript:window.parent.fc_chat.rem()'>Return to chat</a>
+&nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.FCChatConfig.txt.pr_return)</script></a>
 </div>
 
 <div id='editprofile' style='display:none'>
-<span style='font-style:italic'><b>Age</b></span>
+<span style='font-style:italic'><b><script>document.write(window.parent.FCChatConfig.txt.pr_age)</script></b></span>
 <div id='edage' class='infobox'>
 <input id='agetxt' type='text' size='3' maxlength='3' onKeyPress="return numbersonly(this, event)">
 </div>
 <br>
-<span style='font-style:italic'><b>Gender</b></span>
+<span style='font-style:italic'><b><script>document.write(window.parent.FCChatConfig.txt.pr_gender)</script></b></span>
 <div id='edsex' class='infobox'>
-Male <INPUT TYPE=radio  id='sexradio1' name='sexradio' VALUE='1'> Female <INPUT TYPE=radio  id='sexradio2' name='sexradio' VALUE='2'>
+<script>document.write(window.parent.FCChatConfig.txt.pr_male)</script> <INPUT TYPE=radio  id='sexradio1' name='sexradio' VALUE='1'> <script>document.write(window.parent.FCChatConfig.txt.pr_female)</script> <INPUT TYPE=radio  id='sexradio2' name='sexradio' VALUE='2'>
 </div>
 <br>
-<span style='font-style:italic'><b>Location</b> (50 chars)</span>
+<span style='font-style:italic'><b><script>document.write(window.parent.FCChatConfig.txt.pr_location)</script></b> (50 <script>document.write(window.parent.FCChatConfig.txt.pr_chars)</script>)</span>
 <div id='edlocation' class='infobox'>
 <input id='locationtxt' type='text' size='30' maxlength='50' >
 </div>
 <br>
-<span style='font-style:italic'><b>About Me</b> (500 chars)</span>
+<span style='font-style:italic'><b><script>document.write(window.parent.FCChatConfig.txt.pr_about_me)</script></b> (500 <script>document.write(window.parent.FCChatConfig.txt.pr_chars)</script>)</span>
 <div id='edaboutme' class='infobox'>
 <textarea id='aboutmetxt'  style='margin-right:5px;width:340px;height:50px'></textarea>
 </div>
 <br>
-<input id='saveprofile' type='button' name='saveprofile' value='Save Profile' Onclick='saveProfile()'>
+<input id='saveprofile' type='button' name='saveprofile' value='' Onclick='saveProfile()'>
+<script>document.getElementById("saveprofile").value=window.parent.FCChatConfig.txt.pr_save</script>
 &nbsp;&nbsp;<span id='saving' style='color:red;font-weight:bold;font-style:italic'></span>
-<br><br><center><a href='javascript:window.parent.fc_chat.rem()'>Return to chat</a></center>
+<br><br><center><a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.FCChatConfig.txt.pr_return)</script></a></center>
 </div>
 
 <div id='guest' style='display:none'>
-<br><br><span style='color:black'>Sorry, profiles are not available for guest accounts.</span> &nbsp;<a href='javascript:window.parent.fc_chat.rem()'>Return to chat</a>
+<br><br><span style='color:black'><script>document.write(window.parent.FCChatConfig.txt.pr_no_guest)</script>.</span> &nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.FCChatConfig.txt.pr_return)</script></a>
 </div>
 
 <div id='ownguest' style='display:none'>
-<br><br><span style='color:black'>Please sign in to create a profile.</span> &nbsp;<a href='javascript:window.parent.fc_chat.rem()'>Return to chat</a>
+<br><br><span style='color:black'><script>document.write(window.parent.FCChatConfig.txt.pr_sign_in)</script>.</span> &nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.FCChatConfig.txt.pr_return)</script></a>
 </div>
 
 <script>

@@ -1,7 +1,7 @@
 <?php
 //include the configuration file
 include('config/php_config.php');
-echo "<html><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 2px solid;font-size:16'><b><i>Share Images</i></b></div><form name='newad' method='post' enctype='multipart/form-data' action=''>";
+echo "<html><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 2px solid;font-size:16'><b><i><script>document.write(window.parent.FCChatConfig.txt.up_title)</script></i></b></div><form name='newad' method='post' enctype='multipart/form-data' action=''>";
 //This function reads the extension of the file. It is used to determine if the file  is an image by checking the extension.
 function getExtension($str) {
          $i = strrpos($str,".");
@@ -104,7 +104,7 @@ $newname='';
 	//reads the user
 	$id=$_GET['id'];
 	if(!is_numeric($id)){
-		echo '<br><font face=arial><b>Invalid User!</font><font face=arial> Please Try again.</font></b><br>';
+		echo '<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_invalid_user)</script></font></b><br>';
 		$errors=1;
 	}else{
  		//reads the name of the file the user submitted for uploading
@@ -117,7 +117,7 @@ $newname='';
  			//get the extension of the file in a lower case format
 			if(strpos($filename,"[[")>=1 || strpos($filename,"]]")>=1){
 				//print error message
- 				echo '<br><font face=arial><b>Image Name may not contain [[ or ]].</font><font face=arial> Please Try again.</font></b><br>';
+ 				echo '<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_may_not_contain)</script></font></b><br>';
  				$errors=1;
 			}else{
   				$extension = getExtension($filename);
@@ -127,7 +127,7 @@ $newname='';
  				if (($extension != "jpg") && ($extension != "jpeg") && ($extension != "png") && ($extension != "gif")) 
  				{
 					//print error message
- 					echo '<br><font face=arial><b>Bad Filetype!</font><font face=arial> Please Try again.</font></b><br>';
+ 					echo '<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_bad_file_name)</script></font></b><br>';
  					$errors=1;
  				}
  				else
@@ -140,10 +140,10 @@ $newname='';
 					//compare the size with the maxim size we defined and print error if bigger
 					if ($size > MAX_FILE_SIZE*1024)
 					{
-						echo '<br><font face=arial><b>You have exceeded the size limit for image files!</font><font face=arial> Please Try again.</font></b><br>';
+						echo '<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_exceded_size)</script></font></b><br>';
 						$errors=1;
 					}else if (recursive_directory_size(IMAGES_DIRECTORY,FALSE)>MAX_DIR_SIZE){
-						echo '<br><font face=arial><b>The image file repository is full!</font><font face=arial> Please Try again.</font></b><br>';
+						echo '<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_full)</script></font></b><br>';
 						$errors=1;
 					}else{
 						
@@ -166,14 +166,14 @@ $newname='';
 	
 						if (!$copied) 
 						{
-							echo '<br><font face=arial><b>Upload Unsuccessful!</b></font><font face=arial> Try again</font><br>';
+							echo '<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_unsuccessful)</script></b></font><br>';
 							$errors=1;
 						}
 					}
 				}
 			}
 		}else{
-			echo '<br><font face=arial><b>No image selected.</font><font face=arial> Please Try again.</font></b><br>';
+			echo '<br><font face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_no_image)</script></font></b><br>';
  				$errors=1;
 		}
 	}
@@ -182,14 +182,14 @@ $newname='';
 //If no errors registred, print the success message
  if(isset($_POST['Submit']) && !$errors) 
  {
- 	echo "<br><font color=#444444 face=arial><b>".$filename."</font><font color=#444444 face=arial> Uploaded Successfully!</b><br><br><b>Step 2:</b></font><font face=arial> In order to use this image in your chat messages, simply copy and paste the following...<br><br><span style='font-size:16px'><b>[[".$filename."]]</b></span> <br><br>...into the chat box below.";
+ 	echo "<br><font color=#444444 face=arial><b>".$filename."</font><font color=#444444 face=arial> <script>document.write(window.parent.FCChatConfig.txt.up_success)</script></b><br><br><b><script>document.write(window.parent.FCChatConfig.txt.up_step2)</script></b></font><font face=arial> <script>document.write(window.parent.FCChatConfig.txt.up_copy)</script><br><br><span style='font-size:16px'><b>[[".$filename."]]</b></span> <br><br><script>document.write(window.parent.FCChatConfig.txt.up_into)</script>";
  }else{
-	echo '<br><font color=#444444 face=arial><b>Step One:</b></font><font face=arial> Upload the image that you would like to use in your chat messages.</font><table><tr><td><input type="file" name="image"></td></tr>
-<tr><td><input name="Submit" type="submit" value="Upload image"></td></tr><tr><td><font face=arial><small>(jpg,gif,and png only. Maximum size: '.MAX_FILE_SIZE.'KB)</small></font></td></tr></table> </form><br>';
+	echo '<br><font color=#444444 face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_step1)</script></b></font><font face=arial> <script>document.write(window.parent.FCChatConfig.txt.up_upload)</script></font><table><tr><td><input type="file" name="image"></td></tr>
+<tr><td><input name="Submit" id="submitbutton" type="submit" value=""></td></tr><tr><td><font face=arial><small><script>document.getElementById("submitbutton").value=window.parent.FCChatConfig.txt.up_upload_button</script><script>document.write(window.parent.FCChatConfig.txt.up_upload_types)</script> '.MAX_FILE_SIZE.'KB)</small></font></td></tr></table> </form><br>';
  }
  if(isset($_POST['Submit']) && !$errors) 
  {
-  	echo "<br><br><font color=#444444 face=arial> Please Note:</b></font><font face=arial>  You may include a maximum of three images in any single chat message.</small><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+\"html/Upload.php?id=".$id."\")'>Back</a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'>Finish</a><br><br>";
+  	echo "<br><br><font color=#444444 face=arial> <script>document.write(window.parent.FCChatConfig.txt.up_please_note)</script></b></font><font face=arial>  <script>document.write(window.parent.FCChatConfig.txt.up_max_images)</script></small><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+\"html/Upload.php?id=".$id."\")'><script>document.write(window.parent.FCChatConfig.txt.up_back)</script></a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.FCChatConfig.txt.up_finish)</script></a><br><br>";
  }
  ?>
 <div style="border-bottom: #A91905 2px solid;font-size:10">Powered by <A HREF="http://www.php.net/" style="color:black">PHP</A></div></body><html>
