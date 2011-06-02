@@ -42,7 +42,7 @@ Customizable style template
 Administration/moderation panel
 
 
-Service activation -- Service activation comes with a 7 day free trial period. If you wish to continue the service, a small monthly fee applies.
+Service activation -- Service activation comes with a 3 day free trial period. If you wish to continue the service, a small monthly fee applies.
 
 
 IMPORTANT: Those of you who are upgrading from a previous version must obtain a new chat ID in order to use version 2.1.8.  In addition, after upgrading, you must clear your browser cache and cookies or the chat may not connect properly.
