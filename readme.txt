@@ -11,7 +11,7 @@ A full featured, real time chat and video conferencing plugin.
 
 == Description ==
 
-FCChat displays a highly customizable, full featured, real time chat in the sidebar. This version of FCChat has been modified for use with wordpress.
+FCChat displays a highly customizable, full featured, real time chat in the sidebar. 
 
 NEW IN VERSION 2.1.12
 
@@ -42,7 +42,7 @@ Customizable style template
 Administration/moderation panel
 
 
-Service activation -- Service activation comes with a 7 day free trial period. If you wish to continue the service, a small monthly fee applies.
+Service activation -- Service activation comes with a 3 day free trial period. If you wish to continue the service, a small monthly fee applies.
 
 
 IMPORTANT: Those of you who are upgrading from a previous version must obtain a new chat ID in order to use version 2.1.8.  In addition, after upgrading, you must clear your browser cache and cookies or the chat may not connect properly.
@@ -56,6 +56,20 @@ IMPORTANT: Those of you who are upgrading from a previous version must obtain a 
 1. Follow the Steps listed in the dialog in order to activate the chat service.
 1. Rate the plugin and verify that it works at wordpress.org.
 1. Leave a comment regarding bugs, feature request, cocktail recipes at http://www.fastcatsoftware.com
+
+
+
+
+= Upgrading from a previous version (This applies to version 2.1.12 and later)=
+
+When you upgrade to a new version, any customizations you made to the chat will be erased. In order to save those changes, do the following:
+
+1. Make backup copies of any files that you have altered. You may wish to make backups of the following folders: (fcchat/config, fcchat/languages, fcchat/styles, fcchat/html/config). Place them in a safe place where they will not be deleted. 
+1. Next uninstall the old version and install the current version. 
+1. Finally, manually copy the changes you made to the old files into the current version's files. Do not replace the new files with the old files, as the structure of the new files may have changed; but instead, use a text editor to make the changes line by line.
+
+Also, when you upgrade to a new version, it is not required that you reactivate the chat unless you are expressly told to do so.
+
 
 == Frequently Asked Questions ==
 
