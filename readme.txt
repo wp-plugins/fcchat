@@ -166,6 +166,11 @@ Fixed a bug which was causing the video chat window to open in the wrong locatio
 
 Added support for additional languages. Removed the style template from the config file, and created separate folders for language and style templates. Added a text prompt to the chat message box.
 
+= 2.1.12.1 =
+
+Fixed a small bug with the after_days text variable.
+
+
 == Upgrade Notice ==
 
 = 2.1.12 =

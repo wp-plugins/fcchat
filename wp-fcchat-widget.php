@@ -90,7 +90,7 @@ function fcchat_widget_init() {
 		);
         }
 
-	//Echo widget to sidebar
+	  //Echo widget to sidebar
         function fcchat_widget($args) {
   		extract($args);
 		$options = array_merge(fcchat_widget_options(), get_option('fcchat_widget'));
@@ -99,7 +99,7 @@ function fcchat_widget_init() {
   		echo $before_title . $options['title'] . $after_title;
   		echo '<div id="fc_package"><script type="text/javascript" src="'.$plugin_url.'/js/install.prep.js"></script><script type="text/javascript" >FCChatConfig.chat_id="'. $options['chatid'] . '";FCChatConfig.host="'. $options['host'] . '";</script></div><script type="text/javascript" src="'.$plugin_url.'/js/embed.js"></script>';
   		echo $after_widget;
-	}
+	  }
                 
         //widget control form
         function fcchat_widget_control() {
