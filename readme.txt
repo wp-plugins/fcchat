@@ -170,6 +170,10 @@ Added support for additional languages. Removed the style template from the conf
 
 Fixed a small bug with the after_days text variable.
 
+= 2.1.12.2 =
+
+Fixed a small bug with the error_msg text variable.
+
 
 == Upgrade Notice ==
 
