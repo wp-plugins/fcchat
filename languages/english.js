@@ -248,7 +248,7 @@ FCChatConfig.txt={
 	please_wait:"Please wait",
 	loading_msg:"<b>Connecting, please wait...</b>",
 	link_not_ready:"Not Ready... You may use the chat-box, located in the sidebar, to enter the chat rooms.",
-	config_txt_error_msg:"Sorry...An Error Occurred. Please Refresh",
+	error_msg:"Sorry...An Error Occurred. Please Refresh",
 	
 	//Upload page
 	up_title:"Share Images",
