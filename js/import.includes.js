@@ -37,10 +37,10 @@ function fc_chat_load_from_link(elem){
 			jQuery("span.fc_chat_link_msg").remove();
 			fc_chat.open_chat_box(1);
 		}else{
-			alert(FCChatConfig.txt.link_not_ready);
+			alert(fc_chat.textSetter(160));
 		}
 	}catch(e){
-		alert(FCChatConfig.txt.link_not_ready);
+		alert(fc_chat.textSetter(160));
 	}
 };
 

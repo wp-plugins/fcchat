@@ -26,12 +26,12 @@ avatars=false
 function OutputForm()
 %>
     <form name="frmSend" method="POST" enctype="multipart/form-data" action="" onSubmit="return onSubmitForm();">
-	<br><font color= #444444><B><script>document.write(window.parent.FCChatConfig.txt.up_step1)</script></B> </font> <script>document.write(window.parent.FCChatConfig.txt.up_upload)</script><br><br>
+	<br><font color= #444444><B><script>document.write(window.parent.fc_chat.textSetter(172))</script></B> </font> <script>document.write(window.parent.fc_chat.textSetter(176))</script><br><br>
     <input name="attach1" type="file" size=35><br>
     <br> 
     <input style="margin-top:4" type=submit id="submitbutton" value=""><br><br>
-<script>document.getElementById("submitbutton").value=window.parent.FCChatConfig.txt.up_upload_button</script>
-    <script>document.write(window.parent.FCChatConfig.txt.up_upload_types)</script> <%=MAX_IMAGE_SIZE%>KB)
+<script>document.getElementById("submitbutton").value=window.parent.fc_chat.textSetter(177)</script>
+    <script>document.write(window.parent.fc_chat.textSetter(178))</script> <%=MAX_IMAGE_SIZE%>KB)
     </form>
 <%
 end function
@@ -81,13 +81,13 @@ function SaveFiles
     if (UBound(ks) <> -1) then
         if errorstring = "" then
        		for each fileKey in Upload.UploadedFiles.keys
-            		SaveFiles = "<br><font color=#444444 face=arial><b>" & Upload.UploadedFiles(fileKey).FileName & " (" & Upload.UploadedFiles(fileKey).Length & " bytes)</font><font color=#444444 face=arial> <script>document.write(window.parent.FCChatConfig.txt.up_success)</script></b><br><br><b><script>document.write(window.parent.FCChatConfig.txt.up_step2)</script></b></font><font face=arial> <script>document.write(window.parent.FCChatConfig.txt.up_copy)</script><br><br><font face=arial><span style='font-size:16px'><b> [[" & Upload.UploadedFiles(fileKey).FileName & "]]</b></span> </font><br><br><script>document.write(window.parent.FCChatConfig.txt.up_into)</script><br><br><font color=#444444 face=arial><b><script>document.write(window.parent.FCChatConfig.txt.up_please_note)</script></b></font><font face=arial> <script>document.write(window.parent.FCChatConfig.txt.up_max_images)</script><br></small><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+""html/Upload.asp?id=" & userID & """)'><script>document.write(window.parent.FCChatConfig.txt.up_back)</script></a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.FCChatConfig.txt.up_finish)</script></a><br><br>"
+            		SaveFiles = "<br><font color=#444444 face=arial><b>" & Upload.UploadedFiles(fileKey).FileName & " (" & Upload.UploadedFiles(fileKey).Length & " bytes)</font><font color=#444444 face=arial> <script>document.write(window.parent.fc_chat.textSetter(171))</script></b><br><br><b><script>document.write(window.parent.fc_chat.textSetter(173))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(174))</script><br><br><font face=arial><span style='font-size:16px'><b> [[" & Upload.UploadedFiles(fileKey).FileName & "]]</b></span> </font><br><br><script>document.write(window.parent.fc_chat.textSetter(175))</script><br><br><font color=#444444 face=arial><b><script>document.write(window.parent.fc_chat.textSetter(179))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(180))</script><br></small><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+""html/Upload.asp?id=" & userID & """)'><script>document.write(window.parent.fc_chat.textSetter(181))</script></a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.fc_chat.textSetter(182))</script></a><br><br>"
         	next
 	else
-		SaveFiles = "<br><b><script>document.write(window.parent.FCChatConfig.txt." & errorstring & ")</script></b>"
+		SaveFiles = "<br><b><script>document.write(window.parent.fc_chat.textSetter(" & errorstring & "))</script></b>"
 	end if
     else
-        SaveFiles = "<br><b><script>document.write(window.parent.FCChatConfig.txt.up_not_valid)</script></b>"
+        SaveFiles = "<br><b><script>document.write(window.parent.fc_chat.textSetter(168))</script></b>"
         errorstring="-1"
     end if
 end function

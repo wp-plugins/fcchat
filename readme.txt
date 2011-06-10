@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.0.1
-Stable tag: 2.1.12
+Stable tag: 2.1.13
 
 A full featured, real time chat and video conferencing plugin.
 
@@ -13,7 +13,7 @@ A full featured, real time chat and video conferencing plugin.
 
 FCChat displays a highly customizable, full featured, real time chat in the sidebar. 
 
-NEW IN VERSION 2.1.12
+NEW IN VERSION 2.1.13
 
 Multi language support
 
@@ -66,7 +66,7 @@ When you upgrade to a new version, any customizations you made to the chat will 
 
 1. Make backup copies of any files that you have altered. You may wish to make backups of the following folders: (fcchat/config, fcchat/languages, fcchat/styles, fcchat/html/config). Place them in a safe place where they will not be deleted. 
 1. Next uninstall the old version and install the current version. 
-1. Finally, manually copy the changes you made to the old files into the current version's files. Do not replace the new files with the old files, as the structure of the new files may have changed; but instead, use a text editor to make the changes line by line.
+1. Finally, manually copy the changes you made to the old files into the current version's files. Do not replace the new files with the old files, as the structure of the new files may have changed; but instead, use the wordpress file editor to make the changes line by line.
 
 Also, when you upgrade to a new version, it is not required that you reactivate the chat unless you are expressly told to do so.
 
@@ -174,11 +174,15 @@ Fixed a small bug with the after_days text variable.
 
 Fixed a small bug with the error_msg text variable.
 
+= 2.1.13 =
+
+Reorganized the language template. Fixed a bug which was preventing ie9 from loading the chat in integrated mode. Fixed a bug in which the profile page was receiving a 403 error on some sites.
+
 
 == Upgrade Notice ==
 
-= 2.1.12 =
+= 2.1.13 =
 
-*Version 2.1.12 requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
+*Version 2.1.13 requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
 
 To upgrade from any previous version to the current version, first, make backup copies of the 2 configuration files in your old installation (fcchat/config/config.js, fcchat/html/config/config.php) and place them in a safe place where they will not be deleted. Next uninstall the old version and install the current version. Finally, copy your old configuration setting manually to the current version's configuration files. Of course, if you made no alterations to the config files in your previous installation, you may just simply install the new version. Refresh your browser's cache and cookies after upgrading to insure that the browser is displaying the new installation correctly.

@@ -78,16 +78,16 @@ Class FreeASPUpload
 					Set fl1 = objFSO.GetFile(fileItem.Path)
 					If gfxSpex(fl1.Path, w, h, c, strType) = true Then
           					If w>MAX_WIDTH Then
-							errorstring="av_width"
+							errorstring="187"
 							del=1
 						Else
 							If h>MAX_HEIGHT Then
-								errorstring="av_width"
+								errorstring="187"
 								del=1
 							End If
 						End If
      					Else
-       				   		errorstring="up_bad_file_type"
+       				   		errorstring="165"
 						del=1
        					End If
 				End If
@@ -111,24 +111,24 @@ Class FreeASPUpload
 		MyPath = Server.MapPath("images")
 		Set MyFolder = MyFileSize.GetFolder(MyPath)
 		If MyFolder.Size > MAX_DIR_SIZE Then
-			reason="up_full"
+			reason="167"
 		End If
 		If instr(1,fileItem.FileName,"[[")=0 and instr(1,fileItem.FileName,"]]")=0 Then
 			checkFiles=0
 		Else
-			reason="up_may_not_contain"
+			reason="164"
 		End If
 		If fileItem.ContentType="image/gif" or fileItem.ContentType="image/pjpeg" or fileItem.ContentType="image/jpeg" or fileItem.ContentType="image/jpg" Then
 			checkFiles=0
 		Else
-			reason="up_bad_file_type"
+			reason="165"
 		End If
 		If (fileItem.Length)>MAX_FILE_SIZE Then
-			reason="up_exceded_size"
+			reason="166"
 		End If
 		userID=Request.queryString("ID")
 		if(userID="" Or Not isNumeric(userID)) Then
-			reason="up_invalid_user"
+			reason="163"
 		End If
 		If reason="" Then
 			checkFiles=0

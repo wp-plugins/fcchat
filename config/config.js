@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.1.12",
+	version:"2.1.13",
 	subversion:"wp",
 
 	//BASIC GREETINGS

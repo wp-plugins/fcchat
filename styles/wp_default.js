@@ -64,8 +64,7 @@ FCChatConfig.styles={
 		new_message_alert:{
 			top:80,
 			left:3,
-			css:"font-family:arial;font-size:12px;font-weight:bold;color:gray;",
-			text:"New message...Roll over to expand."
+			css:"font-family:arial;font-size:12px;font-weight:bold;color:gray;"
 		},
 		login_panel:{
 			top:32,

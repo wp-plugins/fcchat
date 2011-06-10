@@ -1,7 +1,7 @@
 <?php
 	/* Modified version of import.config.js for wordpress
 	*/
-	$chars = array(">", "<" , ";");
+	$chars = array(">", "<" , "||period||");
 	$repl = array("", "" , ".");
 ?>
 //Path to FCPlayer Folder (must end in a backslash)' .

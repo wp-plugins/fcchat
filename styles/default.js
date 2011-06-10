@@ -22,12 +22,12 @@
 
 FCChatConfig.styles={
 	chat_toolbox:{
-		absolute_positioning:true,
+		absolute_positioning:false,
 		top:0,
 		left:310,
 		width:400,
 		height:40,
-		css:"border:3px solid #aaaaaa;color:transparent;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px",
+		css:"border:0px solid #aaaaaa;color:transparent;",
 		buttons:{
 			default_css:"border:1px solid #000000; padding:4px 8px; font:12px arial;",
 			states:{
@@ -64,8 +64,7 @@ FCChatConfig.styles={
 		new_message_alert:{
 			top:27,
 			left:3,
-			css:"font-family:arial;font-size:12px;font-weight:bold;color:gray;",
-			text:"New message...Roll over to expand."
+			css:"font-family:arial;font-size:12px;font-weight:bold;color:gray;"
 		},
 		login_panel:{
 			top:35,
