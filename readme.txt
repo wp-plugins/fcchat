@@ -13,8 +13,9 @@ A full featured, real time chat and video conferencing plugin.
 
 FCChat displays a highly customizable, full featured, real time chat in the sidebar. 
 
-NEW IN VERSION 2.1.13
+NEW IN VERSION 2.1.13.1
 
+Web based file editor
 Multi language support
 
 FEATURES INCLUDE:
@@ -178,6 +179,9 @@ Fixed a small bug with the error_msg text variable.
 
 Reorganized the language template. Fixed a bug which was preventing ie9 from loading the chat in integrated mode. Fixed a bug in which the profile page was receiving a 403 error on some sites.
 
+= 2.1.13.1 =
+
+Added the file editor to the administration panel. Made small changes to the default style.
 
 == Upgrade Notice ==
 

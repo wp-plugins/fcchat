@@ -29,7 +29,7 @@ FCChatConfig.styles={
 		height:90,
 		css:"border:0px solid #aaaaaa;color:transparent;",
 		buttons:{
-			default_css:"border:1px solid #000000; padding:4px 8px; font:12px arial;",
+			default_css:"border:1px solid #000000; padding:4px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 			states:{
 				link_css:"color:black",
 				hover_css:"color:purple",
@@ -55,7 +55,7 @@ FCChatConfig.styles={
 				shift_page_down:0,
 				shift_page_right:0
 			},
-			css:"border:1px solid #000000;background-color:#eeeeee",
+			css:"border:2px solid #aaaaaa;background-color:#eeeeee;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px",
 			text:{
 				message_text_css:"font-family:arial;font-size:8pt;color:black",
 				screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700"
@@ -84,7 +84,7 @@ FCChatConfig.styles={
 			border:"1px solid #aaaaaa",
 			opacity:.85,
 			send_to_room_button:{
-				default_css:"border:1px solid silver; padding:2px 8px; font:10px arial;",
+				default_css:"border:1px solid silver; padding:2px 8px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
 					link_css:"color:white",
 					hover_css:"color:lightblue",
@@ -92,7 +92,7 @@ FCChatConfig.styles={
 				}
 			},
 			send_private_button:{
-				default_css:"border:1px solid silver; padding:2px 12px 2px 11px; font:10px arial;",
+				default_css:"border:1px solid silver; padding:2px 12px 2px 11px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
 					link_css:"color:white",
 					hover_css:"color:lightblue",
@@ -100,7 +100,7 @@ FCChatConfig.styles={
 				}
 			},
 			other_buttons:{
-				default_css:"border:1px solid silver; padding:2px 8px; font:12px arial;",
+				default_css:"border:1px solid silver; padding:2px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
 					link_css:"color:white",
 					hover_css:"color:lightblue",

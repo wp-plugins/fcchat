@@ -128,17 +128,21 @@
 			left :left + "px"
 		});
 		var background = "background-color:#" + _backgroundColor + ";";
+		var top_left = "border-top-left-radius:";
+		var top_right = "border-top-right-radius:";
+		var bottom_left = "border-bottom-left-radius:";
+		var bottom_right = "border-bottom-right-radius:";
 		if (_backgroundColor == '') {
 			background = "background-image:url(" + _backgroundImage + ");";
 		}
 		this.frame[0].innerHTML = "<table id='jGo_inner" + id
 				+ "' cellpadding=0 cellspacing=0 class='jGo_inner' >" + "<tr>"
 				+ "<td id='jGo_dragtl" + id + "' class='jGo_tl_" + winstyle
-				+ "' style='" + style + "'>" + c[0] + "</td>"
+				+ "' style='-moz-"+top_left+"5px;-webkit-"+top_left+"5px;"+top_left+"5px;" + style + "'>" + c[0] + "</td>"
 				+ "<td id='jGo_dragtm" + id + "' class='jGo_tm_" + winstyle
 				+ "' style='" + style + "'>" + c[1] + "</td>"
 				+ "<td id='jGo_dragtr" + id + "' class='jGo_tr_" + winstyle
-				+ "' style='" + style + "'>" + c[2] + "</td>" + "</tr>"
+				+ "' style='-moz-"+top_right+"5px;-webkit-"+top_right+"5px;"+top_right+"5px;" + style + "'>" + c[2] + "</td>" + "</tr>"
 				+ "<tr>" + "<td id='" + id_prefix + "rl" + id
 				+ "' class='jGo_rl_" + winstyle + "' style='" + style + "'>"
 				+ c[3] + "</td>" + "<td>" + "<div id='jGo_cnt_wrap" + id
@@ -147,11 +151,11 @@
 				+ "</div>" + "</td>" + "<td id='" + id_prefix + "rr" + id
 				+ "' class='jGo_rr_" + winstyle + "' style='" + style + "'>"
 				+ c[4] + "</td>" + "</tr>" + "<tr>" + "<td id='" + id_prefix
-				+ "bl" + id + "' class='jGo_bl_" + winstyle + "' style='"
+				+ "bl" + id + "' class='jGo_bl_" + winstyle + "' style='-moz-"+bottom_left+"4px;-webkit-"+bottom_left+"4px;"+bottom_left+"4px;"
 				+ style + "'>" + c[5] + "</td>" + "<td id='" + id_prefix + "bm"
 				+ id + "' class='jGo_bm_" + winstyle + "' style='" + style
 				+ "'>" + c[6] + "</td>" + "<td id='" + id_prefix + "br" + id
-				+ "' class='jGo_br_" + winstyle + "' style='" + style + "'>"
+				+ "' class='jGo_br_" + winstyle + "' style='-moz-"+bottom_right+"4px;-webkit-"+bottom_right+"4px;"+bottom_right+"4px;" + style + "'>"
 				+ c[7] + "</td>" + "</tr>" + "</table>";
 		if ($.browser.version == '6.0' && $.browser.msie) {
 			this.frame[0].style.background = '';
