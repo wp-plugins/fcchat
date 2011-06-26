@@ -1,8 +1,8 @@
 <?php
 	/* Modified version of import.config.js for wordpress
 	*/
-	$chars = array(">", "<" , "||period||");
-	$repl = array("", "" , ".");
+	$chars = array(">", "<" , "||period||","||protocol||");
+	$repl = array("", "" , ".","http");
 ?>
 //Path to FCPlayer Folder (must end in a backslash)' .
 var fc_chat_path = "<?php echo str_replace($chars, $repl, $_GET['path']); ?>/";
