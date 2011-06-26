@@ -32,8 +32,8 @@ function add_header_script(){
         if (!is_admin()){
 		    wp_register_script('fc-chat-import-google.loader', $plugin_url.'/js/import.google.loader.js');
                 wp_enqueue_script('fc-chat-import-google.loader');
-		    wp_register_script('fc-chat-import-config', $plugin_url.'/js/import.config.php?path='.str_replace(".", "||period||", $plugin_url).'&t=1');
-                wp_enqueue_script('fc-chat-import-config');
+		    wp_register_script('fc-chat-import-config', $plugin_url.'/js/import.config.php?path='.str_ireplace(array(".","http"), array("||period||","||protocol||"), $plugin_url).'&t=1');
+               wp_enqueue_script('fc-chat-import-config');
 		    wp_register_script('fc-chat-import-libs', $plugin_url.'/js/import.libs.js');
                 wp_enqueue_script('fc-chat-import-libs');
 		    wp_register_script('fc-chat-import-includes', $plugin_url.'/js/import.includes.js');

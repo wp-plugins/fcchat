@@ -13,7 +13,7 @@ A full featured, real time chat and video conferencing plugin.
 
 FCChat displays a highly customizable, full featured, real time chat in the sidebar. 
 
-NEW IN VERSION 2.1.13.2
+NEW IN VERSION 2.1.13.3
 
 Web based file editor - 
 Multi language support - new Spanish template
@@ -186,6 +186,10 @@ Added the file editor to the administration panel. Made small changes to the def
 = 2.1.13.2 =
 
 Added the Spanish language template. This is a machine translation so will need a little touch up. Fixed a few minor bugs related to the presentation of alternate languages.
+
+= 2.1.13.3 =
+
+Some site were rejecting the path variable in the url to import.config.php. Created a patch for this
 
 == Upgrade Notice ==
 
