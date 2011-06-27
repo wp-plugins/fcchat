@@ -15,8 +15,8 @@ FCChat displays a highly customizable, full featured, real time chat in the side
 
 NEW IN VERSION 2.1.13.3
 
-Web based file editor - 
-Multi language support - new Spanish template
+Web based file editor -- 
+Multi language support -- new Spanish template
 
 FEATURES INCLUDE:
 
