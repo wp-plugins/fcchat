@@ -165,7 +165,7 @@ var args = getArgs();
 <div style="border-bottom: #A91905 2px solid;font-size:16;color:black"><b><i><script>document.write(window.parent.fc_chat.textSetter(207))</script></i></b></div>
 <br>
 <script>
-document.write("<div style='width:360px'><img src='" + decodeURIComponent(args['loc']).replace(/\|\|period\|\|/g, '.') + "' border=0>&nbsp;")
+document.write("<div style='width:360px'><img src='" + decodeURIComponent(args['loc']).replace(/\|\|period\|\|/g, '.').replace(/\|\|protocol\|\|/g, 'http') + "' border=0>&nbsp;")
 document.write("<b>" + args['nm'] + "&nbsp;&nbsp;&nbsp;" +(args['g']=='0'?"<span id='loading' style='color:green;font-style:italic'>("+window.parent.fc_chat.textSetter(208)+")</span>":"") + "</b></div><br>");
 </script>
 

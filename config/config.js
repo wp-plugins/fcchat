@@ -1,5 +1,5 @@
 /*
- * IMPORTANT-READ THIS: In all config variables 
+ * IMPORTANT-READ THIS: In all config variables
  * EXCEPT smileys you must escape any double quotes
  * with a backslash. ie, "hello" must be encoded as \"hello\"
  */
@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.1.13",
+	version:"2.1.14",
 	subversion:"wp",
 
 	//BASIC GREETINGS
@@ -92,6 +92,13 @@ var FCChatConfig = {
 	video_window1_color:"darkOliveGreen",
 	video_window2_color:"darkOliveGreen",
 	show_a_v_icon:false,
+	
+	//TRANSLATOR
+	trans_enabled:true,
+	trans_default_on:false,
+	trans_default_language_code:"en",
+	trans_url:"http://api.microsofttranslator.com/V2/Ajax.svc/",
+    trans_appid:"4690BC25149C7E7E98E4A356B8C807D6A7132424",
 	
 	//COOKIES
 	user_cookie:"fc_UID", 

@@ -44,12 +44,12 @@ FCChatConfig.txt={
 	t6: "Open Chat",
 	t7: "Help",
 	t8: "Close",
-	close_width: 52,
+	close_width: 51,
 	t9: "Options",
 	options_width: 61,
 	t10: "Send to Room",
 	t11: "Send Private",
-	send_buttons_width: 97,
+	send_buttons_width: 95,
 	
 	//Section Headings
 	t12: "Chat Room",
@@ -138,6 +138,12 @@ FCChatConfig.txt={
 	t81: "Font Size",
 	t82: "Font Color",
 	
+	t255:"Translator",
+	t256:"Translate incoming chats to: ",
+	
+	//Language Names: must match language_codes in the current style
+	t257: ["translator off","Arabic","Bulgarian","Catalan","Chinese Simplified","Chinese Traditional","Czech","Danish","Dutch","English","Estonian","Finnish","French","German","Greek","Haitian Creole","Hebrew","Hungarian","Indonesian","Italian","Japanese","Korean","Latvian","Lithuanian","Norwegian","Polish","Portuguese","Romanian","Russian","Slovak","Slovenian","Spanish","Swedish","Thai","Turkish","Ukrainian","Vietnamese"],
+	
 	//Color Names: must match color_values in the current style
 	t83: ["default","black","blue","red","purple","green","yellow","orange","white"], 
 	
@@ -189,7 +195,7 @@ FCChatConfig.txt={
 	t119: "**Comment Erased**",
 	t120: "<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Loading Chat...Please wait...</font></b>",
 	t121: "<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Loading Page...Please wait...</font></b>",
-	t122: "<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Loading Room...Please wait...</font>",
+	t122: "<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Loading Room...Please wait...</font></b>",
 	
 	//Account types
 	t123: "mod",

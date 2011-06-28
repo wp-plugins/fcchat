@@ -7,7 +7,7 @@ if(!FCChatConfig.default_on){
 		jGo.cookie.setCookie("fc_tglChat",'0',null,'/',FCChatConfig.domain);
 	}
 }
-if(jGo.cookie.getCookie("fc_data")==null||jGo.cookie.getCookie("fc_data").split('&').length<2){
+if(jGo.cookie.getCookie("fc_data")==null||jGo.cookie.getCookie("fc_data").split('&').length!=12){
 	fc_chat.init_cdata();
 }
 if (!document.all){

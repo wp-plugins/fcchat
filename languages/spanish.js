@@ -140,8 +140,14 @@ FCChatConfig.txt = {
 	t81: "Tamaño de fuente",
 	t82: "Color de fuente",
 	
+	t255:"Traductor",
+	t256:"Traducir a los chats entrantes: ",
+	
+	//Language Names: must match language_codes in the current style
+	t257: ["apagar traductor", "árabe", "búlgaro", "catalán", "chino simplificado", "chino tradicional", "checo", "danés", "holandés", "inglés", "estonio", "finlandés", "francés", "alemán", "griego", "criollo haitiano", "hebreo", "húngaro", "indonesio", "italiano", "japonese", "coreano", "letón", "lituano", "noruego", "polaco", "portugués", "rumano", "ruso", "eslovaco", "esloveno", "español", "sueco", "tailandés", "turco", "ucraniano", "vietnamita"],
+	
 	// Nombres de colores: deben coincidir color_values ??en el estilo actual
-	t83: ["default", "negro", "azul", "rojo", "púrpura", "verde", "amarillo", "naranja", "blanco"],
+	t83: ["default", "negro", "azul", "rojo", "púrpura", "verde", "amarillo", "anaranjaho", "blanco"],
 	
 	t84: "Lista de bloqueo",
 	t85: "(A/V)",

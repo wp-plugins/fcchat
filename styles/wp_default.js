@@ -205,6 +205,9 @@ FCChatConfig.styles={
 					offline_css:"background-color:transparent;border:1px solid#aaaaaa",
 					blocked_css:"background-color:#FF8380;border:1px solid white"
 				},	
+				profile_star:{
+					css:"font-size:21px;color:gold;"
+				},
 				font:{
 					family:"arial",
 					size:8,
@@ -294,10 +297,16 @@ FCChatConfig.styles={
 					room_name_font_css:"font-size:12px;font-weight:bold;color:white;",
 					disabled_room_name_font_css:"font-size:12px;font-weight:bold;color:#dddddd;"
 				},
+				//the corresponding language names are in the language template
+				translation_selector:{
+					css:"margin-left:20px;border:4px solid lightblue;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;",
+					language_codes:["_off","ar","bg","ca","zh-CHS","zh-CHT","cs","da","nl","en","et","fi","fr","de","el","ht","he","hu","id","it","ja","ko","lv","lt","no","pl","pt","ro","ru","sk","sl","es","sv","th","tr","uk","vi"]
+				},
 				font_size_selector:{
 					smallest:6,
 					largest:16
 				},
+				//the corresponding color names are in the language template
 				color_selector:{
 					color_values:["#fff","black","blue","red","purple","green","yellow","orange","white"]
 				},
