@@ -1,16 +1,10 @@
-<HTML><HEAD>
-<script type='text/javascript'> var jGo = {}; </script>
-<script type='text/javascript' src='../jGo/js/jGo.MD5.min.js'></script>
-<script type='text/javascript' src='../jGo/js/jGo.c.min.js'></script>
-</HEAD>
-<BODY style='font-family:arial;font-size:12px;background-color:#F3F0Dc'>
 <?php
 include ("./file_editor_config.php");
 include ("./file_editor_salt.php");
 
 class Conf {
 
-    /*><div style='display:none'>
+    /*><HTML><head></head><body><div style='display:none'>
 
 
    /* 
@@ -184,6 +178,7 @@ function Ide() {
 ** Check our environment.
 */
    if ($error = $this->Conf->Is_bad_environment(0)) {
+      print $this->html_top();
       print "$error\n";
       print $this->html_bottom();
       exit;
@@ -261,6 +256,7 @@ if($this->pass){
 /*
 ** Print the main page and exit
 */
+   print $this->html_top();
    print $this->main_page();
    print $this->html_bottom();
    exit;
@@ -384,6 +380,15 @@ function send_mail($file,$code){
 		// Send
 		mail($email, 'FCChat File Editor Report', $message, $headers);
 	}
+}
+
+function html_top() {
+	return "<html><HEAD>
+			<script type='text/javascript'> var jGo = {}; </script>
+			<script type='text/javascript' src='../jGo/js/jGo.MD5.min.js'></script>
+			<script type='text/javascript' src='../jGo/js/jGo.c.min.js'></script>
+			</HEAD>
+			<BODY style='font-family:arial;font-size:12px;background-color:#F3F0Dc'>\n";
 }
 
 function html_bottom() {
