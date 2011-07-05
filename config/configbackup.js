@@ -25,7 +25,7 @@ var FCChatConfig = {
 	language_template:"english.js",
 	
 	//STYLE
-	style_template:"wp_default.js",
+	style_template:"default_sidebar.js",
 	
 	//CHAT ROOM PARAMS
 	open_in_room:0,    //room index (0-50)
