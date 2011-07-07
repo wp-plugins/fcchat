@@ -203,7 +203,7 @@ Added the language translation feature. Fixed text input so that non latin alphe
 
 = 2.1.14.1 =
 
-Changed the name of the style templates. default.js -> default_header.js, wp_default -> default_sidebar.js, blue_silver.js -> blue_silver_header.js, wp_blue_silver.js -> blue_silver_sidebar.js
+Changed the names of the style templates. default.js -> default_header.js, wp_default -> default_sidebar.js, blue_silver.js -> blue_silver_header.js, wp_blue_silver.js -> blue_silver_sidebar.js
 
 
 == Upgrade Notice ==
