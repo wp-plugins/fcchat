@@ -107,31 +107,34 @@ var FCChatConfig = {
 	mod_cookie:"fc_ChatToken",
 	
 	//LOADING PHRASES
-	load_standalone_bsc:(!window["jGo"]||jGo.scripts.loadState('jGo.DefaultWindow.init.min.js') == 'not.loaded'?"<script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></script>":"") +
-	"<script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.c.min.js'></" +
-	"script><script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.MD5.min.js'></" +
-	"script><script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.standalone.min.js'></" +
-	"script><script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/install.fcchat.standalone.js'></" + 
-	"script>",
-	load_integrated_bsc:"<script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") +
-	"jGo/js/jGo.DefaultWindow.init.min.js'></" +
-	"script><script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.c.min.js'></" +
-	"script><script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.MD5.min.js'></" +
-	"script><script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.integrated.min.js'></" +
-	"script><script defer='defer' type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/install.fcchat.integrated.js'></" + 
-	"script>",
-	load_standalone:(!window["jGo"]||jGo.scripts.loadState('jGo.DefaultWindow.init.min.js') == 'not.loaded'?"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></script>":"") +
-	"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.c.min.js'></" +
-	"script><script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.MD5.min.js'></" +
-	"script><script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.standalone.min.js'></" +
-	"script><script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/install.fcchat.standalone.js'></" + 
-	"script>",
-	load_integrated:"<script  type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") +
-	"jGo/js/jGo.DefaultWindow.init.min.js'></" +
-	"script><script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.c.min.js'></" +
-	"script><script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.MD5.min.js'></" +
-	"script><script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.integrated.min.js'></" +
-	"script><script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/install.fcchat.integrated.js'></" + 
-	"script>"
-	
+	load_standalone_bsc:(!window["jGo"]||jGo.scripts.loadState('jGo.DefaultWindow.init.min.js') == 'not.loaded'?"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></" +
+		"script>":"") +
+	    "<script>" +
+			"(function() {" +
+				"var s = document.createElement('script');" +
+	  			"s.src = '" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.standalone.min.js';" +
+	  			"s.async = true;" +
+	  			"var e = document.getElementsByTagName('script')[0];" +
+	  			"e.parentNode.insertBefore(s, e);" +
+			"})();</" +
+		"script>",
+	load_integrated_bsc:"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></" +
+		"script>" +
+		"<script>" +
+			"(function() {" +
+	  			"var s = document.createElement('script');" +
+	  			"s.src = '" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.integrated.min.js';" +
+	  			"s.async = true;" +
+	  			"var e = document.getElementsByTagName('script')[0];" +
+	  			"e.parentNode.insertBefore(s, e);" +
+			"})();</" +
+		"script>",
+	load_standalone:(!window["jGo"]||jGo.scripts.loadState('jGo.DefaultWindow.init.min.js') == 'not.loaded'?"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></" +
+		"script>":"") +
+		"script><script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.standalone.min.js'></" +
+		"script>",
+	load_integrated:"<script  type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></" +
+		"script>" +
+		"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.integrated.min.js'></" +
+		"script>"
 };
