@@ -33,7 +33,7 @@ document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/pa
 
 function fc_chat_load_from_link(elem){
 	try{
-		if(fc_chat && fc_chat.try_connection() =="1"){
+		if(window.fc_chat && fc_chat.try_connection() =="1"){
 			jQuery("span.fc_chat_link_msg").remove();
 			fc_chat.open_chat_box(1);
 		}else{
@@ -44,3 +44,17 @@ function fc_chat_load_from_link(elem){
 	}
 };
 
+jGo.domIsReady = false;
+jGo.loadCalled = false;
+jQuery(document).ready(function() {
+  jGo.domIsReady = true;
+  if(window.fc_chat&&window.fc_chat.initialized){
+    setTimeout("fc_chat.loader()",250);
+    jGo.loadCalled = true;
+  }
+});
+jQuery(window).unload(function() {
+	if(window.fc_chat&&fc_chat.getPause()==1){
+		jGo.cookie.setCookie("fc_pauseChat", "0", null, "/", FCChatConfig.domain);
+	}
+});

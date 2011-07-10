@@ -25,9 +25,6 @@ document.write("<div class='jGo_myapp'><div id='jGo_win0' class='jGo_app jGo_mya
 //Initialization
 jGo.scripts.onLoad('jGo.DefaultWindow.pack.js');
 document.write("<div id='fc_fla' style='position:absolute; top: 0px; left:-9px;border:0px solid #aaaaaa'><div  id='fc_flaToggle'>");
-if (top==self&&FCChatConfig.flashEnabled){
-	document.write(fc_tag.toString());
-}
 document.write('</div><div id="fc_sounds">' + '</div></div>');
 jGo.browser.init();
 if(FCChatConfig.preload_images || (jGo.browser.browser=='Explorer' && (jGo.browser.version=='5' || jGo.browser.version=='6'))){

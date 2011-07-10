@@ -205,6 +205,9 @@ Added the language translation feature. Fixed text input so that non latin alphe
 
 Changed the names of the style templates. default.js -> default_header.js, wp_default -> default_sidebar.js, blue_silver.js -> blue_silver_header.js, wp_blue_silver.js -> blue_silver_sidebar.js
 
+= 2.1.14.2 =
+
+Changed the structure of the loading mechanism to make it more efficient. Fixed a small bug with the timestamp display.
 
 == Upgrade Notice ==
 
