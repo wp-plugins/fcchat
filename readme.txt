@@ -207,7 +207,7 @@ Changed the names of the style templates. default.js -> default_header.js, wp_de
 
 = 2.1.14.2 =
 
-Changed the structure of the loading mechanism to make it more efficient. Fixed a small bug with the timestamp display.
+Changed the structure of the loading mechanism to make it more efficient.  Fixed a small bug with the timestamp display.
 
 == Upgrade Notice ==
 
