@@ -127,6 +127,7 @@ FCChatConfig.txt={
 	t70: "Mode:",
 	t71: "window",
 	t72: "split-screen",
+	t259:"pop-out",
 	t73: "Sounds",
 	t74: "Sounds:",
 	t75: "on",
@@ -178,6 +179,7 @@ FCChatConfig.txt={
 	t105: "Connection failed. Trying again. Attempt",
 	t106: "Sorry, could not connect. Giving up.",
 	t254: "New message...Roll over to expand.",
+	t258: "<b>Pop-out window opened...<a href='javascript:fc_chat.reqRecon()'>Resume</a></b>",
 	
 	//Chat Rooms
 	t107: "Welcome!!! Your screen name is",

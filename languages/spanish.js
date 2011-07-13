@@ -129,6 +129,7 @@ FCChatConfig.txt = {
 	t70: "Modo",
 	t71: "ventana",
 	t72: "pantalla dividida",
+	t259:"pop-out",
 	t73: "Sonidos",
 	t74: "Sonidos",
 	t75: "encender",
@@ -180,6 +181,7 @@ FCChatConfig.txt = {
 	t105: "Error de conexión. Intentando de nuevo. Intento",
 	t106: "¡Perdón! No se pude conectar. Renunciando..",
 	t254: "Nuevo mensaje ... Pase el cursor sobre para ampliar.",
+	t258: "<b>Pop-out Ventana abierto...<a href='javascript:fc_chat.reqRecon()'>Reanudar</a></b>",
 	
 	// Salas de Chat
 	t107: "¡Bienvenido! Tu nombre de usuario es",

@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.2
-Stable tag: 2.1.14
+Stable tag: 2.1.15
 
 A full featured, real time chat and video conferencing plugin.
 
@@ -13,9 +13,9 @@ A full featured, real time chat and video conferencing plugin.
 
 FCChat displays a highly customizable, full featured, real time chat in the sidebar. 
 
-NEW IN VERSION 2.1.14
+NEW IN VERSION 2.1.15
 
--- Language translation feature -- A new style template (blue_silver)
+Pop-out Mode: Launch FCChat into a browser pop-up window  | A new style template (blue_silver)
 
 FEATURES INCLUDE:
 
@@ -30,6 +30,8 @@ Instant messaging/Private Chat
 Upload images
 
 User profiles
+
+Language translation feature 
 
 Assign titles to users
 
@@ -209,10 +211,14 @@ Changed the names of the style templates. default.js -> default_header.js, wp_de
 
 Changed the structure of the loading mechanism to make it more efficient.  Fixed a small bug with the timestamp display.
 
+= 2.1.15 =
+
+Added pop-out mode. The chat can now be launched into a browser pop-up window.
+
 == Upgrade Notice ==
 
-= 2.1.14 =
+= 2.1.15 =
 
-*Version 2.1.14 requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
+*Version 2.1.15 requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
 
 To upgrade from any previous version to the current version, first, make backup copies of the 2 configuration files in your old installation (fcchat/config/config.js, fcchat/html/config/config.php) and place them in a safe place where they will not be deleted. Next uninstall the old version and install the current version. Finally, copy your old configuration setting manually to the current version's configuration files. Of course, if you made no alterations to the config files in your previous installation, you may just simply install the new version. Refresh your browser's cache and cookies after upgrading to insure that the browser is displaying the new installation correctly.

@@ -13,8 +13,8 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.1.14",
-	subversion:"wp",
+	version:"2.1.15",
+	subversion:"0",
 
 	//BASIC GREETINGS
 	startText:"To begin chatting, press the <b>Open Button.&nbsp;</b>",
@@ -36,6 +36,11 @@ var FCChatConfig = {
 	//PROXY
 	forum_proxy:"",
 	
+	//Window modes
+	popup_window_on_open:false, //Default in-browser window
+	popup_window_from_menu:true,
+	allow_split_screen_mode:true,
+	
 	//ENVIRONMENTAL
 	default_on:true,
 	auto_connect:true,
@@ -45,7 +50,7 @@ var FCChatConfig = {
 	display_timestamp:false,
 	sounds_on:true,
 	show_online_count:true,
-	allow_split_screen_mode:true,
+	
 	allow_web:true,
 	preload_images:false,
 	noshow:false,
