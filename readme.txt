@@ -215,6 +215,11 @@ Changed the structure of the loading mechanism to make it more efficient.  Fixed
 
 Added pop-out mode. The chat can now be launched into a browser pop-up window.
 
+= 2.1.15.1 =
+
+Changed the launch from link function so that it can launch the chat into a pop up window.
+
+
 == Upgrade Notice ==
 
 = 2.1.15 =

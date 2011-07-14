@@ -31,11 +31,11 @@ document.write("<script type='text/javascript' src='" + FCChatConfig.dir + "js/j
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/css.vars.js'></script>");
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/page.init.js'></script>");
 
-function fc_chat_load_from_link(elem){
+function fc_chat_load_from_link(elem,mode){
 	try{
-		if(window.fc_chat && fc_chat.try_connection() =="1"){
+		if(window.fc_chat && fc_chat.try_connection(mode) =="1"){
 			jQuery("span.fc_chat_link_msg").remove();
-			fc_chat.open_chat_box(1);
+			fc_chat.open_chat_box(1,mode);
 		}else{
 			alert(fc_chat.textSetter(160));
 		}
