@@ -217,7 +217,7 @@ Added pop-out mode. The chat can now be launched into a browser pop-up window.
 
 = 2.1.15.1 =
 
-Changed the launch from link function so that it can launch the chat into a pop up window.
+Changed the launch from link function so that it can launch the chat into a pop up window .
 
 
 == Upgrade Notice ==
