@@ -223,6 +223,10 @@ Changed the launch from link function so that it can launch the chat into a pop 
 
 Fixed an issue with an extra script tag being inserted in the page and showing up in the html.
 
+= 2.1.15.3 =
+
+Fixed an issue with the window ordering.
+
 
 == Upgrade Notice ==
 
