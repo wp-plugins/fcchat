@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.1.15",
+	version:"2.1.16",
 	subversion:"0",
 
 	//BASIC GREETINGS
@@ -25,7 +25,8 @@ var FCChatConfig = {
 	language_template:"english.js",
 	
 	//STYLE
-	style_template:"default_sidebar.js",
+	widget_style_template:"widget_default_sidebar.js",
+	window_style_template:"window_default.js",
 	
 	//CHAT ROOM PARAMS
 	open_in_room:0,    //room index (0-50)
@@ -50,18 +51,6 @@ var FCChatConfig = {
 	display_timestamp:false,
 	sounds_on:true,
 	show_online_count:true,
-	
-	allow_web:true,
-	preload_images:false,
-	noshow:false,
-	flashEnabled:'test',
-	websocketEnabled:'test',
-	userbox_mode:0,
-	zindex_base:0,
-	domain:null,
-	dir: window["fc_chat_path"] || "/FCChat/",
-	alt_dir: window["fc_chat_path"] || "/FCChat/",
-	
 	
 	//PROFILES
 	
@@ -90,10 +79,10 @@ var FCChatConfig = {
 	//VIDEO
 	video_enabled:false,
 	max_video_streams:30,
-	capture_width:120,
-	capture_height:90,
+	capture_width:160,
+	capture_height:120,
 	fps:8,
-	quality:85,
+	quality:95,
 	video_window1_color:"darkOliveGreen",
 	video_window2_color:"darkOliveGreen",
 	show_a_v_icon:false,
@@ -110,6 +99,18 @@ var FCChatConfig = {
 	session_cookie:"fc_ChatToken",
 	timestamp_cookie:"fc_timestamp",
 	mod_cookie:"fc_ChatToken",
+	
+	//MISC
+	allow_web:true,
+	preload_images:false,
+	noshow:false,
+	flashEnabled:'test',
+	websocketEnabled:'test',
+	userbox_mode:0,
+	zindex_base:0,
+	domain:null,
+	dir: window["fc_chat_path"] || "/FCChat/",
+	alt_dir: window["fc_chat_path"] || "/FCChat/",
 	
 	//LOADING PHRASES
 	load_standalone_bsc:(!window["jGo"]||jGo.scripts.loadState('jGo.DefaultWindow.init.min.js') == 'not.loaded'?"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></" +

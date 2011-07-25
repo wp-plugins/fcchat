@@ -83,7 +83,7 @@ FCChatConfig.txt = {
 	t34: "Cambiar Avatar",
 	
 	// Inserta cuadro de texto
-	t35: "Escriba mensaje aquí!",
+	t35: " Escriba mensaje aquí!",
 	t36: "nombre de la imágen",
 	t37: "=b=",
 	t38: "=i=",

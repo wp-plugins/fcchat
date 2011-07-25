@@ -54,7 +54,7 @@ FCChatConfig.txt={
 	//Section Headings
 	t12: "Chat Room",
 	chat_room_width: 61,
-    t13: "Back to chat",
+        t13: "Back to chat",
 	t14: "Private Chat",
 	private_chat_width: 68,
 	t15: "Who's Online",
@@ -81,7 +81,7 @@ FCChatConfig.txt={
 	t34: "Change Avatar",
 	
 	//Textbox inserts
-	t35: "Type Message Here!",
+	t35: " Type Message Here!",
 	t36: "image name",
 	t37: "=b=",
 	t38: "=i=",
@@ -92,7 +92,7 @@ FCChatConfig.txt={
 	t41: "Change",
 	
 	//User Dialog
-	user_dialog_width: 340,
+	user_dialog_width: 360,
 	t43: "Sign in",
 	t44: "Sign out",
 	t45: "Mod",
@@ -101,7 +101,7 @@ FCChatConfig.txt={
 	t48: "Status",
 	t49: "Add to private group",
 	t50: "Block",
-	t51: "*Hey, it's me! ",
+	t51: "*Hey, it's me!",
 	t52: "*This user has blocked you.",
 	t53: "*This user is offline.",
 	t54: "Close",
