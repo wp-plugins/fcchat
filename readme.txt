@@ -239,7 +239,7 @@ Upgraded the video chat to 3.0. Delivers higher resolution video with the same b
 
 Introduced Fixed Mode: The chat widget can now be fixed to the browser window like a toolbar.
 
-Split the style template files into two catagories: widget templates and window templates. This makes it easier to mix and match.
+Split the style template files into two categories: widget templates and window templates. This makes it easier to mix and match.
 
 == Upgrade Notice ==
 
