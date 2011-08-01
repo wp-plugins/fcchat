@@ -29,10 +29,13 @@ function getQuerystring(key, default_){
 }
 FCChatConfig.chat_id = getQuerystring("cid") || FCChatConfig.chat_id;
 FCChatConfig.host = getQuerystring("h") || FCChatConfig.host;
+FCChatConfig.window_height_offset=0;
+FCChatConfig.chat_room_height_offset=0;
 FCChatConfig.styles.chat_toolbox.absolute_positioning=true;
 FCChatConfig.styles.chat_toolbox.top=0;
 FCChatConfig.styles.chat_toolbox.left=0;
 FCChatConfig.styles.chat_toolbox.css="display:none;";
+
 //-->
 </script>
 </head>

@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.1.16",
+	version:"2.1.17",
 	subversion:"0",
 
 	//BASIC GREETINGS
@@ -41,6 +41,10 @@ var FCChatConfig = {
 	popup_window_on_open:false, //Default in-browser window
 	popup_window_from_menu:true,
 	allow_split_screen_mode:true,
+	
+	//Window size
+	window_height_offset:-45,
+	chat_room_height_offset:45,
 	
 	//ENVIRONMENTAL
 	default_on:true,

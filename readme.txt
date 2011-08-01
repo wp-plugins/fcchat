@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.2
-Stable tag: 2.1.16
+Stable tag: 2.1.17
 
 A full featured, real time chat and video conferencing plugin.
 
@@ -13,13 +13,15 @@ A full featured, real time chat and video conferencing plugin.
 
 FCChat displays a highly customizable, full featured, real time chat in the sidebar. 
 
-NEW IN VERSION 2.1.16
+NEW FEATURES
 
 Upgraded the video chat to 3.0. Delivers higher resolution video with the same bandwidth.
 
 Introduced Fixed Mode: The chat widget can now be fixed to the browser window like a toolbar.
 
-FEATURES INCLUDE:
+Now Resizable 
+
+FEATURE LIST:
 
 Real time text chat
 
@@ -241,10 +243,14 @@ Introduced Fixed Mode: The chat widget can now be fixed to the browser window li
 
 Split the style template files into two categories: widget templates and window templates. This makes it easier to mix and match.
 
+= 2.1.17 =
+
+The chat window can now be resized from the bottom. The chat is also resizable in the split screen mode.
+
 == Upgrade Notice ==
 
-= 2.1.16 =
+= 2.1.17 =
 
-*Version 2.1.16 requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
+*Version 2.1.17 requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
 
 To upgrade from any previous version to the current version, first, make backup copies of the 2 configuration files in your old installation (fcchat/config/config.js, fcchat/html/config/config.php) and place them in a safe place where they will not be deleted. Next uninstall the old version and install the current version. Finally, copy your old configuration setting manually to the current version's configuration files. Of course, if you made no alterations to the config files in your previous installation, you may just simply install the new version. Refresh your browser's cache and cookies after upgrading to insure that the browser is displaying the new installation correctly.

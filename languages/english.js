@@ -92,7 +92,7 @@ FCChatConfig.txt={
 	t41: "Change",
 	
 	//User Dialog
-	user_dialog_width: 360,
+	user_dialog_width: 340,
 	t43: "Sign in",
 	t44: "Sign out",
 	t45: "Mod",
