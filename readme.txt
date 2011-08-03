@@ -15,11 +15,12 @@ FCChat displays a highly customizable, full featured, real time chat in the side
 
 NEW FEATURES
 
+Resizable Window
+
 Upgraded the video chat to 3.0. Delivers higher resolution video with the same bandwidth.
 
 Introduced Fixed Mode: The chat widget can now be fixed to the browser window like a toolbar.
 
-Now Resizable 
 
 FEATURE LIST:
 
