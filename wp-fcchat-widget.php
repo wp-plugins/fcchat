@@ -122,7 +122,7 @@ function fcchat_widget_init() {
 		echo '<p style="text-align:left"><b>Step 1:</b> <a href="http://www.fastcatsoftware.com/chat/wp-activation.aspx" TARGET="_blank" >Click here to activate your chat</a></p>';
 		   
 		//Upgrade notice 
-		echo '<p style="text-align:left"><b>Upgrade notice:</b>Upgrading to version 2.1.13 from a version prior to 2.1.8 requires that you obtain a new chat ID from the link above.</p>';
+		echo '<p style="text-align:left"><b>Upgrade notice:</b>Upgrading to version 2.1.17 from a version prior to 2.1.8 requires that you obtain a new chat ID from the link above.</p>';
 		    echo '<p style="text-align:left"><b>Step 2:</b> Enter your activation info below, and press save.</p>';
 		
 		//Title                

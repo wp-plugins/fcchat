@@ -247,6 +247,10 @@ Split the style template files into two categories: widget templates and window 
 
 The chat window can now be resized from the bottom. The chat is also resizable in the split screen mode.
 
+= 2.1.17.1 =
+
+Changed the file languages/spanish.js to the utf-8 format.
+
 == Upgrade Notice ==
 
 = 2.1.17 =
