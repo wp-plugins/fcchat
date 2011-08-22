@@ -2,7 +2,7 @@
 /*
 Plugin Name: FCChat Widget
 Plugin URI: http://www.fastcatsoftware.com
-Description: Add full featured chat to the sidebar.
+Description: Adds a full featured chat to the sidebar.
 Version: 2.1.17
 Author: Fastcat Software
 Author URI: http://www.fastcatsoftware.com
