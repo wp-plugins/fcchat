@@ -19,7 +19,7 @@ Upgraded the video chat to 3.0. Delivers higher resolution video with the same b
 
 Introduced Fixed Mode: The chat widget can now be fixed to the browser window like a toolbar.
 
-
+Resizable window
 
 FEATURE LIST:
 
