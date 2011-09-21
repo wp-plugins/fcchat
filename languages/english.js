@@ -1,4 +1,4 @@
-/*
+﻿/*
  * LANGUAGE TEMPLATE
  *
  * FCChat supports any language which uses the Latin alphabet. It does not have full support
@@ -36,30 +36,30 @@ FCChatConfig.txt={
 	//guest login may contain letters,numbers and underscores only, 10 chars max
 	t1: "guest",
 	t2: "Chat",
-	t3: "online",
+	t3: "Online",
 	
 	//Buttons
 	t4: "On",
 	t5: "Off",
-	t6: "Open Chat",
+	t6: "Open ChatCenter",
 	t7: "Help",
 	t8: "Close",
 	close_width: 51,
 	t9: "Options",
 	options_width: 61,
 	t10: "Send to Room",
-	t11: "Send Private",
+	t11: "Send to Friend",
 	send_buttons_width: 95,
 	
 	//Section Headings
 	t12: "Chat Room",
 	chat_room_width: 61,
         t13: "Back to chat",
-	t14: "Private Chat",
-	private_chat_width: 68,
+	t14: "Messages",
+	private_chat_width: 57,
 	t15: "Who's Online",
 	t16: "Chat Room Members",
-	t17: "Private Group",
+	t17: "Friends",
 	
 	//Tooltips
 	t18: "Clear",
@@ -99,13 +99,13 @@ FCChatConfig.txt={
 	t46: "Profile",
 	t47: "Change Avatar",
 	t48: "Status",
-	t49: "Add to private group",
+	t49: "Add to Friends",
 	t50: "Block",
 	t51: "*Hey, it's me!",
 	t52: "*This user has blocked you.",
 	t53: "*This user is offline.",
 	t54: "Close",
-	t55: "Retrieving...(to private chat)",
+	t55: "Retrieving...(to messages)",
 	
 	//Sign in Dialog
 	t56: "Name",
@@ -172,14 +172,14 @@ FCChatConfig.txt={
 	
 	//Widget Msgs
 	t100: "<b>Connecting, please wait...</b>",
-	t101: "You have successfully logged out",
+	t101: "<b>You have successfully logged out... <a class='fc_link' href='javascript:fc_chat.reqRecon()'>Reconnect</a></b>",
 	t102: "<b>&nbsp;Chat is off.&nbsp;&nbsp;</b>",
-	t103: "<b>Chat Paused... <a href='javascript:fc_chat.unPause()'>Resume</a></b>",
-	t104: "<font style='color:red;font-weight:700'>Connection lost...</font> <a href='javascript:fc_chat.reqRecon()'>Reconnect</a>",
+	t103: "<b>Chat Paused... <a class='fc_link' href='javascript:fc_chat.unPause()'>Resume</a></b>",
+	t104: "<span class='fc_alert_text'>Connection lost...</span> <a class='fc_link' href='javascript:fc_chat.reqRecon()'>Reconnect</a>",
 	t105: "Connection failed. Trying again. Attempt",
 	t106: "Sorry, could not connect. Giving up.",
-	t254: "New message...Roll over to expand.",
-	t258: "<b>Pop-out window opened...<a href='javascript:fc_chat.reqRecon()'>Resume</a></b>",
+	t254: "New message...",
+	t258: "<b>Pop-out window opened...<a class='fc_link' href='javascript:fc_chat.reqRecon()'>Resume</a></b>",
 	
 	//Chat Rooms
 	t107: "Welcome!!! Your screen name is",
@@ -189,9 +189,9 @@ FCChatConfig.txt={
 	t111: "Prev",
 	t112: "Previous",
 	t113: "Next",
-	t114: "SYSTEM",
+	t114: "info",
 	t115: "to",
-	t116: "Archive Page",
+	t116: "History Page",
 	t117: "Current Chat",
 	t118: "Autoclear. Room message limit exceded.",
 	t119: "**Comment Erased**",
@@ -249,7 +249,7 @@ FCChatConfig.txt={
 	t150: "PM",
 	
 	//Application Windows
-	t151: "Chat Window",
+	t151: "ChatCenter",
 	t152: "FCChat Video",
 	t153: "FCChat Video",
 	t154: "minimize",
@@ -349,6 +349,7 @@ FCChatConfig.txt={
 	t238: "Server Busy",
 	t239: "Expand",
 	
+	
 	//Administration
 	t240: "Censor",
 	//before name
@@ -365,6 +366,52 @@ FCChatConfig.txt={
 	t250: "Current room:",
 	t251: "Time Online:",
 	t252: "Idle time: less than one minute.",
-	t253: "Idle time:"
-
+	t253: "Idle time:",
+		
+	//Added to version 2.2
+	
+	//whiteboard
+	t260: "has invited you to share a",
+	t261: "whiteboard.",
+	t262: "Click here to accept",
+	t263: "has been invited to share your whiteboard",
+	t268: " is now viewing your whiteboard",
+	t288: "Open your whiteboard",
+	t289: "Invite to share your whiteboard",
+	
+	t264: "Send Message",
+	t265: "Unable to send this message. The user has blocked you.",
+	t270: "This user is currently offline.",
+	
+	//Floating toolbar
+	t266: "Check messages",
+	t267: "new",
+	t269: "Friends",
+	t271: "New Messages",
+	
+	//New Messages box
+	t272: "New Messages",
+	t273: "Clear",
+	t274: "Close",
+	t275: "You are currently chatting as ",
+	t276: "To",
+	t277: "You have no new messages",
+	t278: "Click Open ChatCenter to sign in",
+	t279: "Click Open ChatCenter for more options",
+	t280: "Invite to share your whiteboard",
+	t281: "Add to friends list",
+	t282: "Click to send a message",
+	
+	//Friends Box
+	t283: "Friends",
+	t284: "Close",
+	t285: "<u>Underlined Users</u> are available for chat.<br>Click +/- to add/remove friends. Click name to chat.",
+	t286: "Remove from list",
+	t290: "FriendsCenter",
+	
+	//Online Box
+	t294: "Who's Online",
+	t291: "Close",
+	t292: "<u>Underlined Users</u> are available for chat.<br>Click +/- to add/remove friends. Click name to chat.",
+	t293: "<b>Please wait...</b>"
 };

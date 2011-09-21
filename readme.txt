@@ -5,19 +5,17 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.2
-Stable tag: 2.1.17
+Stable tag: 2.2
 
-A full featured, real time chat and video conferencing plugin.
+An interface for real time chat, video conferencing, intant messaging, and more.
 
 == Description ==
 
-FCChat displays a highly customizable, full featured, real time chat in the sidebar. 
+FCChat connects your site users with chat, video, instant messaging and more. 
 
 NEW FEATURES
 
-Upgraded the video chat to 3.0. Delivers higher resolution video with the same bandwidth.
-
-Introduced Fixed Mode: The chat widget can now be fixed to the browser window like a toolbar.
+Version 2.2 comes with an optional toolbar interface for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. Collaborative whiteboard feature introduced. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be comming in future updates.
 
 
 FEATURE LIST:
@@ -33,6 +31,8 @@ Instant messaging/Private Chat
 Upload images
 
 User profiles
+
+Collaborative whiteboard
 
 Split-screen Mode: Show the chat side by side with your site
 
@@ -55,7 +55,7 @@ Administration/moderation panel
 Web based file editor 
 
 
-Service activation -- Service activation comes with a 3 day free trial period. If you wish to continue the service, a small monthly fee applies.
+Service activation -- Service activation comes with a 3 day free trial period. If you wish to continue the service, pricing starts at 20 cents per month for small sites.
 
 
 IMPORTANT: Those of you who are upgrading from a previous version must obtain a new chat ID in order to use version 2.1.8.  In addition, after upgrading, you must clear your browser cache and cookies or the chat may not connect properly.
@@ -250,10 +250,15 @@ The chat window can now be resized from the bottom. The chat is also resizable i
 
 Changed the file languages/spanish.js to the utf-8 format.
 
+= 2.2 =
+
+Introduces the SiteCenter toolbar interface, with a focus on user to user interaction. Whiteboard interface provided by Dabbleboard.com. Friends list added.
+
+
 == Upgrade Notice ==
 
-= 2.1.17 =
+= 2.2 =
 
-*Version 2.1.17 requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
+*Version 2.2 requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
 
 To upgrade from any previous version to the current version, first, make backup copies of the 2 configuration files in your old installation (fcchat/config/config.js, fcchat/html/config/config.php) and place them in a safe place where they will not be deleted. Next uninstall the old version and install the current version. Finally, copy your old configuration setting manually to the current version's configuration files. Of course, if you made no alterations to the config files in your previous installation, you may just simply install the new version. Refresh your browser's cache and cookies after upgrading to insure that the browser is displaying the new installation correctly.

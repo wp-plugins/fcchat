@@ -34,27 +34,27 @@ FCChatConfig.styles={
 			border:"1px solid #aaaaaa",
 			opacity:.85,
 			send_to_room_button:{
-				default_css:"border:1px solid silver; padding:2px 8px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				default_css:"border:1px solid #9a9a9a; padding:2px 10px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
 					link_css:"color:white",
 					hover_css:"color:lightblue",
-					disabled_css:"color:#bbbbbb;border:1px solid #bbbbbb"
+					disabled_css:"color:#bbbbbb;border:1px solid #9a9a9a"
 				}
 			},
 			send_private_button:{
-				default_css:"border:1px solid silver; padding:2px 12px 2px 11px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				default_css:"border:1px solid #9a9a9a; padding:2px 10px 2px 9px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
 					link_css:"color:white",
 					hover_css:"color:lightblue",
-					disabled_css:"color:#bbbbbb;border:1px solid #bbbbbb"
+					disabled_css:"color:#bbbbbb;border:1px solid #9a9a9a"
 				}
 			},
 			other_buttons:{
-				default_css:"border:1px solid silver; padding:2px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				default_css:"border:1px solid #9a9a9a; padding:2px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
 					link_css:"color:white",
 					hover_css:"color:lightblue",
-					disabled_css:"color:#bbbbbb;border:1px solid #bbbbbb"
+					disabled_css:"color:#bbbbbb;border:1px solid #9a9a9a"
 				}
 			},
 			widgets:{
@@ -143,7 +143,7 @@ FCChatConfig.styles={
 				},
 				private_group_panel:{
 					selected_user:{
-						background_color:"#999966",
+						background_color:"#3399CC",
 						arrow:{
 							color:"green",
 							hover_color:"red"
@@ -218,7 +218,7 @@ FCChatConfig.styles={
 					css:"font-size:9pt;font-family:arial;color:black;background-color:#aaaaaa;border:1px solid silver;"
 				},
 				send_private_button:{
-					default_css:"border:1px solid silver; padding:2px 12px 2px 11px; font:10px arial;",
+					default_css:"border:1px solid silver; padding:2px 10px 2px 9px; font:10px arial;",
 					states:{
 						link_css:"color:white",
 						hover_css:"color:lightblue",

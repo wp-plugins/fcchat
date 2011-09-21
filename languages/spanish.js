@@ -33,35 +33,35 @@
  * support@fastcatsoftware.com
  */
 
-FCChatConfig.txt = {
+FCChatConfig.txt = { 
 
 	// Acceso para invitados pueden contener letras, números y subrayados, de 10 caracteres máximo
 	t1: "invitado",
 	t2: "Chat",
-	t3: "en línea",
+	t3: "En Línea",
 	
 	// Botones
 	t4: "Encender",
 	t5: "Apagar",
-	t6: "Abrir Chat",
+	t6: "Abrir ChatCenter",
 	t7: "Ayuda",
 	t8: "Cerrar",
 	close_width: 54,
 	t9: "Opciones",
 	options_width: 70,
 	t10: "Enviar a la Sala",
-	t11: "Enviar privado",
+	t11: "Enviar a amigo",
 	send_buttons_width: 95,
 	
 	// Sección de Títulos
 	t12: "Sala de Chat",
 	chat_room_width: 72,
 	t13: "Volver al Chat",
-	t14: "Chat Privado",
-	private_chat_width: 72,
+	t14: "Mensajes",
+	private_chat_width: 57,
 	t15: "Quién está en línea",
 	t16: "Miembros de la Sala",
-	t17: "Grupo Privado",
+	t17: "Amigos",
 	
 	// Información sobre herramientas
 	t18: "Borrar",
@@ -101,13 +101,13 @@ FCChatConfig.txt = {
 	t46: "Perfil",
 	t47: "Cambiar Avatar",
 	t48: "Estado",
-	t49: "Agregar a grupo privado",
+	t49: "Agregar a amigos",
 	t50: "Bloquear",
 	t51: "* Oye, soy yo",
 	t52: "* Este usuario ha bloqueado",
 	t53: "* Este usuario está fuera de línea.",
 	t54: "Cerrar",
-	t55: "Recuperación de ... (para chat privado)",
+	t55: "Recuperación de ... (a mensajes)",
 	
 	// Firma en el diálogo
 	t56: "Nombre",
@@ -170,18 +170,18 @@ FCChatConfig.txt = {
 	t96: "<font style='color:red;font-weight:700'>Conexión pérdida...</font> <a href='javascript:fc_chat.reqRecon()'>Reconectar</a> <a href = 'javascript:fc_chat.closeChat()'>Cerrar</a> ",
 	t97: "Desconectando ...",
 	t98: "<font style='color:red;font-weight:700'>¡Perdón! La sala ha cerrado...</font><br><center><a href='javascript:fc_chat.reqRecon()'>Reconectar</a> <a href='javascript:fc_chat.closeChat()'>Cerrar</a></center>",
-	t99: "Para entrar,<b> Login </ b> primera, por favor. <a href='javascript:fc_chat.closeChat()'>Cerrar</a>",
+	t99: "Para entrar,<b> Login </b> primera, por favor. <a href='javascript:fc_chat.closeChat()'>Cerrar</a>",
 	
 	// Widget Msgs
-	t100: "<b>Conectando. Espere, por favor...</ b>",
-	t101: "Ha cerrado la sesión",
+	t100: "<b>Conectando. Espere, por favor...</b>",
+	t101: "<b>Ha cerrado la sesión... <a class='fc_link' href='javascript:fc_chat.reqRecon()'>Reconnectar</a></b>",
 	t102: "<b>&nbsp;Chat está apagado.&nbsp;&nbsp;</b>",
-	t103: "<b>Chat en pausa... <a href='javascript:fc_chat.unPause()'>Reanudar</a></b>",
-	t104: "<font style='color:red;font-weight:700'>Conexión pérdida...</font> <a href='javascript:fc_chat.reqRecon()'>Reconnectar</a>",
+	t103: "<b>Chat en pausa... <a class='fc_link' href='javascript:fc_chat.unPause()'>Reanudar</a></b>",
+	t104: "<span class='fc_alert_text'>Conexión pérdida...</span> <a class='fc_link' href='javascript:fc_chat.reqRecon()'>Reconnectar</a>",
 	t105: "Error de conexión. Intentando de nuevo. Intento",
 	t106: "¡Perdón! No se pude conectar. Renunciando..",
-	t254: "Nuevo mensaje ... Pase el cursor sobre para ampliar.",
-	t258: "<b>Pop-out Ventana abierto...<a href='javascript:fc_chat.reqRecon()'>Reanudar</a></b>",
+	t254: "Nuevo mensaje...",
+	t258: "<b>Pop-out Ventana abierto...<a class='fc_link' href='javascript:fc_chat.reqRecon()'>Reanudar</a></b>",
 	
 	// Salas de Chat
 	t107: "¡Bienvenido! Tu nombre de usuario es",
@@ -191,9 +191,9 @@ FCChatConfig.txt = {
 	t111: "Ante",
 	t112: "Anterior",
 	t113: "Siguiente",
-	t114: "SISTEMA",
+	t114: "info",
 	t115: "a",
-	t116: "Archivo Pagina",
+	t116: "Historia Pagina",
 	t117: "Chat actual",
 	t118: "Auto-borrar. Sobrepasado el límite de mensajes.",
 	t119: "**Comentarios Borrados**",
@@ -201,7 +201,7 @@ FCChatConfig.txt = {
 	t121: "<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Pagina cargando... Espere, por favor...</font></b>",
 	t122: "<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Sala cargando... Espere, por favor...</font></b>",
 	
-	// Tipos de cuenta
+	//Tipos de cuenta
 	t123: "mod",
 	t124: "admin",
 	
@@ -251,7 +251,7 @@ FCChatConfig.txt = {
 	t150: "PM",
 	
 	// Aplicación de Windows
-	t151: "Ventana de Chat",
+	t151: "ChatCenter",
 	t152: "FCChat Video",
 	t153: "FCChat Video",
 	t154: "minimizar",
@@ -261,7 +261,7 @@ FCChatConfig.txt = {
 	
 	// Msgs Otros Estado
 	t158: "Espere, por favor",
-	t159: "<b>Conectando. Espere, por favor...</ b>",
+	t159: "<b>Conectando. Espere, por favor...</b>",
 	t160: "No está listo... Usted puede usar el chat-box, que se encuentra en la barra lateral, para entrar en las salas de chat.",
 	t161: "Perdón... Ha ocurrido un error. Recargar.",
 	
@@ -367,6 +367,52 @@ FCChatConfig.txt = {
 	t250: "La sala actual:",
 	t251: "En Línea:",
 	t252: "El tiempo de inactividad: menos de un minuto.",
-	t253: "El tiempo de inactividad:"
+	t253: "El tiempo de inactividad:",
+		
+	//Added to version 2.2
+	
+	//whiteboard
+	t260: "te ha invitado a compartir una",
+	t261: "pizarra.",
+	t262: "Haga clic aquí para aceptar",
+	t263: "ha sido invitado a compartir su pizarra",
+	t268: "está viendo la pizarra",
+	t288: "Abrir la pizarra",
+	t289: "invitar a compartir su pizarra",
 
+	t264: "Enviar mensaje",
+	t265: "No se puede enviar este mensaje. el usuario te ha bloqueado.",
+	t270: "Este usuario no está conectado.",
+
+	// Barra de herramientas flotante
+	t266: "Ver mensajes",
+	t267: "nuevo",
+	t269: "Amigos",
+	t271: "Nuevos mensajes",
+
+	// El nuevo cuadro de mensajes
+	t272: "Nuevos mensajes",
+	t273: "Borrar",
+	t274: "Cerrar",
+	t275: "En este momento está hablando como ",
+	t276: "A",
+	t277: "No tiene mensajes nuevos.",
+	t278: "Haga clic en Abrir ChatCenter para acceder",
+	t279: "Haga clic en Abrir ChatCenter para más opciones",
+	t280: "invitar a compartir su pizarra",
+	t281: "Añadir a la lista de amigos",
+	t282: "Haga clic aquí para enviar un mensaje",
+
+	// Amigos Caja
+	t283: "Amigos",
+	t284: "Cerrar",
+	t285: "<u>subrayado Usuarios</u> están disponibles para chatear. <br> ChatCenter Abrir para añadir más amigos.",
+	t286: "Eliminar de la lista",
+	t290: "FriendsCenter",
+	
+	//Online Box
+	t294: "Quién está en línea",
+	t291: "Cerrar",
+	t292: "<u>subrayado Usuarios</u> están disponibles para chatear. <br>Usa +/- para agregar/quitar amigos. Clic nombre para chatear.",
+	t293: "<b>Espere...Por Favor</b>"
 };

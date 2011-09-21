@@ -13,20 +13,32 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.1.17",
+	version:"2.2",
 	subversion:"0",
+	jQuery_stable:"1.6.4",
 
 	//BASIC GREETINGS
 	startText:"To begin chatting, press the <b>Open Button.&nbsp;</b>",
-	readyText:"<b><font style='color:green'>YOURDOMAIN Chat</font>...</b>",
 	autoGreet:"",
 	
 	//LANGUAGE
 	language_template:"english.js",
 	
-	//STYLE
+	//STYLES
 	widget_style_template:"widget_default_sidebar.js",
-	window_style_template:"window_default.js",
+	chatcenter_style_template:"chatcenter_default.js",
+	
+	//Embedded control box
+	absolute_positioning:false,
+	control_visible:true,
+	
+	//Floating toolbar
+	toolbar_mode:2,   // 2 = always visible | 1 = visible for message alerts only | 0 = hidden
+	toolbar_default_display:1, //1 = normal | 0 = minimized
+	toolbar_position:"bottomright",  //Choices are "topleft" "topright" "bottomleft" and "bottomright"
+	
+	//Online, New messages and Friends boxes
+	alignment:"left", //"left" or "right"
 	
 	//CHAT ROOM PARAMS
 	open_in_room:0,    //room index (0-50)
@@ -54,7 +66,6 @@ var FCChatConfig = {
 	showTyping:true,
 	display_timestamp:false,
 	sounds_on:true,
-	show_online_count:true,
 	
 	//PROFILES
 	

@@ -2,7 +2,7 @@ jGo.scripts.importClass('jGo.browser.min.js', 'static', this,
 			null);
 
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "languages/" + FCChatConfig.language_template + "'></script>");
-document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.window_style_template + "'></script>");
+document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.chatcenter_style_template + "'></script>");
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.widget_style_template + "'></script>");
 
 if(FCChatConfig.flashEnabled=='test'){

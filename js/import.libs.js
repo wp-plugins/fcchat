@@ -1,6 +1,6 @@
 //Load jQuery
-if (!window["jGo"] && (!window.jQuery || window.jQuery.fn.jquery != "1.3.2")) {
-	google.load("jquery", "1.3.2");
+if (!window["jGo"] && (!window.jQuery || (window.jQuery.fn.jquery.substr(0,3)-0)<1.6)) {
+	google.load("jquery", FCChatConfig.jQuery_stable);
 }
 
 // Load jGo css and js

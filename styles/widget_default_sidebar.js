@@ -20,55 +20,148 @@
  * support@fastcatsoftware.com
  */
 
-FCChatConfig.styles.chat_toolbox={
-	absolute_positioning:false,
-	fixed:false,
-	fixed_pos:"",
-	top:0,
-	left:310,
-	width:200,
-	height:90,
-	css:"border:0px solid #aaaaaa;color:transparent;",
-	buttons:{
-		default_css:"border:1px solid #000000; padding:4px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
-		states:{
-			link_css:"color:black",
-			hover_css:"color:purple",
-			disabled_css:"color:gray;border:1px solid gray"
+FCChatConfig.styles.widget={
+	control:{
+		top:0, //for absolute positioning
+		left:310, //"     "
+		width:200,
+		height:107,
+		css:"border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
+		topband:{
+			css:"display: block;background-color:gray;text-align:left;width:200px;height:35px; top: 0px; left:0px;"
 		},
-		open_chat_button:{
-			top:3,
-			left:3
+		buttons:{
+			default_css:"border:1px solid #aaaaaa; padding:4px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+			states:{
+				link_css:"color:#efefef",
+				hover_css:"color:lightblue",
+				disabled_css:"color:#dddddd;border:1px solid #aaaaaa"
+			},
+			open_chat_button:{
+				top:5,
+				left:5
+			},
+			on_off_button:{
+				top:5,
+				left:130
+			}
 		},
-		on_off_button:{
-			top:3,
-			left:83
+		info_box:{
+			top:35,
+			left:2,
+			width:198,
+			height:72,
+			css:"background-color:transparent",
+			linebreak:"<br>",
+			text:{
+				css:"font-family:arial;font-size:10pt;color:#444444",
+				alert_css:"font-family:arial;font-size:10pt;color:green;font-weight:bold",
+				link_css:"text-decoration:none;font-family:arial;font-size:10pt;color:blue"
+			}
+		}
+    },
+	toolbar:{
+		width:460,
+		height:20,
+		css:"background-color:gray;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+		text:{
+			css:"font-family:arial;font-size:8pt;font-weight:bold;color:white",
+			alert_css:"font-family:arial;font-size:8pt;font-weight:bold;color:pink",
+			link_css:"font-family:arial;font-size:8pt;font-weight:bold;color:white"
+		},
+		buttons:{
+			default_css:"font-size:10px;font-weight:bold;font-family:arial;text-decoration:none",
+			states:{
+				link_css:"color:white",
+				hover_css:"color:yellow",
+				disabled_css:"color:lightgray;"
+			},
+			open_chat_button:{
+				top:2,
+				left:295
+			},
+			off_button:{
+				top:2,
+				left:390
+			}
+		},
+		info_box:{
+			css:"width:250px;height:20px;left:10px;top:0px;"
+		},
+		divider:{
+			css:"top:2px;left:285px;width:1px;height:16px;background-color:lightgray"
+		},
+		minimize_icon:{
+			top:2,
+			left:430,
+			css:"color:white;font-stretch:wider;font-size:10px;font-weight:bold;text-decoration:none"
+		},
+		hide_icon:{
+			top:2,
+			left:447,
+			css:"color:white;font-stretch:wider;font-size:10px;font-weight:bold;text-decoration:none"
+		},
+		minimized:{
+			width:110
 		}
 	},
-	alert_box:{
-		top:31,
-		left:2,
-		width:190,
-		height:46,
-		expand_on_rollover:{
-			width:190,
-			height:75,
-			shift_page_down:0,
-			shift_page_right:0
-		},
-		css:"border:2px solid #aaaaaa;background-color:#eeeeee;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px",
+	online_box:{
+		top:113,
+		left:0,
+		toolbar_offset:3,
+		width:200,
+		height:275,
+		css:"border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
+		title_box_css:"top:0px;left:0px;height:40px;background-color:gray;",
+		greeting_box_css:"top:40px;left:0px;height:35px;",
+		list_box_css:"top:75px;left:0px;height:130px;",
+		info_box_css:"top:205px;left:0px;height:70px;background-color:#dddddd;",
+		plus_css:"color:green;text-decoration:none;font-size:20px;font-weight:900;",
 		text:{
-			message_text_css:"font-family:arial;font-size:8pt;color:black",
+			css:"font-family:arial;font-size:12px;color:#444444",
+			title_css:"font-weight:bold;color:white",
+			link_css:"color:lightblue",
 			screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700"
 		}
 	},
-	new_message_alert:{
-		top:80,
-		left:3,
-		css:"font-family:arial;font-size:12px;font-weight:bold;color:gray;"
+	new_messages_box:{
+		top:113,
+		left:0,
+		toolbar_offset:3,
+		width:200,
+		height:275,
+		css:"border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
+		title_box_css:"top:0px;left:0px;height:40px;background-color:gray;",
+		greeting_box_css:"top:40px;left:0px;height:35px;",
+		view_msg_box_css:"top:75px;left:0px;height:130px;",
+		send_msg_box_css:"top:205px;left:0px;height:70px;background-color:#dddddd;",
+		plus_css:"color:green;text-decoration:none;font-size:20px;font-weight:900;",
+		text:{
+			css:"font-family:arial;font-size:12px;color:#444444",
+			title_css:"font-weight:bold;color:white",
+			link_css:"color:lightblue",
+			screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700"
+		}
+	},
+	friends_box:{
+		top:null,
+		left:null,
+		width:200,
+		height:275,
+		css:"border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
+		title_box_css:"top:0px;left:0px;height:40px;background-color:gray;",
+		list_box_css:"top:40px;left:0px;height:165px;",
+		info_box_css:"top:205px;left:0px;height:70px;background-color:#dddddd;",
+		minus_css:"color:red;text-decoration:none;font-size:28px;font-weight:900;",
+		text:{
+			css:"font-family:arial;font-size:12px;color:#444444",
+			title_css:"font-weight:bold;color:white",
+			link_css:"color:lightblue",
+			screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700"
+		}
 	},
 	login_panel:{
-		top:32,
-		left:3
+		top:35,
+		left:5
 	}
 };

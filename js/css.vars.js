@@ -1,7 +1,11 @@
 (function (){
-	var fc_tb = FCChatConfig.styles.chat_toolbox;
-	var fc_tb_btn = fc_tb.buttons;
-	var fc_tb_ab = fc_tb.alert_box;
+	var fc_tb = FCChatConfig.styles.widget;
+	var fc_tb_btn = fc_tb.control.buttons;
+	var fc_tb_ab = fc_tb.control.info_box;
+	var fc_tb_nm = fc_tb.new_messages_box;
+	var fc_tb_f = fc_tb.friends_box;
+	var fc_tb_pl = fc_tb.toolbar;
+	var fc_pl_btn = fc_tb.toolbar.buttons;
 	var fc_cw_mp_cp = FCChatConfig.styles.chat_window.main_panel.chat_panels;
 	var fc_cw_mp_sp = FCChatConfig.styles.chat_window.main_panel.side_panels;
 	var fc_cwtmc=fc_cw_mp_cp.font.color.default_text_color;
@@ -41,8 +45,23 @@
 	
 	//Alert box
 	fc_rule+"*.fc_d4, "+fc_rule2+"*.fc_d4{"+fc_tb_ab.css+"}"+
-	fc_rule+"*.fc_d4 *, "+fc_rule2+"*.fc_d4 *{"+fc_tb_ab.text.message_text_css+"}"+
-
+	fc_rule+"*.fc_d4 *, "+fc_rule2+"*.fc_d4 *{"+fc_tb_ab.text.css+"}"+
+	fc_rule+"*.fc_d4 div.fc_t1 a, "+fc_rule2+"*.fc_d4 div.fc_t1 a{"+fc_tb_ab.text.link_css+"}"+
+	fc_rule+"*.fc_d4 a.fc_link, "+fc_rule2+"*.fc_d4 a.fc_link{"+fc_tb_ab.text.link_css+"}"+
+	fc_rule+"*.fc_d4 span.fc_alert_text, "+fc_rule2+"*.fc_d4 span.fc_alert_text{"+fc_tb_ab.text.alert_css+"}"+
+	
+	//Toolbar
+	fc_rule+"*.fc_d5, "+fc_rule2+"*.fc_d5{"+fc_tb_pl.css+"}"+
+	fc_rule+"*.fc_d5 *, "+fc_rule2+"*.fc_d5 *{"+fc_tb_pl.text.css+"}"+
+	fc_rule+"*.fc_d5 a.fc_link, "+fc_rule2+"*.fc_d5 a.fc_link{"+fc_tb_pl.text.link_css+"}"+
+	fc_rule+"*.fc_d5 span.fc_alert_text, "+fc_rule2+"*.fc_d5 span.fc_alert_text{"+fc_tb_pl.text.alert_css+"}"+
+	
+	//New Message box
+	fc_rule+"*.fc_d6 *, "+fc_rule2+"*.fc_d6 *{"+fc_tb_nm.text.css+"}"+
+	
+	//Friends box
+	fc_rule+"*.fc_d7 *, "+fc_rule2+"*.fc_d7 *{"+fc_tb_f.text.css+"}"+
+	
 	//Widgets border
 	fc_rule+"*.fc_cborder a, "+fc_rule2+"*.fc_cborder a{"+fc_widgets.link_css+"}" +
 	fc_rule+"*.fc_cborder a:link, "+fc_rule2+"*.fc_cborder a:link{}" +
@@ -59,12 +78,20 @@
 	
 	
 	//alert box buttons
-	fc_rule+"div.fc_abbtn a, "+fc_rule2+"div.fc_abbtn a{"+fc_tb_btn.default_css+";display:block;float:left;margin:0 5px 0 0;text-align:center;text-decoration:none;}" +
-	fc_rule+"div.fc_abbtn a:link, "+fc_rule2+"div.fc_abbtn a:link{"+fc_tb_btn.states.link_css+"}" +
-	fc_rule+"div.fc_abbtn a:visited, "+fc_rule2+"div.fc_abbtn a:visited{"+fc_tb_btn.states.link_css+"}" +
-	fc_rule+"div.fc_abbtn a:hover, "+fc_rule2+"div.fc_abbtn a:hover{"+fc_tb_btn.states.hover_css+"}" +
-	fc_rule+"div.fc_abbtn_dis a, "+fc_rule2+"div.fc_abbtn_dis a{"+fc_tb_btn.default_css+";display:block;float:left;margin:0 5px 0 0;text-align:center;text-decoration:none;}" +
-	fc_rule+"div.fc_abbtn_dis a.fc_abbtn_disa, "+fc_rule2+"div.fc_abbtn_dis a.fc_abbtn_disa{"+fc_tb_btn.states.disabled_css+";cursor:default;}" +
+	fc_rule+"div.fc_controlbox div.fc_abbtn a, "+fc_rule2+"div.fc_controlbox div.fc_abbtn a{"+fc_tb_btn.default_css+";display:block;float:left;margin:0 5px 0 0;text-align:center;text-decoration:none;}" +
+	fc_rule+"div.fc_controlbox div.fc_abbtn a:link, "+fc_rule2+"div.fc_controlbox div.fc_abbtn a:link{"+fc_tb_btn.states.link_css+"}" +
+	fc_rule+"div.fc_controlbox div.fc_abbtn a:visited, "+fc_rule2+"div.fc_controlbox div.fc_abbtn a:visited{"+fc_tb_btn.states.link_css+"}" +
+	fc_rule+"div.fc_controlbox div.fc_abbtn a:hover, "+fc_rule2+"div.fc_controlbox div.fc_abbtn a:hover{"+fc_tb_btn.states.hover_css+"}" +
+	fc_rule+"div.fc_controlbox div.fc_abbtn_dis a, "+fc_rule2+"div.fc_controlbox div.fc_abbtn_dis a{"+fc_tb_btn.default_css+";display:block;float:left;margin:0 5px 0 0;text-align:center;text-decoration:none;}" +
+	fc_rule+"div.fc_controlbox div.fc_abbtn_dis a.fc_abbtn_disa, "+fc_rule2+"div.fc_controlbox div.fc_abbtn_dis a.fc_abbtn_disa{"+fc_tb_btn.states.disabled_css+";cursor:default;}" +
+	
+	//toolbar buttons
+	fc_rule+"div.fc_toolbar *.fc_abbtn a, "+fc_rule2+"div.fc_toolbar *.fc_abbtn a{"+fc_pl_btn.default_css+"}" +
+	fc_rule+"div.fc_toolbar *.fc_abbtn a:link, "+fc_rule2+"div.fc_toolbar *.fc_abbtn a:link{"+fc_pl_btn.states.link_css+"}" +
+	fc_rule+"div.fc_toolbar *.fc_abbtn a:visited, "+fc_rule2+"div.fc_toolbar *.fc_abbtn a:visited{"+fc_pl_btn.states.link_css+"}" +
+	fc_rule+"div.fc_toolbar *.fc_abbtn a:hover, "+fc_rule2+"div.fc_toolbar *.fc_abbtn a:hover{"+fc_pl_btn.states.hover_css+"}" +
+	fc_rule+"div.fc_toolbar *.fc_abbtn_dis a, "+fc_rule2+"div.fc_toolbar *.fc_abbtn_dis a{"+fc_pl_btn.default_css+"}" +
+	fc_rule+"div.fc_toolbar *.fc_abbtn_dis a.fc_abbtn_disa, "+fc_rule2+"div.fc_toolbar *.fc_abbtn_dis a.fc_abbtn_disa{"+fc_pl_btn.states.disabled_css+";cursor:default;}" +
 	
 	//options buttons
 	fc_rule+"div.fc_obtn a, "+fc_rule2+"div.fc_obtn a{"+fc_o_btn.default_css+";display:block;float:left;margin:0 5px 0 0;text-align:center;text-decoration:none;}" +

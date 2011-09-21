@@ -1,3 +1,4 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <HTML>
 <HEAD>
 <SCRIPT TYPE="text/javascript">
@@ -67,60 +68,10 @@ function getQuerystring(key, default_){
 	FCChatConfig.host = getQuerystring("host") || FCChatConfig.host;
 	
 	//Page Level Configuration
-	FCChatConfig.txt.t4 = "On";
-	FCChatConfig.txt.t5 = "Off";
-	FCChatConfig.txt.t6="Open Chat";
-	FCChatConfig.styles.chat_toolbox = {
-		absolute_positioning:true,
-		top:30,
-		left:460,
-		width:360,
-		height:112,
-		css:"border:0px solid #aaaaaa;color:transparent;",
-		buttons:{
-			default_css:"border:1px solid #000000; padding:4px 8px; font:12px arial;",
-			states:{
-				link_css:"color:black",
-				hover_css:"color:purple",
-				disabled_css:"color:gray;border:1px solid gray"
-			},
-			open_chat_button:{
-				top:85,
-				left:38
-			},
-			on_off_button:{
-				top:85,
-				left:2
-			}
-		},
-		alert_box:{
-			top:3,
-			left:2,
-			width:350,
-			height:75,
-			expand_on_rollover:{
-				width:350,
-				height:75,
-				shift_page_down:0,
-				shift_page_right:0
-			},
-			css:"border:1px solid #000000;background-color:eeeeee;",
-			text:{
-				message_text_css:"font-family:arial;font-size:8pt;color:black",
-				screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700"
-			}
-		},
-		new_message_alert:{
-			top:80,
-			left:125,
-			css:"font-family:arial;font-size:12px;font-weight:bold;color:gray;",
-			text:"New message...Roll over to expand."
-		},
-		login_panel:{
-			top:"35",
-			left:"295"
-		}
-	};
+	FCChatConfig.control_visible=false;
+	FCChatConfig.toolbar_mode=2;
+	FCChatConfig.toolbar_position="bottomright";
+	FCChatConfig.alignment="left";
 	FCChatConfig.startText="&nbsp;Please exit the administration panel and sign in again.&nbsp;&nbsp; <a href='"+FCChatConfig.dir+"html/ChatHelp.html'>Chat Help</a></b>";
 //-->
 </script>
@@ -140,14 +91,14 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 <!-- Begin Fastcat Body Insert -->
 <script type="text/javascript" src="../js/install.prep.adv.js"></script><script type="text/javascript" src="../js/embed.js"></script>
 <!-- /End Fastcat Body Insert -->
-<div style='position:absolute;top:5px;left:14px;font-weight:bold'><img src='../current_skin/FastcatLogo.gif'>&nbsp;FCChat Administration</div>
-<div style='position:absolute;left:15px;top:25px;width:415px;height:650px;border:2px solid gray;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
-	<center><table border=0 style="font-family:arial;font-size:9pt">
+<div style='position:absolute;top:5px;left:15px;font-weight:bold'><img src='../current_skin/FastcatLogo.gif'>&nbsp;FCChat Administration</div>
+<div style='position:absolute;left:15px;top:25px;padding:5px;height:650px;border:2px solid gray;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
+	<table border=0 style="font-family:arial;font-size:9pt;width:400px">
 		<tr><td colspan=2>
 			<span style='color:darkblue;font-weight:bold;font-style:italic;margin-top:10px'>
 					Search Results
 			</span>
-			<div id='searchframe' style='border:1px solid #aaaaaa;height:195px;width:370px;background-color:white;overflow:auto'>
+			<div id='searchframe' style='border:1px solid #aaaaaa;height:195px;width:400px;background-color:white;overflow:auto'>
 			</div>		
 		</td></tr>
 		<tr>
@@ -159,7 +110,7 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 		</tr>
 		<tr><td>
 			<form name='frm1' OnSubmit='fc_chat.search(-1,1);return false;'>
-				<input type='text' id='searchtext' style='width:100;'>
+				<input type='text' id='searchtext' style='width:100px;'>
 				<br><small>(Search Users)</small><br>
 			</form>
 		</td><td>
@@ -185,15 +136,15 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 			<span style='color:darkblue;font-weight:bold;font-style:italic'>
 					User Records
 			</span>
-			<div id='userframe' style='border:1px solid #aaaaaa;height:195px;width:370px;background-color:white;overflow:auto'>
+			<div id='userframe' style='border:1px solid #aaaaaa;height:195px;width:400px;background-color:white;overflow:auto'>
 			
 </div>
 		</td></tr>
-	</table></center></div>
+	</table></div>
 	<div id='leftframecover' style='position:absolute;background-color:gray;display:none;left:15px;top:25px;width:416px;height:571px;filter:alpha(opacity=1); -moz-opacity:.01; opacity:.01;'>
 	</div>
-<div style='position:absolute;left:450px;top:25px;width:380px;height:650px;border:2px solid gray;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
-<table border=0 style='position:absolute;left:15px;width:350px;top:120px;font-family:arial;font-size:9pt'>
+<div style='position:absolute;left:445px;top:25px;height:650px;border:2px solid gray;padding:5px;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
+<table border=0 style='top:10px;width:370px;font-family:arial;font-size:9pt'>
 	<tr>
 		<td colspan=4>
 			<span style='color:darkblue;font-weight:bold;font-style:italic'>
@@ -327,14 +278,14 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 				<input id='setconfigvalue3' type='button' name='setconfigvalue3' value='Set' disabled Onclick='fc_chat.adminUpdateConfigField(3)'>
 			</td>
 			<td width=100%>
-				ID: <input type='text' id='adminid' maxLength='20' onKeyPress="return numbersonly(this, event)" style='margin-top:0px;width:60;'>
+				ID: <input type='text' id='adminid' maxLength='20' onKeyPress="return numbersonly(this, event)" style='margin-top:0px;width:60px;'>
 			</td>
 		</tr>
 </table>
 
 </div>
-<div style='position:absolute;left:850px;top:25px;width:700px;height:650px;border:2px solid gray;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
-	<table border=0 style="margin-left:15px;font-family:arial;font-size:9pt;width:670px;">
+<div style='position:absolute;left:837px;top:25px;width:650px;height:650px;padding:5px;border:2px solid gray;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
+	<table border=0 style="font-family:arial;font-size:9pt;width:640px;">
 		<tr><td colspan=3>
 			<div style='color:darkblue;font-weight:bold;font-style:italic;'>
 					File Editor
@@ -347,7 +298,7 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 			<div style='color:darkblue;font-weight:bold;font-style:italic;'>
 					View Server Configuration
 			</div>
-			<div id='configfile' style='padding:5px;border:1px solid #aaaaaa;height:150px;width:640px;background-color:white;overflow:auto'>
+			<div id='configfile' style='padding:5px;border:1px solid #aaaaaa;height:150px;width:630px;background-color:white;overflow:auto'>
 			</div>
 		</td></tr>
 		<tr>
