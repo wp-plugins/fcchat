@@ -57,6 +57,15 @@ Web based file editor
 
 Service activation -- Service activation comes with a 3 day free trial period. If you wish to continue the service, pricing starts at 20 cents per month for small sites.
 
+Upgrading from a previous version--
+
+When you upgrade to a new version, any customizations you made to the chat will be erased. In order to save those changes, do the following:
+
+1. Make backup copies of any files that you have altered. You may wish to make backups of the following folders: (fcchat/config, fcchat/languages, fcchat/styles, fcchat/html/config). Place them in a safe place where they will not be deleted. 
+1. Next uninstall the old version and install the current version. 
+1. Finally, manually copy the changes you made to the old files into the current version's files. Do not replace the new files with the old files, as the structure of the new files may have changed; but instead, use the wordpress file editor to make the changes line by line.
+
+
 
 IMPORTANT: Those of you who are upgrading from a previous version must obtain a new chat ID in order to use version 2.1.8.  In addition, after upgrading, you must clear your browser cache and cookies or the chat may not connect properly.
 
