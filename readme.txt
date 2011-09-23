@@ -11,7 +11,7 @@ An interface for real time chat, video conferencing, instant messaging, and more
 
 == Description ==
 
-FCChat connects your site users with chat, video conferencing, instant messaging and more. 
+FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
 
 NEW FEATURES
 
