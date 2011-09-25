@@ -15,7 +15,7 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 NEW FEATURES
 
-Version 2.2 comes with an optional toolbar interface for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. Collaborative whiteboard feature introduced. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be coming in future updates.
+Version 2.2 comes with an optional toolbar component for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. Collaborative whiteboard feature introduced. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be coming in future updates.
 
 
 FEATURE LIST:
