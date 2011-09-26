@@ -15,8 +15,17 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 NEW FEATURES
 
-Version 2.2 comes with an optional toolbar component for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. Collaborative whiteboard feature introduced. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be coming in future updates.
+Version 2.2 comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. If you don't like this new component, you can choose to hide it by editing the config file. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. Collaborative whiteboard feature introduced. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be coming in future updates.
 
+UPGRADING
+
+When you upgrade to a new version, any customizations you made to the chat will be erased. In order to save those changes, do the following:
+
+1. Make backup copies of any files that you have altered. You may wish to make backups of the following folders: (fcchat/config, fcchat/languages, fcchat/styles, fcchat/html/config). Place them in a safe place where they will not be deleted. 
+1. Next install the new version. 
+1. Finally, manually copy the changes you made to the old files into the current version's files. Do not replace the new files with the old files, as the structure of the new files may have changed; but instead, use the wordpress file editor to make the changes line by line.
+
+*As of version 2.2, the changelog will list the configuration files that have changed since the previous version. If the config file has not changed from your current version to the new version, you may simply replace the updated version with the old file.
 
 FEATURE LIST:
 
@@ -55,15 +64,7 @@ Administration/moderation panel
 Web based file editor 
 
 
-Service activation -- Service activation comes with a 3 day free trial period. If you wish to continue the service, pricing starts at 20 cents per month for small sites.
-
-Upgrading from a previous version--
-
-When you upgrade to a new version, any customizations you made to the chat will be erased. In order to save those changes, do the following:
-
-1. Make backup copies of any files that you have altered. You may wish to make backups of the following folders: (fcchat/config, fcchat/languages, fcchat/styles, fcchat/html/config). Place them in a safe place where they will not be deleted. 
-1. Next uninstall the old version and install the current version. 
-1. Finally, manually copy the changes you made to the old files into the current version's files. Do not replace the new files with the old files, as the structure of the new files may have changed; but instead, use the wordpress file editor to make the changes line by line.
+Service activation -- Service activation comes with a 3 day free trial period. If you wish to continue the service, there is a small monthly fee.
 
 
 == Installation ==
@@ -87,7 +88,7 @@ When you upgrade to a new version, any customizations you made to the chat will 
 1. Next uninstall the old version and install the current version. 
 1. Finally, manually copy the changes you made to the old files into the current version's files. Do not replace the new files with the old files, as the structure of the new files may have changed; but instead, use the wordpress file editor to make the changes line by line.
 
-Also, when you upgrade to a new version, it is not required that you reactivate the chat unless you are expressly told to do so.
+Also, when you upgrade to a new version, it is NOT required that you obtain a new chat ID.
 
 
 == Frequently Asked Questions ==
