@@ -34,7 +34,7 @@ var FCChatConfig = {
 	
 	//Floating toolbar
 	toolbar_mode:2,   // 2 = always visible | 1 = visible for message alerts only | 0 = hidden
-	toolbar_default_display:1, //1 = normal | 0 = minimized
+	toolbar_default_display:0, //1 = normal | 0 = minimized
 	toolbar_position:"bottomright",  //Choices are "topleft" "topright" "bottomleft" and "bottomright"
 	
 	//Online, New messages and Friends boxes
