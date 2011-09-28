@@ -3,7 +3,7 @@
 Plugin Name: FCChat Widget
 Plugin URI: http://www.fastcatsoftware.com
 Description: Add full featured chat to the sidebar.
-Version: 2.2
+Version: 2.2.1
 Author: Fastcat Software
 Author URI: http://www.fastcatsoftware.com
 License: GPL2
@@ -122,7 +122,7 @@ function fcchat_widget_init() {
 		echo '<p style="text-align:left"><b>Step 1:</b> <a href="http://www.fastcatsoftware.com/chat/wp-activation.aspx" TARGET="_blank" >Click here to activate your chat</a></p>';
 		   
 		//Upgrade notice 
-		echo '<p style="text-align:left"><b>Upgrade notice:</b>Upgrading to version 2.2 from a version prior to 2.1.8 requires that you obtain a new chat ID from the link above.</p>';
+		echo '<p style="text-align:left"><b>Upgrade notice:</b>Upgrading to version 2.2.1 from a version prior to 2.1.8 requires that you obtain a new chat ID from the link above.</p>';
 		    echo '<p style="text-align:left"><b>Step 2:</b> Enter your activation info below, and press save.</p>';
 		
 		//Title                

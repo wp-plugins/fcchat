@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.2",
+	version:"2.2.1",
 	subversion:"0",
 	jQuery_stable:"1.6.4",
 
@@ -32,7 +32,7 @@ var FCChatConfig = {
 	absolute_positioning:false,
 	control_visible:true,
 	
-	//Floating toolbar
+	//FriendsCenter Floating toolbar
 	toolbar_mode:2,   // 2 = always visible | 1 = visible for message alerts only | 0 = hidden
 	toolbar_default_display:0, //1 = normal | 0 = minimized
 	toolbar_position:"bottomright",  //Choices are "topleft" "topright" "bottomleft" and "bottomright"

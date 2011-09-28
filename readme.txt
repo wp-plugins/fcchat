@@ -15,7 +15,7 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 NEW FEATURES
 
-Version 2.2 comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. If you don't like this new component, you can choose to hide it by editing the config file. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. Collaborative whiteboard feature introduced. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be coming in future updates.
+Version 2.2.x comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. If you don't like this new component, you can choose to hide it by editing the config file. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. Nwew Collaborative whiteboard and doodlepad feature. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be coming in future updates.
 
 UPGRADING
 
@@ -42,6 +42,8 @@ Upload images
 User profiles
 
 Collaborative whiteboard
+
+Doodlepad
 
 Split-screen Mode: Show the chat side by side with your site
 
@@ -261,11 +263,19 @@ Changed the file languages/spanish.js to the utf-8 format.
 
 Introduces the SiteCenter toolbar interface, with a focus on user to user interaction. Whiteboard interface provided by Dabbleboard.com. Friends list added.
 
+= 2.2.1 =
+
+Fixed a bug with the whiteboard api interface. Added the doodlepad. Added the ability to insert a URL of an image between the image tags.
+
+Files Modified:
+languages/english.js
+languages/spanish.js
+
 
 == Upgrade Notice ==
 
-= 2.2 =
+= 2.2.x =
 
-*Version 2.2 requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
+*Version 2.2.x requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
 
 To upgrade from any previous version to the current version, first, make backup copies of the 2 configuration files in your old installation (fcchat/config/config.js, fcchat/html/config/config.php) and place them in a safe place where they will not be deleted. Next uninstall the old version and install the current version. Finally, copy your old configuration setting manually to the current version's configuration files. Of course, if you made no alterations to the config files in your previous installation, you may just simply install the new version. Refresh your browser's cache and cookies after upgrading to insure that the browser is displaying the new installation correctly.

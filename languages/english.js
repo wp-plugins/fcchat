@@ -54,7 +54,7 @@ FCChatConfig.txt={
 	//Section Headings
 	t12: "Chat Room",
 	chat_room_width: 61,
-        t13: "Back to chat",
+    t13: "Back to chat",
 	t14: "Messages",
 	private_chat_width: 57,
 	t15: "Who's Online",
@@ -410,8 +410,20 @@ FCChatConfig.txt={
 	t290: "FriendsCenter",
 	
 	//Online Box
-	t294: "Who's Online",
 	t291: "Close",
 	t292: "<u>Underlined Users</u> are available for chat.<br>Click +/- to add/remove friends. Click name to chat.",
-	t293: "<b>Please wait...</b>"
+	t293: "<b>Please wait...</b>",
+	t294: "Who's Online",
+	
+	//added 2.2.1
+	
+	//Notepad
+	t295: "doodlepad",
+	t296: "Send a doodle.",
+	t297: "Send",
+	t298: "Clear",
+	t299: "Eraser",
+	t300: "to Room",
+	t301: "You have been caught using an outdated browser. Please upgrade to a modern browser in order to use the notepad",
+	t302: "Sorry, there was an error saving your note.",
 };

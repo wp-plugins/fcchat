@@ -411,8 +411,21 @@ FCChatConfig.txt = {
 	t290: "FriendsCenter",
 	
 	//Online Box
-	t294: "Quién está en línea",
 	t291: "Cerrar",
 	t292: "<u>subrayado Usuarios</u> están disponibles para chatear. <br>Usa +/- para agregar/quitar amigos. Clic nombre para chatear.",
-	t293: "<b>Espere...Por Favor</b>"
+	t293: "<b>Espere...Por Favor</b>",
+	t294: "Quién está en línea",
+	
+    //added 2.2.1
+	
+	//Notepad
+	t295: "doodlepad",
+	t296: "Enviar un doodle.",
+	t297: "Enviar",
+	t298: "Borrar",
+	t299: "Borrador",
+	t300: "a la Sala",
+	t301: "Que han sido sorprendidos utilizando un navegador anticuado. Por favor, actualice a un navegador moderno con el fin de utilizar el bloc de notas.",
+	t302: "Lo sentimos, fue un error al guardar la nota.",
+	
 };
