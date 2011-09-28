@@ -425,5 +425,5 @@ FCChatConfig.txt={
 	t299: "Eraser",
 	t300: "to Room",
 	t301: "You have been caught using an outdated browser. Please upgrade to a modern browser in order to use the notepad",
-	t302: "Sorry, there was an error saving your note.",
+	t302: "Sorry, there was an error saving your note."
 };

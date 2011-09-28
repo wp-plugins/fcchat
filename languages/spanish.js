@@ -426,6 +426,6 @@ FCChatConfig.txt = {
 	t299: "Borrador",
 	t300: "a la Sala",
 	t301: "Que han sido sorprendidos utilizando un navegador anticuado. Por favor, actualice a un navegador moderno con el fin de utilizar el bloc de notas.",
-	t302: "Lo sentimos, fue un error al guardar la nota.",
+	t302: "Lo sentimos, fue un error al guardar la nota."
 	
 };
