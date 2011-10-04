@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.2
-Stable tag: 2.2
+Stable tag: 2.2.1
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -265,7 +265,7 @@ Introduces the SiteCenter toolbar interface, with a focus on user to user intera
 
 = 2.2.1 =
 
-Fixed a bug with the whiteboard api interface. Added the doodlepad. Added the ability to insert a URL of an image between the image tags.
+Fixed a bug with the whiteboard api interface. Added the Doodlepad. Added the ability to insert a URL of an image between the image tags.
 
 Files Modified:
 languages/english.js
