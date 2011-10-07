@@ -15,9 +15,9 @@ IMAGES_DIRECTORY = "images/" 'Directory where images should be stored. The path 
 
 MAX_IMAGE_SIZE = 200 'in KB
 
-MAX_WIDTH=70 'Maximum width of avatar in pixels
+MAX_WIDTH=120 'Maximum width of avatar in pixels
 
-MAX_HEIGHT=70 'Maximum height of avatar in pixels
+MAX_HEIGHT=120 'Maximum height of avatar in pixels
 
 MAX_FILE_SIZE=MAX_IMAGE_SIZE*1024 'Don't change change
 

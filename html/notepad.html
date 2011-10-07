@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Notepad</title>
+    <title>Doodlepad</title>
 	<link rel="shortcut icon" href="favicon.ico">  
     <link rel="icon" type="image/ico" href="favicon.ico">
 
@@ -85,7 +85,7 @@ function supports_canvas() {
 }
 
 function supports_html5() {
-	 return !!document.createElement('canvas').toDataURLt;
+	 return !!document.createElement('canvas').toDataURL;
 }
 var host = getQuerystring("host");
 var file = getQuerystring("file");
@@ -179,20 +179,20 @@ $(document).ready(function() {
 </head>
 <body body='background-color:#eeeeee'>
 <script>
-if(!supports_html5||!supports_canvas){
-	document.write('<center><div style="padding:15px;margin-top:190px;font-family:arial">' + window.opener.fc_chat.textSetter(301,'You have been caught using an outdated browser. Please upgrade to a modern browser in order to use the notepad') + '</div></center>');
+if(!supports_html5()||!supports_canvas()){
+	document.write('<center><div style="padding:15px;margin-top:190px;font-family:arial">' + window.opener.fc_chat.textSetter(301,'You have been caught using an outdated browser. Please upgrade to a modern browser in order to use the doodlepad') + '</div></center>');
 }else{
-	document.write('<center><div id="snd" style="display:none;padding:15px;margin-top:190px;font-family:arial"><b>Sending...</b></div></center>'+
-				'<canvas id="can" width="648" height="410" style="position:absolute;top:0px;left:0px;border:1px solid black">'+
+	document.write('<center><div id="snd" style="display:none;padding:15px;margin-top:190px;font-family:arial"><b>' + window.opener.fc_chat.textSetter(306,'Sending...') + '</b></div></center>'+
+				'<canvas id="can" width="648" height="370" style="position:absolute;top:0px;left:0px;border:1px solid black">'+
 				'</canvas>'+
-				'<div style="position:absolute;top:430px;left:10px">'+
+				'<div style="position:absolute;top:390px;left:10px">'+
 				'<a id="save" href="#">' + window.opener.fc_chat.textSetter(297,'Send') + (uid==uid2?' '+window.opener.fc_chat.textSetter(300,'to Room'):"")+'</a>'+
 				'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+
 				'<a href="#" id="clear" >' + window.opener.fc_chat.textSetter(298,'Clear') + '</a>'+
 				'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+
 				'<a id="eraser" href="#">' + window.opener.fc_chat.textSetter(299,'Eraser') + '</a>'+
 				'</div>'+
-				'<div id="clr" style="position:absolute;top:430px;left:400px">'+
+				'<div id="clr" style="position:absolute;top:390px;left:400px">'+
 				'<div style="background-color:black;"> </div>'+
 				'<div style="background-color:red;"> </div>'+
 				'<div style="background-color:green;"> </div>'+
@@ -210,7 +210,11 @@ if(!supports_html5||!supports_canvas){
 				'<div style="background-color:#82B82C;"> </div>'+
 				'<div style="background-color:#0099FF;"> </div>'+
 				'<div style="background-color:#ff00ff;"> </div>'+
-				'</div><br /><br />'+
+				'</div>' +
+				'<div style="position:absolute;top:420px;left:10px;font-family:arial">'+
+				(uid==uid2?window.opener.fc_chat.textSetter(305,'Your doodle will be sent to the chat room. To send a doodle to a user, click on the user\'s name, and then click on the "Send a doodle" icon.'):'')+
+				'</div>'+
+				'<br /><br />'+
 				
 				'<form action="http://www.fastcatsoftware.com/plugins/notepad/savenote.aspx?uid='+uid+'&uid2='+uid2+'&host='+host+'" method="post" id="frm"/>'+
 				'<input type="hidden" name="data" id="data" />'+

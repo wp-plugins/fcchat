@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.2.1",
+	version:"2.2.2",
 	subversion:"0",
 	jQuery_stable:"1.6.4",
 
@@ -74,7 +74,7 @@ var FCChatConfig = {
 	
 	//IMAGES AVATARS SMILEYS
 	
-	use_images:false,
+	upload_images_enabled:false,
 	use_avatars:false,
 	script_type:"php",
 	avatars_dir:(window["fc_chat_path"] || "/FCChat/") + "html/images/avatars/",
@@ -108,8 +108,12 @@ var FCChatConfig = {
 	trans_default_language_code:"en",
 	trans_url:"http://api.microsofttranslator.com/V2/Ajax.svc/",
     trans_appid:"4690BC25149C7E7E98E4A356B8C807D6A7132424",
+    
+    //TRANSLITERATION
+    transliteration_enabled:true,
 	
 	//COOKIES
+	cookie_expires:1, //0 - end of session //1 - never
 	user_cookie:"fc_UID", 
 	session_cookie:"fc_ChatToken",
 	timestamp_cookie:"fc_timestamp",

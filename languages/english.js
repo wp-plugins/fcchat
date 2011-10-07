@@ -376,7 +376,7 @@ FCChatConfig.txt={
 	t262: "Click here to accept",
 	t263: "has been invited to share your whiteboard",
 	t268: " is now viewing your whiteboard",
-	t288: "Open your whiteboard",
+	t288: "Share whiteboard",
 	t289: "Invite to share your whiteboard",
 	
 	t264: "Send Message",
@@ -418,12 +418,29 @@ FCChatConfig.txt={
 	//added 2.2.1
 	
 	//Notepad
-	t295: "doodlepad",
+	t295: "Doodlepad",
 	t296: "Send a doodle.",
 	t297: "Send",
 	t298: "Clear",
 	t299: "Eraser",
 	t300: "to Room",
 	t301: "You have been caught using an outdated browser. Please upgrade to a modern browser in order to use the notepad",
-	t302: "Sorry, there was an error saving your note."
+	t302: "Sorry, there was an error saving your note.",
+	
+	//added 2.2.2
+	//Tools
+	t303: "more",
+		
+	//Transliteration icon
+	t304: "Type in your language",
+		
+	//Doodlepad cont.
+	t305: "Your doodle will be sent to the chat room. To send a doodle to a user, click on the user's name, and then click on the \"Send a doodle\" icon.",
+	t306: "Sending...",
+		
+	//Transliteration window.
+	t307: "Select Language to type in:",
+	t308: " selected. When you type your chats, use the space bar to transliterate words. Press Ctrl+g to toggle the transliteration service on and off.<br><br>The transliteration service will remain in effect while this window is open.",
+	t309: "Transliteration is off.",
+	t310: "Transliteration off"
 };

@@ -15,7 +15,7 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 NEW FEATURES
 
-Version 2.2.x comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New collaborative whiteboard and doodlepad feature introduced. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be coming in future updates.
+Version 2.2.x comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New collaborative whiteboard, transliteration, and doodlepad feature introduced. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be coming in future updates.
 
 UPGRADING
 
@@ -44,6 +44,8 @@ User profiles
 Collaborative whiteboard
 
 Doodlepad
+
+Transliteration
 
 Split-screen Mode: Show the chat side by side with your site
 
@@ -270,6 +272,20 @@ Fixed a bug with the whiteboard api interface. Added the Doodlepad. Added the ab
 Files Modified:
 languages/english.js
 languages/spanish.js
+
+= 2.2.2 =
+
+Added transliteration service. Changed the look of some of the icons. Added support for cookie sessions that do not expire.
+
+Files Modified:
+config/config.js
+languages/english.js
+languages/spanish.js
+html/config/php_config.php
+html/config/asp_config.asp
+styles/chatcenter_default.js
+styles/chatcenter_blue_silver.js
+
 
 
 == Upgrade Notice ==

@@ -56,6 +56,8 @@ jQuery(document).ready(function() {
 });
 jQuery(window).unload(function() {
 	if(window.fc_chat&&fc_chat.getPause()==1){
-		jGo.cookie.setCookie("fc_pauseChat", "0", null, "/", FCChatConfig.domain);
+		var date = new Date();
+    	date.setTime(date.getTime()+(365*24*60*60*1000));
+		jGo.cookie.setCookie("fc_pauseChat", "0", (FCChatConfig.cookie_expires==0?null:date), "/", FCChatConfig.domain);
 	}
 });

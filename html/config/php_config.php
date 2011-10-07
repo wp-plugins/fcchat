@@ -1,6 +1,6 @@
 <?php
 
- define ("ALLOW_UPLOADS", "0"); //1=true/0=false
+ define ("ALLOW_UPLOADS", "1"); //1=true/0=false
 
  define ("USE_BOARD_AVATARS", "0"); //1=true/0=false
 
@@ -16,7 +16,7 @@
 
  define ("MAX_DIR_SIZE","1000000000"); //Should not need to change this
 
- define ("MAX_WIDTH","70"); //Maximum width of avatar in pixels
+ define ("MAX_WIDTH","120"); //Maximum width of avatar in pixels
 
- define ("MAX_HEIGHT",70); //Maximum height of avatar in pixels
+ define ("MAX_HEIGHT",120); //Maximum height of avatar in pixels
 ?>

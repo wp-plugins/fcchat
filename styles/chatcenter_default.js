@@ -61,7 +61,9 @@ FCChatConfig.styles={
 				border:{
 					link_css:"border:1px solid #666666",
 					hover_css:"border:1px solid lightblue"
-				}
+				},
+				text_icon_css:"background-color:gray",
+				more_icon_css:"color:white;font-stretch:wider;font-size:10px;font-weight:bold;text-decoration:none"
 			},
 			text:{
 				font:{
@@ -269,11 +271,17 @@ FCChatConfig.styles={
 					}
 				}
 			},
-			smileys_panel:{
+			tools_panel:{
 				border:"1px solid #444444",
 				background_color:"gray",
-				width:250,
-				height:200
+				smileys:{
+					width:250,
+					height:200
+				},
+				icons:{
+					width:250,
+					height:25
+				}
 			},
 			login_panel:{
 				background_color:"#444444",

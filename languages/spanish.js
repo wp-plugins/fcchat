@@ -377,7 +377,7 @@ FCChatConfig.txt = {
 	t262: "Haga clic aquí para aceptar",
 	t263: "ha sido invitado a compartir su pizarra",
 	t268: "está viendo la pizarra",
-	t288: "Abrir la pizarra",
+	t288: "Compartir pizarra",
 	t289: "invitar a compartir su pizarra",
 
 	t264: "Enviar mensaje",
@@ -419,13 +419,30 @@ FCChatConfig.txt = {
     //added 2.2.1
 	
 	//Notepad
-	t295: "doodlepad",
+	t295: "Doodlepad",
 	t296: "Enviar un doodle.",
 	t297: "Enviar",
 	t298: "Borrar",
 	t299: "Borrador",
 	t300: "a la Sala",
 	t301: "Que han sido sorprendidos utilizando un navegador anticuado. Por favor, actualice a un navegador moderno con el fin de utilizar el bloc de notas.",
-	t302: "Lo sentimos, fue un error al guardar la nota."
+	t302: "Lo sentimos, fue un error al guardar la nota.",
+	
+	//added 2.2.2
+	//Tools
+	t303: "mas",
+		
+	// Transliteración icono
+	t304: "Escribir en tu idioma",
+
+	// Doodlepad cont.
+	t305: "Su doodle será enviado a la sala de chat. Para enviar un doodle a un usuario, haga clic en el nombre del usuario, a continuación, haga clic en la carpeta \" Enviar un doodle \" icon",
+	t306: "Envío de...",
+
+	// Transliteración de la ventana.
+	t307: "Seleccione el idioma para escribir:",
+	t308: " está seleccionado. Cuando escriba sus mensajes, utilizar la barra espaciadora para transcribir palabras. Presione Ctrl + g para alternar el servicio de transcripción dentro y fuera de. <br> El servicio de transcripción se mantendrá en efecto mientras que la ventana está abierta.",
+	t309: "La transliteración está apagado.",
+	t310: "Transliteración está apagado"
 	
 };
