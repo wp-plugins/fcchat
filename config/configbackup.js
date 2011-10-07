@@ -75,7 +75,7 @@ var FCChatConfig = {
 	//IMAGES AVATARS SMILEYS
 	
 	upload_images_enabled:false,
-	use_avatars:false,
+	use_avatars:true,
 	script_type:"php",
 	avatars_dir:(window["fc_chat_path"] || "/FCChat/") + "html/images/avatars/",
 	images_dir:(window["fc_chat_path"] || "/FCChat/") + "html/images/",
