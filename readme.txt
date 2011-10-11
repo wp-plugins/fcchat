@@ -286,7 +286,9 @@ html/config/asp_config.asp
 styles/chatcenter_default.js
 styles/chatcenter_blue_silver.js
 
+= 2.2.2.1 =
 
+Bug Fix. A bug was fixed that occurred when the video chat windows were opened and close multiple times, causing the window to become detached from the frame.
 
 == Upgrade Notice ==
 

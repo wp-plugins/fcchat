@@ -305,6 +305,9 @@
 			height :""
 		});
 		this.cN.css("display","none");
+		this.frame.removeEventHandler('mousedown');
+		this.cN.removeEventHandler('mousedown');
+		this.frame.removeEventHandler('dblclick');
 		if (!$.browser.msie) {
 			this.empty();
 		}else{
