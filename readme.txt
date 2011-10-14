@@ -15,7 +15,7 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 NEW FEATURES
 
-Version 2.2.x comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New collaborative whiteboard, transliteration, and doodlepad feature introduced. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be coming in future updates.
+Version 2.2.x comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New collaborative whiteboard, transliteration, and doodlepad feature introduced. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be coming in future updates. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. In addition, you may now open the chatcenter directly into a separate window, so the the connection is maintained through page changes.
 
 UPGRADING
 
@@ -33,6 +33,8 @@ Real time text chat
 
 Video Chat/Video Conferencing (6 Simulaneous Cams)
 
+Pop-out Mode: Launch Chat into a separate window
+
 Public rooms/Private Rooms
 
 Instant messaging/Private Chat
@@ -49,7 +51,7 @@ Transliteration
 
 Split-screen Mode: Show the chat side by side with your site
 
-Pop-out Mode: Launch FCChat into a browser pop-up window
+
 
 Language translation feature 
 
