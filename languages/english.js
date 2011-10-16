@@ -374,10 +374,10 @@ FCChatConfig.txt={
 	t260: "has invited you to share a",
 	t261: "whiteboard.",
 	t262: "Click here to accept",
-	t263: "has been invited to share your whiteboard",
+	t263: "has been invited to share a whiteboard",
 	t268: " is now viewing your whiteboard",
-	t288: "Share whiteboard",
-	t289: "Invite to share your whiteboard",
+	t288: "Share a whiteboard",
+	t289: "Invite to share a whiteboard",
 	
 	t264: "Send Message",
 	t265: "Unable to send this message. The user has blocked you.",
@@ -442,5 +442,15 @@ FCChatConfig.txt={
 	t307: "Select Language to type in:",
 	t308: " selected. When you type your chats, use the space bar to transliterate words. Press Ctrl+g to toggle the transliteration service on and off.<br><br>The transliteration service will remain in effect while this window is open.",
 	t309: "Transliteration is off.",
-	t310: "Transliteration off"
+	t310: "Transliteration off",
+	
+	//added 2.2.2
+	t311: "Share a document",
+	t312:"document",
+	t313:" is now viewing your document",
+	t315:"pin to screen",
+	t316:"unpin",
+	t317: "has been invited to share a document",
+	t318: "To invite additional users to share this document, click on their screen name, and then click \"Share a document\"."
+	
 };

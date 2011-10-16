@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.2
-Stable tag: 2.2.2
+Stable tag: 2.2.3
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -15,7 +15,7 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 NEW FEATURES
 
-Video Chat 3.0. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. Version 2.2.x now comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New collaborative whiteboard, transliteration, and doodlepad feature. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be coming in future updates.  In addition, you may now open the chatcenter directly into a separate window, so the the connection is maintained through page changes.
+Video Chat 3.0. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. Version 2.2.x now comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New features include collaborative whiteboard and documents, transliteration service, and doodlepad. The 2.2.x series will be focused on providing greater user to user interaction. Collaborative documents and games will be coming in future updates.  In addition, you may now open the chatcenter directly into a separate window, so the the connection is maintained through page changes.
 
 UPGRADING
 
@@ -291,6 +291,16 @@ styles/chatcenter_blue_silver.js
 = 2.2.2.1 =
 
 Bug Fix. A bug was fixed that occurred when the video chat windows were opened and close multiple times, causing the window to become detached from the frame.
+
+= 2.2.3 =
+
+Collaborative document feature introduced. windows can now be pinned or unpined from a fixed position on the browser screen.
+
+Files Modified:
+config/config.js
+languages/english.js
+languages/spanish.js
+styles/chatcenter_blue_silver.js
 
 == Upgrade Notice ==
 

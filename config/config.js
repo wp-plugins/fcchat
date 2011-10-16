@@ -53,10 +53,12 @@ var FCChatConfig = {
 	popup_window_on_open:false, //Default in-browser window
 	popup_window_from_menu:true,
 	allow_split_screen_mode:true,
+	pin_windows:true,
+	pinned_by_default:true,
 	
 	//Window size
-	window_height_offset:-45,
-	chat_room_height_offset:45,
+	window_height_offset:-60,
+	chat_room_height_offset:55,
 	
 	//ENVIRONMENTAL
 	default_on:true,
@@ -74,7 +76,9 @@ var FCChatConfig = {
 	
 	//IMAGES AVATARS SMILEYS
 	
-	upload_images_enabled:false,
+	upload_images_enabled:true,
+	allow_crossdomain_images:true,
+	current_domain:"fastcatsoftware.com", //set this to your domain
 	use_avatars:true,
 	script_type:"php",
 	avatars_dir:(window["fc_chat_path"] || "/FCChat/") + "html/images/avatars/",

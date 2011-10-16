@@ -311,6 +311,6 @@ FCChatConfig.styles={
 		}
 	},
 	split_screen:{
-		background_color:"#555555"
+		background_color:"lightgray"
 	}
 };

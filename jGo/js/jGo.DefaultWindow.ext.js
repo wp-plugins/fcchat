@@ -27,10 +27,12 @@
     var MAXIMIZE = "mx";
     var CLOSE = "cl";
     var RESTORE = "rs";
+    var PIN = "pn";
     var ALTMINIMIZE = "b1";
     var ALTMAXIMIZE = "b2";
     var ALTCLOSE = "b3";
     var ALTRESTORE = "b0";
+    var ALTPIN = "b4";
 
 var dwp = jGo.DefaultWindow.prototype;
 
@@ -98,6 +100,7 @@ dwp.handleMouseDown = function(e,doubleClick) {
                         	this.eCBL = jGo.util.eN(this.cB.css("left"));
                         	this.eMBL = jGo.util.eN(this.MB.css("left"));
                         	this.emBL = jGo.util.eN(this.mB.css("left"));
+                        	this.epBL = jGo.util.eN(this.pB.css("left"));
 				jGo.UI.EventHandler('mousemove','hmd' + this.id,jGo.UI,this,"onMouseMoveResizeR");
 				jGo.UI.EventHandler('mouseup','hmd' + this.id,jGo.UI,this,"onMouseUp");
                         break;
@@ -109,6 +112,7 @@ dwp.handleMouseDown = function(e,doubleClick) {
                         	this.eCBL = jGo.util.eN(this.cB.css("left"));
                         	this.eMBL = jGo.util.eN(this.MB.css("left"));
                         	this.emBL = jGo.util.eN(this.mB.css("left"));
+                        	this.epBL = jGo.util.eN(this.pB.css("left"));
 				jGo.UI.EventHandler('mousemove','hmd' + this.id,jGo.UI,this,"onMouseMoveResizeL");
 				jGo.UI.EventHandler('mouseup','hmd' + this.id,jGo.UI,this,"onMouseUp");
                         break;
@@ -120,6 +124,7 @@ dwp.handleMouseDown = function(e,doubleClick) {
                         	this.eCBL = jGo.util.eN(this.cB.css("left"));
                         	this.eMBL = jGo.util.eN(this.MB.css("left"));
                         	this.emBL = jGo.util.eN(this.mB.css("left"));
+                        	this.epBL = jGo.util.eN(this.pB.css("left"));
                         	this.eCH = jGo.util.eN(this.cA.css("height"));
                         	this.eWH = jGo.util.eN(this.frame.height());
                         	this.frame.css({height:this.eWH});
@@ -140,6 +145,7 @@ dwp.handleMouseDown = function(e,doubleClick) {
                         	this.eCBL = jGo.util.eN(this.cB.css("left"));
                         	this.eMBL = jGo.util.eN(this.MB.css("left"));
                         	this.emBL = jGo.util.eN(this.mB.css("left"));
+                        	this.epBL = jGo.util.eN(this.pB.css("left"));
                         	this.eCH = jGo.util.eN(this.cA.css("height"));
                         	this.eWH = jGo.util.eN(this.frame.height());
                         	this.frame.css({height:this.eWH});
@@ -156,18 +162,21 @@ dwp.handleMouseDown = function(e,doubleClick) {
                     var _id = target_id.substr(CLICKABLE_ELEMENT_PREFIX.length + CLICK_SELECTOR_LENGTH);
                     if (this.enabled&&this.id==_id) {
                         switch(click_selector) {
+                        	case PIN: case ALTPIN: 
+                        		this.togglePin();
+                                break;
                             case MINIMIZE: case ALTMINIMIZE: 
-				this.onMinimize();
+                            	this.onMinimize();
                             	break;
                             case RESTORE: case ALTRESTORE: 
-				this.onRestore();
+                            	this.onRestore();
                             	break;
                             case MAXIMIZE: case ALTMAXIMIZE: 
-				this.onMaximize();
+                            		this.onMaximize();
                             	break;
                             case CLOSE: case ALTCLOSE: 
-				this.close();
-				this.destroy();
+                            	this.close();
+                            	this.destroy();
                             	break;
                             default: 
                         }
@@ -227,7 +236,7 @@ dwp.raiseDragShield = function() {
     //this.cA.css({opacity:.5});
     //this.cN.css({position:"absolute",top:"-3000px"});
 	this.cN.css({left:"-3000px"});
-    //this.cN.css({visibility:"hidden"});
+	//jGo.$("#jGo_cnt1").html("hello there");
     //this.cA.style.filter = 'alpha(opacity=' + 50 + ')';
 };
 dwp.lowerDragShield = function() {
@@ -259,6 +268,7 @@ dwp.resizeRight = function(offset, findDimensions) {
         dim.push(this.eCBL);
         dim.push(this.eMBL);
         dim.push(this.emBL);
+        dim.push(this.epBL);
     }
     if ((dim[0] + offset) < this.mW) {
         offset = this.mW - dim[0];
@@ -275,6 +285,7 @@ dwp.resizeRight = function(offset, findDimensions) {
     this.cB.css({left:(dim[2] + offset) + 'px'});
     this.MB.css({left:(dim[3] + offset) + 'px'});
     this.mB.css({left:(dim[4] + offset) + 'px'});
+    this.pB.css({left:(dim[5] + offset) + 'px'});
 };
 dwp.resizeLeft = function(offset, findDimensions) {
     var dim;
@@ -288,6 +299,7 @@ dwp.resizeLeft = function(offset, findDimensions) {
         dim.push(this.eCBL);
         dim.push(this.eMBL);
         dim.push(this.emBL);
+        dim.push(this.epBL);
     }
     if (dim[1] + offset < this.mW) {
         offset = this.mW - dim[1];
@@ -306,6 +318,7 @@ dwp.resizeLeft = function(offset, findDimensions) {
     this.cB.css({left:(dim[3] + offset) + 'px'});
     this.MB.css({left:(dim[4] + offset) + 'px'});
     this.mB.css({left:(dim[5] + offset) + 'px'});
+    this.pB.css({left:(dim[6] + offset) + 'px'});
 };
 dwp.resizeBottom = function(offset, findDimensions) {
     var dim;
@@ -347,6 +360,7 @@ dwp.setWindowWidth = function(x) {
     dim.push(jGo.util.eN(this.cB.css("left")));
     dim.push(jGo.util.eN(this.MB.css("left")));
     dim.push(jGo.util.eN(this.mB.css("left")));
+    dim.push(jGo.util.eN(this.pB.css("left")));
     var offset = x - jGo.util.eN(this.frame.css("width"));
     this.frame.css("width",x + "px");
     this.cN.css("width",(x - 10) + "px");
@@ -354,6 +368,7 @@ dwp.setWindowWidth = function(x) {
     this.cB.css("left",(dim[2] + offset) + "px");
     this.MB.css("left",(dim[3] + offset) + "px");
     this.mB.css("left",(dim[4] + offset) + "px");
+    this.pB.css("left",(dim[5] + offset) + "px");
     
 };
 
@@ -474,6 +489,18 @@ dwp.restore = function() {
     }
     this.state = 1;
     this.lock=false;
+};
+dwp.togglePin = function(){
+	this.fixed = (this.fixed?false:true);
+	var pos = (this.fixed?"fixed":"absolute");
+	if(this.fixed){
+		this.pB.html("<a href='javascript:void(0)' title='"+this.unpin_label+"' id='jGo_clickb4" + this.id + "' class='jGo_unpinwindow_default'>&nbsp;</a>");
+	}else{
+		this.pB.html("<a href='javascript:void(0)' title='"+this.pin_label+"' id='jGo_clickb4" + this.id + "' class='jGo_pinwindow_default'>&nbsp;</a>");
+	}
+	var offset = (this.fixed?-jGo.$(document).scrollTop():0);
+	this.cN.css({"position":pos,"top":this.cN.offset().top+offset+'px'});
+	this.frame.css({"position":pos,"top":this.frame.offset().top+offset-9+'px'});
 };
 })();
 

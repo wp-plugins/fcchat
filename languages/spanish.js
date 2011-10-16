@@ -375,10 +375,10 @@ FCChatConfig.txt = {
 	t260: "te ha invitado a compartir una",
 	t261: "pizarra.",
 	t262: "Haga clic aquí para aceptar",
-	t263: "ha sido invitado a compartir su pizarra",
+	t263: "ha sido invitado a compartir una pizarra",
 	t268: "está viendo la pizarra",
 	t288: "Compartir pizarra",
-	t289: "invitar a compartir su pizarra",
+	t289: "invitar a compartir una pizarra",
 
 	t264: "Enviar mensaje",
 	t265: "No se puede enviar este mensaje. el usuario te ha bloqueado.",
@@ -443,6 +443,14 @@ FCChatConfig.txt = {
 	t307: "Seleccione el idioma para escribir:",
 	t308: " está seleccionado. Cuando escriba sus mensajes, utilizar la barra espaciadora para transcribir palabras. Presione Ctrl + g para alternar el servicio de transcripción dentro y fuera de. <br> El servicio de transcripción se mantendrá en efecto mientras que la ventana está abierta.",
 	t309: "La transliteración está apagado.",
-	t310: "Transliteración está apagado"
+	t310: "Transliteración está apagado",
 	
+	//added 2.2.2
+	t311: "Compartir un documento",
+	t312: "documento",
+	t313: " está viendo el documento",
+	t315: "clavar a la pantalla",
+	t316: "liberar",
+	t317: "ha sido invitado a compartir un documento",
+	t318: "Para invitar a otros usuarios a compartir este documento, haga clic en su nombre de usuario y haga clic en \"Compartir un documento\"."
 };
