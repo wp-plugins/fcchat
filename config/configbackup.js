@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.2.2",
+	version:"2.2.3",
 	subversion:"0",
 	jQuery_stable:"1.6.4",
 
@@ -76,7 +76,7 @@ var FCChatConfig = {
 	
 	//IMAGES AVATARS SMILEYS
 	
-	upload_images_enabled:true,
+	upload_images_enabled:false,
 	allow_crossdomain_images:true,
 	current_domain:"fastcatsoftware.com", //set this to your domain
 	use_avatars:true,
