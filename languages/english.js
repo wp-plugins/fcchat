@@ -76,7 +76,7 @@ FCChatConfig.txt={
 	t29: "Create Avatar",
 	t30: "Create Avatar Disabled",
 	t31: "Video Chat",
-	t32: "Video Chat Disabled",
+	t32: "Disabled",
 	t33: "Webcam",
 	t34: "Change Avatar",
 	
@@ -333,15 +333,15 @@ FCChatConfig.txt={
 		
 	//Video
 	t224: "Video Chat Loading...This may take a few seconds.",
-	t225: "Sorry, you may not open the video chat from this room. To use the video chat, you must be in a room which has (a/v) next to it.",
-	t226: "This user is chatting in the private room: ",
+	t225: "Sorry, you may not open the public video chat from this room. To use the public video chat, you must be in a room which has (a/v) next to it.",
+	t226: "This user is chatting in a private room: ",
 	t227: ". You must be a member of this room in order to view their webcam.",
 	t228: "Sorry, the video chat has reached its capacity. Try again later.",
 	t229: "Turn on camera",
 	t230: "Turn off camera",
 	t231: "Broadcast audio",
 	t232: "Mute",
-	t233: "Loading",
+	t233: "Starting",
 	t234: "No Cam Found",
 	t235: "Start Your Cam",
 	t236: "Waiting for Signal",
@@ -444,13 +444,26 @@ FCChatConfig.txt={
 	t309: "Transliteration is off.",
 	t310: "Transliteration off",
 	
-	//added 2.2.2
+	//added 2.2.3
 	t311: "Share a document",
 	t312:"document",
 	t313:" is now viewing your document",
 	t315:"pin to screen",
 	t316:"unpin",
-	t317: "has been invited to share a document",
-	t318: "To invite additional users to share this document, click on their screen name, and then click \"Share a document\"."
+	t317: "has been invited to share a document.",
+	t318: "To invite additional users to share this document, click on their screen name, and then click \"Share a document\".",
 	
+	//added 2.2.4
+	t319: "Private Video Chat",
+	t320: "has invited you to a 1 on 1 video chat."	,
+	t321: "has been invited to a 1 on 1 video chat.",
+	t322: "is now viewing your webcam.",
+	t323: "Sorry, this user is not available for video chat at the moment.",
+	t324: "Public Video Chat",
+	t325: "Your webcam will be visible to everyone.",
+	t326: "Click below to accept your invitation to a one on one video chat.<br><br> Once loaded, you must click 'Start Webcam' in order for the other party to view your webcam.",
+	t327: "When you start your webcam, the other party will automatically be invited to join you.",
+	t328: "Continue",
+	t329: "Loading...Please Wait"
+		
 };

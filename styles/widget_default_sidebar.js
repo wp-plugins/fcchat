@@ -88,6 +88,9 @@ FCChatConfig.styles.widget={
 		info_box:{
 			css:"width:250px;height:20px;left:10px;top:0px;"
 		},
+		status:{
+			css:"top:8px;left:268px;"
+		},
 		divider:{
 			css:"top:2px;left:285px;width:1px;height:16px;background-color:lightgray"
 		},

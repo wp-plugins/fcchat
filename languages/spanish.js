@@ -78,7 +78,7 @@ FCChatConfig.txt = {
 	t29: "Crear Avatar",
 	t30: "Crear Avatar se ha desactivado",
 	t31: "Video Chat",
-	t32: "Video Chat se ha desactivado",
+	t32: "se ha desactivado",
 	t33: "Webcam",
 	t34: "Cambiar Avatar",
 	
@@ -335,15 +335,15 @@ FCChatConfig.txt = {
 	
 	// Video
 	t224: "Video Chat Cargando ... Este proceso puede tardar unos segundos.",
-	t225: "¡Perdón! Usted no puede abrir el vídeo chat de esta sala. Para utilizar el vídeo chat, debe estar en una habitación que tiene (a/v) al lado de él.",
-	t226: "Este usuario está charlando en la sala privada: ",
+	t225: "¡Perdón! Usted no puede abrir el vídeo chat publico de esta sala. Para utilizar el vídeo chat publico, debe estar en una habitación que tiene (a/v) al lado de él.",
+	t226: "Este usuario está charlando en una sala privada: ",
 	t227: ". Usted debe ser un miembro de esta sala para ver su webcam.",
 	t228: "¡Perdón! El vídeo chat ha alcanzado su capacidad. Inténtelo más tarde.",
 	t229: "Encienda la cámara",
 	t230: "Apague la cámara",
 	t231: "Audio",
 	t232: "Silencio",
-	t233: "Cargando",
+	t233: "Comenzando",
 	t234: "No Cam Encontrado",
 	t235: "Iniciar la Cámara",
 	t236: "Esperando la Señal",
@@ -445,12 +445,25 @@ FCChatConfig.txt = {
 	t309: "La transliteración está apagado.",
 	t310: "Transliteración está apagado",
 	
-	//added 2.2.2
+	//added 2.2.3
 	t311: "Compartir un documento",
 	t312: "documento",
 	t313: " está viendo el documento",
 	t315: "clavar a la pantalla",
 	t316: "liberar",
-	t317: "ha sido invitado a compartir un documento",
-	t318: "Para invitar a otros usuarios a compartir este documento, haga clic en su nombre de usuario y haga clic en \"Compartir un documento\"."
+	t317: "ha sido invitado a compartir un documento.",
+	t318: "Para invitar a otros usuarios a compartir este documento, haga clic en su nombre de usuario y haga clic en \"Compartir un documento\".",
+	
+	//added 2.2.4
+	t319: "Video Chat Privado",
+	t320: "te ha invitado a un chat de vídeo en uno." ,
+	t321: "ha sido invitado a un chat de vídeo 1 a 1.",
+	t322: "está viendo su cámara web.",
+	t323: "Lo sentimos, este usuario no está disponible para video chat en este momento.",
+	t324: "Video Chat Público",
+	t325: "Su cámara será visible a todos.",
+	t326: "Haga clic a continuación para aceptar su invitación a un chat de vídeo privado. <br> Una vez cargado, debe hacer clic en 'Encienda la cámara' para que la otra parte puede ver tu cámara web.",
+	t327: "Al iniciar la cámara web, la otra parte de forma automática serán invitados a unirse a usted.",
+	t328: "Continuar",
+	t329: "Cargando ... Por favor espere"
 };

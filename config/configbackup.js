@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.2.3",
+	version:"2.2.4",
 	subversion:"0",
 	jQuery_stable:"1.6.4",
 
@@ -97,6 +97,7 @@ var FCChatConfig = {
 	
 	//VIDEO
 	video_enabled:false,
+	video_access_level:3, //0 none , 1 private only , public only , 3 both public and private
 	max_video_streams:30,
 	capture_width:160,
 	capture_height:120,
