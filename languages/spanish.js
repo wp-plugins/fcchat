@@ -465,5 +465,18 @@ FCChatConfig.txt = {
 	t326: "Haga clic a continuación para aceptar su invitación a un chat de vídeo privado. <br> Una vez cargado, debe hacer clic en 'Encienda la cámara' para que la otra parte puede ver tu cámara web.",
 	t327: "Al iniciar la cámara web, la otra parte de forma automática serán invitados a unirse a usted.",
 	t328: "Continuar",
-	t329: "Cargando ... Por favor espere"
+	t329: "Cargando ... Por favor espere",
+	
+	//added 2.2.5
+	t330: "Invitar a jugar a un juego",
+	t331: "Seleccionar un juego",
+	// Los nombres del juego: deben coincidir game_ids en config/config.js
+	t332: "Ajedrez,Backgammon,Bola Ocho,Batalla Domino,Dardos,Damas,Billar,Tácticas Back2Back,La Ruleta Rusa,Coiny Coins,Poker,Cuatro en raya,A su vez brillante,Canicas,Pelotas Super Star,Scramble Ramble,Reversi,Tic-Tac-Toe,Raza Paso,Acorazados,Zex Lex Duel,Trucos,Ajedrez velocidad,Nine-ball,Buscaminas,Monstros Vs Marinas,Amor & Odio,Hex del Imperio,Ovejas,Cuatro en raya-Luminati!,¡ya!,Dos Coronas,Kaban Tácticas,Mancala,GoldMiner,Simón,Batalla Libra,Guerra Sudoku",
+	t333: "te ha invitado a jugar: ",
+	t334: ".",
+	t335: "ha sido invitado a jugar un juego.",
+	t336: " ha aceptado su invitación para jugar un juego.",
+	t337: "Haga clic aquí para iniciar el juego.",
+	t338: "Lo sentimos, este usuario no puede jugar en este momento.",
+	t339: "Enviando la invitación...<br><br>Se le pedirá para empezar a jugar después de la otra parte ha aceptado la invitación. Esta ventana se cerrará momentáneamente..."
 };

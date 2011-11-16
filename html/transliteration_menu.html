@@ -30,8 +30,8 @@
 	            google.elements.transliteration.LanguageCode.ENGLISH);
 	        for (var lang in supportedDestinationLanguages) {
 	        	fill += '<a href="javascript:languageChangeHandler(\''+lang+'\',\''+supportedDestinationLanguages[lang]+'\')" style="text-decoration:none">'+lang+'</a>&nbsp;&nbsp; ';
-				document.getElementById('translControl').innerHTML=fill;
 	        }
+	        document.getElementById('translControl').innerHTML=fill;
 	    };
 	    
 	    // Handler for disabling transliteration

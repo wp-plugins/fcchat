@@ -464,6 +464,18 @@ FCChatConfig.txt={
 	t326: "Click below to accept your invitation to a one on one video chat.<br><br> Once loaded, you must click 'Start Webcam' in order for the other party to view your webcam.",
 	t327: "When you start your webcam, the other party will automatically be invited to join you.",
 	t328: "Continue",
-	t329: "Loading...Please Wait"
+	t329: "Loading...Please Wait",
 		
+	//added 2.2.5
+	t330: "Invite to play a game",
+	t331: "Select a Game",
+	//Game Names: must match game_ids in config/config.js
+	t332: "Chess,Backgammon,Eight ball,Domino Battle,Darts,Checkers,Snooker,Back2Back Tactics,Russian Roulette,Coiny Coins,Poker,Four-In-A-Row,Brilliant turn,Marbles,Super Star Balls,Ramble Scramble,Reversi,Tic-Tac-Toe,Step Race,BattleShips,Zex Lex Duel,Cheat,Speed Chess,Nine-ball,MineSweeper,Monsters Vs Marines,Love & Hate,Hex Empire,Sheep me,4-In-A-Row - Luminati!,Go,Two Crowns,Kaban Tactics,Mancala,GoldMiner,Simon,Libra Battle,Sudoku War",
+	t333: "has invited you to play ",
+	t334: ".",
+	t335: "has been invited to play a game.",
+	t336: " has accepted your invitation to play a game.",
+	t337: "Click here to start the game.",
+	t338: "Sorry, this user is not able to play at the moment.",
+	t339: "Sending Invitation...<br><br>You will be prompted to begin play after the other party has accepted the invitation. This window will close momentarily..."
 };

@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.2.4",
+	version:"2.2.5",
 	subversion:"0",
 	jQuery_stable:"1.6.4",
 
@@ -86,6 +86,11 @@ var FCChatConfig = {
 	smileys_dir:(window["fc_chat_path"] || "/FCChat/") + "html/images/smileys/",
 	avatar_sz:35,
 	show_avatar_in_chats:true,
+	
+	//GAMES
+	allow_games:true,
+	//GAME ID'S should match game names in language file
+	game_ids:[2,1,256,325,86,6,254,1822,607,1723,225,4,1607,102,327,274,3,26,6346,562,1840,557,29,255,272,2227,5286,567,15,1658,64,3177,330,329,273,11,1661,12],
 	
 	//SMILEYS
 	/* 
