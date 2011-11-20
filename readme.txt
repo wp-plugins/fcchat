@@ -35,7 +35,7 @@ FEATURE LIST:
 
 Real time text chat
 
-Video Chat/Video Conferencing (6 Simulaneous Cams)
+Video Chat: 1 on 1 video chat and video conferencing (6 Simulaneous Cams)
 
 Pop-out Mode: Launch Chat into a separate window
 
@@ -49,13 +49,15 @@ User profiles
 
 Collaborative whiteboard
 
+Coloaborative document
+
 Doodlepad
 
 Transliteration
 
+Two player games
+
 Split-screen Mode: Show the chat side by side with your site
-
-
 
 Language translation feature 
 
