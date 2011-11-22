@@ -478,5 +478,10 @@ FCChatConfig.txt = {
 	t336: " ha aceptado su invitación para jugar un juego.",
 	t337: "Haga clic aquí para iniciar el juego.",
 	t338: "Lo sentimos, este usuario no puede jugar en este momento.",
-	t339: "Enviando la invitación...<br><br>Se le pedirá para empezar a jugar después de la otra parte ha aceptado la invitación. Esta ventana se cerrará momentáneamente..."
+	t339: "Enviando la invitación...<br><br>Se le pedirá para empezar a jugar después de la otra parte ha aceptado la invitación. Esta ventana se cerrará momentáneamente...",
+	
+	//added 2.2.5.1
+	t340: "Configurar",
+	t341: "¡Perdón! No se puede enviar este mensaje.",
+	t342: "Cambiar su nombre"
 };

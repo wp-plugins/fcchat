@@ -321,7 +321,23 @@ config/config.js
 languages/english.js
 languages/spanish.js
 styles/widget_default_header.js
-styles/widget_default_sidebarr.js
+styles/widget_default_sidebar.js
+
+= 2.2.5.1 =
+
+Bug fixed: Changing users did not clear the friends list properly.
+Bug fixed: "Ghost friends" were being added to some users accounts.
+Bug fixed: Sending messages on enter was sporadically not working in ie9.
+Added: A prompt to change your nickname, when viewing the online list and new messages dialog.
+
+Files Modified:
+config/config.js
+languages/english.js
+languages/spanish.js
+styles/widget_default_header.js
+styles/widget_default_sidebar.js
+styles/chatcenter_default.js
+styles/chatcenter_blue_silver.js
 
 == Upgrade Notice ==
 

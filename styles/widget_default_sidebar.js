@@ -164,7 +164,14 @@ FCChatConfig.styles.widget={
 		}
 	},
 	login_panel:{
-		top:35,
-		left:5
+		top:40,
+		left:5,
+		background_color:"gray",
+		border:"1px solid gray",
+		font:{
+			textfield_description_css:{"font-family":"arial","font-size":"8pt",color:"white","font-style":"italic","font-weight":"bold"},
+			smalltext_css:{"margin-right":"10px","font-family":"arial","font-size":"8pt",color:"white"}
+		},
+		textfield_css:{"background-color":"#dddddd"}
 	}
 };

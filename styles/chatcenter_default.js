@@ -287,10 +287,10 @@ FCChatConfig.styles={
 				background_color:"#444444",
 				border:"1px solid silver",
 				font:{
-					textfield_description_css:"font-family:arial;font-size:8pt;color:darkgray;font-style:italic;font-weight:bold;",
-					smalltext_css:"margin-right:10px;font-family:arial;font-size:8pt;color:white;"
+					textfield_description_css:{"font-family":"arial","font-size":"8pt",color:"lightgray","font-style":"italic","font-weight":"bold"},
+					smalltext_css:{"margin-right":"10px","font-family":"arial","font-size":"8pt",color:"white"}
 				},
-				textfield_css:"background-color:#dddddd;"
+				textfield_css:{"background-color":"#dddddd"}
 			},
 			room_password_panel:{
 				background_color:"#444444",

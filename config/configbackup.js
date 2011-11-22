@@ -14,7 +14,7 @@ var FCChatConfig = {
 	
 	//VERSION
 	version:"2.2.5",
-	subversion:"0",
+	subversion:"1",
 	jQuery_stable:"1.6.4",
 
 	//BASIC GREETINGS
