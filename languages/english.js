@@ -477,5 +477,11 @@ FCChatConfig.txt={
 	t336: " has accepted your invitation to play a game.",
 	t337: "Click here to start the game.",
 	t338: "Sorry, this user is not able to play at the moment.",
-	t339: "Sending Invitation...<br><br>You will be prompted to begin play after the other party has accepted the invitation. This window will close momentarily..."
+	t339: "Sending Invitation...<br><br>You will be prompted to begin play after the other party has accepted the invitation. This window will close momentarily...",
+
+	//added 2.2.5.1
+	t340: "Set",
+	t341: "Sorry, unable to send this message.",
+	t342: "Change nickname"
+
 };
