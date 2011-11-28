@@ -482,6 +482,11 @@ FCChatConfig.txt={
 	//added 2.2.5.1
 	t340: "Set",
 	t341: "Sorry, unable to send this message.",
-	t342: "Change nickname"
+	t342: "Change nickname",
+	
+	//added 2.2.5.2
+	//social media plugin
+	t343: "Share",
+	t344: "Share this site with others"
 
 };

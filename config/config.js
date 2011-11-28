@@ -21,21 +21,23 @@ var FCChatConfig = {
 	startText:"To begin chatting, press the <b>Open Button.&nbsp;</b>",
 	autoGreet:"",
 	
-	//LANGUAGE
+	//LANGUAGE (templates located in the languages folder)
 	language_template:"english.js",
 	
-	//STYLES
+	//STYLES (templates located in the styles folder)
 	widget_style_template:"widget_default_sidebar.js",
+	toolbar_style_template:"toolbar_default.js",
 	chatcenter_style_template:"chatcenter_default.js",
 	
 	//Embedded control box
 	absolute_positioning:false,
 	control_visible:true,
 	
-	//FriendsCenter Floating toolbar
+	//Floating toolbar
 	toolbar_mode:2,   // 2 = always visible | 1 = visible for message alerts only | 0 = hidden
 	toolbar_default_display:0, //1 = normal | 0 = minimized
 	toolbar_position:"bottomright",  //Choices are "topleft" "topright" "bottomleft" and "bottomright"
+	toolbar_items:["friendscenter","social_media"], //List MUST include "friendscenter"
 	
 	//Online, New messages and Friends boxes
 	alignment:"left", //"left" or "right"
@@ -49,14 +51,12 @@ var FCChatConfig = {
 	//PROXY
 	forum_proxy:"",
 	
-	//Window modes
+	//ChatCenter window modes
 	popup_window_on_open:false, //Default in-browser window
 	popup_window_from_menu:true,
 	allow_split_screen_mode:true,
-	pin_windows:true,
-	pinned_by_default:true,
 	
-	//Window size
+	//ChatCenter window size
 	window_height_offset:-60,
 	chat_room_height_offset:55,
 	
@@ -130,7 +130,8 @@ var FCChatConfig = {
 	mod_cookie:"fc_ChatToken",
 	
 	//MISC
-	allow_web:true,
+	pin_windows:true,
+	pinned_by_default:true,
 	preload_images:false,
 	noshow:false,
 	flashEnabled:'test',

@@ -483,5 +483,10 @@ FCChatConfig.txt = {
 	//added 2.2.5.1
 	t340: "Configurar",
 	t341: "¡Perdón! No se puede enviar este mensaje.",
-	t342: "Cambiar su nombre"
+	t342: "Cambiar su nombre",
+	
+	//added 2.2.5.2
+	//social media plugin
+	t343: "Compartir",
+	t344: "Comparta este sitio con otras personas"
 };
