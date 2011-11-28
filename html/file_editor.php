@@ -18,9 +18,9 @@ class Conf {
    var $salt_code_pre = "<?php \$salt='";
    var $salt_code_post = "';
 ?>";
-   var $File_dir = array('./../config','./../languages','./../styles','./config','./');
-   var $dir_names = array('FCChat/config/','FCChat/languages/','FCChat/styles/','FCChat/html/config/');
-   var $Language_files,$Style_files;
+   var $File_dir = array('./../config','./../languages','./../styles','./config','./','./../toolbar_items');
+   var $dir_names = array('FCChat/config/','FCChat/languages/','FCChat/styles/','FCChat/html/config/','FCChat/toolbar_items/');
+   var $Language_files,$Style_files,$Toolbar_files;
 
 function Conf() {
 }
@@ -34,6 +34,7 @@ function is_bad_environment($index) {
 			/FCChat/html/file_editor_salt.php<br>
 			/FCChat/config/<BR>
 			/FCChat/languages/<BR>
+			/FCChat/toolbar_items/<BR>
 			/FCChat/styles/<BR>
 			/FCChat/html/config<BR><BR><br>To ensure security, you should also set up a notification email in /FCChat/html/file_editor_config.php. This will notify you when any changes are made to the filesystem. Also, you should always click on 'Lock File Editor' when you are done using it.";
        	if($error!=""){
@@ -44,6 +45,7 @@ function is_bad_environment($index) {
 			/FCChat/html/file_editor_salt.php<br>
 			/FCChat/config/<BR>
 			/FCChat/languages/<BR>
+			/FCChat/toolbar_items/<BR>
 			/FCChat/styles/<BR>
 			/FCChat/html/config<BR><BR>";
 
@@ -61,6 +63,9 @@ function is_bad_environment($index) {
       $error = $std_error; 
    }
    if(! (is_readable($this->File_dir[3]))) {
+      $error = $std_error; 
+   }
+   if(! (is_readable($this->File_dir[5]))) {
       $error = $std_error; 
    }
    if($error!=""){
@@ -145,6 +150,23 @@ function is_bad_environment($index) {
    }
    $data_dir_obj->close();
 
+   $data_dir_obj = dir ($this->File_dir[5]);
+   while (false !== ($entry = $data_dir_obj->read())) $files5[] = $entry;
+   sort($files5);
+   while (strlen($file=next($files5))) {
+      if (ereg("^\.{1,2}$", $file)) continue;
+	$this->Toolbar_files[] = $file;
+      $my_fullname = "{$data_dir_obj->path}/$file";
+      chmod ($my_fullname, 0777);
+      if (!($FH_SAVEAS = @fopen ("{$my_fullname}", "a"))){
+      	$error = "Some files within FCChat/toolbar_items do not have write permission set. ".$std_error;
+	break;     
+      }else{
+		fclose ($FH_SAVEAS);
+      }
+   }
+   $data_dir_obj->close();
+
    return $error;
 }
 }
@@ -199,7 +221,7 @@ if($this->pass){
       }else {
 	        $file = $_POST['save_file'];
 	        $dir_index = intval($_POST['save_dir']);
-	   	if($dir_index<=3&&$dir_index>=0){ 
+	   	if($dir_index<=3&&$dir_index>=0||$dir_index==5){ 
 			if($dir_index==3){
 				if($this->make_script_safe($this->code)){
 					if ($FH_SAVEAS = @fopen ("{$this->Conf->File_dir[$dir_index]}/{$file}", "w")) {
@@ -228,7 +250,7 @@ if($this->pass){
    }elseif ($_GET['action'] == "open_file") {
 	$dir_index = intval($_GET['dir']);
 	$file = $_GET['file'];
-	if($dir_index<=3&&$dir_index>=0){ 
+	if($dir_index<=3&&$dir_index>=0||$dir_index==5){ 
       		$this->textarea_safe_code = join ("", (file ("{$this->Conf->File_dir[$dir_index]}/{$file}")));
       		if (get_magic_quotes_runtime()) $this->textarea_safe_code = stripslashes($this->textarea_safe_code);
       		$this->textarea_safe_code = $this->make_textarea_safe($this->textarea_safe_code);
@@ -333,6 +355,11 @@ function main_page() {
    foreach ($this->Conf->Style_files as $file) {
       $urlfile = urlencode($file);
       $ret .= "<a style='text-decoration:none' href='file_editor.php?action=open_file&dir=2&file={$urlfile}'>FCChat/styles/{$file}</a><br>\n";
+   }
+   $ret .= "<br><span style='color:darkblue'><i><b>Toolbar Items:</b></i></span><br>\n";
+   foreach ($this->Conf->Toolbar_files as $file) {
+      $urlfile = urlencode($file);
+      $ret .= "<a style='text-decoration:none' href='file_editor.php?action=open_file&dir=5&file={$urlfile}'>FCChat/toolbar_items/{$file}</a><br>\n";
    }
    $ret .= "<br><span style='color:darkblue'><i><b>Scripting Configuration Files:</b></i></span><br>\n";
    $ret .= "<a style='text-decoration:none' href='file_editor.php?action=open_file&dir=3&file=php_config.php'>FCChat/html/config/php_config.php</a><br>\n";

@@ -1,9 +1,15 @@
 jGo.scripts.importClass('jGo.browser.min.js', 'static', this,
 			null);
-
+jGo.toolbar = {};
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "languages/" + FCChatConfig.language_template + "'></script>");
+document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.toolbar_style_template + "'></script>");
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.chatcenter_style_template + "'></script>");
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.widget_style_template + "'></script>");
+for(var i = 0;i<FCChatConfig.toolbar_items.length;i++){
+	if(FCChatConfig.toolbar_items[i]!="friendscenter"){
+		document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "toolbar_items/"+FCChatConfig.toolbar_items[i]+".js'></script>");
+	}
+}
 
 if(FCChatConfig.flashEnabled=='test'){
 	FCChatConfig.flashEnabled=false;

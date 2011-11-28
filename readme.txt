@@ -17,9 +17,9 @@ RECENT FEATURES
 
 Video Chat 3.0. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. Version 2.2.x now comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New features include private video chat, collaborative whiteboard and documents, transliteration service, and doodlepad. The 2.2.x series will be focused on providing greater user to user interaction.  In addition, you may now open the chatcenter directly into a separate popup window, so the the connection is maintained through page changes.
 
-NEW IN 2.2.5
+NEW IN 2.2.5.2
 
-Two player games introduced. This is an optional feature, as games may not be appropriate for some sites. You may disable games by setting "games_allowed" to false in the configuration file.
+Two player games introduced. This is an optional feature, as games may not be appropriate for some sites. You may disable games by setting "games_allowed" to false in the configuration file. Also introduced, an optional social media menu item for the toolbar, which allows your site visitors to share your site on Facebook, Twitter, etc.
 
 UPGRADING
 
@@ -338,6 +338,19 @@ styles/widget_default_header.js
 styles/widget_default_sidebar.js
 styles/chatcenter_default.js
 styles/chatcenter_blue_silver.js
+
+= 2.2.5.2 =
+
+Added: an optional social media menu item for the toolbar, which allows your site visitors to share your site on Facebook, Twitter, etc.
+
+Files Modified:
+config/config.js
+languages/english.js
+languages/spanish.js
+styles/widget_default_header.js
+styles/widget_default_sidebar.js
+
+
 
 == Upgrade Notice ==
 
