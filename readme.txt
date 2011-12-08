@@ -351,6 +351,9 @@ styles/widget_default_header.js
 styles/widget_default_sidebar.js
 
 
+= 2.2.5.3 =
+
+Bug fix: The message alert box componenent was not being linked properly to the chat, causing problems with the administration panel and the forum integrated version of the chat.
 
 == Upgrade Notice ==
 
