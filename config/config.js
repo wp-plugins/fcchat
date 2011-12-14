@@ -39,6 +39,10 @@ var FCChatConfig = {
 	toolbar_position:"bottomright",  //Choices are "topleft" "topright" "bottomleft" and "bottomright"
 	toolbar_items:["friendscenter","social_media"], //List MUST include "friendscenter"
 	
+	//Hide floating toolbar for these mobile apps (support for fixed positioned elements is spotty in mobile apps)
+	//The format below uses the syntax of regualar expressions
+	toolbar_mobile_hidden:/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i,
+
 	//Online, New messages and Friends boxes
 	alignment:"left", //"left" or "right"
 	
