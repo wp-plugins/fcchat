@@ -355,6 +355,10 @@ styles/widget_default_sidebar.js
 
 Critical bug fix: The message alert box componenent was not being linked properly to the chat, causing problems with the administration panel and the forum integrated version of the chat.
 
+= 2.2.5.4 =
+
+Added a config variable "toolbar_mobile_hidden" which can be used to hide the floating toolbar in selected mobile platforms. The reason for this is that fixed positioning of page elements has spotty support in mobile apps.
+
 == Upgrade Notice ==
 
 = 2.2.x =
