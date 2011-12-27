@@ -42,7 +42,7 @@ function fc_chat_load_from_link(elem,mode){
 	try{
 		if(window.fc_chat && fc_chat.try_connection(mode) =="1"){
 			jGo.$("span.fc_chat_link_msg").remove();
-			fc_chat.open_chat_box(1,mode);
+			fc_chat.open_chat_box(null,1,mode);
 		}else{
 			alert(fc_chat.textSetter(160));
 		}

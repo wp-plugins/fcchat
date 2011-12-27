@@ -22,9 +22,9 @@
 
 jGo.toolbar.style={
 		height:20,
-		css:"background-color:gray;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+		css:"box-shadow: 1px 1px 4px 3px #888888;background-color:gray;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 		dialog_box:{
-			css:"border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
+			css:"box-shadow: 1px 1px 3px 2px #aaaaaa;border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
 			title_box_css:"top:0px;left:0px;height:40px;background-color:gray;",
 			text:{
 				css:"font-family:arial;font-size:12px;color:#444444",

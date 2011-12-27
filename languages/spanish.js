@@ -302,8 +302,8 @@ FCChatConfig.txt = {
 	t193: "Opción Cuatro:",
 	t194: "Cargar un nuevo avatar. El ancho y alto máximo para los avatares es",
 	t195: "px",
-	t196: "Usa tu",
-	t197: "avatar",
+	t196: "Usa tu <a target=_blank href='http://gravatar.com'>avatar de Gravatar</a>",
+	t197: "Ayúdame a ubicar el enlace.",
 	t198: "Enviar",
 	t199: "Enlace a su gravatar imagen.<br>(es decir, http://www.gravatar.com/avatar/1234.png)",
 	t200: "Utiliza tu avatar foro actual",
@@ -483,10 +483,14 @@ FCChatConfig.txt = {
 	//added 2.2.5.1
 	t340: "Configurar",
 	t341: "¡Perdón! No se puede enviar este mensaje.",
-	t342: "Cambiar su nombre",
+	t342: "Cambiar nombre",
 	
 	//added 2.2.5.2
 	//social media plugin
 	t343: "Compartir",
-	t344: "Comparta este sitio con otras personas"
+	t344: "Comparta este sitio con otras personas",
+	
+	//added 2.2.6
+	t345:"OK",
+	t346:"Entrar ChatCenter"
 };

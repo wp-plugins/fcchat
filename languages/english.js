@@ -73,8 +73,8 @@ FCChatConfig.txt={
 	t26: "Insert Image Tag",
 	t27: "Upload Images",
 	t28: "Upload Images Disabled",
-	t29: "Create Avatar",
-	t30: "Create Avatar Disabled",
+	t29: "Set Avatar",
+	t30: "Set Avatar Disabled",
 	t31: "Video Chat",
 	t32: "Disabled",
 	t33: "Webcam",
@@ -294,16 +294,16 @@ FCChatConfig.txt={
 	t187: "The width and height of the images can be no larger than ",
 	t188: "px and",
 	t189: "px, respectively. Please try again.",
-	t190: "Option One:",
-	t191: "Option Two:",
-	t192: "Option Three:",
-	t193: "Option Four:",
-	t194: "Upload a new avatar. The maximum width and height for avatars is",
+	t190: "Option One",
+	t191: "Option Two",
+	t192: "Option Three",
+	t193: "Option Four",
+	t194: "Upload a picture from your hard drive. The maximum width and height for avatars is",
 	t195: "px",
-	t196: "Use your",
-	t197: "avatar",
+	t196: "Use your <a target=_blank href='http://gravatar.com'>Gravatar avatar</a>",
+	t197: "Help me find the image link!",
 	t198: "Submit",
-	t199: "Link to gravatar Image.<br>(ie http://www.gravatar.com/avatar/1234.png)",
+	t199: "Link to Image.<br><span style='color:#269CDD'>(ie http://www.gravatar.com/avatar/1234.png)</span>",
 	t200: "Use your current forum avatar",
 	t201: "Use my current avatar",
 	t202: "Select an avatar from the gallery below",
@@ -482,11 +482,15 @@ FCChatConfig.txt={
 	//added 2.2.5.1
 	t340: "Set",
 	t341: "Sorry, unable to send this message.",
-	t342: "Change nickname",
+	t342: "Change name",
 	
 	//added 2.2.5.2
 	//social media plugin
 	t343: "Share",
-	t344: "Share this site with others"
+	t344: "Share this site with others",
+	
+	//added 2.2.6
+	t345:"OK",
+	t346:"Enter ChatCenter"
 
 };

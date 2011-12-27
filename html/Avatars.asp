@@ -14,6 +14,18 @@ arr(4) = "193"
 flext="asp"
 rspln="http://www.freeaspupload.net" 
 rspln2="Free ASP Upload"
+Dim ref, ref2
+'reads the referrer
+ref = Request.queryString("ref")
+
+ref2="0"
+if(ref="1") then
+	ref="window.opener"
+	ref2="1"
+else
+	ref="window.parent"
+	ref2="0"
+end if
 %>
 <!-- #include file="config/asp_config.asp" -->
 <!-- #include file="freeaspupload.asp" -->
@@ -63,7 +75,7 @@ Function listTheFiles(directory)
 			If Len(file)>3 and inStr(file,"a1fc_")<>1 Then
 				Dim path
 				path = directory & "/" & file
-				filetable=filetable & "<td width=80 style='background-color:#cccccc;'><center><img src='" & path & "' border=0  onclick=""this.style.border='3px solid green';window.parent.fc_chat.newAvatar('" & file & "',2,'" & flext & "','" & rspln & "','" & rspln2 & "');"" onmouseover='this.style.border=""1px solid blue""' onmouseout='this.style.border=""1px solid red""' style='border:1px solid red'></center></td>"
+				filetable=filetable & "<td width=80 style='background-color:#cccccc;'><center><img src='" & path & "' border=0  onclick=""this.style.border='3px solid green';" & ref & ".fc_chat.newAvatar('" & file & "',2,'" & ref2 & "','" & flext & "','" & rspln & "','" & rspln2 & "');"" onmouseover='this.style.border=""1px solid blue""' onmouseout='this.style.border=""1px solid red""' style='border:1px solid red'></center></td>"
 				If columns=4 Then
 					filetable=filetable & "</tr><tr>"
 					columns=0
@@ -80,7 +92,7 @@ Function listTheFiles(directory)
 		file=defaultfile
 		If Len(file)>3 and inStr(file,"a1fc_")<>1 Then
 			path = directory & "/" & file
-			filetable=filetable & "<td width=80 style='background-color:#cccccc;'><center><img src='" & path & "' border=0  onclick=""this.style.border='3px solid green';window.parent.fc_chat.newAvatar('" & file & "',2,'" & flext & "','" & rspln & "','" & rspln2 & "');"" onmouseover='this.style.border=""1px solid blue""' onmouseout='this.style.border=""1px solid red""' style='border:1px solid red'></center></td>"
+			filetable=filetable & "<td width=80 style='background-color:#cccccc;'><center><img src='" & path & "' border=0  onclick=""this.style.border='3px solid green';" & ref & ".fc_chat.newAvatar('" & file & "',2,'" & ref2 & "','" & flext & "','" & rspln & "','" & rspln2 & "');"" onmouseover='this.style.border=""1px solid blue""' onmouseout='this.style.border=""1px solid red""' style='border:1px solid red'></center></td>"
 			If columns=4 Then
 				filetable=filetable & "</tr><tr>"
 				columns=0
@@ -102,17 +114,39 @@ Function listTheFiles(directory)
 End Function
 
 Dim startdoc
-startdoc="<script>function useCurrentAvatar(){window.parent.fc_chat.newAvatar('',3,'" & flext & "','" & rspln & "','" & rspln2 & "')};var gravatar;function useGravatar(){ gravatar= document.getElementById('fc_gravatar').value;document.getElementById('fc_gravatar').value='';if(gravatar.indexOf('gravatar.com/')==-1){return false}if(gravatar.indexOf('http://')!=0){gravatar='http://'+gravatar}var tester=new Image();tester.onload=isGood;tester.onerror=isBad;tester.src=gravatar}function isGood(){window.parent.fc_chat.newAvatar('/'+gravatar,4,'" & flext & "','" & rspln & "','" & rspln2 & "')}function isBad(){return false}</script><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 2px solid;font-size:16'><b><i><script>document.write(window.parent.fc_chat.textSetter(184))</script></i></b></div><div id='wait1' style='margin-top:100px;display:none'><center><script>document.write(window.parent.fc_chat.textSetter(185))</script></center></div><div id='content1'>"
+startdoc="<script>function useCurrentAvatar(){" & ref & ".fc_chat.newAvatar('',3,'" & ref2 & "','" & flext & "','" & rspln & "','" & rspln2 & "')};" & _
+"var imagelink;" & _
+"function useimagelink(){ " & _
+"	imagelink= document.getElementById('fc_imagelink').value;document.getElementById('fc_imagelink').value='';" & _
+"		if(" & _
+"(imagelink.indexOf('gravatar.com/')==-1||imagelink.indexOf('gravatar.com/')>11)" & _
+"&&" & _
+"(imagelink.indexOf('twimg.com/profile_images')==-1||imagelink.indexOf('twimg.com/profile_images')>11)" & _
+"&&" & _
+"(imagelink.indexOf('profile.ak.fbcdn.net')==-1||imagelink.indexOf('profile.ak.fbcdn.net')>11)" & _
+"){" & _
+"			return false" & _
+"		}" & _
+"	if(imagelink.indexOf('http://')!=0){" & _
+"		imagelink='http://'+imagelink" & _
+"	}" & _
+"	var tester=new 	Image();" & _
+"	tester.onload=isGood;" & _
+"	tester.onerror=isBad;" & _
+"	tester.src=imagelink" & _
+"}function isGood(){" & ref & ".fc_chat.newAvatar('/'+imagelink,4,'" & ref2 & "','" & flext & "','" & rspln & "','" & rspln2 & "')}" & _
+"function isBad(){alert('Cannot load image');return false}" & _
+"</script><style>BODY {background-color: #DBDBDD;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#444444'><b><i><script>document.write(" & ref & ".fc_chat.textSetter(184))</script></i></b></div><div id='wait1' style='margin-top:100px;display:none'><center><script>document.write(" & ref & ".fc_chat.textSetter(185))</script></center></div><div id='content1'>"
 
 
 function write_upload_option()
 %>
-    <form name="frmSend" method="POST" enctype="multipart/form-data" action="" onSubmit="return onSubmitForm();">
-	<br><font color=#444444 face=arial><b><script>document.write(window.parent.fc_chat.textSetter(<%=arr(1) %>))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(194))</script> <%=MAX_HEIGHT%><script>document.write(window.parent.fc_chat.textSetter(195))</script>.</font><div style='margin:20px'>
+    <br><br><div style="background-color:#eeeeee;border:2px solid gray;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;padding:6px"><form name="frmSend" method="POST" enctype="multipart/form-data" action="" onSubmit="return onSubmitForm();">
+	<font color=#444444 face=arial><b><script>document.write(<%= ref %>.fc_chat.textSetter(<%=arr(1) %>))</script></b></font>&nbsp;<font face=arial> <script>document.write(<%= ref %>.fc_chat.textSetter(194))</script> <%=MAX_HEIGHT%><script>document.write(<%= ref %>.fc_chat.textSetter(195))</script>.</font><div style='margin:20px'>
     <input name="attach1" type="file" size=35><br>
-    <input style="margin-top:4" type=submit value="" id="submitbutton"><br><script>document.getElementById("submitbutton").value=window.parent.fc_chat.textSetter(177)</script>
-    <script>document.write(window.parent.fc_chat.textSetter(178))</script> <%=MAX_IMAGE_SIZE%>KB)</div>
-    </form>
+    <input style="margin-top:4" type=submit value="" id="submitbutton"><br><script>document.getElementById("submitbutton").value=<%= ref %>.fc_chat.textSetter(177)</script>
+    <font face=arial style="color:#269CDD"><script>document.write(<%= ref %>.fc_chat.textSetter(178))</script> <%=MAX_IMAGE_SIZE%>KB)</font></div>
+    </form></div>
 <%
 end function
 
@@ -161,13 +195,35 @@ function SaveFiles
     if (UBound(ks) <> -1) then
         if errorstring = "" then
        		for each fileKey in Upload.UploadedFiles.keys
-            		SaveFiles = "<script>function relayAvatar(){window.parent.fc_chat.newAvatar('" & theFile & "',1,'" & flext & "','" & rspln & "','" & rspln2 & "');}function useCurrentAvatar(){window.parent.fc_chat.newAvatar('',3)};var gravatar;function useGravatar(){ gravatar= document.getElementById('fc_gravatar').value;document.getElementById('fc_gravatar').value='';if(gravatar.indexOf('gravatar.com/')==-1){return false}if(gravatar.indexOf('http://')!=0){gravatar='http://'+gravatar}var tester=new Image();tester.onload=isGood;tester.onerror=isBad;tester.src=gravatar}function isGood(){window.parent.fc_chat.newAvatar('/'+gravatar,4,'" & flext & "','" & rspln & "','" & rspln2 & "')}function isBad(){return false}</script><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body onload=""setTimeout('relayAvatar()',1000);""><br><div style='border-bottom: #A91905 2px solid;font-size:16'><script>document.write(window.parent.fc_chat.textSetter(183))</script></div><div id='wait1' style='margin-top:100px'><center><script>document.write(window.parent.fc_chat.textSetter(185))</script></center></div><div id='content1' style='display:none'><br><font face=arial><b>" & Upload.UploadedFiles(fileKey).FileName & " (" & Upload.UploadedFiles(fileKey).Length & " bytes)</font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(186))</script></b></font><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+""html/Avatars.asp?id=" & userID & """)'><script>document.write(window.parent.fc_chat.textSetter(181))</script></a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.fc_chat.textSetter(182))</script></a><br><br>"
+            		SaveFiles = "<script>function relayAvatar(){" & ref & ".fc_chat.newAvatar('" & theFile & "',1,'" & ref2 & "','" & flext & "','" & rspln & "','" & rspln2 & "');}function useCurrentAvatar(){" & ref & ".fc_chat.newAvatar('',3,'" & ref2 & "','" & flext & "','" & rspln & "','" & rspln2 & "')};" & _
+            		"var imagelink;" & _
+					"function useimagelink(){ " & _
+					"	imagelink= document.getElementById('fc_imagelink').value;document.getElementById('fc_imagelink').value='';" & _
+					"		if(" & _
+					"(imagelink.indexOf('gravatar.com/')==-1||imagelink.indexOf('gravatar.com/')>11)" & _
+					"&&" & _
+					"(imagelink.indexOf('twimg.com/profile_images')==-1||imagelink.indexOf('twimg.com/profile_images')>11)" & _
+					"&&" & _
+					"(imagelink.indexOf('profile.ak.fbcdn.net')==-1||imagelink.indexOf('profile.ak.fbcdn.net')>11)" & _
+					"){" & _
+					"			return false" & _
+					"		}" & _
+					"	if(imagelink.indexOf('http://')!=0){" & _
+					"		imagelink='http://'+imagelink" & _
+					"	}" & _
+					"	var tester=new 	Image();" & _
+					"	tester.onload=isGood;" & _
+					"	tester.onerror=isBad;" & _
+					"	tester.src=imagelink" & _
+					"}function isGood(){" & ref & ".fc_chat.newAvatar('/'+imagelink,4,'" & ref2 & "','" & flext & "','" & rspln & "','" & rspln2 & "')}" & _
+					"function isBad(){alert('Cannot load image');return false}" & _
+            		"</script><style>BODY {background-color: #DBDBDD;font-family:arial; font-size:12}</style><body onload=""setTimeout('relayAvatar()',1000);""><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#444444'><script>document.write(" & ref & ".fc_chat.textSetter(183))</script></div><div id='wait1' style='margin-top:100px'><center><script>document.write(" & ref & ".fc_chat.textSetter(185))</script></center></div><div id='content1' style='display:none'><br><font face=arial><b>" & Upload.UploadedFiles(fileKey).FileName & " (" & Upload.UploadedFiles(fileKey).Length & " bytes)</font><font face=arial> <script>document.write(" & ref & ".fc_chat.textSetter(186))</script></b></font><br><br><a href='javascript:this.location.replace(" & ref & ".FCChatConfig.alt_dir+""html/Avatars.asp?id=" & userID & """)'><script>document.write(" & ref & ".fc_chat.textSetter(181))</script></a>&nbsp;<a href='javascript:" & ref & ".fc_chat.rem()'><script>document.write(" & ref & ".fc_chat.textSetter(182))</script></a><br><br>"
         	next
 	else
-		SaveFiles = startdoc & "<script>document.write(window.parent.fc_chat.textSetter(" & errorstring & "))</script>"
+		SaveFiles = startdoc & "<script>document.write(" & ref & ".fc_chat.textSetter(" & errorstring & "))</script>"
 	end if
     else
-        SaveFiles = startdoc & "<br><b><script>document.write(window.parent.fc_chat.textSetter(168))</script></b><br><br>"
+        SaveFiles = startdoc & "<br><b><script>document.write(" & ref & ".fc_chat.textSetter(168))</script></b><br><br>"
 	errorstring = "-1"
     end if
 end function
@@ -203,21 +259,20 @@ if Request.ServerVariables("REQUEST_METHOD") <> "POST" then
         response.write diagnostics
         response.write "<p>After you correct this problem, reload the page."
     else
-
-	if (ALLOW_UPLOADS=1) Then
+    if (ALLOW_UPLOADS=1) Then
 		Write_upload_option()
 		i = i + 1
 	End If
 	if (USE_GRAVATAR=1) Then
-		option2="<br><font color=#444444 face=arial><b><script>document.write(window.parent.fc_chat.textSetter(" & arr(i) & "))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(196))</script> <a href='http://gravatar.com' target=_blank>Gravitar</a> <script>document.write(window.parent.fc_chat.textSetter(197))</script>.</font><br><br><div style='margin-left:20px'><INPUT id='fc_gravatar' TYPE=text NAME='gravatar' VALUE='' style='width:200px'> <input type='button' name='Submit' value='Submit' onclick='useGravatar();' id='submitbutton2'><script>document.getElementById('submitbutton2').value=window.parent.fc_chat.textSetter(198)</script><br><script>document.write(window.parent.fc_chat.textSetter(199))</script></div><br>"
+		option2="<br><br><div style='background-color:#eeeeee;border:2px solid gray;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;padding:6px'><font color=#444444 face=arial><b><script>document.write(" & ref & ".fc_chat.textSetter(" & arr(i) & "))</script></b></font>&nbsp;<font face=arial> <script>document.write(" & ref & ".fc_chat.textSetter(196))</script>.</font><br><br><div style='margin-left:20px'><INPUT id='fc_imagelink' TYPE=text NAME='imagelink' VALUE='' style='width:200px'> <input type='button' name='Submit' value='' id='submitbutton2' onclick='useimagelink();'><script>document.getElementById('submitbutton2').value=" & ref & ".fc_chat.textSetter(198)</script><br><script>document.write(" & ref & ".fc_chat.textSetter(199))</script><br><br></div></div><br>"
 		i = i + 1
-	End If
+	End If	
 	if (USE_BOARD_AVATARS=1) Then
-		option3="<br><font color=#444444 face=arial><b><script>document.write(window.parent.fc_chat.textSetter(" & arr(i) & "))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(200))</script>.</font><br><br><div style='margin-left:20px'><INPUT TYPE=checkbox NAME='current' VALUE='1' onclick='useCurrentAvatar();'><script>document.write(window.parent.fc_chat.textSetter(201))</script>.</div><br>"
+		option3="<br><div style='background-color:#eeeeee;border:2px solid gray;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;padding:6px'>&nbsp;<font color=#444444 face=arial><b><script>document.write(" & ref & ".fc_chat.textSetter(" & arr(i) & "))</script></b></font><font face=arial> <script>document.write(" & ref & ".fc_chat.textSetter(200))</script>.</font><br><br><div style='margin-left:20px'><INPUT TYPE=checkbox NAME='current' VALUE='1' onclick='useCurrentAvatar();'><script>document.write(" & ref & ".fc_chat.textSetter(201))</script>.<br><br></div></div><br>"
 		i = i + 1
 	End If
 	if (USE_GALLERY=1) Then
-		option4="<br><font color=#444444 face=arial><b><script>document.write(window.parent.fc_chat.textSetter(" & arr(i) & "))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(202))</script>.</font><br>"
+		option4="<br><div style='background-color:#eeeeee;border:2px solid gray;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;padding:6px'>&nbsp;<font color=#444444 face=arial><b><script>document.write(" & ref & ".fc_chat.textSetter(" & arr(i) & "))</script></b></font><font face=arial> &nbsp;<script>document.write(" & ref & ".fc_chat.textSetter(202))</script>.</font><br></div>"
 		i = i + 1
 		If listTheFiles(AVATAR_DIRECTORY)<>0 Then
 			option4 = option4 & "<br>" & filetable
@@ -245,15 +300,15 @@ else
 		i = i + 1
 	End If
 	if (USE_GRAVATAR=1) Then
-		option2="<br><font color=#444444 face=arial><b><script>document.write(window.parent.fc_chat.textSetter(" & arr(i) & "))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(196))</script> <a href='http://gravatar.com' target=_blank>Gravitar</a> <script>document.write(window.parent.fc_chat.textSetter(197))</script>.</font><br><br><div style='margin-left:20px'><INPUT id='fc_gravatar' TYPE=text NAME='gravatar' VALUE='' style='width:200px'> <input type='button' name='Submit' value='Submit' onclick='useGravatar();' id='submitbutton2'><script>document.getElementById('submitbutton2').value=window.parent.fc_chat.textSetter(198)</script><br><script>document.write(window.parent.fc_chat.textSetter(199))</script></div><br>"
+		option2="<br><br><div style='background-color:#eeeeee;border:2px solid gray;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;padding:6px'><font color=#444444 face=arial><b><script>document.write(" & ref & ".fc_chat.textSetter(" & arr(i) & "))</script></b></font>&nbsp;<font face=arial> <script>document.write(" & ref & ".fc_chat.textSetter(196))</script>.</font><br><br><div style='margin-left:20px'><INPUT id='fc_imagelink' TYPE=text NAME='imagelink' VALUE='' style='width:200px'> <input type='button' name='Submit' value='' id='submitbutton2' onclick='useimagelink();'><script>document.getElementById('submitbutton2').value=" & ref & ".fc_chat.textSetter(198)</script><br><script>document.write(" & ref & ".fc_chat.textSetter(199))</script><br><br></div></div><br>"
 		i = i + 1
-	End If
+	End If	
 	if (USE_BOARD_AVATARS=1) Then
-		option3="<br><font color=#444444 face=arial><b><script>document.write(window.parent.fc_chat.textSetter(" & arr(i) & "))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(200))</script>.</font><br><br><div style='margin-left:20px'><INPUT TYPE=checkbox NAME='current' VALUE='1' onclick='useCurrentAvatar();'><script>document.write(window.parent.fc_chat.textSetter(201))</script>.</div><br>"
+		option3="<br><div style='background-color:#eeeeee;border:2px solid gray;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;padding:6px'>&nbsp;<font color=#444444 face=arial><b><script>document.write(" & ref & ".fc_chat.textSetter(" & arr(i) & "))</script></b></font><font face=arial> <script>document.write(" & ref & ".fc_chat.textSetter(200))</script>.</font><br><br><div style='margin-left:20px'><INPUT TYPE=checkbox NAME='current' VALUE='1' onclick='useCurrentAvatar();'><script>document.write(" & ref & ".fc_chat.textSetter(201))</script>.<br><br></div></div><br>"
 		i = i + 1
 	End If
 	if (USE_GALLERY=1) Then
-		option4="<br><font color=#444444 face=arial><b><script>document.write(window.parent.fc_chat.textSetter(" & arr(i) & "))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(202))</script>.</font><br>"
+		option4="<br><div style='background-color:#eeeeee;border:2px solid gray;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;padding:6px'>&nbsp;<font color=#444444 face=arial><b><script>document.write(" & ref & ".fc_chat.textSetter(" & arr(i) & "))</script></b></font><font face=arial> &nbsp;<script>document.write(" & ref & ".fc_chat.textSetter(202))</script>.</font><br></div>"
 		i = i + 1
 		If listTheFiles(AVATAR_DIRECTORY)<>0 Then
 			option4 = option4 & "<br>" & filetable

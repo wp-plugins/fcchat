@@ -1,6 +1,16 @@
 <?php
  //include the configuration file
  include('config/php_config.php');
+//reads the referrer
+$ref=$_GET['ref'];
+$ref2="0";
+if($ref=="1"){
+	$ref="window.opener";
+	$ref2="1";
+}else{
+	$ref="window.parent";
+	$ref2="0";
+}
  $flext='php';
 $rspln='http://www.php.net'; 
 $rspln2='PHP';
@@ -17,7 +27,7 @@ $filetable='';
 
 function list_files($directory)
  {
-     Global $filetable,$flext,$rspln,$rspln2;
+     Global $filetable,$flext,$rspln,$rspln2,$ref,$ref2;
      $size = 0;
      $filecount=0;
      $columns=1;
@@ -46,7 +56,7 @@ function list_files($directory)
              		// we build the new table
 			if(strlen($file)>3 && strpos($file,"1fc_")!=1){
 				$path = $directory.'/'.$file;
-				$filetable=$filetable."<td width=80 style='background-color:#cccccc;'><center><img src='".$path."' border=0  onclick=\"this.style.border='3px solid green';window.parent.fc_chat.newAvatar('".$file."',2,'".$flext."','".$rspln."','".$rspln2."');\" onmouseover='this.style.border=\"1px solid blue\"' onmouseout='this.style.border=\"1px solid red\"' style='border:1px solid red'></center></td>";
+				$filetable=$filetable."<td width=80 style='background-color:#cccccc;'><center><img src='".$path."' border=0  onclick=\"this.style.border='3px solid green';".$ref.".fc_chat.newAvatar('".$file."',2,'".$ref2."','".$flext."','".$rspln."','".$rspln2."');\" onmouseover='this.style.border=\"1px solid blue\"' onmouseout='this.style.border=\"1px solid red\"' style='border:1px solid red'></center></td>";
 				if($columns==4){
 					$filetable=$filetable."</tr><tr>";
 					$columns=0;
@@ -62,7 +72,7 @@ function list_files($directory)
 		$file=$defaultfile;
 		if(strlen($file)>3 && strpos($file,"1fc_")!=1){
 			$path = $directory.'/'.$file;
-			$filetable=$filetable."<td width=80 style='background-color:#cccccc;'><center><img src='".$path."' border=0  onclick=\"this.style.border='3px solid green';window.parent.fc_chat.newAvatar('".$file."',2,'".$flext."','".$rspln."','".$rspln2."');\" onmouseover='this.style.border=\"1px solid blue\"' onmouseout='this.style.border=\"1px solid red\"' style='border:1px solid red'></center></td>";
+			$filetable=$filetable."<td width=80 style='background-color:#cccccc;'><center><img src='".$path."' border=0  onclick=\"this.style.border='3px solid green';".$ref.".fc_chat.newAvatar('".$file."',2,'".$ref2."','".$flext."','".$rspln."','".$rspln2."');\" onmouseover='this.style.border=\"1px solid blue\"' onmouseout='this.style.border=\"1px solid red\"' style='border:1px solid red'></center></td>";
 			if($columns==4){
 				$filetable=$filetable."</tr><tr>";
 				$columns=0;
@@ -182,15 +192,38 @@ $errors=0;
 $errorstring='';
 $filename='';
 $newname='';
+
 //checks if the form has been submitted
-$startdoc="<html><script>function useCurrentAvatar(){window.parent.fc_chat.newAvatar('',3,'".$flext."','".$rspln."','".$rspln2."')};var gravatar;function useGravatar(){ gravatar= document.getElementById('fc_gravatar').value;document.getElementById('fc_gravatar').value='';if(gravatar.indexOf('gravatar.com/')==-1){return false}if(gravatar.indexOf('http://')!=0){gravatar='http://'+gravatar}var tester=new Image();tester.onload=isGood;tester.onerror=isBad;tester.src=gravatar}function isGood(){window.parent.fc_chat.newAvatar('/'+gravatar,4,'".$flext."','".$rspln."','".$rspln2."')}function isBad(){return false}</script><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 2px solid;font-size:16'><b><i><script>document.write(window.parent.fc_chat.textSetter(184))</script></i></b></div><div id='wait1' style='margin-top:100px;display:none'><center><script>document.write(window.parent.fc_chat.textSetter(185))</script></center></div><div id='content1'>";
+$startdoc="<html><script>
+function useCurrentAvatar(){".$ref.".fc_chat.newAvatar('',3,'".$ref2."','".$flext."','".$rspln."','".$rspln2."')};var imagelink;
+function useimagelink(){ 
+	imagelink= document.getElementById('fc_imagelink').value;document.getElementById('fc_imagelink').value='';
+		if(
+(imagelink.indexOf('gravatar.com/')==-1||imagelink.indexOf('gravatar.com/')>11)
+&&
+(imagelink.indexOf('twimg.com/profile_images')==-1||imagelink.indexOf('twimg.com/profile_images')>11)
+&&
+(imagelink.indexOf('profile.ak.fbcdn.net')==-1||imagelink.indexOf('profile.ak.fbcdn.net')>11)
+){
+			return false
+		}
+	if(imagelink.indexOf('http://')!=0){
+		imagelink='http://'+imagelink
+	}
+	var tester=new 	Image();
+	tester.onload=isGood;
+	tester.onerror=isBad;
+	tester.src=imagelink
+}function isGood(){".$ref.".fc_chat.newAvatar('/'+imagelink,4,'".$ref2."','".$flext."','".$rspln."','".$rspln2."')}
+function isBad(){alert('Cannot load image');return false}
+</script><style>BODY {background-color: #DBDBDD;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#444444'><b><i><script>document.write(".$ref.".fc_chat.textSetter(184))</script></i></b></div><div id='wait1' style='margin-top:100px;display:none'><center><script>document.write(".$ref.".fc_chat.textSetter(185))</script></center></div><div id='content1'>";
 
  if(isset($_POST['Submit'])) 
  {
 	//reads the user
 	$id=$_GET['id'];
 	if(!is_numeric($id)){
-		$errorstring='<br><font color=red face=arial><b><script>document.write(window.parent.fc_chat.textSetter(163))</script></font></b><br><br>';
+		$errorstring='<br><font color=red face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter(163))</script></font></b><br><br>';
 		$errors=1;
 	}else{
  		//reads the name of the file the user submitted for uploading
@@ -208,7 +241,7 @@ $startdoc="<html><script>function useCurrentAvatar(){window.parent.fc_chat.newAv
  			if (($extension != "jpg") && ($extension != "jpeg") && ($extension != "png") && ($extension != "gif")) 
  			{
 				//print error message
- 				$errorstring='<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(165))</script></font></b><br><br>';
+ 				$errorstring='<br><font face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter(165))</script></font></b><br><br>';
  				$errors=1;
  			}
  			else
@@ -221,10 +254,10 @@ $startdoc="<html><script>function useCurrentAvatar(){window.parent.fc_chat.newAv
 				//compare the size with the maxim size we defined and print error if bigger
 				if ($size > MAX_FILE_SIZE*1024)
 				{
-					$errorstring='<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(166))</script></font></b><br><br>';
+					$errorstring='<br><font face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter(166))</script></font></b><br><br>';
 					$errors=1;
 				}else if (recursive_directory_size(AVATAR_DIRECTORY,FALSE)>MAX_DIR_SIZE){
-					$errorstring='<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(167))</script></b><br><br>';
+					$errorstring='<br><font face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter(167))</script></b><br><br>';
 					$errors=1;
 				}else{
 						
@@ -246,23 +279,46 @@ $startdoc="<html><script>function useCurrentAvatar(){window.parent.fc_chat.newAv
 	
 					if (!$copied) 
 					{
-						$errorstring='<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(169))</script></b></font><br><br>';
+						$errorstring='<br><font face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter(169))</script></b></font><br><br>';
 						$errors=1;
 					}else{
 						//Check height and width
 						if($width<=MAX_WIDTH&&$height<=MAX_HEIGHT){	
 							$base = basename($newname);
-							$startdoc="<html><script>function relayAvatar(){window.parent.fc_chat.newAvatar('".$base."',1,'".$flext."','".$rspln."','".$rspln2."');}function useCurrentAvatar(){window.parent.fc_chat.newAvatar('',3,'".$flext."','".$rspln."','".$rspln2."')};var gravatar;function useGravatar(){ gravatar= document.getElementById('fc_gravatar').value;document.getElementById('fc_gravatar').value='';if(gravatar.indexOf('gravatar.com/')==-1){return false}if(gravatar.indexOf('http://')!=0){gravatar='http://'+gravatar}var tester=new Image();tester.onload=isGood;tester.onerror=isBad;tester.src=gravatar}function isGood(){window.parent.fc_chat.newAvatar('/'+gravatar,4,'".$flext."','".$rspln."','".$rspln2."')}function isBad(){return false}</script><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body onload=\"setTimeout('relayAvatar()',1000);\"><br><div style='border-bottom: #A91905 2px solid;font-size:16'><script>document.write(window.parent.fc_chat.textSetter(183))</script></div><div id='wait1' style='margin-top:100px'><center><script>document.write(window.parent.fc_chat.textSetter(185))</script></center></div><div id='content1' style='display:none'>";
+							$startdoc="<html><script>function relayAvatar(){".$ref.".fc_chat.newAvatar('".$base."',1,'".$ref2."','".$flext."','".$rspln."','".$rspln2."');}function useCurrentAvatar(){".$ref.".fc_chat.newAvatar('',3,'".$ref2."','".$flext."','".$rspln."','".$rspln2."')};var imagelink;
+function useimagelink(){ 
+	imagelink= document.getElementById('fc_imagelink').value;document.getElementById('fc_imagelink').value='';
+		if(
+(imagelink.indexOf('gravatar.com/')==-1||imagelink.indexOf('gravatar.com/')>11)
+&&
+(imagelink.indexOf('twimg.com/profile_images')==-1||imagelink.indexOf('twimg.com/profile_images')>11)
+&&
+(imagelink.indexOf('profile.ak.fbcdn.net')==-1||imagelink.indexOf('profile.ak.fbcdn.net')>11)
+){
+			return false
+		}
+	if(imagelink.indexOf('http://')!=0){
+		imagelink='http://'+imagelink
+	}
+	var tester=new 	Image();
+	tester.onload=isGood;
+	tester.onerror=isBad;
+	tester.src=imagelink
+}function isGood(){".$ref.".fc_chat.newAvatar('/'+imagelink,4,'".$ref2."','".$flext."','".$rspln."','".$rspln2."')}
+function isBad(){alert('Cannot load image');return false}
+</script><style>BODY {background-color: #DBDBDD;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#44444
+
+</script><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body onload=\"setTimeout('relayAvatar()',1000);\"><br><div style='border-bottom: #A91905 2px solid;font-size:16'><script>document.write(".$ref.".fc_chat.textSetter(183))</script></div><div id='wait1' style='margin-top:100px'><center><script>document.write(".$ref.".fc_chat.textSetter(185))</script></center></div><div id='content1' style='display:none'>";
 						}else{
 							$deleted=user_avatar_delete($newname);
-							$errorstring='<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(187))</script>'.MAX_WIDTH.'<script>document.write(window.parent.fc_chat.textSetter(188))</script> '.MAX_HEIGHT.'<script>document.write(window.parent.fc_chat.textSetter(189))</script></font><br><br>';
+							$errorstring='<br><font face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter(187))</script>'.MAX_WIDTH.'<script>document.write(window.parent.fc_chat.textSetter(188))</script> '.MAX_HEIGHT.'<script>document.write('.$ref.'.fc_chat.textSetter(189))</script></font><br><br>';
 							$errors=1;
 						}
 					}
 				}
 			}
 		}else{
-			$errorstring='<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(170))</script></font></b><br><br>';
+			$errorstring='<br><font face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter(170))</script></font></b><br><br>';
  			$errors=1;
 		}
 	}
@@ -271,7 +327,7 @@ $startdoc="<html><script>function useCurrentAvatar(){window.parent.fc_chat.newAv
 //If no errors registred, print the success message
  if(isset($_POST['Submit']) && !$errors) 
  {
- 	echo $startdoc."<br><font face=arial><b>".$filename."</font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(186))</script></b></font><br><br><a href='javascript:this.location.replace(window.parent.FCChatConfig.alt_dir+\"html/Avatars.php?id=".$id."\")'><script>document.write(window.parent.fc_chat.textSetter(181))</script></a>&nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.fc_chat.textSetter(182))</script></a><br><br>";
+ 	echo $startdoc."<br><font face=arial><b>".$filename."</font><font face=arial> <script>document.write(".$ref.".fc_chat.textSetter(186))</script></b></font><br><br><a href='javascript:this.location.replace(".$ref.".FCChatConfig.alt_dir+\"html/Avatars.php?id=".$id."\")'><script>document.write(".$ref.".fc_chat.textSetter(181))</script></a>&nbsp;<a href='javascript:".$ref.".fc_chat.rem()'><script>document.write(".$ref.".fc_chat.textSetter(182))</script></a><br><br>";
  }else{
 	$arr = array(1 => "190", 2 => "191" ,3 => "192", 4 => "193");
 	$i=1;
@@ -279,20 +335,20 @@ $startdoc="<html><script>function useCurrentAvatar(){window.parent.fc_chat.newAv
 	$option2='';
   	$option3='';
 	$option4='';
-	if(ALLOW_UPLOADS){
-		$option1 = '<form name="newad" method="post" enctype="multipart/form-data" action=""><br><font color=#444444 face=arial><b><script>document.write(window.parent.fc_chat.textSetter('.$arr[$i].'))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(194))</script>  '.MAX_HEIGHT.'<script>document.write(window.parent.fc_chat.textSetter(195))</script>.</font><br><br><table style="margin-left:20px"><tr><td><input type="file" name="image" ></td></tr><tr><td><input name="Submit" type="submit" value="" id="submitbutton"></td></tr><tr><td><script>document.getElementById("submitbutton").value=window.parent.fc_chat.textSetter(177)</script><font face=arial><small><script>document.write(window.parent.fc_chat.textSetter(178))</script>'.MAX_FILE_SIZE.'KB)</small></font></td></tr></table> </form>';
+	if(USE_GRAVATAR){
+		$option1='<br><br><div style="background-color:#eeeeee;border:2px solid gray;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;padding:6px"><font color=#444444 face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter('.$arr[$i].'))</script></b></font>&nbsp;<font face=arial> <script>document.write('.$ref.'.fc_chat.textSetter(196))</script>.</font><br><br><div style="margin-left:20px"><INPUT id="fc_imagelink" TYPE=text NAME="imagelink" VALUE="" style="width:200px"> <input type="button" name="Submit" value="" id="submitbutton2" onclick="useimagelink();"><script>document.getElementById("submitbutton2").value='.$ref.'.fc_chat.textSetter(198)</script><br><script>document.write('.$ref.'.fc_chat.textSetter(199))</script><br><br></div></div><br>';
 		$i++;
 	}
-	if(USE_GRAVATAR){
-		$option2='<br><font color=#444444 face=arial><b><script>document.write(window.parent.fc_chat.textSetter('.$arr[$i].'))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(196))</script> <a href="http://gravatar.com" target=_blank>Gravatar</a> <script>document.write(window.parent.fc_chat.textSetter(197))</script>.</font><br><br><div style="margin-left:20px"><INPUT id="fc_gravatar" TYPE=text NAME="gravatar" VALUE="" style="width:200px"> <input type="button" name="Submit" value="" id="submitbutton2" onclick="useGravatar();"><script>document.getElementById("submitbutton2").value=window.parent.fc_chat.textSetter(198)</script><br><script>document.write(window.parent.fc_chat.textSetter(199))</script></div><br>';
+	if(ALLOW_UPLOADS){
+		$option2 = '<br><div style="background-color:#eeeeee;border:2px solid gray;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;padding:6px"><form name="newad" method="post" enctype="multipart/form-data" action=""><font color=#444444 face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter('.$arr[$i].'))</script></b></font>&nbsp;<font face=arial> <script>document.write('.$ref.'.fc_chat.textSetter(194))</script>  '.MAX_HEIGHT.'<script>document.write('.$ref.'.fc_chat.textSetter(195))</script>.</font><br><br><table style="margin-left:20px"><tr><td><input type="file" name="image" ></td></tr><tr><td><input name="Submit" type="submit" value="" id="submitbutton"></td></tr><tr><td><script>document.getElementById("submitbutton").value='.$ref.'.fc_chat.textSetter(177)</script><font face=arial style="color:#269CDD"><small><script>document.write('.$ref.'.fc_chat.textSetter(178))</script>'.MAX_FILE_SIZE.'KB)</small></font></td></tr></table> </form></div>';
 		$i++;
 	}
 	if(USE_BOARD_AVATARS){
-		$option3='<br><font color=#444444 face=arial><b><script>document.write(window.parent.fc_chat.textSetter('.$arr[$i].'))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(200))</script>.</font><br><br><div style="margin-left:20px"><INPUT TYPE=checkbox NAME="current" VALUE="1" onclick="useCurrentAvatar();"><script>document.write(window.parent.fc_chat.textSetter(201))</script>.</div><br>';
+		$option3='<br><div style="background-color:#eeeeee;border:2px solid gray;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;padding:6px">&nbsp;<font color=#444444 face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter('.$arr[$i].'))</script></b></font><font face=arial> <script>document.write('.$ref.'.fc_chat.textSetter(200))</script>.</font><br><br><div style="margin-left:20px"><INPUT TYPE=checkbox NAME="current" VALUE="1" onclick="useCurrentAvatar();"><script>document.write('.$ref.'.fc_chat.textSetter(201))</script>.<br><br></div></div><br>';
 		$i++;
 	}
 	if(USE_GALLERY){
-		$option4='<br><font color=#444444 face=arial><b><script>document.write(window.parent.fc_chat.textSetter('.$arr[$i].'))</script></b></font><font face=arial> <script>document.write(window.parent.fc_chat.textSetter(202))</script>. </font><br>';
+		$option4='<br><div style="background-color:#eeeeee;border:2px solid gray;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;padding:6px"><font color=#444444 face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter('.$arr[$i].'))</script></b></font>&nbsp;<font face=arial> <script>document.write('.$ref.'.fc_chat.textSetter(202))</script>. </font><br></div>';
 		$i++;
 		if(list_files(AVATAR_DIRECTORY)!=0){
 			$option4 = $option4.'<br>'.$filetable;

@@ -6,7 +6,9 @@
 *
 */
 
-define('HASH_SEED', '1234');
+define('SECRET_KEY', 'OqO,X<rU_&=F;V}f39< bh,+&Qlr>:20=V6a^FkQ9N!<Uwp|y}]}<!5(|W|N4E>8');
+define('USERNAMES_ENCODED', true);
+define('RETURN_AVATAR', true);
 
 /**
 * @ignore
@@ -17,7 +19,7 @@ $phpEx = substr(strrchr(__FILE__, '.'), 1);
 include($phpbb_root_path . 'common.' . $phpEx);
 
 $user_id='';
-$session_id='';
+$password='';
 
 /*
 if (isset($_COOKIE[$config['cookie_name'] . "_u"])){
@@ -46,14 +48,30 @@ if($request==0){
 		echo "<fcchatresponse><fcchatresponse>";
 	}else{
 		$t1 = time();
-		$name_length = strlen($row['username']);
+		if(USERNAMES_ENCODED){
+			$username = htmlspecialchars_decode($row['username']);
+		}
+		$name_length = strlen($username);
 		if($name_length<10){
 			$name_length = '00' . $name_length;
 		}else if($name_length<100){
 			$name_length = '0' . $name_length;
 		}
-		$hash = md5($t1 . $session_id . HASH_SEED);
-		echo "<fcchatresponse>" . $row['user_id'] . '&' . $session_id . '&' . $name_length . $row['username'] . $hash . $t1 . "<fcchatresponse>";
+		$password = md5('pbb' . $row['user_id'] . SECRET_KEY);
+		$signature = md5($t1 . $password . SECRET_KEY);
+		echo "<fcchatresponse>" . 'pbb' . $row['user_id'] . '&' . $password . '&' . $name_length . $username . $signature . $t1 . "<fcchatresponse>";
+		if(RETURN_AVATAR){
+			$sql = "Select user_avatar from " . SESSIONS_TABLE . " left join " . USERS_TABLE . " on session_user_id=user_id  where session_id='" . $session_id . "'";
+			$result = $db->sql_query($sql);
+			$row = $db->sql_fetchrow($result);
+			$db->sql_freeresult($result);
+			if($row['user_avatar']==''){
+				echo "<fcchatresponse2><fcchatresponse2>";
+			}else{
+				echo "<fcchatresponse2>/" . $php_root_path . "download/file.php?avatar=" . $row['user_avatar'] . "<fcchatresponse2>";
+			}
+		}	
+
 	}
 }else{
 	$sql = "Select user_avatar from " . SESSIONS_TABLE . " left join " . USERS_TABLE . " on session_user_id=user_id  where session_id='" . $session_id . "'";

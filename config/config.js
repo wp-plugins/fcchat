@@ -13,12 +13,13 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.2.5",
+	version:"2.2.6",
 	subversion:"1",
 	jQuery_stable:"1.6.4",
 
 	//BASIC GREETINGS
 	startText:"To begin chatting, press the <b>Open Button.&nbsp;</b>",
+	loginText:"Please login using your site account.",
 	autoGreet:"",
 	
 	//LANGUAGE (templates located in the languages folder)
@@ -61,8 +62,8 @@ var FCChatConfig = {
 	allow_split_screen_mode:true,
 	
 	//ChatCenter window size
-	window_height_offset:-60,
-	chat_room_height_offset:55,
+	window_height_offset:-80,
+	chat_room_height_offset:75,
 	
 	//ENVIRONMENTAL
 	default_on:true,
@@ -84,6 +85,7 @@ var FCChatConfig = {
 	allow_crossdomain_images:true,
 	current_domain:"fastcatsoftware.com", //set this to your domain
 	use_avatars:true,
+	import_default_avatar:true,
 	script_type:"php",
 	avatars_dir:(window["fc_chat_path"] || "/FCChat/") + "html/images/avatars/",
 	images_dir:(window["fc_chat_path"] || "/FCChat/") + "html/images/",
@@ -158,23 +160,10 @@ var FCChatConfig = {
 	  			"e.parentNode.insertBefore(s, e);" +
 			"})();</" +
 		"script>",
-	load_integrated_bsc:"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></" +
-		"script>" +
-		"<script>" +
-			"(function() {" +
-	  			"var s = document.createElement('script');" +
-	  			"s.src = '" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.integrated.min.js';" +
-	  			"s.async = true;" +
-	  			"var e = document.getElementsByTagName('script')[0];" +
-	  			"e.parentNode.insertBefore(s, e);" +
-			"})();</" +
-		"script>",
+	load_integrated_bsc:"",
 	load_standalone:(!window["jGo"]||jGo.scripts.loadState('jGo.DefaultWindow.init.min.js') == 'not.loaded'?"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></" +
 		"script>":"") +
 		"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.standalone.min.js'></" +
 		"script>",
-	load_integrated:"<script  type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></" +
-		"script>" +
-		"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "js/fcchat.integrated.min.js'></" +
-		"script>"
+	load_integrated:""
 };

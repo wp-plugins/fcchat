@@ -79,10 +79,11 @@ function smf_main()
 
 	// Load the user's cookie (or set as guest) and load their settings.
 	loadUserSettings();
-     	define('HASH_SEED', '1234');
+     	define('SECRET_KEY', 'OqO,X<rU_&=F;V}f39< bh,+&Qlr>:20=V6a^FkQ9N!<Uwp|y}]}<!5(|W|N4E>8');
+	define('USERNAMES_ENCODED', true);
 
 	$user_id='';
-	$session_id='';
+	$password='';
 
 	$request = ( isset($_POST['f']) ) ? (int) $_POST['f'] : 0;
 
@@ -93,15 +94,18 @@ function smf_main()
 		} else {
     			// Logged in.
 			$t1 = time();
-			$name_length = strlen($user_info['username']);
+			if(USERNAMES_ENCODED){
+				$username = htmlspecialchars_decode($user_info['username']);
+			}
+			$name_length = strlen($username);
 			if($name_length<10){
 				$name_length = '00' . $name_length;
 			}else if($name_length<100){
 				$name_length = '0' . $name_length;
 			}
-			$session_id = md5($user_info['passwd']);
-			$hash = md5($t1 . $session_id . HASH_SEED);
-			echo "<fcchatresponse>" . $ID_MEMBER . '&' . $session_id . '&' . $name_length . $user_info['username'] . $hash . $t1 . "<fcchatresponse>";
+			$password = md5('smf' . $ID_MEMBER . SECRET_KEY);
+			$signature = md5($t1 . $password . SECRET_KEY);
+			echo "<fcchatresponse>" . 'smf' . $ID_MEMBER . '&' . $password . '&' . $name_length . $username . $signature . $t1 . "<fcchatresponse>";
 
 		}
 	}else{

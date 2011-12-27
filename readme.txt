@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.2
-Stable tag: 2.2.5
+Stable tag: 2.2.6
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -15,11 +15,11 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 RECENT FEATURES
 
-Video Chat 3.0. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. Version 2.2.x now comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New features include private video chat, collaborative whiteboard and documents, transliteration service, and doodlepad. The 2.2.x series will be focused on providing greater user to user interaction.  In addition, you may now open the chatcenter directly into a separate pop up window, so the the connection is maintained through page changes.
+Video Chat 3.0. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. Version 2.2.x now comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New features include private video chat, 2 player games, collaborative whiteboard and documents, transliteration service, and doodlepad. The 2.2.x series will be focused on providing greater user to user interaction.  In addition, you may now open the chatcenter directly into a separate pop up window, so the the connection is maintained through page changes.
 
-NEW IN 2.2.5.2
+NEW IN 2.2.6
 
-Two player games introduced. This is an optional feature, as games may not be appropriate for some sites. You may disable games by setting "games_allowed" to false in the configuration file. Also introduced, an optional social media menu item for the toolbar, which allows your site visitors to share your site on Facebook, Twitter, etc.
+The chat server was upgraded to allow easier integration of wp user accounts. Avatars may now be chosen without opening the ChatCenter.
 
 UPGRADING
 
@@ -358,6 +358,11 @@ Critical bug fix: The message alert box componenent was not being linked properl
 = 2.2.5.4 =
 
 Added a config variable "toolbar_mobile_hidden" which can be used to hide the floating toolbar in selected mobile platforms. The reason for this is that fixed positioning of page elements has spotty support in mobile apps.
+
+
+= 2.2.6 =
+
+The chat server was upgraded to allow easier integration of wp user accounts. Avatars may now be chosen without opening the ChatCenter.
 
 == Upgrade Notice ==
 

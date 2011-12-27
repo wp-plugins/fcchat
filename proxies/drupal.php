@@ -10,7 +10,8 @@
 *
 */
 
-define('HASH_SEED', '1234');
+define('SECRET_KEY', 'OqO,X<rU_&=F;V}f39< bh,+&Qlr>:20=V6a^FkQ9N!<Uwp|y}]}<!5(|W|N4E>8');
+define('USERNAMES_ENCODED', true);
 
 chdir('../../../../../');
 require('./includes/bootstrap.inc');
@@ -26,7 +27,7 @@ drupal_bootstrap(DRUPAL_BOOTSTRAP_SESSION);
 //echo 'sessionid='.session_id(); // just to see what my session ID is to manually compare to my browser's cookie session ID.
 
 $user_id='';
-$session_id='';
+$password='';
 
 
 $request = ( isset($_POST['f']) ) ? (int) $_POST['f'] : 0;
@@ -39,15 +40,18 @@ if($request==0){
 	} else {
     		// Logged in.
 		$t1 = time();
-		$name_length = strlen($current_user->name);
+		if(USERNAMES_ENCODED){
+			$username = htmlspecialchars_decode($current_user->name);
+		}
+		$name_length = strlen($username);
 		if($name_length<10){
 			$name_length = '00' . $name_length;
 		}else if($name_length<100){
 			$name_length = '0' . $name_length;
 		}
-		$session_id = md5($current_user->pass);
-		$hash = md5($t1 . $session_id . HASH_SEED);
-		echo "<fcchatresponse>" . $current_user->uid . '&' . $session_id . '&' . $name_length . $current_user->name . $hash . $t1 . "<fcchatresponse>";
+		$password = md5('dru' . $current_user->uid . SECRET_KEY);
+		$signature = md5($t1 . $password . SECRET_KEY);
+		echo "<fcchatresponse>" . 'dru' . $current_user->uid . '&' . $password . '&' . $name_length . $username . $signature . $t1 . "<fcchatresponse>";
 
 	}
 }else{

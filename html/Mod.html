@@ -80,7 +80,7 @@ function getQuerystring(key, default_){
 
 <style>
 <!--
-body {background-color:#F3F0Dc}
+body {background-color:#e3e0cc}
 small { FONT-SIZE: 9pt; font-family:Arial,  Helvetica;}
 
 td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bottom: 1px solid #aaaaaa;}
@@ -93,7 +93,7 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 <script type="text/javascript" src="../js/install.prep.adv.js"></script><script type="text/javascript" src="../js/embed.js"></script>
 <!-- /End Fastcat Body Insert -->
 <div style='position:absolute;top:5px;left:15px;font-weight:bold'><img src='../current_skin/fastcatlogo.gif'>&nbsp;FCChat Administration</div>
-<div style='position:absolute;left:15px;top:25px;padding:5px;height:650px;border:2px solid gray;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
+<div style='position:absolute;left:15px;top:25px;padding:5px;height:650px;border:2px solid gray;background-color:#F3F0Dc;box-shadow: 1px 1px 2px 1px #aaaaaa;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
 	<table border=0 style="font-family:arial;font-size:9pt;width:400px">
 		<tr><td colspan=2>
 			<span style='color:darkblue;font-weight:bold;font-style:italic;margin-top:10px'>
@@ -144,7 +144,7 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 	</table></div>
 	<div id='leftframecover' style='position:absolute;background-color:gray;display:none;left:15px;top:25px;width:416px;height:571px;filter:alpha(opacity=1); -moz-opacity:.01; opacity:.01;'>
 	</div>
-<div style='position:absolute;left:445px;top:25px;height:650px;border:2px solid gray;padding:5px;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
+<div style='position:absolute;left:445px;top:25px;height:650px;border:2px solid gray;padding:5px;background-color:#F3F0Dc;box-shadow: 1px 1px 2px 1px #aaaaaa;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
 <table border=0 style='top:10px;width:370px;font-family:arial;font-size:9pt'>
 	<tr>
 		<td colspan=4>
@@ -265,27 +265,71 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 			</td>
 		</tr>
 		<tr>	
-			<td>
-				enableForumIntegration
-			</td>
-			<td>
-				<select id='configvalue3' name='configvalue3' style='margin-top:0px' size='1'>
-					<option selected value></option>
-					<option value=1>no</option>
-					<option value=2>yes</option>
-				</select>
-			</td>
-			<td>
-				<input id='setconfigvalue3' type='button' name='setconfigvalue3' value='Set' disabled Onclick='fc_chat.adminUpdateConfigField(3)'>
-			</td>
-			<td width=100%>
-				ID: <input type='text' id='adminid' maxLength='20' onKeyPress="return numbersonly(this, event)" style='margin-top:0px;width:60px;'>
+			<td colspan=4>
+				&nbsp;
 			</td>
 		</tr>
+		<tr>
+			<td colspan=4>
+				<span style='color:darkblue;font-weight:bold;font-style:italic'>
+						User Integration:&nbsp;&nbsp;&nbsp;&nbsp;<small><a target=_blank href='http://www.fastcatsoftware.com/chat/userguide/index.html'>Tutorials</a></small></br><hr style='width:100%;color:lightblue;'>
+				</span>
+			</td>
+		</tr>
+		<tr>	
+			<td>
+				Set secret key
+			</td>
+			<td width=100%>
+				<form name='frm6' OnSubmit='fc_chat.adminUpdateConfigField(3);return false;'>
+					<input type='text' id='configvalue3' maxLength='512'  style='margin-top:0px;width:150px;'>
+				</form>
+			</td>
+		</tr>
+		<tr>	
+			<td colspan=4>
+				<hr style='width:100%;color:lightblue;'>
+			</td>
+		</tr>
+		<tr>	
+			<td >
+				CMS Type:
+			</td>
+			<td>
+				<select id='configvalue4' name='configvalue4' style='margin-top:0px' size='1'>
+					<option selected value></option>
+					<option value=1>wordpress</option>
+					<option value=2>phpbb</option>
+					<option value=3>smf</option>
+					<option value=4>drupal</option>
+				</select>
+			</td>
+			</tr>
+		<tr>
+			<td>
+				Administrative Account:
+			</td>
+			<td>
+					<input type='text' id='configvalue5' maxLength='512'  style='margin-top:0px;width:150px;'>
+			</td>
+			<td>
+				<input id='setconfigvalue4' type='button' name='setconfigvalue4' value='Set' disabled Onclick='fc_chat.adminUpdateConfigField(4)'>
+			</td >
+		</tr>
+		<tr>	
+			<td colspan=4>
+				<hr style='width:100%;color:lightblue;'>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<script>document.write("<a href='admin.html?chatid="+FCChatConfig.chat_id+"&host="+FCChatConfig.host+"'>Switch Administrator</a>");</script>
+			</td>
+		<tr>
 </table>
 
 </div>
-<div style='position:absolute;left:837px;top:25px;width:650px;height:650px;padding:5px;border:2px solid gray;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
+<div style='position:absolute;left:837px;top:25px;width:650px;height:650px;padding:5px;border:2px solid gray;background-color:#F3F0Dc;box-shadow: 1px 1px 2px 1px #aaaaaa;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
 	<table border=0 style="font-family:arial;font-size:9pt;width:640px;">
 		<tr><td colspan=3>
 			<div style='color:darkblue;font-weight:bold;font-style:italic;'>

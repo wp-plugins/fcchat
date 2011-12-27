@@ -8,15 +8,29 @@
 *
 */
 
-define('HASH_SEED', '1234');
-
+define('SECRET_KEY', 'OqO,X<rU_&=F;V}f39< bh,+&Qlr>:20=V6a^FkQ9N!<Uwp|y}]}<!5(|W|N4E>8');
+define('USERNAMES_ENCODED', true);
+define('RETURN_AVATAR', true);
 
 /** Make sure that the WordPress bootstrap has run before continuing. */
 require( dirname(__FILE__) . '/../../../../wp-load.php' );
 
 
 $user_id='';
-$session_id='';
+$password='';
+
+function validate_gravatar($email) {
+	// Craft a potential url and test its headers
+	$hash = md5($email);
+	$uri = 'http://www.gravatar.com/avatar/' . $hash . '?d=404';
+	$headers = @get_headers($uri);
+	if (!preg_match("|200|", $headers[0])) {
+		$has_valid_avatar = FALSE;
+	} else {
+		$has_valid_avatar = TRUE;
+	}
+	return $has_valid_avatar;
+}
 
 
 $request = ( isset($_POST['f']) ) ? (int) $_POST['f'] : 0;
@@ -29,16 +43,38 @@ if($request==0){
 	} else {
     		// Logged in.
 		$t1 = time();
-		$name_length = strlen($current_user->display_name);
+		if(USERNAMES_ENCODED){
+			$username = htmlspecialchars_decode($current_user->display_name);
+		}
+		$name_length = strlen($username);
 		if($name_length<10){
 			$name_length = '00' . $name_length;
 		}else if($name_length<100){
 			$name_length = '0' . $name_length;
 		}
-		$session_id = md5($current_user->user_pass);
-		$hash = md5($t1 . $session_id . HASH_SEED);
-		echo "<fcchatresponse>" . $current_user->ID . '&' . $session_id . '&' . $name_length . $current_user->display_name . $hash . $t1 . "<fcchatresponse>";
+		$password = md5('wp1' . $current_user->ID . SECRET_KEY);
+		$signature = md5($t1 . $password . SECRET_KEY);
+		
 
+		echo "<fcchatresponse>" . 'wp1' . $current_user->ID . '&' . $password . '&' . $name_length . $username . $signature . $t1 . "<fcchatresponse>";
+
+		
+		//Grab the avatar
+		if(RETURN_AVATAR){
+			$email=$current_user->user_email;
+			if(validate_gravatar($email)){
+				if (function_exists('get_avatar')) {
+      					echo "<fcchatresponse2>/" . get_avatar($email) . "<fcchatresponse2>";
+   				} else {
+      					//alternate gravatar code for < 2.5
+      					$grav_url = "/http://www.gravatar.com/avatar/" . 
+        				 md5(strtolower($email)) . "?d=" . urlencode($default) . "&s=" . $size;
+      					echo "<fcchatresponse2>" . $grav_url . "<fcchatresponse2>";
+   				}
+			}else{
+				echo "<fcchatresponse2><fcchatresponse2>";
+			}
+		}
 	}
 }else{
 	echo "<fcchatresponse>0<fcchatresponse>";		
