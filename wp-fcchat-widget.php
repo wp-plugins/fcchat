@@ -44,7 +44,7 @@ function add_header_script(){
 function add_footer_script(){
         $plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );
         if (!is_admin()){
-                echo '<script type="text/javascript">document.write("</div>" + (FCChatConfig.forum_proxy==""?FCChatConfig.load_standalone:FCChatConfig.load_integrated));</script>';    
+                echo '<script type="text/javascript">document.write("</div>" + (true?FCChatConfig.load_standalone:FCChatConfig.load_integrated));</script>';    
         }
 }
 
