@@ -64,8 +64,14 @@ if($request==0){
 			$email=$current_user->user_email;
 			if(validate_gravatar($email)){
 				if (function_exists('get_avatar')) {
-      					echo "<fcchatresponse2>/" . get_avatar($email) . "<fcchatresponse2>";
-   				} else {
+					$avatar = get_avatar($email);
+					if(stripos($avatar, "src='")){
+						$extractURL = split("src='",$avatar);
+						$extractURL = split("'",$extractURL[1]);
+      						echo "<fcchatresponse2>/" . $extractURL[0] . "<fcchatresponse2>";   							}else{
+						echo "<fcchatresponse2><fcchatresponse2>";
+					}				
+				} else {
       					//alternate gravatar code for < 2.5
       					$grav_url = "/http://www.gravatar.com/avatar/" . 
         				 md5(strtolower($email)) . "?d=" . urlencode($default) . "&s=" . $size;
