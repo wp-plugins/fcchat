@@ -132,7 +132,7 @@ var FCChatConfig = {
 	cookie_expires:1, //0 - end of session //1 - never
 	user_cookie:"fc_UID", 
 	session_cookie:"fc_ChatToken",
-	timestamp_cookie:"fc_timestamp",
+	login_type_cookie:"fc_state",
 	mod_cookie:"fc_ChatToken",
 	
 	//MISC
