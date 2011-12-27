@@ -33,6 +33,7 @@ var FCChatConfig = {
 	//Embedded control box
 	absolute_positioning:false,
 	control_visible:true,
+	control_padding:"0px",
 	
 	//Floating toolbar
 	toolbar_mode:2,   // 2 = always visible | 1 = visible for message alerts only | 0 = hidden
