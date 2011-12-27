@@ -1,6 +1,6 @@
 <?php
 
- define ("ALLOW_UPLOADS", "1"); //1=true/0=false
+ define ("ALLOW_UPLOADS", "0"); //1=true/0=false
 
  define ("USE_BOARD_AVATARS", "0"); //1=true/0=false
 
