@@ -364,6 +364,11 @@ Added a config variable "toolbar_mobile_hidden" which can be used to hide the fl
 
 The chat server was upgraded to allow easier integration of wp user accounts. Avatars may now be chosen without opening the ChatCenter.
 
+= 2.2.6.1 =
+
+Bug Fix: In the adminstration panel, the 'Update Select Server Configuration Variables' section was not working properly, due to an error introduced in the last update.
+Bug Fix: A problem with the login reconnection mechanism was resolved.
+
 == Upgrade Notice ==
 
 = 2.2.x =
