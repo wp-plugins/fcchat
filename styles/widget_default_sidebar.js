@@ -119,7 +119,7 @@ FCChatConfig.styles.widget={
 		view_msg_box_css:"top:85px;left:0px;height:135px;",
 		send_msg_box_css:"top:215px;left:0px;height:70px;background-color:#dddddd;",
 		plus_css:"color:green;text-decoration:none;font-size:20px;font-weight:900;",
-		text:jGo.toolbar.style.dialog_box.text,
+		text:jGo.toolbar.style.dialog_box.text
 	},
 	friends_box:{
 		top:null,
@@ -131,7 +131,7 @@ FCChatConfig.styles.widget={
 		list_box_css:"top:40px;left:0px;height:165px;",
 		info_box_css:"top:215px;left:0px;height:70px;background-color:#dddddd;",
 		minus_css:"color:red;text-decoration:none;font-size:28px;font-weight:900;",
-		text:jGo.toolbar.style.dialog_box.text,
+		text:jGo.toolbar.style.dialog_box.text
 	},
 	login_panel:{
 		top:40,

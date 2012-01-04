@@ -20,7 +20,7 @@ jGo.toolbar.style.social_media={
 		css:jGo.toolbar.style.dialog_box.css,
 		title_box_css:jGo.toolbar.style.dialog_box.title_box_css,
 		info_box_css:"top:40px;left:0px;height:235px;",
-		text:jGo.toolbar.style.dialog_box.text,
+		text:jGo.toolbar.style.dialog_box.text
 	}
 };
 

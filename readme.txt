@@ -367,7 +367,12 @@ The chat server was upgraded to allow easier integration of wp user accounts. Av
 = 2.2.6.1 =
 
 Bug Fix: In the adminstration panel, the 'Update Select Server Configuration Variables' section was not working properly, due to an error introduced in the last update.
-Bug Fix: A problem with the login reconnection mechanism was resolved.
+Bug Fix: A minor problem with the login reconnection mechanism was resolved.
+
+= 2.2.6.2 =
+
+Bug Fix: A syntax problem with the style templates was generating an error in ie6, preventing the chat from being displayed.
+
 
 == Upgrade Notice ==
 
