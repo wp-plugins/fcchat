@@ -214,8 +214,29 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 			</td>
 		</tr>
 		<tr>	
+			<td >
+				Guest Names
+			</td>
 			<td>
-				showTyping
+				<select id='configvalue5' name='configvalue5' style='margin-top:0px' size='1'>
+					<option selected value></option>
+					<option value=0>None</option>
+					<option value=1>Common English Names</option>
+					<option value=2>WOW Names</option>
+					<option value=3>Elf Names</option>
+					<option value=4>Pet Names</option>
+					<option value=5>Mixed</option>
+				</select>
+			</td>
+			<td>
+				<input id='setconfigvalue5' type='button' name='setconfigvalue5' value='Set' disabled Onclick='fc_chat.adminUpdateConfigField(5)'>
+			</td>
+			<td width=300px>
+			</td>
+		</tr>
+		<tr>	
+			<td>
+				Show Typing 
 			</td>
 			<td>
 				<select id='configvalue0' name='configvalue0' style='margin-top:0px' size='1'>
@@ -232,7 +253,7 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 		</tr>
 		<tr>	
 			<td>
-				useAvatars
+				Use Avatars
 			</td>
 			<td>
 				<select id='configvalue1' name='configvalue1' style='margin-top:0px' size='1'>
@@ -249,7 +270,7 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 		</tr>
 		<tr>	
 			<td>
-				showNewestMessages
+				Show 50 Newest Messages
 			</td>
 			<td>
 				<select id='configvalue2' name='configvalue2' style='margin-top:0px' size='1'>
@@ -329,7 +350,7 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 </table>
 
 </div>
-<div style='position:absolute;left:837px;top:25px;width:650px;height:650px;padding:5px;border:2px solid gray;background-color:#F3F0Dc;box-shadow: 1px 1px 2px 1px #aaaaaa;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
+<div style='position:absolute;left:847px;top:25px;width:650px;height:650px;padding:5px;border:2px solid gray;background-color:#F3F0Dc;box-shadow: 1px 1px 2px 1px #aaaaaa;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
 	<table border=0 style="font-family:arial;font-size:9pt;width:640px;">
 		<tr><td colspan=3>
 			<div style='color:darkblue;font-weight:bold;font-style:italic;'>
@@ -355,7 +376,7 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 			</td>
 		</tr>
 	</table></div>
-</div>
+</div> 
 <script type="text/javascript" src="../jGo/js/jGo.DefaultWindow.init.min.js"></script><script type="text/javascript" src="../jGo/js/jGo.c.min.js"></script><script type="text/javascript" src="../jGo/js/jGo.MD5.min.js"></script>
 <script language="JavaScript" src="../js/fcchat.moderation.min.js"></script>
 <script>
@@ -363,10 +384,11 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 	document.getElementById('bip').disabled = true;
     document.getElementById('getconfig').disabled = true;
     document.getElementById('setconfigvalue0').disabled = true;
+    document.getElementById('setconfigvalue5').disabled = true;
+    document.getElementById('setconfigvalue4').disabled = true;
     document.getElementById('setconfigvalue1').disabled = true;
     document.getElementById('setconfigvalue2').disabled = true;
     document.getElementById('configvalue3').disabled = true;
-    document.getElementById('setconfigvalue4').disabled = true;
     document.getElementById('searchtext').disabled = true;
     document.getElementById('searchoptions').disabled = true;
     document.getElementById('filterchat').disabled = true;

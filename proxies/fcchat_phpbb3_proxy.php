@@ -16,6 +16,8 @@ define('RETURN_AVATAR', true);
 define('IN_PHPBB', true);
 $phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : './../../';
 $phpEx = substr(strrchr(__FILE__, '.'), 1);
+$php_root_path = explode("fcchat/proxies/fcchat_phpbb3_proxy.php",strtolower($_SERVER["REQUEST_URI"]));
+$php_root_path = $php_root_path[0];
 include($phpbb_root_path . 'common.' . $phpEx);
 
 $user_id='';

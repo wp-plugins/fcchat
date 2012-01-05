@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.3
-Stable tag: 2.2.6
+Stable tag: 2.2.7
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -17,9 +17,9 @@ RECENT FEATURES
 
 Video Chat 3.0. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. Version 2.2.x now comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New features include private video chat, 2 player games, collaborative whiteboard and documents, transliteration service, and doodlepad. The 2.2.x series will be focused on providing greater user to user interaction.  In addition, you may now open the chatcenter directly into a separate pop up window, so the the connection is maintained through page changes.
 
-NEW IN 2.2.6
+NEW IN 2.2.7
 
-The chat server was upgraded to allow easier integration of wp user accounts. Avatars may now be chosen without opening the ChatCenter.
+Country Flags and Guest Aliases added.
 
 UPGRADING
 
@@ -372,6 +372,10 @@ Bug Fix: A minor problem with the login reconnection mechanism was resolved.
 = 2.2.6.2 =
 
 Bug Fix: A syntax problem with the style templates was generating an error in ie6, preventing the chat from being displayed.
+
+= 2.2.7 =
+
+Country Flags and guest aliases added.
 
 
 == Upgrade Notice ==

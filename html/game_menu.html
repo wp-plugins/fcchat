@@ -41,7 +41,7 @@
     var games = window.opener.fc_chat.textSetter(332,"Chess,Backgammon,Eight ball,Domino Battle,Darts,Checkers,Snooker,Back2Back Tactics,Russian Roulette,Coiny Coins,Poker,Four-In-A-Row,Brilliant turn,Marbles,Super Star Balls,Ramble Scramble,Reversi,Tic-Tac-Toe,Step Race,BattleShips,Zex Lex Duel,Cheat,Speed Chess,Nine-ball,MineSweeper,Monsters Vs Marines,Love & Hate,Hex Empire,Sheep me,4-In-A-Row - Luminati!,Go,Two Crowns,Kaban Tactics,Mancala,GoldMiner,Simon,Libra Battle,Sudoku War");
     var gameArray = games.split(",");	
     var uid2 = getQuerystring("uid2");
-    document.title="Invite " + getQuerystring("nm") + " to play a game.";
+    document.title="Invite " + decodeURIComponent(getQuerystring("nm")) + " to play a game.";
     var game_dim = {
     		"G2":[700,505],
     		"G1":[700,485],

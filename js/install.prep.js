@@ -19,6 +19,7 @@ if(document.getElementsByTagName("head")[0]){
 	document.write("<style>"+FCChatConfig.dynamicStyles+"</style>");
 }
 document.write("<div id='fc_domain' style='display: none;'>none</div>");
+
 jGo.scripts.importClass('jGo.DefaultWindow.pack.js', 'static', this,
 		null,null,1);
 document.write("<div class='jGo_myapp'><div id='jGo_win0' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win1' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win2' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win3' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win4' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win5' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win6' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win7' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win8' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win9' class='jGo_app jGo_myapp jGo_ydsf'></div></div>");

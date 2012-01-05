@@ -18,7 +18,11 @@ if(document.getElementsByTagName("head")[0]){
 	document.write("<link rel='stylesheet' href='" + FCChatConfig.dir + "css/fcchat.css' type='text/css'>");
 	document.write("<style>"+FCChatConfig.dynamicStyles+"</style>");
 }
+if(FCChatConfig.show_flags){
+	document.write("<div><div id='fc_geo_locator' style=''><script type='text/javascript' src='http://www.seocentro.com/geo/geocc.pl'></script>hello</div></div>");
+	}
 document.write("<div id='fc_install'><div id='fc_domain' style='display: none;'>none</div>");
+
 jGo.scripts.importClass('jGo.DefaultWindow.pack.js', 'static', this,
 		null,null,1);
 document.write("<div class='jGo_myapp'><div id='jGo_win0' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win1' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win2' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win3' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win4' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win5' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win6' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win7' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win8' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win9' class='jGo_app jGo_myapp jGo_ydsf'></div></div>");

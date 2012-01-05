@@ -2,7 +2,7 @@
 if(fc_chat_path == ""){
 	var scripts = document.getElementsByTagName("script");
 	for(var i = 0;i<scripts.length;i++){
-		if(((scripts[i].src).toLowerCase()).indexOf('fcchat/js/import.config.js')>0){
+		if(((scripts[i].src).toLowerCase()).indexOf('js/import.config.js')>0){
 			fc_chat_path=scripts[i].src;
 		}
 	}

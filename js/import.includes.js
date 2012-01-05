@@ -53,6 +53,7 @@ function fc_chat_load_from_link(elem,mode){
 
 jGo.domIsReady = false;
 jGo.loadCalled = false;
+
 jGo.$(document).ready(function() {
   jGo.domIsReady = true;
   if(window.fc_chat&&window.fc_chat.initialized){
@@ -67,3 +68,15 @@ jGo.$(window).unload(function() {
 		jGo.cookie.setCookie("fc_pauseChat", "0", (FCChatConfig.cookie_expires==0?null:date), "/", FCChatConfig.domain);
 	}
 });
+jGo.country_code='';
+if(FCChatConfig.show_country_flags){
+	jGo.$.post(FCChatConfig.dir+'proxies/getloc.php',{c1:FCChatConfig.ipinfodb_api_key,c2:FCChatConfig.data_cookie}, function(data) {
+		data=data.split("<getloc>");
+	  if(data.length>1){
+		  jGo.country_code=data[1];
+		  if(window.fc_chat&&window.fc_chat.initialized){
+			  window.fc_chat.put_c(data[1],13);
+		  }
+	  }
+	});
+};

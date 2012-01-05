@@ -115,7 +115,7 @@ FCChatConfig.txt = {
 	t58: "Entrar",
 	t59: "Cancelar",
 	t60: "Ingrese su nombre de usuario y contraseña deseados, por favor.",
-	t61: "Los nombres de usuario y las contraseñas deben contener 3-15 caracteres cada uno. Sólo letras, números y guiones están permitidos.",
+	t61: "Los nombres de usuario y las contraseñas deben contener 3-20 caracteres cada uno. Sólo letras, números y guiones están permitidos.",
 	t62: "El nombre de usuario no puede comenzar con 'invitado'.",
 	t63: "El nombre de usuario introducido no es válido. Elija un nombre de usuario diferente, por favor.",
 	t64: "El nombre de usuario que ha introducido ya está en uso. Introduzca la contraseña correcta o seleccione un nombre de usuario diferente, por favor.",
@@ -492,5 +492,9 @@ FCChatConfig.txt = {
 	
 	//added 2.2.6
 	t345:"OK",
-	t346:"Entrar ChatCenter"
+	t346:"Entrar ChatCenter",
+	
+	//added 2.2.7
+	t347:"No podría entrar. Por favor salga del panel de administración e iniciar sesión en el chat de nuevo."	
+
 };

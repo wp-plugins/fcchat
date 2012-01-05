@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.2.6",
+	version:"2.2.7",
 	subversion:"1",
 	jQuery_stable:"1.6.4",
 
@@ -42,7 +42,7 @@ var FCChatConfig = {
 	toolbar_items:["friendscenter","social_media"], //List MUST include "friendscenter"
 	
 	//Hide floating toolbar for these mobile apps (support for fixed positioned elements is spotty in mobile apps)
-	//The format below uses the syntax of regualar expressions
+	//The format below uses the syntax of regular expressions
 	toolbar_mobile_hidden:/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i,
 
 	//Online, New messages and Friends boxes
@@ -74,6 +74,11 @@ var FCChatConfig = {
 	showTyping:true,
 	display_timestamp:false,
 	sounds_on:true,
+	
+	//COUNTRY FLAGS
+	show_country_flags:true,
+	//get your free api key from http://ipinfodb.com/register.php
+	ipinfodb_api_key:"",
 	
 	//PROFILES
 	
@@ -133,8 +138,8 @@ var FCChatConfig = {
 	cookie_expires:1, //0 - end of session //1 - never
 	user_cookie:"fc_UID", 
 	session_cookie:"fc_ChatToken",
-	login_type_cookie:"fc_state",
 	mod_cookie:"fc_ChatToken",
+	data_cookie:"fc_data",
 	
 	//MISC
 	pin_windows:true,

@@ -16,10 +16,10 @@ jGo.toolbar.style.social_media={
 	},
 	dialog_box:{
 		width:200,
-		height:275,
+		height:323,
 		css:jGo.toolbar.style.dialog_box.css,
 		title_box_css:jGo.toolbar.style.dialog_box.title_box_css,
-		info_box_css:"top:40px;left:0px;height:235px;",
+		info_box_css:"top:40px;left:0px;height:283px;",
 		text:jGo.toolbar.style.dialog_box.text
 	}
 };
@@ -132,7 +132,7 @@ jGo.toolbar.social_media = {};
 		var subtract = Math.min(0,fc_chat.getToolbarWidth()-EN(jQ("#fc_social_media_toolbar_item").css("left"))-(config.dialog_box.width+3));
 		jQ("#fc_social_media_dialog").css({
 			position:pos,
-			top:(EN(jQ(elem).css("top"))-(FCChatConfig.toolbar_position.substr(0,1)=='t'?-jGo.toolbar.style.height-4:7+275))+'px',
+			top:(EN(jQ(elem).css("top"))-(FCChatConfig.toolbar_position.substr(0,1)=='t'?-jGo.toolbar.style.height-4:7+config.dialog_box.height))+'px',
 			left:basepos+(basepos+subtract>3?subtract:0)+"px"});
 	};
 

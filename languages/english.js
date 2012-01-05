@@ -113,7 +113,7 @@ FCChatConfig.txt={
 	t58: "Enter",
 	t59: "Cancel",
 	t60: "Please enter your desired screen name and password.",
-	t61: "Screen names and passwords must contain 3-15 characters each. Only letters, numbers, and underscores are allowed.",
+	t61: "Screen names and passwords must contain 3-20 characters each. Letters, numbers, and underscores only. (Spaces OK for names)",
 	t62: "Screen names may not begin with 'guest'",
 	t63: "The screen name you entered is invalid. Please choose a different screen name.",
 	t64: "The screen name you entered is already in use. Please provide the correct password or choose a different screen name.",
@@ -303,7 +303,7 @@ FCChatConfig.txt={
 	t196: "Use your <a target=_blank href='http://gravatar.com'>Gravatar avatar</a>",
 	t197: "Help me find the image link!",
 	t198: "Submit",
-	t199: "Link to Image.<br><span style='color:#269CDD'>(ie http://www.gravatar.com/avatar/1234.png)</span>",
+	t199: "Link to image.<br><span style='color:#269CDD'>(ie http://www.gravatar.com/avatar/1234.png)</span>",
 	t200: "Use your current forum avatar",
 	t201: "Use my current avatar",
 	t202: "Select an avatar from the gallery below",
@@ -491,6 +491,9 @@ FCChatConfig.txt={
 	
 	//added 2.2.6
 	t345:"OK",
-	t346:"Enter ChatCenter"
+	t346:"Enter ChatCenter",
+		
+	//added 2.2.7
+	t347:"Could not log you in. Please exit the adminstration panel and sign in to the chat again."	
 
 };
