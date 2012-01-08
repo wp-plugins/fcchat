@@ -377,6 +377,10 @@ Bug Fix: A syntax problem with the style templates was generating an error in ie
 
 Country Flags and guest aliases added.
 
+= 2.2.7.1 =
+
+Bug Fix: A bug was fixed which was preventing the addition of CMS adminstrators
+
 
 == Upgrade Notice ==
 
