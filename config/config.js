@@ -96,7 +96,7 @@ var FCChatConfig = {
 	avatars_dir:(window["fc_chat_path"] || "/FCChat/") + "html/images/avatars/",
 	images_dir:(window["fc_chat_path"] || "/FCChat/") + "html/images/",
 	smileys_dir:(window["fc_chat_path"] || "/FCChat/") + "html/images/smileys/",
-	avatar_sz:35,
+	avatar_sz:26,
 	show_avatar_in_chats:true,
 	
 	//GAMES
