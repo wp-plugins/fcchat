@@ -381,6 +381,10 @@ Country Flags and guest aliases added.
 
 Bug Fix: A bug was fixed which was preventing the addition of CMS adminstrators
 
+= 2.2.7.2 =
+
+Bug Fix: A bug was fixed in which parseint was being used with the wrong radix, resulting in incorrect username length determination. A syntax error ws corrected relating to the usage of the variable use_avatar.
+
 
 == Upgrade Notice ==
 
