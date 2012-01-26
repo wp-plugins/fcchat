@@ -2,7 +2,12 @@
  //include the configuration file
  include('config/php_config.php');
 //reads the referrer
-$ref=$_GET['ref'];
+$ref="";
+if (isset($_GET['ref']))
+{
+	//If not isset -> set with dumy value
+	$ref=$_GET['ref'];
+}
 $ref2="0";
 if($ref=="1"){
 	$ref="window.opener";
