@@ -64,7 +64,10 @@ if($request==0){
 			$email=$current_user->user_email;
 			if (function_exists('get_avatar')) {
 				$avatar = get_avatar($current_user->ID);
-				if(stripos($avatar, "src='")){
+				if(stripos($avatar, 'src="')){
+					$extractURL = split('src="',$avatar);
+					$extractURL = split('"',$extractURL[1]);
+      					echo "<fcchatresponse2>/" . $extractURL[0] . "<fcchatresponse2>";   							}else if(stripos($avatar, "src='")){
 					$extractURL = split("src='",$avatar);
 					$extractURL = split("'",$extractURL[1]);
       					echo "<fcchatresponse2>/" . $extractURL[0] . "<fcchatresponse2>";   							}else{
