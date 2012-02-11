@@ -24,11 +24,11 @@ FCChatConfig.styles.widget={
 	control:{
 		top:0, //for absolute positioning
 		left:310, //"     "
-		width:200,
+		width:180,
 		height:107,
-		css:"box-shadow: 1px 1px 3px 2px #aaaaaa;border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
+		css:"-webkit-box-shadow: 1px 1px 3px 2px #aaaaaa;box-shadow: 1px 1px 3px 2px #aaaaaa;border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
 		topband:{
-			css:"display: block;background-color:gray;text-align:left;width:200px;height:35px; top: 0px; left:0px;"
+			css:"display: block;background-color:gray;text-align:left;width:180px;height:35px; top: 0px; left:0px;"
 		},
 		buttons:{
 			default_css:"border:1px solid #aaaaaa; padding:4px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
@@ -61,7 +61,7 @@ FCChatConfig.styles.widget={
 		}
     },
 	toolbar_item:{
-		width:420,
+		width:440,
 		text:{
 			css:"font-family:arial;font-size:8pt;font-weight:bold;color:white",
 			alert_css:"font-family:arial;font-size:8pt;font-weight:bold;color:pink",
@@ -72,7 +72,7 @@ FCChatConfig.styles.widget={
 			states:{
 				link_css:"color:white",
 				hover_css:"color:yellow",
-				disabled_css:"color:lightgray;"
+				disabled_css:"color:lightgray"
 			},
 			open_chat_button:{
 				top:2,

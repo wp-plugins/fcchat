@@ -26,7 +26,7 @@ FCChatConfig.styles.widget={
 		left:310, //"     "
 		width:470,
 		height:35,
-		css:"box-shadow: 1px 1px 3px 2px #aaaaaa;border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
+		css:"-webkit-box-shadow: 1px 1px 3px 2px #aaaaaa;box-shadow: 1px 1px 3px 2px #aaaaaa;border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
 		topband:{
 			css:"display: block;background-color:gray;text-align:left;width:190px;height:35px; top: 0px; left:0px;"
 		},

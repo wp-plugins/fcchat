@@ -49,7 +49,7 @@ FCChatConfig.txt={
 	options_width: 61,
 	t10: "Send to Room",
 	t11: "Send to Friend",
-	send_buttons_width: 95,
+	send_buttons_width: 138,
 	
 	//Section Headings
 	t12: "Chat Room",
@@ -195,9 +195,9 @@ FCChatConfig.txt={
 	t117: "Current Chat",
 	t118: "Autoclear. Room message limit exceded.",
 	t119: "**Comment Erased**",
-	t120: "<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Loading Chat...Please wait...</font></b>",
-	t121: "<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Loading Page...Please wait...</font></b>",
-	t122: "<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Loading Room...Please wait...</font></b>",
+	t120: "<b><div style='margin-left:10px;margin-top:10px;font-size:12pt;'>&nbsp;Loading Chat...Please wait...</div></b>",
+	t121: "<b><div style='margin-left:10px;margin-top:10px;font-size:12pt;'>&nbsp;Loading Page...Please wait...</div></b>",
+	t122: "<b><div style='margin-left:10px;margin-top:10px;font-size:12pt;'>&nbsp;Loading Room...Please wait...</div></b>",
 	
 	//Account types
 	t123: "mod",

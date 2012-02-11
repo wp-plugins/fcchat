@@ -14,7 +14,7 @@
  * To use this template, edit FCChat/config/config.js as follows:
  * 
  *  //STYLE
- *	window_style_template:"window_default.js",
+ *	window_style_template:"window_blue_silver.js",
  * 
  * If you create a decent style template. Please email us the template at 
  * support@fastcatsoftware.com
@@ -24,73 +24,73 @@ FCChatConfig.styles={
 	chat_window:{
 		frame:{
 			logo:"fastcatlogo.gif",
-			background_color:"gray",
-			opacity:.80
+			background_color:"#666666",
+			opacity:.90
 		},
 		main_panel:{
 			height:568,
 			background_image:"", //"tc2.gif",
-			background_color:"#555555",
+			background_color:"#cccccc",
 			border:"1px solid #aaaaaa",
-			opacity:.96,
+			opacity:.95,
 			send_to_room_button:{
-				default_css:"border:1px solid #9a9a9a; padding:2px 32px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				default_css:"background-color:#cfcfcf;border:1px solid #888888; padding:2px 32px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
-					link_css:"color:white",
-					hover_css:"color:lightblue",
-					disabled_css:"color:#bbbbbb;border:1px solid #9a9a9a"
+					link_css:"color:#163663",
+					hover_css:"color:white",
+					disabled_css:"color:#aaaaaa;border:1px solid #999999;background-color:#c3c3c3;"
 				}
 			},
 			send_private_button:{
-				default_css:"border:1px solid #9a9a9a; padding:2px 31px 2px 31px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				default_css:"background-color:#cfcfcf;border:1px solid #888888; padding:2px 31px 2px 31px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
-					link_css:"color:white",
-					hover_css:"color:lightblue",
-					disabled_css:"color:#bbbbbb;border:1px solid #9a9a9a"
+					link_css:"color:#163663",
+					hover_css:"color:white",
+					disabled_css:"color:#a0a0a0;border:1px solid #999999;background-color:#c3c3c3;"
 				}
 			},
 			other_buttons:{
-				default_css:"border:1px solid #9a9a9a; padding:2px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				default_css:"background-color:#cfcfcf;border:1px solid #888888; padding:2px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
-					link_css:"color:white",
-					hover_css:"color:lightblue",
-					disabled_css:"color:#bbbbbb;border:1px solid #9a9a9a"
+					link_css:"color:#163663",
+					hover_css:"color:white",
+					disabled_css:"color:#aaaaaa;border:1px solid #999999;background-color:#c3c3c3;"
 				}
 			},
 			widgets:{
 				border:{
-					link_css:"border:1px solid #666666",
+					link_css:"border:1px solid #999999",
 					hover_css:"border:1px solid lightblue"
 				},
-				text_icon_css:"background-color:gray",
+				text_icon_css:"background-color:#aaaaaa",
 				more_icon_css:"color:white;font-stretch:wider;font-size:10px;font-weight:bold;text-decoration:none"
 			},
 			text:{
 				font:{
 					family:"arial",
-					color:"lightblue",
+					color:"#444444",
 					size:12,
 					weight:700
 				}
 			},
 			links:{
-				css:"font-family:arial;font-size:12px;font-weight:700;color:#ccffff;text-decoration:none;"
+				css:"font-family:arial;font-size:12px;font-weight:700;color:#448844;text-decoration:none;"
 			},
 			chat_panels:{
 				chat_room_panel:{
-					background_image:"chat_window_background.jpg",
-					background_color:"#000000",
-					border:"2px solid silver",
-					css:{opacity:.5}
+					background_image:"chat_window_light_background.jpg",
+					background_color:"#ffffff",
+					border:"2px solid #a0a0a0",
+					css:{opacity:.65,"box-shadow":"inset 5px 5px 10px 0px rgba(0,0,0,0.2)","-webkit-box-shadow": "inset 5px 5px 10px 0px rgba(0,0,0,0.2)"}
 				},
 				private_chat_panel:{
-					background_image:"private_chat_background.jpg",
-					background_color:"#000000",
-					border:"2px solid silver",
-					css:{opacity:.5}
+					background_image:"private_chat_light_background.jpg",
+					background_color:"#f6f6f6",
+					border:"2px solid #a0a0a0",
+					css:{opacity:.65,"box-shadow":"inset 5px 5px 10px 0px rgba(0,0,0,0.2)","-webkit-box-shadow": "inset 5px 5px 10px 0px rgba(0,0,0,0.2)"}
 				},
 				user_icon:{
-					online_css:"-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;background-color:#54FD74;border:1px solid white",
+					online_css:"-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;background-color:#44FD64;border:1px solid white",
 					offline_css:"-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;background-color:transparent;border:1px solid #aaaaaa",
 					blocked_css:"-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;background-color:#FF8380;border:1px solid white"
 				},
@@ -99,15 +99,15 @@ FCChatConfig.styles={
 					size:8,
 					weight:600,
 					color:{
-						default_text_color:"white",
-						timestamp_color:"#4cF66c",
-						link_color:"white",
+						default_text_color:"#444444",
+						timestamp_color:"green",
+						link_color:"#528DC4",
 						censored_color:"red"
 					},
 					screen_name_states:{
 						online:{
-							link_css:"color:#fff;",
-							visited_css:"color:#FDF5E6;",
+							link_css:"color:#528DC4;",
+							visited_css:"color:purple;",
 							hover_css:"color:#FFFF00;",
 							blocked:{
 								link_css:"color:#FFB6C1;",
@@ -116,9 +116,9 @@ FCChatConfig.styles={
 							}
 						},
 						offline:{
-							link_css:"color:white;text-decoration:none;",
-							visited_css:"color:#B0E0E6;text-decoration:none;",
-							hover_css:"color:#ADD8E6;text-decoration:none;",
+							link_css:"color:#528DC4;text-decoration:none;",
+							visited_css:"color:purple;text-decoration:none;",
+							hover_css:"color:#FFFF00;text-decoration:none;",
 							blocked:{
 								link_css:"color:#FFB6C1;text-decoration:none;",
 								visited_css:"color:red;text-decoration:none;",
@@ -129,23 +129,23 @@ FCChatConfig.styles={
 				}
 			},
 			side_panels:{
-				background_color:"#B7D0EC",
-				border:"2px solid silver",
-				opacity:.5,
+				background_color:"#DaDfE8",
+				border:"2px solid #a0a0a0",
+				opacity:.7,
 				screen_name_dividers:{
 					background_color:"transparent",
-					hover_color:"#b3b3b3",
+					hover_color:"#f3f3f3",
 					border:"1px solid #cccccc"
 				},
 				room_display_panel:{
 					background_color:"transparent",
-					divider_color:"silver",
-					text_css:"font-family:arial;font-size:7pt;font-weight:500;color:white;",
-					change_room_link_css:"font-family:arial;font-size:7pt;font-weight:500;color:#ccffff;"
+					divider_color:"#c0c0d0",
+					text_css:"font-family:arial;font-size:7pt;font-weight:500;color:#204096;",
+					change_room_link_css:"font-family:arial;font-size:7pt;font-weight:500;color:#214399;"
 				},
 				private_group_panel:{
 					selected_user:{
-						background_color:"#3399CC",
+						background_color:"#CACFF5",
 						arrow:{
 							color:"green",
 							hover_color:"red"
@@ -158,37 +158,37 @@ FCChatConfig.styles={
 					blocked_css:"-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;background-color:#FF8380;border:1px solid white"
 				},	
 				profile_star:{
-					css:"font-size:21px;color:gold;"
+					css:"font-size:21px;color:yellow;"
 				},
 				font:{
 					family:"arial",
 					size:8,
 					weight:500,
 					color:{
-						typing_color:"#eeeeee",
-						idle_color:"#eeeeee",
-						mod_color:"#eeeeee",
-						title_color:"#eeeeee"
+						typing_color:"#888888",
+						idle_color:"#888888",
+						mod_color:"#777777",
+						title_color:"#294975"
 					},
 					screen_name_states:{
 						online:{
-							link_css:"color:#fff;text-decoration:none;",
+							link_css:"color:#444444;text-decoration:none;",
 							visited_css:"color:#FDF5E6;text-decoration:none;",
 							hover_css:"color:#FFFF00;text-decoration:none;",
 							blocked:{
-								link_css:"color:#FFB6C1;text-decoration:none;",
+								link_css:"color:#CC0000;text-decoration:none;",
 								visited_css:"color:red;text-decoration:none;",
-								hover_css:"color:#cc0000;text-decoration:none;"
+								hover_css:"color:#DF96A1;text-decoration:none;"
 							}
 						},
 						offline:{
-							link_css:"color:white;text-decoration:none;",
+							link_css:"color:#444444;text-decoration:none;",
 							visited_css:"color:#B0E0E6;text-decoration:none;",
 							hover_css:"color:#ADD8E6;text-decoration:none;",
 							blocked:{
-								link_css:"color:#FFB6C1;text-decoration:none;",
+								link_css:"color:#CC0000;text-decoration:none;",
 								visited_css:"color:red;text-decoration:none;",
-								hover_css:"color:#cc0000;text-decoration:none;"
+								hover_css:"color:#DF96A1;text-decoration:none;"
 							}
 						}
 					}
@@ -197,7 +197,7 @@ FCChatConfig.styles={
 			send_chat_panel:{
 				width:417,
 				height:30,
-				css:"font-size:9pt;font-family:arial;color:black;background-color:#aaaaaa;border:1px solid silver;"
+				css:"font-size:9pt;font-family:arial;color:black;background-color:#f3f3f3;border:1px solid #aaaaaa;"
 			},
 			user_pop_up_panel:{
 				border:"1px solid silver",
@@ -220,7 +220,7 @@ FCChatConfig.styles={
 					css:"font-size:9pt;font-family:arial;color:black;background-color:#aaaaaa;border:1px solid silver;"
 				},
 				send_private_button:{
-					default_css:"border:1px solid silver; padding:2px 10px 2px 9px; font:10px arial;",
+					default_css:"border:1px solid silver; padding:2px 12px 2px 11px; font:10px arial;",
 					states:{
 						link_css:"color:white",
 						hover_css:"color:lightblue",
@@ -260,7 +260,7 @@ FCChatConfig.styles={
 				},
 				//the corresponding color names are in the language template
 				color_selector:{
-					color_values:["#fff","black","blue","red","purple","green","yellow","orange","white"]
+					color_values:["#444444","black","blue","red","purple","green","yellow","orange","white"]
 				},
 				remove_block_button:{
 					default_css:"border:1px solid silver; padding:2px 12px 2px 11px; font:10px arial;",
@@ -312,6 +312,6 @@ FCChatConfig.styles={
 		}
 	},
 	split_screen:{
-		background_color:"#555555"
+		background_color:"lightgray"
 	}
 };

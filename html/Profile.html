@@ -24,6 +24,7 @@ function escape(s){
     s = s.replace(/&/g, '%26amp;');
     s = s.replace(/</g, '%26lt;');
     s = s.replace(/>/g, '%26gt;');
+    s = s.replace(/\\/g, '\\\\');
     return s;
 };
 function unescape(s){

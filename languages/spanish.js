@@ -51,7 +51,7 @@ FCChatConfig.txt = {
 	options_width: 70,
 	t10: "Enviar a la Sala",
 	t11: "Enviar a amigo",
-	send_buttons_width: 95,
+	send_buttons_width: 138,
 	
 	// Sección de Títulos
 	t12: "Sala de Chat",
@@ -197,9 +197,9 @@ FCChatConfig.txt = {
 	t117: "Chat actual",
 	t118: "Auto-borrar. Sobrepasado el límite de mensajes.",
 	t119: "**Comentarios Borrados**",
-	t120: "<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Chat cargando ... Espere, por favor...</font></b>",
-	t121: "<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Pagina cargando... Espere, por favor...</font></b>",
-	t122: "<b><font style='margin-left:10px;font-size:12pt;'>&nbsp;Sala cargando... Espere, por favor...</font></b>",
+	t120: "<b><div style='margin-left:10px;margin-top:10px;font-size:12pt;'>&nbsp;Chat cargando ... Espere, por favor...</div></b>",
+	t121: "<b><div style='margin-left:10px;margin-top:10px;font-size:12pt;'>&nbsp;Pagina cargando... Espere, por favor...</div></b>",
+	t122: "<b><div style='margin-left:10px;margin-top:10px;font-size:12pt;'>&nbsp;Sala cargando... Espere, por favor...</div></b>",
 	
 	//Tipos de cuenta
 	t123: "mod",
