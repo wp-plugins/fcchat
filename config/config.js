@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.2.9",
+	version:"2.2.8",
 	subversion:"0",
 	jQuery_stable:"1.6.4",
 
