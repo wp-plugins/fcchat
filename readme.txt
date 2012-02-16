@@ -395,6 +395,10 @@ Bug Fix: A bug was fixed in html/Avatars.php in which a get variable was not che
 
 New styling, there are now three style templates to choose from for the ChatCenter.
 
+= 2.2.8.1 =
+
+Bug Fix: A bug was fixed that was preventing the friends list from being displayed.
+
 Files Modified:
 config/config.js
 languages/english.js
