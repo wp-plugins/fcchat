@@ -24,11 +24,11 @@ FCChatConfig.styles.widget={
 	control:{
 		top:0, //for absolute positioning
 		left:310, //"     "
-		width:180,
+		width:190,
 		height:107,
-		css:"-webkit-box-shadow: 1px 1px 3px 2px #aaaaaa;box-shadow: 1px 1px 3px 2px #aaaaaa;border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
+		css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
 		topband:{
-			css:"display: block;background-color:gray;text-align:left;width:180px;height:35px; top: 0px; left:0px;"
+			css:"display: block;background-color:gray;text-align:left;width:190px;height:35px; top: 0px; left:0px;"
 		},
 		buttons:{
 			default_css:"border:1px solid #aaaaaa; padding:4px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
