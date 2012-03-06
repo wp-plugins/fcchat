@@ -119,7 +119,7 @@ Here are some places to look for information:
 
 http://www.fastcatsoftware.com/chat/userguide/Index.html
 
-http://www.fastcatsoftware.com/chat/Manual.html
+http://www.fastcatsoftware.com/chat/Manual2.2.html
 
 = How do I contact you if I have questions? =
 
@@ -408,6 +408,10 @@ styles/widget_default_sidebar.js
 styles/chatcenter_default.js
 styles/chatcenter_blue_gray.js
 styles/toolbar_default.js
+
+= 2.2.8.2 =
+
+Bug Fix: A bug was fixed that was preventing the floating toolbar dialog boxes from opening properly in Chrome.
 
 == Upgrade Notice ==
 

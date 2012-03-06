@@ -28,7 +28,7 @@ var FCChatConfig = {
 	//STYLES (templates located in the styles folder)
 	widget_style_template:"widget_default_sidebar.js",
 	toolbar_style_template:"toolbar_default.js",
-	chatcenter_style_template:"chatcenter_default.js",
+	chatcenter_style_template:"chatcenter_light_gray.js",
 	
 	//Embedded control box
 	absolute_positioning:false,
