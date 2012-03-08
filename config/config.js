@@ -13,8 +13,8 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.2.8.1",
-	subversion:"0",
+	version:"2.2.8",
+	subversion:"2",
 	jQuery_stable:"1.6.4",
 
 	//BASIC GREETINGS
@@ -170,7 +170,7 @@ var FCChatConfig = {
 			"box-shadow": "2px 2px 2px 2px rgba(0,0,0,0.5)",
 			"background-color":"#eeeeee",
 			//padding:"10px",
-			font:"10pt arial",
+			font:"6pt arial",
 			color:"black",
 			border:"1px solid silver"
 		}
