@@ -19,7 +19,8 @@ var _jGo = window["jGo"], jGo = {};
 jGo.config = {
 	version :1.0,
 	path :FCChatConfig.dir + "jGo",
-	z_index_base :	1000
+	z_index_base :	1000,
+	max_z_index:2147483647
 };
 
 ( function() {
