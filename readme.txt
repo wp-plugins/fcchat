@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.3
-Stable tag: 2.2.8
+Stable tag: 2.2.9
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -17,7 +17,7 @@ RECENT FEATURES
 
 Video Chat 3.0. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. Version 2.2.x now comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New features include private video chat, 2 player games, collaborative whiteboard and documents, transliteration service, and doodlepad. The 2.2.x series will be focused on providing greater user to user interaction.  In addition, you may now open the chatcenter directly into a separate window, so the the connection is maintained through page changes.
 
-NEW IN 2.2.8
+NEW IN 2.2.9
 
 New styling, there are now three style templates to choose from for the ChatCenter.
 
@@ -412,6 +412,24 @@ styles/toolbar_default.js
 = 2.2.8.2 =
 
 Bug Fix: A bug was fixed that was preventing the floating toolbar dialog boxes from opening properly in Chrome.
+
+= 2.2.9 =
+
+A new drop-down menu system was introduced. The style of the toolbar was modified a bit.
+
+Files Modified:
+config/config.js
+languages/english.js
+languages/spanish.js
+styles/widget_default_header.js
+styles/widget_default_sidebar.js
+styles/chatcenter_default.js
+styles/chatcenter_light_gray.js
+styles/chatcenter_blue_gray.js
+styles/toolbar_default.js
+
+Bug Fix: A bug was fixed that was preventing the floating toolbar dialog boxes from opening properly in Chrome.
+
 
 == Upgrade Notice ==
 

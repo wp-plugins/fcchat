@@ -61,7 +61,7 @@ FCChatConfig.styles.widget={
 		}
     },
 	toolbar_item:{
-		width:420,
+		width:440,
 		text:{
 			css:"font-family:arial;font-size:8pt;font-weight:bold;color:white",
 			alert_css:"font-family:arial;font-size:8pt;font-weight:bold;color:pink",
@@ -75,22 +75,23 @@ FCChatConfig.styles.widget={
 				disabled_css:"color:lightgray;"
 			},
 			open_chat_button:{
-				top:2,
+				top:7,
 				left:295
 			},
 			off_button:{
-				top:2,
+				top:7,
 				left:390
 			}
 		},
 		info_box:{
-			css:"width:250px;height:20px;left:10px;top:0px;"
+			css:"width:250px;height:30px;left:10px;top:0px;",
+			padding_top:8
 		},
 		status:{
-			css:"top:8px;left:268px;"
+			css:"top:13px;left:268px;"
 		},
 		divider:{
-			css:"top:2px;left:285px;width:1px;height:16px;background-color:lightgray"
+			css:"top:2px;left:285px;width:1px;height:26px;background-color:lightgray"
 		}
 	},
 	online_box:{
@@ -108,8 +109,8 @@ FCChatConfig.styles.widget={
 		text:jGo.toolbar.style.dialog_box.text
 	},
 	new_messages_box:{
-		top:43,
-		left:240,
+		top:null,
+		left:null,
 		toolbar_offset:3,
 		width:220,
 		height:323,
@@ -122,8 +123,9 @@ FCChatConfig.styles.widget={
 		text:jGo.toolbar.style.dialog_box.text
 	},
 	friends_box:{
-		top:null,
-		left:null,
+		top:43,
+		left:240,
+		toolbar_offset:3,
 		width:220,
 		height:323,
 		css:jGo.toolbar.style.dialog_box.css,

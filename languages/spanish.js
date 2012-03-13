@@ -104,7 +104,7 @@ FCChatConfig.txt = {
 	t49: "Agregar a amigos",
 	t50: "Bloquear",
 	t51: "* Oye, soy yo",
-	t52: "* Este usuario ha bloqueado",
+	t52: "* Este usuario no esta disponible para chatear.",
 	t53: "* Este usuario está fuera de línea.",
 	t54: "Cerrar",
 	t55: "Recuperación de ... (a mensajes)",
@@ -381,7 +381,7 @@ FCChatConfig.txt = {
 	t289: "invitar a compartir una pizarra",
 
 	t264: "Enviar mensaje",
-	t265: "No se puede enviar este mensaje. el usuario te ha bloqueado.",
+	t265: "No se puede enviar este mensaje. el usuario no esta disponible para chatear.",
 	t270: "Este usuario no está conectado.",
 
 	// Barra de herramientas flotante
@@ -400,19 +400,19 @@ FCChatConfig.txt = {
 	t278: "Haga clic en Abrir ChatCenter para acceder",
 	t279: "Haga clic en Abrir ChatCenter para más opciones",
 	t280: "invitar a compartir su pizarra",
-	t281: "Añadir a la lista de amigos",
+	t281: "Añadir a amigos",
 	t282: "Haga clic aquí para enviar un mensaje",
 
 	// Amigos Caja
 	t283: "Amigos",
 	t284: "Cerrar",
-	t285: "<u>subrayado Usuarios</u> están disponibles para chatear. <br> ChatCenter Abrir para añadir más amigos.",
-	t286: "Eliminar de la lista",
+	t285: "Los usuarios con indicadores verdes están disponibles para chat.<br> su nombre de chat. Clic nombre para chatear y otras opciones.",
+	t286: "Eliminar de amigos",
 	t290: "FriendsCenter",
 	
 	//Online Box
 	t291: "Cerrar",
-	t292: "<u>subrayado Usuarios</u> están disponibles para chatear. <br>Usa +/- para agregar/quitar amigos. Clic nombre para chatear.",
+	t292: "Los usuarios con indicadores verdes están disponibles para chat.<br> su nombre de chat. Clic nombre para chatear y otras opciones.",
 	t293: "<b>Espere...Por Favor</b>",
 	t294: "Quién está en línea",
 	
@@ -495,6 +495,11 @@ FCChatConfig.txt = {
 	t346:"Entrar ChatCenter",
 	
 	//added 2.2.7
-	t347:"No podría entrar. Por favor salga del panel de administración e iniciar sesión en el chat de nuevo."	
-
+	t347:"No podría entrar. Por favor salga del panel de administración e iniciar sesión en el chat de nuevo.",	
+	
+	//added 2.2.9
+	t348:"Disponible.",
+	t349:"Ocupado",
+	t350:"Establecer la disponibilidad",
+	t351:"Enviar un Mensaje"
 };

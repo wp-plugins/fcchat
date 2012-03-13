@@ -1,9 +1,7 @@
 jGo.scripts.importClass('jGo.browser.min.js', 'static', this,
 			null);
-if(FCChatConfig.use_menus){
-jGo.scripts.importClass('jGo.DefaultMenu.js', 'static', this,
+jGo.scripts.importClass('jGo.DefaultMenu.min.js', 'static', this,
 		null);
-}
 jGo.toolbar = {};
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "languages/" + FCChatConfig.language_template + "'></script>");
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.toolbar_style_template + "'></script>");

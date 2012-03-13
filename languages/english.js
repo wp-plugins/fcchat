@@ -102,7 +102,7 @@ FCChatConfig.txt={
 	t49: "Add to Friends",
 	t50: "Block",
 	t51: "*Hey, it's me!",
-	t52: "*This user has blocked you.",
+	t52: "*This user is not available for chat.",
 	t53: "*This user is offline.",
 	t54: "Close",
 	t55: "Retrieving...(to messages)",
@@ -380,7 +380,7 @@ FCChatConfig.txt={
 	t289: "Invite to share a whiteboard",
 	
 	t264: "Send Message",
-	t265: "Unable to send this message. The user has blocked you.",
+	t265: "Unable to send this message. The user is not available for chat.",
 	t270: "This user is currently offline.",
 	
 	//Floating toolbar
@@ -399,19 +399,19 @@ FCChatConfig.txt={
 	t278: "Click Open ChatCenter to sign in",
 	t279: "Click Open ChatCenter for more options",
 	t280: "Invite to share your whiteboard",
-	t281: "Add to friends list",
+	t281: "Add to friends",
 	t282: "Click to send a message",
 	
 	//Friends Box
 	t283: "Friends",
 	t284: "Close",
-	t285: "<u>Underlined Users</u> are available for chat.<br>Click +/- to add/remove friends. Click name to chat.",
-	t286: "Remove from list",
+	t285: "Users with green indicators are available for chat.<br>Click user's name for chat and other options.",
+	t286: "Remove from friends",
 	t290: "FriendsCenter",
 	
 	//Online Box
 	t291: "Close",
-	t292: "<u>Underlined Users</u> are available for chat.<br>Click +/- to add/remove friends. Click name to chat.",
+	t292: "Users with green indicators are available for chat.<br>Click user's name for chat and other options.",
 	t293: "<b>Please wait...</b>",
 	t294: "Who's Online",
 	
@@ -494,6 +494,12 @@ FCChatConfig.txt={
 	t346:"Enter ChatCenter",
 		
 	//added 2.2.7
-	t347:"Could not log you in. Please exit the adminstration panel and sign in to the chat again."	
+	t347:"Could not log you in. Please exit the adminstration panel and sign in to the chat again.",
+	
+	//added 2.2.9
+	t348:"Available.",
+	t349:"Busy",
+	t350:"Set Availability.",
+	t351:"Send Message"
 
 };

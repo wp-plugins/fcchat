@@ -18,6 +18,8 @@ jGo.DefaultMenu = function() {
     this.frame;
 
     this.style;
+    this.fixed;
+    this.mobile;
     
     this.getDefault = function() {
         return jGo.DefaultMenu.prototype;
@@ -38,11 +40,13 @@ TMp.create = function(id, p){
 	//var left = s.left || (p[3].offset().left+p[3].width()+s.offsetLeft-(p[4][0]===document.body?'0':jGo.util.eN(p[4].offset().left)));
 	//var top = s.top || (p[3].offset().top+s.offsetTop-(p[4][0]===document.body?'0':jGo.util.eN(p[4].offset().top)));
 	this.target=p[3];
-    this.parent=p[4];
+        this.parent=p[4];
+        this.fixed=p[5];
+    	this.mobile=p[6];
 	//var forecolor = (s.opacity!=1)?s.color:'transparent';
 	var outerClass = 'jGo_app jGo_myapp defaultmenu'+id;
 	var content ="<div style='position:relative'>"+p[1]+"</div>";
-	this.frame=$(document.createElement('div')).addClass(outerClass).attr('id', 'jGo_defaultmenuF' + id).css({position:'absolute',display:'none','z-index':(jGo.config.z_index_base+101)}).css(s.css).html(content);
+	this.frame=$(document.createElement('div')).addClass(outerClass).attr('id', 'jGo_defaultmenuF' + id).css({position:(this.fixed?'fixed':'absolute'),display:'none','z-index':jGo.config.max_z_index}).css(s.css).html(content);
 	this.parent.append(this.frame);
 	this.target.eventHandler('mousedown', this, 'onMouseDown', '');
 	this.frame.eventHandler('mousedown', this, 'onMouseDown', '');
@@ -68,24 +72,25 @@ TMp.position = function(target){
 	var s = this.style.position,
  	t = this.target,
 	p = this.parent,
-	offset = 18,
+	offset = 48,
+	right_margin=25,
+	bottom_margin=20,
 	displayLeft = 0;
-	var uPosX = (s.left || (t.offset().left+t.width() + s.offsetLeft-(p[0]===document.body?'0':jGo.util.eN(p.offset().left)))) - 9;
-    var uPosY = (s.top || (t.offset().top+s.offsetTop-(p[0]===document.body?'0':jGo.util.eN(p.offset().top)))) - 9;
+	var uPosX = (s.left || (t.offset().left + s.offsetLeft-(p[0]===document.body?'0':jGo.util.eN(p.offset().left)))) - 9;
+	var uPosY = (s.top || (t.offset().top+(this.fixed?-$(document).scrollTop():0)+s.offsetTop-(p[0]===document.body?'0':jGo.util.eN(p.offset().top)))) - 9;
 
     var height = this.frame.height();
     var width = this.frame.width();
     
     var screen_left = jGo.util.getSWidth();
-    var menu_left = width + uPosX + (p[0]===document.body?0:jGo.util.eN(p.offset().left));
-    if (screen_left < menu_left && menu_left > width) {
+    var menu_left = width + right_margin + uPosX + (p[0]===document.body?0:jGo.util.eN(p.offset().left));
+    if (screen_left < menu_left && menu_left > width && !this.mobile) {
         displayLeft = 1;
     }
-
-    var screen_height = (jGo.browser.browser != 'Explorer'?$(window).scrollTop():0) + jGo.util.getSHeight();
+    var screen_height = $(window).scrollTop() +(this.fixed?-$(document).scrollTop():0)+ jGo.util.getSHeight();
     var menu_bottom = height + uPosY + (p[0]===document.body?0:jGo.util.eN(p.offset().top));
-    if(screen_height < menu_bottom){
-    	uPosY -= (menu_bottom - screen_height +10);
+    if(screen_height - bottom_margin < menu_bottom){
+    	uPosY -= (menu_bottom - screen_height + bottom_margin);
     };
  
     if (jGo.browser.browser != 'Explorer') {

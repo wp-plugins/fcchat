@@ -13,8 +13,8 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.2.8",
-	subversion:"2",
+	version:"2.2.9",
+	subversion:"0",
 	jQuery_stable:"1.6.4",
 
 	//BASIC GREETINGS
@@ -154,27 +154,6 @@ var FCChatConfig = {
 	domain:null,
 	dir: window["fc_chat_path"] || "/FCChat/",
 	alt_dir: window["fc_chat_path"] || "/FCChat/",
-	
-	//TEST MENU NOT IMPLEMENTED
-	use_menus:false,
-	menus:{
-		position:{
-			left:null,
-			top:null,
-			offsetLeft:0,
-			offsetTop:0
-		},
-		css:{
-			width:"200px",
-			height:"150px",
-			"box-shadow": "2px 2px 2px 2px rgba(0,0,0,0.5)",
-			"background-color":"#eeeeee",
-			//padding:"10px",
-			font:"6pt arial",
-			color:"black",
-			border:"1px solid silver"
-		}
-	},
 	
 	//LOADING PHRASES
 	load_standalone_bsc:(!window["jGo"]||jGo.scripts.loadState('jGo.DefaultWindow.init.min.js') == 'not.loaded'?"<script type='text/javascript' src='" + (window["fc_chat_path"] || "/FCChat/") + "jGo/js/jGo.DefaultWindow.init.min.js'></" +
