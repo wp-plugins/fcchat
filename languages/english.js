@@ -172,7 +172,7 @@ FCChatConfig.txt={
 	
 	//Widget Msgs
 	t100: "<b>Connecting, please wait...</b>",
-	t101: "<b>You have successfully logged out... <a class='fc_link' href='javascript:fc_chat.reqRecon()'>Reconnect</a></b>",
+	t101: "<b>You have logged out... <a class='fc_link' href='javascript:fc_chat.reqRecon()'>Reconnect</a></b>",
 	t102: "<b>&nbsp;Chat is off.&nbsp;&nbsp;</b>",
 	t103: "<b>Chat Paused... <a class='fc_link' href='javascript:fc_chat.unPause()'>Resume</a></b>",
 	t104: "<span class='fc_alert_text'>Connection lost...</span> <a class='fc_link' href='javascript:fc_chat.reqRecon()'>Reconnect</a>",
@@ -500,6 +500,12 @@ FCChatConfig.txt={
 	t348:"Available.",
 	t349:"Busy",
 	t350:"Set Availability.",
-	t351:"Send Message"
-
+	t351:"Send Message",
+		
+	//added 2.3
+	t352:"Connect with Facebook",
+	t353:"Or...Use your Facebook account...",
+	t354:"Authorizing",
+	t355:"Authorization Failed",
+	t356:"Loading..."
 };

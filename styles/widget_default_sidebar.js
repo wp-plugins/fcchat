@@ -25,7 +25,7 @@ FCChatConfig.styles.widget={
 		top:0, //for absolute positioning
 		left:310, //"     "
 		width:190,
-		height:107,
+		height:112,
 		css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
 		topband:{
 			css:"display: block;background-color:gray;text-align:left;width:190px;height:35px; top: 0px; left:0px;"
@@ -49,14 +49,14 @@ FCChatConfig.styles.widget={
 		info_box:{
 			top:35,
 			left:2,
-			width:198,
+			width:188,
 			height:72,
 			css:"background-color:transparent",
 			linebreak:"<br>",
 			text:{
-				css:"font-family:arial;font-size:10pt;color:#444444",
-				alert_css:"font-family:arial;font-size:10pt;color:green;font-weight:bold",
-				link_css:"text-decoration:none;font-family:arial;font-size:10pt;color:blue"
+				css:"font-family:arial;font-size:9pt;color:#444444",
+				alert_css:"font-family:arial;font-size:9pt;color:green;font-weight:bold",
+				link_css:"text-decoration:none;font-family:arial;font-size:9pt;color:blue"
 			}
 		}
     },
@@ -95,7 +95,7 @@ FCChatConfig.styles.widget={
 		}
 	},
 	online_box:{
-		top:113,
+		top:118,
 		left:0,
 		toolbar_offset:3,
 		width:220,
@@ -123,7 +123,7 @@ FCChatConfig.styles.widget={
 		text:jGo.toolbar.style.dialog_box.text
 	},
 	friends_box:{
-		top:113,
+		top:118,
 		left:0,
 		toolbar_offset:3,
 		width:220,
@@ -138,7 +138,7 @@ FCChatConfig.styles.widget={
 	login_panel:{
 		top:40,
 		left:5,
-		box_shadow:"1px 1px 3px 2px #aaaaaa",
+		box_shadow:"0px 0px 12px 2px rgba(0,0,0,0.5)",
 		background_color:"#eeeeee",
 		border:"2px solid gray",
 		font:{

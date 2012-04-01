@@ -501,5 +501,12 @@ FCChatConfig.txt = {
 	t348:"Disponible.",
 	t349:"Ocupado",
 	t350:"Establecer la disponibilidad",
-	t351:"Enviar un Mensaje"
+	t351:"Enviar un Mensaje",
+	
+	//added 2.3
+	t352:"Conectar con Facebook",
+	t353:"O...Usa tu cuenta de Facebook...",
+	t354:"Autorizando",
+	t355:"Error de autorización",
+	t356:"Cargando..."
 };

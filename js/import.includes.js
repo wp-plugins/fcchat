@@ -3,6 +3,10 @@ jGo.scripts.importClass('jGo.browser.min.js', 'static', this,
 jGo.scripts.importClass('jGo.DefaultMenu.min.js', 'static', this,
 		null);
 jGo.toolbar = {};
+if(FCChatConfig.facebook_connect){
+	jGo.scripts.importClass('jGo.postMessage.min.js', 'static', this,
+			null);
+}
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "languages/" + FCChatConfig.language_template + "'></script>");
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.toolbar_style_template + "'></script>");
 document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.chatcenter_style_template + "'></script>");

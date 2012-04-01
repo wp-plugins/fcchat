@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	//VERSION
-	version:"2.2.9",
+	version:"2.2.10",
 	subversion:"0",
 	jQuery_stable:"1.6.4",
 
@@ -41,10 +41,21 @@ var FCChatConfig = {
 	toolbar_position:"bottomright",  //Choices are "topleft" "topright" "bottomleft" and "bottomright"
 	toolbar_items:["friendscenter","social_media"], //List MUST include "friendscenter"
 	
+	//MOBILE BROWSER OPTIONS
+	
+	//Run floating toolbar in banner mode for mobile apps.
+	toolbar_banner_mode:false,
+	toobar_banner_height:35,
+	toolbar_banner_left_offset:50,
+	toolbar_banner_top_offset:0,
+	
 	//Hide floating toolbar for these mobile apps (support for fixed positioned elements is spotty in mobile apps)
+	//This directive is ignored if toolbar_banner_mode is set to true, above.
 	//The format below uses the syntax of regular expressions
 	toolbar_mobile_hidden:/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i,
-
+	
+	//END MOBILE BROWSER OPTIONS
+	
 	//Online, New messages and Friends boxes
 	alignment:"left", //"left" or "right"
 	
@@ -53,6 +64,10 @@ var FCChatConfig = {
 	room_message_limit:300,
 	min_room_messages:50,
 	max_chat_size:2000,
+	
+	//ALLOW FACEBOOK LOGINS
+	facebook_connect:true,
+	fb_connection_url:"http://chat.fastcatsoftware.com:8080",
 	
 	//PROXY
 	forum_proxy:"",

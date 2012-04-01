@@ -138,7 +138,7 @@ FCChatConfig.styles.widget={
 	login_panel:{
 		top:40,
 		left:5,
-		box_shadow:"1px 1px 3px 2px #aaaaaa",
+		box_shadow:"0px 0px 12px 2px rgba(0,0,0,0.5)",
 		background_color:"#eeeeee",
 		border:"2px solid gray",
 		font:{

@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.3
-Stable tag: 2.2.9
+Stable tag: 2.2.10
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -17,9 +17,24 @@ RECENT FEATURES
 
 Video Chat 3.0. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. Version 2.2.x now comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New features include private video chat, 2 player games, collaborative whiteboard and documents, transliteration service, and doodlepad. The 2.2.x series will be focused on providing greater user to user interaction.  In addition, you may now open the chatcenter directly into a separate popup window, so the the connection is maintained through page changes.
 
-NEW IN 2.2.9
+NEW IN 2.2.10
 
-New styling, there are now three style templates to choose from for the ChatCenter.
+Facebook Connect - Allows users to log in with their Facebook accounts.
+
+(To use, set facebook_connect:true in the config file.)
+
+New search menu items for the toolbar.
+
+(To use, set add the menu items 'wp_search' or 'wp_search_in_menu' to the menu item list. For example: 
+
+toolbar_items:["wp_search","friendscenter","social_media"]
+
+)
+
+You may opt to display the toolbar in "Banner Mode" for mobile browsers. This eliminates some of the difficulties with mobile browsers not being able to display fixed elements properly.
+
+(To use, set toolbar_banner_mode:true in the config file)
+
 
 UPGRADING
 
@@ -428,7 +443,14 @@ styles/chatcenter_light_gray.js
 styles/chatcenter_blue_gray.js
 styles/toolbar_default.js
 
-Bug Fix: A bug was fixed that was preventing the floating toolbar dialog boxes from opening properly in Chrome.
+= 2.2.10 =
+Facebook Connect - Allows users to log in with their Facebook accounts.
+New search menu items for the toolbar.
+Banner Mode for mobile apps.
+Fixed a few minor issues with the administration panel.
+Added support for Joomla user integration
+
+)
 
 
 == Upgrade Notice ==
