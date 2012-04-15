@@ -55,7 +55,7 @@ jGo.toolbar.wp_search = {};
 	};
 	var render_dialog_content = function(){
 		var content="<div style='padding-left:20px;overflow:auto;"+config.dialog_box.text.css+";line-height:120%'><br>" +
-		"<li style='list-style-type: none' class='widget-container widget_search' id='search-2'><form action='"+action_url+"' id='searchform' method='get' role='search'><div><label for='s' class='screen-reader-text'> </label><input type='text' name='s' onfocus='if(this.value==\"search...\") this.value=\"\";' onblur='if(this.value==\"\") this.value=\"search...\";' value='search...' style='"+config.dialog_box.input_css+"'/><input type='submit' value='Search' id='searchsubmit'/></div></form></li></div>";
+		"<li style='list-style-type: none' class='widget-container widget_search' id='search-2'><form action='"+action_url+"' id='searchform' method='get' role='search'><div><label for='s' class='screen-reader-text'> </label><input type='text' name='s' onfocus='if(this.value==\"search...\") this.value=\"\";' onblur='if(this.value==\"\") this.value=\"search...\";' value='search...' style='"+config.dialog_box.input_css+"'/></div></form></li></div>";
 		jQ("#fc_view_wp_search_dialog").html(content);
 	};
 	var append_dialog = function(){
