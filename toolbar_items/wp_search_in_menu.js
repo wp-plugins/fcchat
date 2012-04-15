@@ -6,7 +6,7 @@
 //WP Search style template
 jGo.toolbar.style.wp_search_in_menu={
 	menu_item:{
-		width:148,
+		width:143,
 		padding:{
 			left:10,
 			top:3
@@ -38,8 +38,8 @@ jGo.toolbar.wp_search_in_menu = {};
 	jGo.toolbar.wp_search_in_menu.tgl_dialog = function()    {return tgl_dialog();};
 	
 	var create_menu_item = function(){
-	  return"<div class='fc_wp_search_in_menu_item' style='position: absolute;width:"+config.menu_item.width+"px;top:"+config.menu_item.padding.top+"px; left: "+config.menu_item.padding.left+"px;'>" +
-		"<li style='list-style-type: none' id='search-2'><form action='"+action_url+"' id='searchform' method='get' role='search'><div><label for='s' class='screen-reader-text'> </label><input style='"+config.menu_item.text_input_css+"' type='text' id='s' name='s' value='Enter Search'/>&nbsp;<input type='image' src='"+basedir+"current_skin/wp_search.png' style='"+config.menu_item.button_css+"' name='image' width='16' height='16'></div></form></li>"
+	  return"<div class='jGo_app jGo_myapp fc_wp_search_in_menu_item' style='position: absolute;width:"+config.menu_item.width+"px;top:"+config.menu_item.padding.top+"px; left: "+config.menu_item.padding.left+"px;'>" +
+		"<form action='"+action_url+"' method='get' role='search'><label for='s' class='screen-reader-text'> </label><input style='"+config.menu_item.text_input_css+"' type='text'  name='s' onfocus='if(this.value==\"search...\") this.value=\"\";' onblur='if(this.value==\"\") this.value=\"search...\";' value='search...' value='Enter Search'/>&nbsp;<input type='image' src='"+basedir+"current_skin/wp_search.png' style='"+config.menu_item.button_css+"' name='image' width='16' height='16'></form>"
 		+ "</div>";
 	};
 	var create_dialog = function(){
