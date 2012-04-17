@@ -39,7 +39,7 @@ jGo.toolbar.wp_search_in_menu = {};
 	
 	var create_menu_item = function(){
 	  return"<div class='jGo_app jGo_myapp fc_wp_search_in_menu_item' style='position: absolute;width:"+config.menu_item.width+"px;top:"+config.menu_item.padding.top+"px; left: "+config.menu_item.padding.left+"px;'>" +
-		"<form action='"+action_url+"' method='get' role='search'><label for='s' class='screen-reader-text'> </label><input style='"+config.menu_item.text_input_css+"' type='text'  name='s' onfocus='if(this.value==\"search...\") this.value=\"\";' onblur='if(this.value==\"\") this.value=\"search...\";' value='search...' value='Enter Search'/>&nbsp;<input type='image' src='"+basedir+"current_skin/wp_search.png' style='"+config.menu_item.button_css+"' name='image' width='16' height='16'></form>"
+		"<form action='"+action_url+"' method='get' role='search'><label for='s' class='screen-reader-text'> </label><input style='"+config.menu_item.text_input_css+"' type='text'  name='s' onfocus='if(this.value==\""+fc_chat.textSetter(359,'search')+"...\") this.value=\"\";' onblur='if(this.value==\"\") this.value=\""+fc_chat.textSetter(359,'search')+"...\";' value='"+fc_chat.textSetter(359,'search')+"...' value='Enter Search'/>&nbsp;<input type='image' src='"+basedir+"current_skin/wp_search.png' style='"+config.menu_item.button_css+"' name='image' width='16' height='16'></form>"
 		+ "</div>";
 	};
 	var create_dialog = function(){
