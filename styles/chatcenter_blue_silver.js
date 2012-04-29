@@ -34,7 +34,7 @@ FCChatConfig.styles={
 			border:"1px solid #aaaaaa",
 			opacity:.95,
 			send_to_room_button:{
-				default_css:"background-color:#cfcfcf;border:1px solid #eeeeee; padding:2px 32px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				default_css:"background-color:#cfcfcf;border:1px solid #eeeeee; padding:2px 49px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
 					link_css:"color:#264673",
 					hover_css:"color:white",
@@ -42,7 +42,7 @@ FCChatConfig.styles={
 				}
 			},
 			send_private_button:{
-				default_css:"background-color:#cfcfcf;border:1px solid #eeeeee; padding:2px 31px 2px 31px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				default_css:"background-color:#cfcfcf;border:1px solid #eeeeee; padding:2px 48px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
 					link_css:"color:#264673",
 					hover_css:"color:white",
@@ -168,8 +168,7 @@ FCChatConfig.styles={
 					size:8,
 					weight:500,
 					color:{
-						typing_color:"#888888",
-						idle_color:"#888888",
+						user_info_css:"color:#888888",
 						mod_color:"#777777",
 						title_color:"#294975"
 					},
@@ -287,12 +286,12 @@ FCChatConfig.styles={
 				}
 			},
 			login_panel:{
-				box_shadow:"1px 1px 3px 2px #aaaaaa",
-				background_color:"#444444",
-				border:"1px solid silver",
+				box_shadow:"0px 0px 12px 2px rgba(0,0,0,0.5)",
+				background_color:"#eeeeee",
+				border:"2px solid #666666",
 				font:{
-					textfield_description_css:{"font-family":"arial","font-size":"10pt",color:"lightgray","font-style":"italic","font-weight":"bold"},
-					smalltext_css:{"margin-right":"10px","font-family":"arial","font-size":"8pt",color:"white"}
+					textfield_description_css:{"font-family":"arial","font-size":"10pt",color:"black","font-style":"italic","font-weight":"bold"},
+					smalltext_css:{"margin-right":"10px","font-family":"arial","font-size":"8pt",color:"black"}
 				},
 				textfield_css:{"background-color":"#dddddd"}
 			},

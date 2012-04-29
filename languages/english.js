@@ -49,7 +49,7 @@ FCChatConfig.txt={
 	options_width: 61,
 	t10: "Send to Room",
 	t11: "Send to Friend",
-	send_buttons_width: 138,
+	send_buttons_width: 175,
 	
 	//Section Headings
 	t12: "Chat Room",
@@ -502,10 +502,24 @@ FCChatConfig.txt={
 	t350:"Set Availability.",
 	t351:"Send Message",
 		
-	//added 2.3
+	//added 2.2.10
 	t352:"Connect with Facebook",
 	t353:"Or...Use your Facebook account...",
 	t354:"Authorizing",
 	t355:"Authorization Failed",
-	t356:"Loading..."
+	t356:"Loading...",
+		
+	//added 2.2.11
+	t357:"Search Site",
+	t358:"Close",
+	t359:"search",
+	t360:"Close",
+	
+	t361:"Signature (50 chars max)",
+	t362:"Signature Set",
+	t363:"Set Signature",
+	
+	t364:"Hi, your chat name is ",
+	t365:"Create new name",
+	t366:"No thanks"
 };

@@ -34,7 +34,7 @@ FCChatConfig.styles={
 			border:"1px solid #aaaaaa",
 			opacity:.95,
 			send_to_room_button:{
-				default_css:"background-color:#cfcfcf;border:1px solid #888888; padding:2px 32px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				default_css:"background-color:#cfcfcf;border:1px solid #888888; padding:2px 49px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
 					link_css:"color:#163663",
 					hover_css:"color:white",
@@ -42,7 +42,7 @@ FCChatConfig.styles={
 				}
 			},
 			send_private_button:{
-				default_css:"background-color:#cfcfcf;border:1px solid #888888; padding:2px 31px 2px 31px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				default_css:"background-color:#cfcfcf;border:1px solid #888888; padding:2px 48px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
 					link_css:"color:#163663",
 					hover_css:"color:white",
@@ -167,8 +167,7 @@ FCChatConfig.styles={
 					size:8,
 					weight:500,
 					color:{
-						typing_color:"#888888",
-						idle_color:"#888888",
+						user_info_css:"color:#888888",
 						mod_color:"#777777",
 						title_color:"#294975"
 					},

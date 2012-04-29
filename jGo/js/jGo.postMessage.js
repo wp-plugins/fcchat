@@ -33,7 +33,6 @@ jGo.postMessage = {};
 		    // jQuery dependency for this script. If removed, this script could be
 		    // written as very basic JavaScript.
 		    message = typeof message === 'string' ? message : jGo.$.param( message );
-		    
 		    // Default to parent if unspecified.
 		    target = target || parent;
 		    

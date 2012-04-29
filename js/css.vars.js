@@ -7,6 +7,7 @@
 	var fc_fr_tb = jGo.toolbar.style;
 	var fc_tb_pl = fc_tb.toolbar_item;
 	var fc_pl_btn = fc_tb.toolbar_item.buttons;
+	var fc_promo  = (jGo.toolbar.style.prompt?jGo.toolbar.style.prompt.dialog_box.bubble.triangle_color:'');
 	var fc_cw_mp_cp = FCChatConfig.styles.chat_window.main_panel.chat_panels;
 	var fc_cw_mp_sp = FCChatConfig.styles.chat_window.main_panel.side_panels;
 	var fc_cwtmc=fc_cw_mp_cp.font.color.default_text_color;
@@ -135,6 +136,14 @@
 	fc_rule+"div.fc_blkbtn_dis a.fc_blkbtn_disa, "+fc_rule2+"div.fc_blkbtn_dis a.fc_blkbtn_disa{"+fc_blk_btn.states.disabled_css+";cursor:default;}";
 	
 	FCChatConfig.dynamicStyles=firstPart+
+	
+	//promo
+	fc_rule +"*.fc-triangle-right, "+fc_rule2+"*.fc-triangle-right {position:relative;padding:15px;}"+
+	fc_rule +"*.fc-triangle-right:after, "+fc_rule2+"*.fc-triangle-right:after {content:'';position:absolute;bottom:-10px;left:190px;border-width:10px 0 0 10px;border-style:solid;border-color:"+fc_promo+" transparent;display:block;width:0;}"+
+	
+	fc_rule +"*.fc-triangle-right.top, "+fc_rule2+"*.fc-triangle-right.top {position:relative;margin-top:10px;}"+
+	fc_rule +"*.fc-triangle-right.top:after, "+fc_rule2+"*.fc-triangle-right.top:after {top:-10px;right:50px;bottom:auto;left:auto;border-width:10px 10px 0 0;border-color:transparent "+fc_promo+"}"+
+	
 	//fc_rule+"*.fc_a1:link, "+fc_rule2+"*.fc_a1:link{font-size:"+fc_cwfs+"pt;}"+
 	//fc_rule+"*.fc_a1:visited, "+fc_rule2+"*.fc_a1:visited{font-size:"+fc_cwfs+"pt;}"+
 	//fc_rule+"*.fc_a1:hover, "+fc_rule2+"*.fc_a1:hover{font-size:"+fc_cwfs+"pt;}"+

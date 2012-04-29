@@ -5,17 +5,25 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.3
-Stable tag: 2.2.10
+Stable tag: 2.2.11
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
 == Description ==
 
-FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
+Please Read Upgrade notice below before installing. FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
 
 RECENT FEATURES
 
 Video Chat 3.0. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. Version 2.2.x now comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New features include private video chat, 2 player games, collaborative whiteboard and documents, transliteration service, and doodlepad. The 2.2.x series will be focused on providing greater user to user interaction.  In addition, you may now open the chatcenter directly into a separate window, so the the connection is maintained through page changes.
+
+
+NEW IN 2.2.11
+
+Promo - this feature introduces new users to the chat, and prompts them to create a chat name. To disable set prompt_user:false, in the config file.
+
+Signature-users may write a signature which appears below their name.
+
 
 NEW IN 2.2.10
 
@@ -57,6 +65,8 @@ Pop-out Mode: Launch Chat into a separate window
 Public rooms/Private Rooms
 
 Instant messaging/Private Chat
+
+Facebook Connect
 
 Upload images
 
@@ -450,10 +460,17 @@ Banner Mode for mobile apps.
 Fixed a few minor issues with the administration panel.
 Added support for Joomla user integration
 
-)
-
+= 2.2.11 =
+Promo - this feature introduces new users to the chat, and prompts them to create a chat name. 
+Signature-users may write a signature statement which appears below their name.
+A new sound was created for chatroom messages.
+The style template chatcenter_default.js has been renamed to chatcenter_midnight_blue.js
+Critical bug fix: In ie6, the opening of the change name dialog was causing a page reload.
 
 == Upgrade Notice ==
+
+= 2.2.11 =
+After upgrading, there will be a period of about 2 minutes where the chat will not function properly. This is because the upgrade to 2.2.11 requires a reboot of your chat server. Just keep refreshing the page for a few minutes untill the chat comes online again.
 
 = 2.2.x =
 

@@ -93,47 +93,32 @@ jGo.toolbar.social_media = {};
 	};
 	var create_dialog = function(){
 		  dialog= "<div class='jGo_app jGo_myapp jGo_dialog' id='fc_social_media_dialog' style='position:absolute;display: none;visibility: visible;"+config.dialog_box.css+";text-align:left;height:"+config.dialog_box.height+"px;width:"+config.dialog_box.width+"px;top: 113px; left:210px; z-index:" + (z_b + 104) + ";overflow:hidden;'>" +
-			"<div id='fc_social_media_dialog_title' style='position:absolute;width:"+config.dialog_box.width+"px;"+config.dialog_box.title_box_css+";overflow:hidden'><div style='padding:4px;'><span style='"+config.dialog_box.text.title_css+"'>Share</span>&nbsp;&nbsp;&nbsp;<a style='"+config.dialog_box.text.link_css+"' href='javascript:jGo.toolbar.social_media.tgl_dialog()'>Close</a></div></div>" +
+			"<div id='fc_social_media_dialog_title' style='position:absolute;width:"+config.dialog_box.width+"px;"+config.dialog_box.title_box_css+";overflow:hidden'><div style='padding:4px;'><span style='"+config.dialog_box.text.title_css+"'>"+fc_chat.textSetter(343,'Share')+"</span>&nbsp;&nbsp;&nbsp;<a style='"+config.dialog_box.text.link_css+"' href='javascript:jGo.toolbar.social_media.tgl_dialog()'>"+fc_chat.textSetter(360,'Close')+"</a></div></div>" +
 			"<div  id='fc_view_social_media_dialog' style='position:absolute;width:"+config.dialog_box.width+"px;"+config.dialog_box.info_box_css+";overflow:auto'></div></div>";
 			return dialog;
 	};
 	var render_dialog_content = function(){
-		var content="<div style='padding:3px;overflow:auto;"+config.dialog_box.text.css+";line-height:120%'>&nbsp;"+fc_chat.textSetter(344,'Share this site with others')+":<br>";
-		var n=1;
-		for (var site in media) {
-        	if(media.hasOwnProperty(site)){
-        		content+="<div style='position:absolute;top:"+(n*30)+"px;left:0px;width:200px;height:30px'>" + sitecode[media[site]]() + "</div>";
-        		n++;
-        	}
-        }
-		jQ("#fc_view_social_media_dialog").html(content);
+		if(rendered==0){
+			var content="<div style='padding:3px;overflow:auto;"+config.dialog_box.text.css+";line-height:120%'>&nbsp;"+fc_chat.textSetter(344,'Share this site with others')+":<br>";
+			var n=1;
+			for (var site in media) {
+		    	if(media.hasOwnProperty(site)){
+		    		content+="<div style='position:absolute;top:"+(n*30)+"px;left:0px;width:200px;height:30px'>" + sitecode[media[site]]() + "</div>";
+		    		n++;
+		    	}
+		    }
+			jQ("#fc_view_social_media_dialog").html(content);
+			rendered=1;
+		}
 	};
 	var append_dialog = function(){
 		document.body.appendChild(jQ("#fc_social_media_dialog")[0]);
 	};
 	var tgl_dialog = function(){
-		if(jQ("#fc_social_media_dialog").css("display")!="none"){
-			jQ("div.jGo_dialog").css("display","none");
-		}else{
-			jQ("div.jGo_dialog").css("display","none");
-			fc_chat.close_boxes();
-			position_dialog();
-			if(rendered==0){
-				render_dialog_content();
-				rendered=1;
-			}
-			jQ("#fc_social_media_dialog").css("display","block");
-		}
+		fc_chat.tgl_dialog(jQ("#fc_social_media_dialog"),position_dialog,render_dialog_content,200);
 	};
 	var position_dialog = function(){
-		var elem = (fc_chat.getexp6()?"#fc_toolbar_inner":"#fc_toolbar");
-		var pos = (fc_chat.getexp6()?"absolute":"fixed");
-		var basepos = Math.max(3,EN(jQ(elem).css("left"))+EN(jQ("#fc_social_media_toolbar_item").css("left")));
-		var subtract = Math.min(0,fc_chat.getToolbarWidth()-EN(jQ("#fc_social_media_toolbar_item").css("left"))-(config.dialog_box.width+3));
-		jQ("#fc_social_media_dialog").css({
-			position:pos,
-			top:(EN(jQ(elem).css("top"))-(FCChatConfig.toolbar_position.substr(0,1)=='t'?-jGo.toolbar.style.height-4:7+config.dialog_box.height))+'px',
-			left:basepos+(basepos+subtract>3?subtract:0)+"px"});
+		fc_chat.position_dialog(jQ("#fc_social_media_dialog"),EN(jQ("#fc_social_media_toolbar_item").css("left")),config.dialog_box.width,config.dialog_box.height)
 	};
 
 })();

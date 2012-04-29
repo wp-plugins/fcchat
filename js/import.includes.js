@@ -16,7 +16,9 @@ for(var i = 0;i<FCChatConfig.toolbar_items.length;i++){
 		document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "toolbar_items/"+FCChatConfig.toolbar_items[i]+".js'></script>");
 	}
 }
-
+if(FCChatConfig.prompt_user){
+	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/prompt.js'></script>");
+}
 if(FCChatConfig.flashEnabled=='test'){
 	FCChatConfig.flashEnabled=false;
 	if (navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"])

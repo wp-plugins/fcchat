@@ -50,8 +50,8 @@ FCChatConfig.txt = {
 	t9: "Opciones",
 	options_width: 70,
 	t10: "Enviar a la Sala",
-	t11: "Enviar a amigo",
-	send_buttons_width: 138,
+	t11: "Enviar a amigo&nbsp;&nbsp;",
+	send_buttons_width: 178,
 	
 	// Sección de Títulos
 	t12: "Sala de Chat",
@@ -500,13 +500,27 @@ FCChatConfig.txt = {
 	//added 2.2.9
 	t348:"Disponible.",
 	t349:"Ocupado",
-	t350:"Establecer la disponibilidad",
+	t350:"Disponible",
 	t351:"Enviar un Mensaje",
 	
-	//added 2.3
+	//added 2.2.10
 	t352:"Conectar con Facebook",
 	t353:"O...Usa tu cuenta de Facebook...",
 	t354:"Autorizando",
 	t355:"Error de autorización",
-	t356:"Cargando..."
+	t356:"Cargando...",
+	
+	//added 2.2.11
+	t357:"Buscar Sitio",
+	t358:"Cerrar",
+	t359:"buscar",
+	t360:"Cerrar",
+	
+	t361:"Comentario (50 máx)",
+	t362:"Comentario se establece",
+	t363:"Comentario",
+	
+	t364:"Hola, tu nombre de chat es ",
+	t365:"Crear un nuevo nombre",
+	t366:"No, gracias"
 };

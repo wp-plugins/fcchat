@@ -104,8 +104,8 @@ FCChatConfig.styles.widget={
 		title_box_css:jGo.toolbar.style.dialog_box.title_box_css,
 		greeting_box_css:"top:40px;left:0px;height:53px;background-color:#dddddd;",
 		list_box_css:"top:93px;left:0px;height:160px;",
+		list_divider_css:jGo.toolbar.style.dialog_box.list_divider_css,
 		info_box_css:"top:253px;left:0px;height:70px;background-color:#dddddd;",
-		plus_css:"color:green;text-decoration:none;font-size:20px;font-weight:900;",
 		text:jGo.toolbar.style.dialog_box.text
 	},
 	new_messages_box:{
@@ -119,7 +119,6 @@ FCChatConfig.styles.widget={
 		greeting_box_css:"top:40px;left:0px;height:53px;background-color:#dddddd;",
 		view_msg_box_css:"top:93px;left:0px;height:160px;",
 		send_msg_box_css:"top:253px;left:0px;height:70px;background-color:#dddddd;",
-		plus_css:"color:green;text-decoration:none;font-size:20px;font-weight:900;",
 		text:jGo.toolbar.style.dialog_box.text
 	},
 	friends_box:{
@@ -131,8 +130,8 @@ FCChatConfig.styles.widget={
 		css:jGo.toolbar.style.dialog_box.css,
 		title_box_css:jGo.toolbar.style.dialog_box.title_box_css,
 		list_box_css:"top:40px;left:0px;height:203px;",
+		list_divider_css:jGo.toolbar.style.dialog_box.list_divider_css,
 		info_box_css:"top:253px;left:0px;height:70px;background-color:#dddddd;",
-		minus_css:"color:red;text-decoration:none;font-size:28px;font-weight:900;",
 		text:jGo.toolbar.style.dialog_box.text
 	},
 	login_panel:{

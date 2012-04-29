@@ -481,6 +481,15 @@ jGo.config = {
 				}
 				return mW;
 			},
+			extractFromCSSString : function(prop,str) {
+				var s = str.split(";");
+				for(var i=0;i>s.length;i++){
+					if(s[i].indexOf(prop)==0){
+						return s[i].split(":")[1];
+					}
+				}
+				return "";
+			},
 			bind : function(obj, method) {
 				return function() {
 					return method.apply(obj, arguments);

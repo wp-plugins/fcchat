@@ -32,6 +32,7 @@
 #jGo_app.jGo_myapp *.fc_e_sml, .jGo_app.jGo_myapp *.fc_e_sml { width: 12px; height: 12px; background-position: -98px -181px; }
 #jGo_app.jGo_myapp *.fc_e_rmp, .jGo_app.jGo_myapp *.fc_e_rmp { width: 7px; height: 10px; background-position: -170px -118px; }
 #jGo_app.jGo_myapp *.fc_e_ud, .jGo_app.jGo_myapp *.fc_e_ud { width: 30px; height: 4px; background-position: -142px -140px; }
+
 .inputapi-transliterate-indic-suggestion-menu.inputapi-transliterate-indic-suggestion-menu-vertical {
   z-index:10000000;
 }
