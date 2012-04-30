@@ -7,11 +7,11 @@ Requires at least: 2.7
 Tested up to: 3.3
 Stable tag: 2.2.11
 
-An interface for real time chat, video conferencing, instant messaging, and more.
+An interface for real time chat, video conferencing, instant messaging, and more. Please Read Upgrade notice before updating the plugin.
 
 == Description ==
 
-Please Read Upgrade notice below before installing. FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
+ FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
 
 RECENT FEATURES
 
@@ -44,7 +44,10 @@ You may opt to display the toolbar in "Banner Mode" for mobile browsers. This el
 (To use, set toolbar_banner_mode:true in the config file)
 
 
-UPGRADING
+UPGRADE NOTICE
+
+After upgrading to version 2.2.11, there will be a period of about 2 minutes where the chat will not function properly. This is because the upgrade requires a reboot of your chat server. Just keep refreshing the page for a few minutes until the chat comes online again.
+
 
 When you upgrade to a new version, any customizations you made to the chat will be erased. In order to save those changes, do the following:
 
@@ -468,9 +471,6 @@ The style template chatcenter_default.js has been renamed to chatcenter_midnight
 Critical bug fix: In ie6, the opening of the change name dialog was causing a page reload.
 
 == Upgrade Notice ==
-
-= 2.2.11 =
-After upgrading, there will be a period of about 2 minutes where the chat will not function properly. This is because the upgrade to 2.2.11 requires a reboot of your chat server. Just keep refreshing the page for a few minutes untill the chat comes online again.
 
 = 2.2.x =
 
