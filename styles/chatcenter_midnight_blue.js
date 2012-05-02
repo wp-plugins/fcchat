@@ -166,10 +166,10 @@ FCChatConfig.styles={
 					family:"arial",
 					size:8,
 					weight:500,
-					color:{
+					style:{
 						user_info_css:"color:#eeeeee",
-						mod_color:"#eeeeee",
-						title_color:"#eeeeee"
+						mod_css:"color:#eeeeee",
+						title_css:"color:#eeeeee"
 					},
 					screen_name_states:{
 						online:{
