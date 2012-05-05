@@ -72,7 +72,7 @@ FCChatConfig.styles.widget={
 			states:{
 				link_css:"color:white",
 				hover_css:"color:yellow",
-				disabled_css:"color:lightgray"
+				disabled_css:"color:lightgray;"
 			},
 			open_chat_button:{
 				top:7,
