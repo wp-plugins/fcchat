@@ -42,11 +42,11 @@ FCChatConfig.txt={
 	t4: "On",
 	t5: "Off",
 	t6: "Open ChatCenter",
-	t7: "Help",
+	t7: "Help?",
+	help_width: 110,
 	t8: "Close",
-	close_width: 51,
-	t9: "Options",
-	options_width: 61,
+	close_width: 50,
+	t9: "Rooms&nbsp;/&nbsp;Settings",
 	t10: "Send to Room",
 	t11: "Send to Friend",
 	send_buttons_width: 175,
@@ -54,7 +54,7 @@ FCChatConfig.txt={
 	//Section Headings
 	t12: "Chat Room",
 	chat_room_width: 61,
-    t13: "Back to chat",
+    t13: "Back",
 	t14: "Messages",
 	private_chat_width: 57,
 	t15: "Who's Online",
@@ -101,9 +101,9 @@ FCChatConfig.txt={
 	t48: "Status",
 	t49: "Add to Friends",
 	t50: "Block",
-	t51: "*Hey, it's me!",
-	t52: "*This user is not available for chat.",
-	t53: "*This user is offline.",
+	t51: "Hey, it's me!",
+	t52: "Not available for chat.",
+	t53: "Offline. ",
 	t54: "Close",
 	t55: "Retrieving...(to messages)",
 	
@@ -185,7 +185,7 @@ FCChatConfig.txt={
 	t107: "Welcome!!! Your screen name is",
 	t108: "To sign in, click on your screen name in the side bar.",
 	t109: "You are currently chatting in: ",
-	t110: "<a href='javascript:void' onClick='fc_chat.show_hide_options(333,425);return false'>See Room List</a>",
+	t110: "<a href='javascript:void' onClick='fc_chat.tgl_options();return false'>See Room List</a>",
 	t111: "Prev",
 	t112: "Previous",
 	t113: "Next",
@@ -213,7 +213,7 @@ FCChatConfig.txt={
 	t129: "You must be a member to enter this room.",
 	
 	//Send chat msgs
-	t130: "Unable to send this message. The user is offline.",
+	t130: "Guest accounts can't receive offline chats.",
 	t131: "Message is too big (",
 	t132: " chars max).",
 	t133: "Please enter a message!",
@@ -329,7 +329,7 @@ FCChatConfig.txt={
 	t220: "Save Profile",
 	t221: "Saving...",
 	t222: "Saved",
-	t223: "Return to chat",
+	t223: "Return",
 		
 	//Video
 	t224: "Video Chat Loading...This may take a few seconds.",
@@ -519,7 +519,30 @@ FCChatConfig.txt={
 	t362:"Signature Set",
 	t363:"Set Signature",
 	
+	promo_width_offset:0,
 	t364:"Hi, your chat name is ",
 	t365:"Create new name",
-	t366:"No thanks"
+	t366:"No thanks",
+		
+	//Added in 2.2.12
+	t367:"Chats",
+	t368:"Offline",
+	t369:"Settings",
+	t370:", your current room and settings are shown below.",
+	t371:"Close this window",
+	t372:"when finished viewing",
+	
+	t373:"User List",
+	t374:"Searching...Please Wait...",
+	t375:"User List - Page ",
+	t376:"User Search Results - Page ",
+	t377:"Guest accounts are not shown.",
+	t378:"No Results found.",
+	t379:"Previous Page",
+	t380:"Next Page",
+	t381:"Return to chat",
+	t382:"search...",
+	t383:"Search is too big (50 chars max).",
+	t384:"Please enter at least one character."
+	
 };

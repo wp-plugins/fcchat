@@ -81,7 +81,11 @@ FCChatConfig.styles={
 					background_image:"chat_window_background.jpg",
 					background_color:"#000000",
 					border:"2px solid #808080",
-					css:{opacity:.5}
+					css:{opacity:.5},
+					infobox:{
+						border:"4px solid silver",
+						triangle_color:"silver"
+					}
 				},
 				private_chat_panel:{
 					background_image:"private_chat_background.jpg",
@@ -94,7 +98,6 @@ FCChatConfig.styles={
 					offline_css:"-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;background-color:transparent;border:1px solid #aaaaaa",
 					busy_css:"-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;background-color:yellow;border:1px solid white",
 					blocked_css:"-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;background-color:#FF8380;border:1px solid white"
-							
 				},
 				font:{
 					family:"arial",
@@ -104,7 +107,8 @@ FCChatConfig.styles={
 						default_text_color:"white",
 						timestamp_color:"#4cF66c",
 						link_color:"white",
-						censored_color:"red"
+						censored_color:"red",
+						offline_css:"color:#4cF66c"
 					},
 					screen_name_states:{
 						online:{
@@ -142,8 +146,7 @@ FCChatConfig.styles={
 				room_display_panel:{
 					background_color:"transparent",
 					divider_color:"#c0c0d0",
-					text_css:"font-family:arial;font-size:7pt;font-weight:500;color:#204096;",
-					change_room_link_css:"font-family:arial;font-size:7pt;font-weight:500;color:#214399;"
+					text_css:"font-family:arial;font-size:8pt;font-weight:500;color:#204096;"
 				},
 				private_group_panel:{
 					selected_user:{
@@ -235,6 +238,11 @@ FCChatConfig.styles={
 				inner_border:"1px solid silver",
 				background_color:"gray",
 				panel_font_css: "color:lightblue;font-family:arial;font-weight:bold;font-style:italic;font-size:12px",
+				infobox:{
+					font_css:"color:white;font-size:12px;text-decoration:none",
+					border:"4px solid silver",
+					triangle_color:"silver"
+				},
 				functions:{
 					font_css:"color:white;font-size:12px;text-decoration:none",
 					border:"1px solid silver"
@@ -285,6 +293,12 @@ FCChatConfig.styles={
 					height:25
 				}
 			},
+			userlist_panel:{
+				background_color:"#D6D9DC",
+				font_css:"color:#444444",
+				screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700;text-decoration:none",
+				list_divider_css:"border-bottom:1px solid #cccccc"
+			},
 			login_panel:{
 				box_shadow:"0px 0px 12px 2px rgba(0,0,0,0.5)",
 				background_color:"#eeeeee",
@@ -293,7 +307,7 @@ FCChatConfig.styles={
 					textfield_description_css:{"font-family":"arial","font-size":"10pt",color:"black","font-style":"italic","font-weight":"bold"},
 					smalltext_css:{"margin-right":"10px","font-family":"arial","font-size":"8pt",color:"black"}
 				},
-				textfield_css:{"background-color":"#dddddd"}
+				textfield_css:"background-color:#dddddd !important;color:#444444 !important;width:120px !important;height:18px !important;"
 			},
 			room_password_panel:{
 				background_color:"#444444",

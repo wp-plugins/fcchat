@@ -24,7 +24,7 @@ FCChatConfig.styles.widget={
 	control:{
 		top:0, //for absolute positioning
 		left:310, //"     "
-		width:470,
+		width:580,
 		height:35,
 		css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
 		topband:{
@@ -49,23 +49,25 @@ FCChatConfig.styles.widget={
 		info_box:{
 			top:5,
 			left:193,
-			width:280,
+			width:390,
 			height:25,
 			css:"background-color:transparent",
 			linebreak:"",
 			text:{
 				css:"font-family:arial;font-size:9pt;color:#444444",
 				alert_css:"font-family:arial;font-size:9pt;color:green;font-weight:bold",
-				link_css:"text-decoration:none;font-family:arial;font-size:9pt;color:blue"
+				link_css:"text-decoration:none;font-family:arial;font-size:9pt;color:blue",
+				info_css:"color:green"
 			}
 		}
     },
 	toolbar_item:{
-		width:440,
+		width:550,
 		text:{
 			css:"font-family:arial;font-size:8pt;font-weight:bold;color:white",
 			alert_css:"font-family:arial;font-size:8pt;font-weight:bold;color:pink",
-			link_css:"font-family:arial;font-size:8pt;font-weight:bold;color:white"
+			link_css:"font-family:arial;font-size:8pt;font-weight:bold;color:white",
+			info_css:"color:lightgreen"
 		},
 		buttons:{
 			default_css:"font-size:10px;font-weight:bold;font-family:arial;text-decoration:none",
@@ -76,22 +78,22 @@ FCChatConfig.styles.widget={
 			},
 			open_chat_button:{
 				top:7,
-				left:295
+				left:405
 			},
 			off_button:{
 				top:7,
-				left:390
+				left:500
 			}
 		},
 		info_box:{
-			css:"width:250px;height:30px;left:10px;top:0px;",
+			css:"width:360px;height:30px;left:10px;top:0px;",
 			padding_top:8
 		},
 		status:{
-			css:"top:13px;left:268px;"
+			css:"top:13px;left:378px;"
 		},
 		divider:{
-			css:"top:2px;left:285px;width:1px;height:26px;background-color:lightgray"
+			css:"top:2px;left:395px;width:1px;height:26px;background-color:lightgray"
 		}
 	},
 	online_box:{
@@ -119,6 +121,7 @@ FCChatConfig.styles.widget={
 		greeting_box_css:"top:40px;left:0px;height:53px;background-color:#dddddd;",
 		view_msg_box_css:"top:93px;left:0px;height:180px;",
 		send_msg_box_css:"top:273px;left:0px;height:70px;background-color:#dddddd;",
+		input_css:"height:18px !important;background-color:white !important;border:1px solid silver !important;margin-left:2px !important;color:#44444 !important;",
 		text:jGo.toolbar.style.dialog_box.text
 	},
 	friends_box:{
@@ -144,6 +147,6 @@ FCChatConfig.styles.widget={
 			textfield_description_css:{"font-family":"arial","font-size":"10pt",color:"black","font-style":"italic","font-weight":"bold"},
 			smalltext_css:{"margin-right":"10px","font-family":"arial","font-size":"8pt",color:"black"}
 		},
-		textfield_css:{"background-color":"#dddddd"}
+		textfield_css:"background-color:#dddddd !important;color:#444444 !important;width:120px !important;height:18px !important;"
 	}
 };

@@ -44,11 +44,11 @@ FCChatConfig.txt = {
 	t4: "Encender",
 	t5: "Apagar",
 	t6: "Abrir ChatCenter",
-	t7: "Ayuda",
+	t7: "Ayuda?",
+	help_width:160,
 	t8: "Cerrar",
 	close_width: 54,
-	t9: "Opciones",
-	options_width: 70,
+	t9: "Salas&nbsp;/&nbsp;Opciones",
 	t10: "Enviar a la Sala",
 	t11: "Enviar a amigo&nbsp;&nbsp;",
 	send_buttons_width: 178,
@@ -56,7 +56,7 @@ FCChatConfig.txt = {
 	// Sección de Títulos
 	t12: "Sala de Chat",
 	chat_room_width: 72,
-	t13: "Volver al Chat",
+	t13: "Volver",
 	t14: "Mensajes",
 	private_chat_width: 57,
 	t15: "Quién está en línea",
@@ -103,9 +103,9 @@ FCChatConfig.txt = {
 	t48: "Estado",
 	t49: "Agregar a amigos",
 	t50: "Bloquear",
-	t51: "* Oye, soy yo",
-	t52: "* Este usuario no esta disponible para chatear.",
-	t53: "* Este usuario está fuera de línea.",
+	t51: "Oye, soy yo",
+	t52: "No esta disponible.",
+	t53: "Fuera de línea. ",
 	t54: "Cerrar",
 	t55: "Recuperación de ... (a mensajes)",
 	
@@ -187,7 +187,7 @@ FCChatConfig.txt = {
 	t107: "¡Bienvenido! Tu nombre de usuario es",
 	t108: "Para iniciar sesión, haga clic en el nombre de usuario en la barra lateral.",
 	t109: "En este momento, está en la sala: ",
-	t110: "<a href='javascript:void' onClick='fc_chat.show_hide_options(333,425);return false'>Vea la lista de salas</a>",
+	t110: "<a href='javascript:void' onClick='fc_chat.tgl_options();return false'>Vea la lista de salas</a>",
 	t111: "Ante",
 	t112: "Anterior",
 	t113: "Siguiente",
@@ -215,7 +215,7 @@ FCChatConfig.txt = {
 	t129: "Tienes que ser miembro para entrar en esta sala.",
 	
 	// Enviar mens chat
-	t130: "No se puede enviar este mensaje. El usuario no está en línea.",
+	t130: "Las cuentas de invitado no puede recibir mensajes fuera de línea.",
 	t131: "El mensaje es demasiado grande (",
 	t132: "caracteres max).",
 	t133: "Introduzca un mensaje, por favor!",
@@ -331,7 +331,7 @@ FCChatConfig.txt = {
 	t220: "Guardar Perfil",
 	t221: "Guardando...",
 	t222: "Guardado",
-	t223: "Volver al chat",
+	t223: "Volver",
 	
 	// Video
 	t224: "Video Chat Cargando ... Este proceso puede tardar unos segundos.",
@@ -520,7 +520,29 @@ FCChatConfig.txt = {
 	t362:"Comentario se establece",
 	t363:"Comentario",
 	
+	promo_width_offset:60,
 	t364:"Hola, tu nombre de chat es ",
 	t365:"Crear un nuevo nombre",
-	t366:"No, gracias"
+	t366:"No, gracias",
+	
+	//Added in 2.2.12
+	t367:"Chats",
+	t368:"Fuera de línea",
+	t369:"Opciones",
+	t370:", su sala actual y su configuración se muestra a continuación.",
+	t371:"Cerrar esta pantalla",
+	t372:"cuando termine de ver.",
+	
+	t373:"Lista de Usuarios",
+	t374:"Cargando ... Por favor espere...",
+	t375:"Lista de Usuarios - Página ",
+	t376:"Resultados - Página ",
+	t377:"Las cuentas de invitado no se muestran.",
+	t378:"No se encontraron resultados.",
+	t379:"Página anterior",
+	t380:"Página siguiente",
+	t381:"Volver al Chat",
+	t382:"buscar...",
+	t383:"La búsqueda es demasiado grande (50 caracteres máximo).",
+	t384:"Por favor, introduzca al menos un carácter."
 };

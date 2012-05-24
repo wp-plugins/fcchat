@@ -33,7 +33,8 @@ jGo.toolbar.style={
 				title_css:"font-weight:bold;color:white",
 				link_css:"color:lightblue",
 				screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700;text-decoration:none",
-				user_info_css:"color:#888888"
+				user_info_css:"color:#888888",
+				offline_css:"font-style:italic;color:green"
 			}
 		},
 		menus:{

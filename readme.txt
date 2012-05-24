@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.3
-Stable tag: 2.2.11
+Stable tag: 2.2.12
 
 An interface for real time chat, video conferencing, instant messaging, and more. Please read the UPGRADE NOTICE section before updating the plugin.
 
@@ -16,6 +16,13 @@ An interface for real time chat, video conferencing, instant messaging, and more
 RECENT FEATURES
 
 Video Chat 3.0. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. Version 2.2.x now comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New features include private video chat, 2 player games, collaborative whiteboard and documents, transliteration service, and doodlepad. The 2.2.x series will be focused on providing greater user to user interaction.  In addition, you may now open the chatcenter directly into a separate popup window, so the the connection is maintained through page changes.
+
+
+NEW IN 2.2.12
+
+User List Function. To disable, set show_user_list:false, in the config file.
+
+You may now send messages to offline users.
 
 
 NEW IN 2.2.11
@@ -46,7 +53,7 @@ You may opt to display the toolbar in "Banner Mode" for mobile browsers. This el
 
 UPGRADE NOTICE
 
-After upgrading to version 2.2.11, there will be a period of about 2 minutes where the chat will not function properly. This is because the upgrade requires a reboot of your chat server. Just keep refreshing the page for a few minutes until the chat comes online again.
+After upgrading to version 2.2.12, there will be a period of about 2 minutes where the chat will not function properly. This is because the upgrade requires a reboot of your chat server. Just keep refreshing the page for a few minutes until the chat comes online again.
 
 
 When you upgrade to a new version, any customizations you made to the chat will be erased. In order to save those changes, do the following:
@@ -469,6 +476,20 @@ Signature-users may write a signature statement which appears below their name.
 A new sound was created for chatroom messages.
 The style template chatcenter_default.js has been renamed to chatcenter_midnight_blue.js
 Critical bug fix: In ie6, the opening of the change name dialog was causing a page reload.
+
+= 2.2.12 =
+User List Function. To disable, set show_user_list:false, in the config file.
+You may now send messages to offline users.
+Files Modified:
+config/config.js
+languages/english.js
+languages/spanish.js
+styles/widget_default_header.js
+styles/widget_default_sidebar.js
+styles/chatcenter_midnight_blue.js
+styles/chatcenter_light_gray.js
+styles/chatcenter_blue_gray.js
+styles/toolbar_default.js
 
 == Upgrade Notice ==
 

@@ -43,6 +43,7 @@ jGo.toolbar.prompt = {};
 	var create_menu_item = function(){
 	};
 	var create_dialog = function(){
+		  config.dialog_box.width+=fc_chat.textSetter(0,0,'promo_width_offset');
 		  dialog= "<div class='jGo_app jGo_myapp jGo_dialog ' id='fc_prompt_dialog' style='display: none;visibility: visible;height:"+config.dialog_box.height+"px;width:"+config.dialog_box.width+"px;top: 113px; left:210px; z-index:" + (z_b) + ";overflow:hidden;'>" +
 		  		  "<div class='fc-triangle-right"+(FCChatConfig.toolbar_position.substr(0,1)=='t'?' top':'')+"' style='"+config.dialog_box.bubble.css+"'>" +
 		  		  "<div id='fc_prompt_content' style='"+config.dialog_box.bubble.text+"'></div>"+ 
