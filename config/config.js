@@ -13,7 +13,7 @@ var FCChatConfig = {
 	policy_port:443,
 	
 	// VERSION
-	version:"2.2.11",
+	version:"2.2.12",
 	subversion:"0",
 	jQuery_stable:"1.6.4",
 
@@ -41,7 +41,7 @@ var FCChatConfig = {
 	toolbar_position:"bottomright",  // Choices are "topleft" "topright" "bottomleft" and "bottomright"
 	toolbar_items:["friendscenter","social_media"], // List MUST include "friendscenter"
 	
-	// MOBILE BROWSER OPTIONS
+	// ---MOBILE BROWSER OPTIONS
 	
 	// Run floating toolbar in banner mode for mobile apps.
 	toolbar_banner_mode:false,
@@ -54,7 +54,7 @@ var FCChatConfig = {
 	// The format below uses the syntax of regular expressions
 	toolbar_mobile_hidden:/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i,
 	
-	// END MOBILE BROWSER OPTIONS
+	// ---END MOBILE BROWSER OPTIONS
 	
 	// ---PROMO
 	
@@ -96,6 +96,7 @@ var FCChatConfig = {
 	showTyping:true,
 	display_timestamp:false,
 	sounds_on:true,
+	new_chat_alert_sound:true,
 	
 	// COUNTRY FLAGS
 	show_country_flags:true,
@@ -157,7 +158,7 @@ var FCChatConfig = {
     transliteration_enabled:true,
 	
 	// COOKIES
-	cookie_expires:1, // 0 - end of session // 1 - never
+	cookie_expires:1, // 0 - end of session 1 - never
 	user_cookie:"fc_UID", 
 	session_cookie:"fc_ChatToken",
 	mod_cookie:"fc_ChatToken",
@@ -165,6 +166,9 @@ var FCChatConfig = {
 	
 	// MISC
 	help_link:"http://www.fastcatsoftware.com/chat/manual2.2.html",
+	show_help_button:true,
+	show_user_list:true,
+	show_settings_on_open:false,
 	pin_windows:true,
 	pinned_by_default:true,
 	preload_images:false,
