@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.3
-Stable tag: 2.2.12
+Stable tag: 2.2.12.1
 
 An interface for real time chat, video conferencing, instant messaging, and more. Please read the UPGRADE NOTICE section before updating the plugin.
 
@@ -17,6 +17,9 @@ RECENT FEATURES
 
 Video Chat 3.0. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. Version 2.2.x now comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New features include private video chat, 2 player games, collaborative whiteboard and documents, transliteration service, and doodlepad. The 2.2.x series will be focused on providing greater user to user interaction.  In addition, you may now open the chatcenter directly into a separate popup window, so the the connection is maintained through page changes.
 
+NEW IN 2.2.12.1
+
+The client configuration has been moved to Settings->FCChat Settings, which you may access from your wordpress administration. No more having to manually edit the config.js file!
 
 NEW IN 2.2.12
 
@@ -490,6 +493,11 @@ styles/chatcenter_midnight_blue.js
 styles/chatcenter_light_gray.js
 styles/chatcenter_blue_gray.js
 styles/toolbar_default.js
+
+= 2.2.12.1 =
+The client configuration has been moved to Settings->FCChat Settings, which you may access from your wordpress administration. No more having to manually edit the config.js file!
+Files Modified:
+config/config.js
 
 == Upgrade Notice ==
 
