@@ -59,7 +59,7 @@ UPGRADE NOTICE
 After upgrading to version 2.2.12, there will be a period of about 2 minutes where the chat will not function properly. This is because the upgrade requires a reboot of your chat server. Just keep refreshing the page for a few minutes until the chat comes online again.
 
 
-When you upgrade to a new version, any customizations you made to the chat will be erased. In order to save those changes, do the following:
+When you upgrade to a new version, any customizations you made to the chat files will be erased. In order to save those changes, do the following:
 
 1. Make backup copies of any files that you have altered. You may wish to make backups of the following folders: (fcchat/config, fcchat/languages, fcchat/styles, fcchat/html/config). Place them in a safe place where they will not be deleted. 
 1. Next install the new version. 
