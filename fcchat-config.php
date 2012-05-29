@@ -73,6 +73,7 @@ function fcchat_widget_options() {
 		"allow_crossdomain_images"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Allow users to post links to images from a different domain."),
 		"current_domain"=>array("value"=>"fastcatsoftware.com","type"=>"text","quote"=>"1",sz=>"80","desc"=>"The current domain."),
 		"use_avatars"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Allow users to choose an avatar"),
+		"import_default_avatar"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"When user integration is enabled, the users site account avatar will be used. (if possible)."),
 		"script_type"=>array("value"=>"php","type"=>"radio2","ops"=>array(array("value"=>"php","desc"=>"PHP"),array("value"=>"asp","desc"=>"ASP")),"quote"=>"1","desc"=>""),
 		"avatars_dir"=>array("value"=>"(window['fc_chat_path'] || '/FCChat/') + 'html/images/avatars/'","type"=>"text","quote"=>"0",sz=>"80","desc"=>"The directory in which avatars are placed."),
 		"images_dir"=>array("value"=>"(window['fc_chat_path'] || '/FCChat/') + 'html/images/'","type"=>"text","quote"=>"0",sz=>"80","desc"=>"The directory in which uploaded images are placed."),
