@@ -25,7 +25,7 @@ License: GPL2
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-include('wp-fcchat-config.php');
+include('fcchat-config.php');
 
 $options;
 $plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) ).'/';
@@ -107,7 +107,7 @@ function add_header_scripts(){
         if (!is_admin()){
 		    wp_register_script('fc-chat-import-google.loader', $plugin_url.'/js/import.google.loader.js');
                 wp_enqueue_script('fc-chat-import-google.loader');
-		    wp_register_script('fc-chat-import-config', $plugin_url.'/js/import.config.php?path='.str_ireplace(array(".","http"), array("||period||","||protocol||"), $plugin_url).'&t=1');
+		    wp_register_script('fc-chat-import-config', $plugin_url.'/js/import.config.alt.php?path='.str_ireplace(array(".","http"), array("||period||","||protocol||"), $plugin_url).'&t=1');
                wp_enqueue_script('fc-chat-import-config');
 		    wp_register_script('fc-chat-import-libs', $plugin_url.'/js/import.libs.js');
                 wp_enqueue_script('fc-chat-import-libs');
