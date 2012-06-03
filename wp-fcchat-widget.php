@@ -61,7 +61,7 @@ function fcchat_add_header_js(){
 		$fcchat_options = get_fcchat_widget_options();
 		echo '<script type="text/javascript">if(!window["FCChatConfig"]){window["FCChatConfig"] = {}}(function(){var a = window["FCChatConfig"];';
 		foreach($fcchat_options as $key => $value){
-			if($fcchat_options[$key]['type']!='comment'){
+			if($fcchat_options[$key]['type']!='comment'&&$key!='template_overrides'){
 				if($fcchat_options[$key]['quote']=='1'||($fcchat_options[$key]['quote']=='2'&&$fcchat_options[$key]['value']!='true'&&$fcchat_options[$key]['value']!='false')){
 					echo 'a.' . $key . '=' . '"' . $fcchat_options[$key]['value'] . '";';
 				}else{
@@ -94,6 +94,18 @@ function fcchat_add_header_scripts(){
         }
 }
 
+//widget header js
+function fcchat_add_header_js_after(){
+	global $fcchat_options,$fcchat_plugin_url;
+        if (!is_admin()&&$fcchat_options['template_overrides']['value']!=""){
+		$fcchat_options = get_fcchat_widget_options();
+		echo '<script type="text/javascript">(function(){function getObj(a,b,d){var c=window;for(var i=0;i<b.length-d;i++){c=c[b[i]]}return c};function setOption(a,d){try{var b=a.split(".");var c= getObj(a,b,1);c[b[b.length-1]]=d}catch(e){}};function mergeOption(a,d){try{var b=a.split(".");var c = getObj(a,b,1);c[b[b.length-1]]+=d}catch(e){}};function mergeBlock(a,d){try{var b=a.split(".");var c=getObj(a,b,0);jGo.$.extend(true,c,d)}catch(e){}};';
+		echo 'function getCSSProp(a,d,g){try{var b=a.split(".");var c;c=getObj(a,b,1);var f=((c[b[b.length-1]].split(d+":"))[1].split(";"))[0];return (g?jGo.util.eN(f):f)}catch(e){}};';
+		echo $fcchat_options['template_overrides']['value'];
+		echo '})();</script>';
+
+        }
+}
 function fcchat_add_footer_script(){
         $fcchat_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );
         if (!is_admin()){
@@ -104,6 +116,7 @@ function fcchat_add_footer_script(){
 // Inserts scripts into page
 add_action( 'wp_print_scripts', 'fcchat_add_header_js' );
 add_action('wp_enqueue_scripts', 'fcchat_add_header_scripts');
+add_action('wp_head','fcchat_add_header_js_after');
 add_action('wp_footer','fcchat_add_footer_script');
 
 //the widget
@@ -200,7 +213,11 @@ function fcchat_settings_page() {
                   // Remember to sanitize and format use input appropriately.
                  foreach($fcchat_options as $key => $value){
 			if(isset($_POST['fcchat-'.$key])){
-    				$fcchat_options[$key]['value'] = str_replace('"', '&quot;', stripslashes($_POST['fcchat-'.$key]));	
+				if($key!='template_overrides'){
+    					$fcchat_options[$key]['value'] = str_replace('"', '&quot;', stripslashes($_POST['fcchat-'.$key]));	
+				}else{
+					$fcchat_options[$key]['value'] = stripslashes($_POST['fcchat-'.$key]);	
+				}
 			}
 			$fcchat_options2[$key] = $fcchat_options[$key]['value'];
 		}
@@ -271,6 +288,10 @@ foreach($fcchat_options as $key => $value){
 	}else if($fcchat_options[$key]['type']=='radio'){
 		echo '<p><b>' . $key . '</b>&nbsp; ' . _e($fcchat_options[$key]['desc'], 'menu-test' ); 
 		echo '<input type="radio"  name="fcchat-' . $key . '" value="true" ' . ($fcchat_options[$key]['value'] == "true"? 'checked="checked"':'') . ' /> Yes&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"  name="fcchat-' . $key . '" value="false" ' . ($fcchat_options[$key]['value'] == "false"? 'checked="checked"':'') . ' /> no ';
+		echo '</p><hr />';
+	}else if($fcchat_options[$key]['type']=='textarea'){
+		echo '<p>' . _e($fcchat_options[$key]['desc'], 'menu-test' ); 
+		echo '&nbsp;&nbsp;<b>' . $key . '</b><br>&nbsp; <textarea style="font-size:16px;font-family:arial;width:100%;height:200px" name="fcchat-' . $key . '">' . $fcchat_options[$key]['value'] . '</textarea>';
 		echo '</p><hr />';
 	}else{
 		echo '<p><b>' . $key . '</b>&nbsp; ' . _e($fcchat_options[$key]['desc'], 'menu-test' ); 
