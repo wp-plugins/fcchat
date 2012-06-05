@@ -47,19 +47,6 @@ function fcchat_includes(){
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/css.vars.js'></script>");
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/page.init.js'></script>");
 	
-	function fc_chat_load_from_link(elem,mode){
-		try{
-			if(window.fc_chat && fc_chat.try_connection(mode) =="1"){
-				jGo.$("span.fc_chat_link_msg").remove();
-				fc_chat.open_chat_box(null,1,mode);
-			}else{
-				alert(fc_chat.textSetter(160));
-			}
-		}catch(e){
-			alert(fc_chat.textSetter(160));
-		}
-	};
-	
 	jGo.domIsReady = false;
 	jGo.loadCalled = false;
 	
@@ -89,6 +76,19 @@ function fcchat_includes(){
 		  }
 		});
 	};
+};
+
+function fc_chat_load_from_link(elem,mode){
+	try{
+		if(window.fc_chat && fc_chat.try_connection(mode) =="1"){
+			jGo.$("span.fc_chat_link_msg").remove();
+			fc_chat.open_chat_box(null,1,mode);
+		}else{
+			alert(FCChatConfig.txt.t160);
+		}
+	}catch(e){
+		alert(FCChatConfig.txt.t160);
+	}
 };
 
 if(!FCChatConfig['delay_import']){

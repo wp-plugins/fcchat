@@ -24,8 +24,8 @@ FCChatConfig.styles={
 	chat_window:{
 		frame:{
 			logo:"fastcatlogo.gif",
-			background_color:"gray",
-			opacity:.80
+			background_color:"#5f5f5f",
+			opacity:.85
 		},
 		main_panel:{
 			height:568,

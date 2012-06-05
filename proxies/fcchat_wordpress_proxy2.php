@@ -14,7 +14,7 @@ define('RETURN_AVATAR', true);
 
 /** Make sure that the WordPress bootstrap has run before continuing. */
 require( dirname(__FILE__) . '/../../../../wp-load.php' );
-
+ 
 
 function my_wp_validate_auth_cookie($cookie = '', $scheme = '') {
 	        if ( ! $cookie_elements = wp_parse_auth_cookie($cookie, $scheme) ) {

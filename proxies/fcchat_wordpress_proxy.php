@@ -32,7 +32,6 @@ function validate_gravatar($email) {
 	return $has_valid_avatar;
 }
 
-
 $request = ( isset($_POST['f']) ) ? (int) $_POST['f'] : 0;
 
 if($request==0){

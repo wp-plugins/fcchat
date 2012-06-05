@@ -24,11 +24,11 @@ FCChatConfig.styles.widget={
 	control:{
 		top:0, //for absolute positioning
 		left:310, //"     "
-		width:190,
-		height:132,
-		css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
+		width:580,
+		height:35,
+		css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:2px solid #eeeeee;background-color:#cccccc;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
 		topband:{
-			css:"display: block;background-color:gray;text-align:left;width:190px;height:35px; top: 0px; left:0px;"
+			css:"display: block;background-color:#444444;text-align:left;width:190px;height:35px; top: 0px; left:0px;"
 		},
 		buttons:{
 			default_css:"border:1px solid #aaaaaa; padding:4px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
@@ -43,16 +43,16 @@ FCChatConfig.styles.widget={
 			},
 			on_off_button:{
 				top:5,
-				left:130
+				left:127
 			}
 		},
 		info_box:{
-			top:35,
-			left:2,
-			width:188,
-			height:92,
+			top:5,
+			left:193,
+			width:390,
+			height:25,
 			css:"background-color:transparent",
-			linebreak:"<br>",
+			linebreak:"",
 			text:{
 				css:"font-family:arial;font-size:9pt;color:#444444",
 				alert_css:"font-family:arial;font-size:9pt;color:green;font-weight:bold",
@@ -93,21 +93,21 @@ FCChatConfig.styles.widget={
 			css:"top:13px;left:378px;"
 		},
 		divider:{
-			css:"top:2px;left:395px;width:1px;height:26px;background-color:lightgray;"
+			css:"top:2px;left:395px;width:1px;height:26px;background-color:lightgray"
 		}
 	},
 	online_box:{
-		top:138,
-		left:0,
+		top:43,
+		left:240,
 		toolbar_offset:3,
 		width:230,
 		height:343,
 		css:jGo.toolbar.style.dialog_box.css,
 		title_box_css:jGo.toolbar.style.dialog_box.title_box_css,
-		greeting_box_css:"top:40px;left:0px;height:53px;background-color:#dddddd;",
+		greeting_box_css:"top:40px;left:0px;height:53px;background-color:#bbbbbb;",
 		list_box_css:"top:93px;left:0px;height:180px;",
 		list_divider_css:jGo.toolbar.style.dialog_box.list_divider_css,
-		info_box_css:"top:273px;left:0px;height:70px;background-color:#dddddd;",
+		info_box_css:"top:273px;left:0px;height:70px;background-color:#bbbbbb;",
 		text:jGo.toolbar.style.dialog_box.text
 	},
 	new_messages_box:{
@@ -118,15 +118,15 @@ FCChatConfig.styles.widget={
 		height:343,
 		css:jGo.toolbar.style.dialog_box.css,
 		title_box_css:jGo.toolbar.style.dialog_box.title_box_css,
-		greeting_box_css:"top:40px;left:0px;height:53px;background-color:#dddddd;",
+		greeting_box_css:"top:40px;left:0px;height:53px;background-color:#bbbbbb;",
 		view_msg_box_css:"top:93px;left:0px;height:180px;",
-		send_msg_box_css:"top:273px;left:0px;height:70px;background-color:#dddddd;",
+		send_msg_box_css:"top:273px;left:0px;height:70px;background-color:#bbbbbb;",
 		input_css:"height:18px !important;background-color:white !important;border:1px solid silver !important;margin-left:2px !important;color:#44444 !important;",
 		text:jGo.toolbar.style.dialog_box.text
 	},
 	friends_box:{
-		top:138,
-		left:0,
+		top:43,
+		left:240,
 		toolbar_offset:3,
 		width:230,
 		height:343,
@@ -134,7 +134,7 @@ FCChatConfig.styles.widget={
 		title_box_css:jGo.toolbar.style.dialog_box.title_box_css,
 		list_box_css:"top:40px;left:0px;height:233px;",
 		list_divider_css:jGo.toolbar.style.dialog_box.list_divider_css,
-		info_box_css:"top:273px;left:0px;height:70px;background-color:#dddddd;",
+		info_box_css:"top:273px;left:0px;height:70px;background-color:#bbbbbb",
 		text:jGo.toolbar.style.dialog_box.text
 	},
 	login_panel:{
