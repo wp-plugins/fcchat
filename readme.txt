@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.3
-Stable tag: 2.2.13
+Stable tag: 2.2.13.1
 
 An interface for real time chat, video conferencing, instant messaging, and more. Please read the UPGRADE NOTICE section before updating the plugin.
 
