@@ -114,6 +114,7 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		"mod_cookie"=>array("value"=>"fc_ChatToken","type"=>"text","quote"=>"1","sz"=>"80","desc"=>"Moderation cookie name."),
 		"data_cookie"=>array("value"=>"fc_data","type"=>"text","quote"=>"1","sz"=>"80","desc"=>"Data cookie name."),
 		"cmntmisc"=>array("value"=>"","type"=>"comment","desc"=>"MISC"),
+		"allow_links"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Allow links in chats."),
 		"help_link"=>array("value"=>"http://www.fastcatsoftware.com/chat/manual2.2.html","type"=>"text","quote"=>"1","sz"=>"80","desc"=>"Help link."),
 		"show_help_button"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Show help button."),
 		"show_user_list"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Show user list."),
