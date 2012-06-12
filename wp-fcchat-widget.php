@@ -3,7 +3,7 @@
 Plugin Name: FCChat Widget
 Plugin URI: http://www.fastcatsoftware.com
 Description: Add full featured chat to the sidebar.
-Version: 2.2.13.2
+Version: 2.2.13.3
 Author: Fastcat Software
 Author URI: http://www.fastcatsoftware.com
 License: GPL2
@@ -322,5 +322,26 @@ function fcchat_add_pages() {
     // Add a new submenu under Settings:
     add_options_page(__('FCChat Settings','menu-test'), __('FCChat Settings','menu-test'), 'manage_options', 'testsettings', 'fcchat_settings_page');
 }
+
+function fcchat_activate() {
+    if(($fcchat_options = get_option('fcchat_widget')) !== FALSE){
+    	foreach($fcchat_options as $key => $value){
+	 	if($key=='avatars_dir'&&$fcchat_options[$key]=="(window['fc_chat_path'] || '/FCChat/') + 'html/images/avatars/'"){
+	 		$fcchat_options[$key]="(window['fc_chat_path'] || '/FCChat/') + 'html/images/images/avatars/'";
+		 }
+	 	if($key=='images_dir'&&$fcchat_options[$key]=="(window['fc_chat_path'] || '/FCChat/') + 'html/images/'"){
+	 		$fcchat_options[$key]="(window['fc_chat_path'] || '/FCChat/') + 'html/images/images/'";
+		 }
+	 	if($key=='smileys_dir'&&$fcchat_options[$key]=="(window['fc_chat_path'] || '/FCChat/') + 'html/images/smileys/'"){
+	 		$fcchat_options[$key]="(window['fc_chat_path'] || '/FCChat/') + 'html/images/images/smileys/'";
+		 }
+         
+    	}
+    	// Save changes
+    	update_option('fcchat_widget', $fcchat_options);
+    }
+}
+
+register_activation_hook( __FILE__, 'fcchat_activate' );
 
 ?>
