@@ -8,9 +8,9 @@
 
  define ("USE_GALLERY", "1"); //1=true/0=false
 
- define ("AVATAR_DIRECTORY","images/images/avatars/"); //The value of this variable must be the same as that of avatars_dir in config.js. The path is relative to the html directory.
+ define ("AVATAR_DIRECTORY","images/avatars/"); //The value of this variable must be the same as that of avatars_dir in config.js. The path is relative to the html directory.
 
- define("IMAGES_DIRECTORY", "images/images/"); //Directory where images should be stored. The path is relative to the html directory.
+ define("IMAGES_DIRECTORY", "images/"); //Directory where images should be stored. The path is relative to the html directory.
 
  define ("MAX_FILE_SIZE","200"); //in KB
 
