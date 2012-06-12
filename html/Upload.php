@@ -103,7 +103,10 @@ $newname='';
  {
 	//reads the user
 	$id=$_GET['id'];
-	if(!is_numeric($id)){
+	if(ALLOW_UPLOADS==0){
+		echo '<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(169))</script></font></b><br>';
+		$errors=1;
+	}else if(!is_numeric($id)){
 		echo '<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(163))</script></font></b><br>';
 		$errors=1;
 	}else{
