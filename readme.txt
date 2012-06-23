@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.3
-Stable tag: 2.2.13.6
+Stable tag: 2.2.13.7
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -13,73 +13,11 @@ An interface for real time chat, video conferencing, instant messaging, and more
 
  FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
 
-RECENT FEATURES
-
-Video Chat 3.0. The video chat has recently been upgraded, providing for higher resolution video at a lower bandwidth. Version 2.2.x now comes with FriendsCenter, an optional floating toolbar component intended for better user interaction. The instant messaging capability has been enhanced with new-messages and friends-list dialogs. New features include private video chat, 2 player games, collaborative whiteboard and documents, transliteration service, and doodlepad. The 2.2.x series will be focused on providing greater user to user interaction.  In addition, you may now open the chatcenter directly into a separate popup window, so the the connection is maintained through page changes.
-
-NEW IN 2.2.13.3-6
-
-Fixes a security venerability involving file uploads.
-
-NEW IN 2.2.13.2
+MOST RECENT FEATURES
 
 You can now post links in your chat messages. To turn off this feature set allow_links to "no" in the fcchat -> settings page (misc section).
 
-NEW IN 2.2.13.1
-Fixed minor bug in 2.2.13
-
-NEW IN 2.2.13
-
 Version 2.2.13 contains new style templates for sites with darker backgrounds. Style templates found in the fcchat/styles/ folder.
-
-NEW IN 2.2.12.4
-
-Version 2.2.12.3 contains an error that makes access to the pop-up window and administration panel impossible. Upgrade immediately to version 2.2.12.4.
-
-NEW IN 2.2.12.3
-
-A template override function has been added to the FCChat -> Settings page. This will allow you to make customizations to the style and language templates without directly editing the template files. Also, changes made in this way have the advantage of being able to persist accross updates.
-
-NEW IN 2.2.12.2
-
-Version 2.2.12.1 was found to contain an error that made it unstable. Please update to version 2.2.12.2 to correct this.
-
-
-NEW IN 2.2.12.1
-
-The client configuration has been moved to Settings->FCChat Settings, which you may access from your wordpress administration. No more having to manually edit the config.js file!
-
-NEW IN 2.2.12
-
-User List Function. To disable, set show_user_list:false, in the config file.
-
-You may now send messages to offline users.
-
-
-NEW IN 2.2.11
-
-Promo - this feature introduces new users to the chat, and prompts them to create a chat name. To disable set prompt_user:false, in the config file.
-
-Signature-users may write a signature which appears below their name.
-
-
-NEW IN 2.2.10
-
-Facebook Connect - Allows users to log in with their Facebook accounts.
-
-(To use, set facebook_connect:true in the config file.)
-
-New search menu items for the toolbar.
-
-(To use, set add the menu items 'wp_search' or 'wp_search_in_menu' to the menu item list. For example: 
-
-toolbar_items:["wp_search","friendscenter","social_media"]
-
-)
-
-You may opt to display the toolbar in "Banner Mode" for mobile browsers. This eliminates some of the difficulties with mobile browsers not being able to display fixed elements properly.
-
-(To use, set toolbar_banner_mode:true in the config file)
 
 
 UPGRADE NOTICE
@@ -94,6 +32,7 @@ When you upgrade to a new version, any customizations you made to the chat files
 1. Finally, manually copy the changes you made to the old files into the current version's files. Do not replace the new files with the old files, as the structure of the new files may have changed; but instead, use the wordpress file editor to make the changes line by line.
 
 *As of version 2.2, the changelog will list the configuration files that have changed since the previous version. If the config file has not changed from your current version to the new version, you may simply replace the updated version with the old file.
+
 
 FEATURE LIST:
 
@@ -144,7 +83,14 @@ Administration/moderation panel
 Web based file editor 
 
 
-Service activation -- Service activation comes with a 3 day free trial period. If you wish to continue the service, there is a small monthly fee.
+SERVICE ACTIVATION - SERVICES HOSTED BY FASTCATSOFTWARE.COM
+
+In order to use this widget, you will need to sign up for a subscription to the chat service on www.fastcatsoftware.com. Follow the "Installation" tab for more specific instructions. This is a paid service, however, you will receive a free trial when you sign up. Subscriptions start at only 20 cents per month. You may view all our subscription plans here: http://www.fastcatsoftware.com/chat/activation.aspx
+
+SERVICES PROVIDED
+
+When you install the FCChat Widget, you will only be installing the chat client on your site. Your chat server (meaning your chat data) will be hosted at www.fastcatsoftware.com, on our servers.
+
 
 
 == Installation ==
@@ -153,7 +99,7 @@ Service activation -- Service activation comes with a 3 day free trial period. I
 1. Activate the Plugin
 1. Add the Widget to the desired sidebar in the WordPress Widgets menu.
 1. Open the `FCChat Widget' options dialog by clicking on the widget once added to the sidebar.
-1. Follow the Steps listed in the dialog in order to activate the chat service.
+1. Follow the Steps listed in the dialog in order to activate the chat service. This will include signing up for a subscription to the service on www.fastcatsoftware.com. This is a paid service, however, you will receive a free trial when you sign up.
 1. Rate the plugin and verify that it works at wordpress.org.
 1. Leave a comment regarding bugs, feature request, cocktail recipes at http://www.fastcatsoftware.com
 
@@ -529,6 +475,9 @@ config/config.js
 
 = 2.2.13 =
 new style templates for sites with darker backgrounds. Style templates found in the fcchat/styles/ folder.
+
+= 2.2.13.1-7 =
+Fixed security issue with fcchat/html/uploads.php file.
 
 == Upgrade Notice ==
 

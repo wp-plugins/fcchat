@@ -1,9 +1,86 @@
 <?php
+
+/** Make sure that the WordPress bootstrap has run before continuing. */
+require( dirname(__FILE__) . '/../../../../wp-load.php' );
+
 //include the configuration file
 include('config/php_config.php');
-echo "<html><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 2px solid;font-size:16'><b><i><script>document.write(window.parent.fc_chat.textSetter(162))</script></i></b></div><form name='newad' method='post' enctype='multipart/form-data' action=''>";
+
+//create a nonce
+$nonce = wp_create_nonce( 'wp-fcchat-upload' );
+
+//Used to "verify" image format (taken from wordpress image resize function)
+function fcchat_image_check( $file, $max_w = 1, $max_h = 1, $crop = false, $suffix = null, $dest_path = null, $jpeg_quality = 90 ) {
+
+    $image = wp_load_image( $file );
+    if ( !is_resource( $image ) )
+        return 1;
+
+    $size = @getimagesize( $file );
+    if ( !$size )
+        return 2;
+    list($orig_w, $orig_h, $orig_type) = $size;
+
+    $dims = image_resize_dimensions($orig_w, $orig_h, $max_w, $max_h, $crop);
+    if ( !$dims )
+        return 3;
+    list($dst_x, $dst_y, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h) = $dims;
+
+    $newimage = wp_imagecreatetruecolor( $dst_w, $dst_h );
+
+    imagecopyresampled( $newimage, $image, $dst_x, $dst_y, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h);
+
+    // convert from full colors to index colors, like original PNG.
+    if ( IMAGETYPE_PNG == $orig_type && function_exists('imageistruecolor') && !imageistruecolor( $image ) )
+        imagetruecolortopalette( $newimage, false, imagecolorstotal( $image ) );
+
+    // we don't need the original in memory anymore
+    imagedestroy( $image );
+
+    // $suffix will be appended to the destination filename, just before the extension
+    if ( !$suffix )
+        $suffix = "{$dst_w}x{$dst_h}";
+
+    /*
+    $info = pathinfo($file);
+    $dir = $info['dirname'];
+    $ext = $info['extension'];
+    $name = wp_basename($file, ".$ext");
+
+    if ( !is_null($dest_path) and $_dest_path = realpath($dest_path) )
+        $dir = $_dest_path;
+    $destfilename = "{$dir}/{$name}-{$suffix}.{$ext}";
+    */
+    ob_start();
+    if ( IMAGETYPE_GIF == $orig_type ) {
+        if ( !imagegif( $newimage) ){
+	    ob_end_clean();
+            return 4;}
+    } elseif ( IMAGETYPE_PNG == $orig_type ) {
+        if ( !imagepng( $newimage) ){
+	    ob_end_clean();
+            return 5;}
+    } else {
+        // all other formats are converted to jpg
+        if ( !imagejpeg( $newimage) ){
+ 	    ob_end_clean();
+            return 6;}
+    }
+    ob_end_clean();
+    imagedestroy( $newimage );
+
+    //Set correct file permissions
+    //$stat = stat( dirname( $destfilename ));
+    //$perms = $stat['mode'] & 0000666; //same permissions as parent folder, strip off the executable bits
+    //@ chmod( $destfilename, $perms );
+
+    return 7;
+}
+
+echo "<html><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 2px solid;font-size:16'><b><i><script>document.write(window.parent.fc_chat.textSetter(162))</script></i></b></div><form name='newad' method='post' enctype='multipart/form-data' action=''><input type='hidden' name='nonce' value='" . $nonce . "'>";
+
 //This function reads the extension of the file. It is used to determine if the file  is an image by checking the extension.
-function getExtension($str) {
+function fcchat_getExtension($str) {
          $i = strrpos($str,".");
          if (!$i) { return ""; }
          $l = strlen($str) - $i;
@@ -11,7 +88,7 @@ function getExtension($str) {
          return $ext;
  }
 
-function recursive_directory_size($directory, $format=FALSE)
+function fcchat_recursive_directory_size($directory, $format=FALSE)
  {
      $size = 0;
   
@@ -50,7 +127,7 @@ function recursive_directory_size($directory, $format=FALSE)
                 }elseif(is_dir($path))
                 {
                     // we call this function with the new path
-                     $handlesize = recursive_directory_size($path);
+                     $handlesize = fcchat_recursive_directory_size($path);
   
                      // if the function returns more than zero
                      if($handlesize >= 0)
@@ -90,23 +167,30 @@ function recursive_directory_size($directory, $format=FALSE)
      }
  }
 
-//print_r(recursive_directory_size(IMAGES_DIRECTORY,TRUE));
+//print_r(fcchat_recursive_directory_size(IMAGES_DIRECTORY,TRUE));
 
-//This variable is used as a flag. The value is initialized with 0 (meaning no error  found)  
-//and it will be changed to 1 if an errro occures.  
-//If the error occures the file will not be uploaded.
- $errors=0;
+// This variable is used as a flag. The value is initialized with 0 (meaning no error  found)  
+// and it will be changed to 1 if an errro occures.  
+// If the error occures the file will not be uploaded.
+$errors=0;
 $filename='';
 $newname='';
 //checks if the form has been submitted
  if(isset($_POST['Submit'])) 
  {
-	//reads the user
-	$id=$_GET['id'];
-	if(ALLOW_UPLOADS==0){
-		echo '<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(169))</script></font></b><br>';
-		$errors=1;
-	}else if(!is_numeric($id)){
+
+	// Uploads need to be enabled in the configuration file fcchat/html/config/php_config.php
+	if ( ALLOW_UPLOADS==0) die("Uploads not allowed");
+
+	// Test the nonce
+	$nonce=$_REQUEST['nonce'];
+    	if (! wp_verify_nonce($nonce, 'wp-fcchat-upload') ) die("Security check failed");
+
+	// reads the user
+	$id = ( isset($_GET['id']) ) ? (int) $_GET['id'] : '';
+
+
+	if(!is_numeric($id)){
 		echo '<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(163))</script></font></b><br>';
 		$errors=1;
 	}else{
@@ -123,7 +207,7 @@ $newname='';
  				echo '<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(164))</script></font></b><br>';
  				$errors=1;
 			}else{
-  				$extension = getExtension($filename);
+  				$extension = fcchat_getExtension($filename);
  				$extension = strtolower($extension);
  				//if it is not a known extension, we will suppose it is an error and will not  upload the file,  
 				//otherwise we will do more tests
@@ -135,43 +219,41 @@ $newname='';
  				}
  				else
  				{
-					//get the size of the image in bytes
- 					//$_FILES['image']['tmp_name'] is the temporary filename of the file
- 					//in which the uploaded file was stored on the server
- 					$size=filesize($_FILES['image']['tmp_name']);
+					//Remove all dots from the filename and replace with underscores, except the last one.
+					$lastDot = strrpos($filename, ".");
+					$filename = str_replace(".", "_", substr($filename, 0, $lastDot)) . substr($filename, $lastDot);
+					if(($errorcode=fcchat_image_check($_FILES['image']['tmp_name']))==7){
+					   //get the size of the image in bytes
+ 					   //$_FILES['image']['tmp_name'] is the temporary filename of the file
+ 					   //in which the uploaded file was stored on the server
+ 					   $size=filesize($_FILES['image']['tmp_name']);
 
-					//compare the size with the maxim size we defined and print error if bigger
-					if ($size > MAX_FILE_SIZE*1024)
-					{
-						echo '<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(166))</script></font></b><br>';
-						$errors=1;
-					}else if (recursive_directory_size(IMAGES_DIRECTORY,FALSE)>MAX_DIR_SIZE){
-						echo '<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(167))</script></font></b><br>';
-						$errors=1;
-					}else{
+					   //compare the size with the maxim size we defined and print error if bigger
+					   if ($size > MAX_FILE_SIZE*1024)
+					   {
+					      echo '<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(166))</script></font></b><br>';
+					      $errors=1;
+					   }else if (fcchat_recursive_directory_size(IMAGES_DIRECTORY,FALSE)>MAX_DIR_SIZE){
+					       echo '<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(167))</script></font></b><br>';
+					       $errors=1;
+					   }else{
 						
-						//we will give an unique name, for example the time in unix time format
-						$image_name=$id.'_'.$filename;
-						//the new name will be containing the full path where will be stored (images folder)
-						$newname=IMAGES_DIRECTORY.$image_name;
-						//we verify if the image has been uploaded, and print error instead
-						$copied = copy($_FILES['image']['tmp_name'], $newname);
-						//$my_image = array_values(getimagesize($newname));
-  						//use list on new array
-  						//list($width, $height, $type, $attr) = $my_image;
-
-  						//view new array
-  						//print_r($my_image);
-
-  						//spit out content
-  						//echo 'Attribute: '.$attr.'<br />';
-  						//echo 'Width: '.$width.'<br />';
-	
-						if (!$copied) 
-						{
-							echo '<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(169))</script></b></font><br>';
-							$errors=1;
-						}
+					      //we will give an unique name, for example the time in unix time format
+					      $image_name=$id.'_'.$filename;
+					      //the new name will be containing the full path where will be stored (images folder)
+					      $newname=IMAGES_DIRECTORY.$image_name;
+					      //we verify if the image has been uploaded and print error instead
+					      $copied = move_uploaded_file($_FILES['image']['tmp_name'], $newname);
+					      if (!$copied) 
+				   	      {
+					         echo '<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(169))</script></b></font><br>';
+						 $errors=1;
+					      }
+					   }
+					}else{
+						echo '<br><font face=arial><b><script>document.write(window.parent.fc_chat.textSetter(600,"Not a valid image format"))</script></font></b><br>';
+ 						echo $errorcode . 'not a valid image';
+						$errors=1;
 					}
 				}
 			}
