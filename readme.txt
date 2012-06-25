@@ -17,7 +17,7 @@ MOST RECENT FEATURES
 
 You can now post links in your chat messages. To turn off this feature set allow_links to "no" in the fcchat -> settings page (misc section).
 
-Version 2.2.13 contains new style templates for sites with darker backgrounds. Style templates found in the fcchat/styles/ folder.
+Version 2.2.13 contains new style templates for sites with darker backgrounds. Style templates are found in the fcchat/styles/ folder.
 
 
 UPGRADE NOTICE
