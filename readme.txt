@@ -19,15 +19,13 @@ The video chat now supports Flash player 11's h264 streaming capability. This re
 
 UPGRADE NOTICE
 
-
 When you upgrade to a new version, any customizations you made to the chat files will be erased. In order to save those changes, do the following:
 
 1. Make backup copies of any files that you have altered. You may wish to make backups of the following folders: (fcchat/config, fcchat/languages, fcchat/styles, fcchat/html/config). Place them in a safe place where they will not be deleted. 
 1. Next install the new version. 
 1. Finally, manually copy the changes you made to the old files into the current version's files. Do not replace the new files with the old files, as the structure of the new files may have changed; but instead, use the wordpress file editor to make the changes line by line.
 
-*As of version 2.2, the changelog will list the configuration files that have changed since the previous version. If the config file has not changed from your current version to the new version, you may simply replace the updated version with the old file.
-
+After upgrading, make sure you clear your browser cache and refresh the page.
 
 FEATURE LIST:
 
