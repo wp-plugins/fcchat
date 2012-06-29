@@ -32,11 +32,51 @@ JDEBUG ? $_PROFILER->mark( 'afterLoad' ) : null;
  * NOTE :
  */
 $mainframe =& JFactory::getApplication('site');
+$mainframe->initialise();
 
 $user_id='';
 $password='';
 
 $request = ( isset($_POST['f']) ) ? (int) $_POST['f'] : 0;
+
+
+//Pull the kunena avatar
+function fc_get_avatar(){
+
+	/*
+	* Test for Kunena avatar.
+	*/
+
+	$version=1.6;
+	// Detects Kunena 2.0 or later version
+	if (class_exists('KunenaForum') && KunenaForum::isCompatible('2.0') && KunenaForum::installed()) {
+		KunenaForum::setup();
+		$version=2;
+	}else if (class_exists('KunenaForum') || !class_exists('Kunena')) { // Detects Kunena 1.6 and 1.7
+		return null;
+	}
+
+	// Initialize variables
+	$sizex = $sizey = 90;
+	$class = 'avatar';
+	$user = KunenaFactory::getUser();
+ 
+	// Get avatar URL "/media/kunena/avatars/path/file.jpg"
+	$avatar=$user->getAvatarURL($sizex, $sizey);
+	if(!empty($avatar)){
+		if($version==2){
+			return JURI::base() . substr($avatar, 1);
+		}else{
+			$url = preg_split('/modules\/mod_fcchat\/FCChat\/proxies\//i',JURI::base());
+			$url = $url[0];
+			$url2 = preg_split('/modules\/mod_fcchat\/FCChat\/proxies\//i',$avatar);
+			return $url . $url2[1];
+		}
+	}else{
+		return null;
+	}
+}
+
 
 if($request==0){
 	$current_user =& JFactory::getUser();
@@ -59,7 +99,21 @@ if($request==0){
 		$signature = md5($t1 . $password . SECRET_KEY);
 		echo "<fcchatresponse>" . 'jm1' . $current_user->id . '&' . $password . '&' . $name_length . $username . $signature . $t1 .  "<fcchatresponse>";
 
+//Grab the avatar
+		if(RETURN_AVATAR){
+			$avatar=fc_get_avatar();
+			if (!empty($avatar)){
+				echo "<fcchatresponse2>/" . $avatar . "<fcchatresponse2>";
+			}else{
+				echo "<fcchatresponse2><fcchatresponse2>";
+			}
+		}
 	}
 }else{
-	echo "<fcchatresponse>0<fcchatresponse>";		
+	$avatar=fc_get_avatar();
+	if (!empty($avatar)){
+		echo "<fcchatresponse>/" . $avatar . "<fcchatresponse>";		
+	}else{
+		echo "<fcchatresponse>0<fcchatresponse>";
+	}		
 }

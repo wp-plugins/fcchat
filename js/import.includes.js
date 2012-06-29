@@ -1,9 +1,13 @@
 function fcchat_includes(){
 	jGo.scripts.importClass('jGo.browser.min.js', 'static', this,
 				null);
+	jGo.scripts.importClass('jGo.DefaultToolbar.min.js', 'static', this,
+			null);
 	jGo.scripts.importClass('jGo.DefaultMenu.min.js', 'static', this,
 			null);
-	jGo.toolbar = {};
+	jGo.scripts.importClass('jGo.InfoBox.min.js', 'static', this,
+			null);
+	jGo.fcchat_toolbar = {};
 	if(FCChatConfig.facebook_connect){
 		jGo.scripts.importClass('jGo.postMessage.min.js', 'static', this,
 				null);
@@ -14,7 +18,9 @@ function fcchat_includes(){
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.widget_style_template + "'></script>");
 	for(var i = 0;i<FCChatConfig.toolbar_items.length;i++){
 		if(FCChatConfig.toolbar_items[i]!="friendscenter"){
-			document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "toolbar_items/"+FCChatConfig.toolbar_items[i]+".js'></script>");
+			document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "toolbar_items/"+FCChatConfig.toolbar_items[i].replace(/:/g, '/')+".js'></script>");
+			var item=FCChatConfig.toolbar_items[i].split(":");
+			FCChatConfig.toolbar_items[i]=item[item.length-1];
 		}
 	}
 	if(FCChatConfig.prompt_user){

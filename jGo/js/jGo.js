@@ -1,6 +1,6 @@
 /*
  *jGo javascript-OS (work in progress)
- *Copyright (C) 2008 Robert Beach (www.fastcatsoftware.com)
+ *Copyright (C) 2012 Robert Beach (www.fastcatsoftware.com)
  *
  */
 
@@ -17,10 +17,10 @@ var _jGo = window["jGo"], jGo = {};
  */
 
 jGo.config = {
-	version :1.0,
-	path :FCChatConfig.dir + "jGo",
-	z_index_base :	1000,
-	max_z_index:2147483647
+	version : 2.0,
+	path : FCChatConfig.dir + "jGo",
+	z_index_base: 21477,
+	max_z_index : 2147483647
 };
 
 ( function() {
@@ -44,50 +44,67 @@ jGo.config = {
 
 		events : {
 			enabled :true,
+			
+			//onEvent - all events in jGo are funneled through this function
 			onEvent : function(event) {
-				if (_e.enabled && _e.eventManager('pre', event)) {
-					var e = _e[eventHandlers][event.type];
-					for ( var fn = e.length - 1; fn > 0; fn--) {
-						if (event.data[0] == e[fn][1]) {
-							e[fn][2].call(_e, event);
-						}
-					}
-					e[0][2].call(_e, event);
+				//Do the pre-event handlers, cancel event if necessary
+				if (_e.enabled && _e.eventManager('pre',event)) {
+					
+					//Call the event dispatcher to handle the primary event
+					_e.dispatchEvent(event);
+						
+					//Do the post-event handlers
 					_e.eventManager('post', event)
 				}
 			},
-			preHandlers : [],
-			eventHandlers : {
-				dblclick : [ [ 'default', null, function() {
-					this.dispatchEvent.apply(this, arguments);
-				} ] ],
-				mousedown : [ [ 'default', null, function() {
-					this.dispatchEvent.apply(this, arguments);
-				} ] ],
-				mousemove : [ [ 'default', null, function() {
-					this.dispatchEvent.apply(this, arguments);
-				} ] ],
-				mouseup : [ [ 'default', null, function() {
-					this.dispatchEvent.apply(this, arguments);
-				} ] ],
-				control : []
+			
+			eventManager : function(action,event){
+				if(!_e[eventHandlers][action]){
+					return true;
+				}else{
+					return _e.eventProcessor(action, 'all', event) &&	
+						   _e.eventProcessor(action, event.type, event);
+				}
 			},
-			postHandlers : [],
-			eventManager : function(action, event) {
-				var e = _e[action + 'Handlers'];
-				for ( var fn = e.length - 1; fn >= 0; fn--) {
-					if (!e[fn][1].call(_e, event)) {
-						return false;
+			
+			eventProcessor : function(action, type, event) {
+				var e =_e[eventHandlers][action];
+				if(e[type]){
+					e=e[type];
+				}else{
+					return true;
+				}
+				for ( var fn = e.length-1; fn >= 0; fn--) {
+					if (event.data[0] == e[fn][1] || e[fn][1]==jGo) {
+						if (e[fn][2](event)=='StopPropagation') {
+							return false;
+						}
 					}
 				}
 				return true;
 			},
+			
 			dispatchEvent : function() {
 				var args = arguments;
 				if (args[0].data) {
 					var obj = args[0].data[0], fn = args[0].data[1];
 					obj[fn].apply(obj, args);
 				}
+			},
+			
+			// eventhandlers format [name, scope, function]
+			eventHandlers : {
+				//action
+				pre:{
+					//type
+					all:[]
+				}
+				/* action
+				post:{
+					//type
+					all:[]
+				}
+				*/
 			}
 		},
 
@@ -236,6 +253,7 @@ jGo.config = {
 
 		// Event capture
 		capture = {
+			//click: true,
 			dblclick :true,
 			mouseup :true,
 			mousedown :true,
@@ -251,6 +269,8 @@ jGo.config = {
 			},
 
 			// Events
+			//onclick : function(e){
+			//},
 			ondoubleclick : function(e) {
 			},
 			onmousedown : function(e) {
@@ -261,25 +281,41 @@ jGo.config = {
 			},
 
 			// Aplication Interface
-
+			
+			//Depricated use jGo.onEvent instead
 			EventHandler : function(type, name, scope, obj, method) {
-				var e = _e[eventHandlers][type];
-				for ( var fn in e) {
-					if(e.hasOwnProperty(fn)){
-						if (e[fn][0] == name) {
-							return false;
-						}
-					}
-				}
 				if (!capture[type]) {
-					jGo.$(document).eventHandler(type, J, 'on' + type);
+					jGo.$(document).eventHandler(type, this, 'on' + type);
 				}
-				e.splice(e.length, 0, [ name, scope,
-						jGo.util.bind(obj, obj[method]) ]);
+				this.addEventHandler(type, name, obj, method, scope);
 			},
-
-			removeHandler : function(type, name) {
-				var e = _e[eventHandlers][type];
+			
+			addEventHandler : function(type, name, obj, method, scope, pos) {
+				if(!scope)scope=jGo.UI; //interface scope
+				if(!pos)pos='pre';
+				var e = _e[eventHandlers][pos];
+				if(e){
+					if(e[type]){
+						for ( var fn in e[type]) {
+							if(e[type].hasOwnProperty(fn)){
+								if (e[type][fn][0] == name) {
+									return false;
+								}
+							}
+						}
+					}else{
+						e[type]=[];
+					}
+				}else{
+					e = {};
+					e[type]=[];
+				}
+				e[type].splice(e[type].length, 0, [ name, scope, jGo.util.bind(obj, obj[method]) ]);
+			},
+			
+			removeHandler : function(type, name, pos) {
+				if(!pos)pos='pre';
+				var e = _e[eventHandlers][pos][type];
 				for ( var fn in e) {
 					if(e.hasOwnProperty(fn)){
 						if (e[fn][0] == name) {
@@ -401,12 +437,13 @@ jGo.config = {
 			classesLoaded :false,
 
 			setClassesLoaded : function() {
-				J.classesLoaded = true;
+				this.classesLoaded = true;
 			},
 
 			// Initialization
 			init : function() {
 				var doc = jGo.$(document);
+				//doc.eventHandler('click', this, 'onclick');
 				doc.eventHandler('dblclick', this, 'ondoubleclick');
 				doc.eventHandler('mousedown', this, 'onmousedown');
 				doc.eventHandler('mouseup', this, 'onmouseup');
@@ -433,6 +470,14 @@ jGo.config = {
 							&& (arguments[0] != jGo.UI && arguments[1] != jGo.UI)) {
 						throw Error('Do not use eventHandler to bind events to the document object, use jGo.UI.EventHandler');
 					}
+					var args = Array.prototype.slice.call(arguments);
+					var type = (typeof args[1] == 'string') ? args.splice(0, 1,
+							this) : args.splice(0, 1);
+					type = type.toString();
+					return this.bind(type, args, OS.events.onEvent);
+				},
+				//Version 2.0 prefered method of attaching event handler to dom object
+				onEvent : function() {
 					var args = Array.prototype.slice.call(arguments);
 					var type = (typeof args[1] == 'string') ? args.splice(0, 1,
 							this) : args.splice(0, 1);
@@ -481,9 +526,22 @@ jGo.config = {
 				}
 				return mW;
 			},
+		    getInnerHeight : function() {
+				var innerHeight = 0;
+				if( typeof( window.innerWidth ) == 'number' && window.innerHeight!=0) {
+				//Non-IE
+				    innerHeight = Math.min(window.innerHeight,jGo.$(window).height());
+				} else if( document.documentElement &&  document.documentElement.clientHeight && document.documentElement.clientHeight !=0) {
+				    //IE 6+ in 'standards compliant mode'
+				    innerHeight = Math.min(document.documentElement.clientHeight,jGo.$(window).height());
+				} else{
+					innerHeight = jGo.$(window).height();
+				}
+				return innerHeight;
+			},
 			extractFromCSSString : function(prop,str) {
 				var s = str.split(";");
-				for(var i=0;i>s.length;i++){
+				for(var i=0;i<s.length;i++){
 					if(s[i].indexOf(prop)==0){
 						return s[i].split(":")[1];
 					}
@@ -521,7 +579,12 @@ jGo.config = {
 			}
 		}
 	};
-
+	
+	//Version 2.0 prefered method of attaching application wide event handler
+	jGo.onEvent = function(type, name, obj, method, scope, pos){
+			jGo.UI.addEventHandler(type, name, obj, method, scope, pos);
+	};
+	
 	// scripts
 
 	jGo.scripts = {
@@ -720,11 +783,21 @@ jGo.Menu = function() {
 	jGo.Widget.apply(this, arguments);
 	this.isSelected = false;
 	this.getDefault = function() {
-		return jGo.Window.prototype;
+		return jGo.Menu.prototype;
 	};
 };
 
 jGo.Menu.prototype = new jGo.Widget();
+
+jGo.Control = function() {
+	jGo.Widget.apply(this, arguments);
+	this.isSelected = false;
+	this.getDefault = function() {
+		return jGo.Control.prototype;
+	};
+};
+
+jGo.Control.prototype = new jGo.Widget();
 
 /*
  * Clean up

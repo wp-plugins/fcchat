@@ -6,7 +6,7 @@
 var $ = jGo.$;
 
 jGo.DefaultMenu = function() {
-    jGo.Window.apply(this, arguments);
+    jGo.Menu.apply(this, arguments);
     this.type = 'DefaultMenu';
 
     this.eventsEnabled = true;
@@ -48,8 +48,8 @@ TMp.create = function(id, p){
 	var content ="<div style='position:relative'>"+p[1]+"</div>";
 	this.frame=$(document.createElement('div')).addClass(outerClass).attr('id', 'jGo_defaultmenuF' + id).css({position:(this.fixed?'fixed':'absolute'),display:'none','z-index':jGo.config.max_z_index}).css(s.css).html(content);
 	this.parent.append(this.frame);
-	this.target.eventHandler('mousedown', this, 'onMouseDown', '');
-	this.frame.eventHandler('mousedown', this, 'onMouseDown', '');
+	this.target.onEvent('mousedown', this, 'onMouseDown', '');
+	this.frame.onEvent('mousedown', this, 'onMouseDown', '');
 	this.id=id;
 };
 
@@ -112,7 +112,7 @@ TMp.position = function(target){
 };
 
 TMp.show = function() {
-   	jGo.UI.EventHandler('mousedown','defaultmenu'+this.id,jGo.UI,this,'mouseOff');
+   	jGo.onEvent('mousedown','defaultmenu'+this.id,this,'mouseOff');
 	this.position();
 	this.frame.css("display","block");
    	this.isOpen=true;
@@ -131,9 +131,65 @@ TMp.close = function() {
 	this.isOpen=false;
     return true;
 };
-TMp.destroy=function(){return false;}
+TMp.destroy=function(){return false;};
+
+/*
+ *  Menu Controller Subclass
+ *  Applies proper mouse event control to a menu
+ */
+
+/*
+ * id - a unique identifier for the controller
+ * target - the dom element used to toggle the menu
+ * menu - the dom element representing the container for the menu
+ * obj - the javascript object which will control the menus toggle
+ * toggleFunction - a function which is applied to physically toggle the menu (resides in obj)
+ * control_target (optional) - should the controller handle the toggling when the target is clicked
+ * 
+ * it is assumed that you will hide the menu by setting the menu "display:none" or "visibility:hidden"
+ */
+jGo.DefaultMenuController = function(id,target,menu,obj,toggleFunction,control_target){
+	this.id=id;
+	this.no_hide=false;
+	this.target=$(target);
+	this.menu=$(menu);
+	this.obj = obj;
+	this.control_target = control_target || false;
+	this.toggleFunction=toggleFunction;
+	this.enableControl();
+};
+
+var DMC = jGo.DefaultMenuController.prototype;
+
+DMC.mouseOn = function(e){
+	this.no_hide=true;
+};
+DMC.mouseDown = function(e){
+	var root = (document.body.scrollHeight>=document.documentElement.scrollHeight)?document.body:document.documentElement;
+	var scroll = (root.scrollLeft)?root.scrollLeft:0;
+	if((scroll+root.clientWidth)>e.pageX||root.clientWidth==0){
+		if(!this.no_hide&&this.is_open())this.toggle(true);
+	}
+	this.no_hide=false;
+};
+DMC.toggle = function(){
+	if(arguments[0]==true||this.control_target)this.obj[this.toggleFunction]();
+};
+DMC.is_open = function(){
+	return !($(this.menu).css("display")=="none"||$(this.menu).css("visibility")=="hidden");
+};
+DMC.enableControl = function(){
+	this.target.onEvent('mousedown', this, 'mouseOn', '');
+	this.menu.onEvent('mousedown', this, 'mouseOn', '');
+	jGo.onEvent('mousedown','menucontroller'+this.id,this,'mouseDown');
+};
+DMC.disableControl = function() {
+	this.target.removeEventHandler('mousedown');
+	this.menu.removeEventHandler('mousedown');
+    jGo.UI.removeHandler('mousedown','menucontroller'+this.id);
+};
 })();
 
 //Class Initialization
-jGo.UI.registerWidgetClass(jGo.DefaultMenu,'DefaultMenu','complex.windows');
-jGo.scripts.onLoad('jGo.DefaultMenu.js');
+jGo.UI.registerWidgetClass(jGo.DefaultMenu,'DefaultMenu','complex.menus');
+jGo.scripts.onLoad('jGo.DefaultMenu.min.js');

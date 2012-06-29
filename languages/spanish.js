@@ -461,9 +461,9 @@ FCChatConfig.txt = {
 	t322: "está viendo su cámara web.",
 	t323: "Lo sentimos, este usuario no está disponible para video chat en este momento.",
 	t324: "Video Chat Público",
-	t325: "Su cámara será visible a todos.",
+	t325: "Su cámara será visible a todos.<br><br><b>Nota: Se requiere Flash Player 11 o superior.",
 	t326: "Haga clic a continuación para aceptar su invitación a un chat de vídeo privado. <br> Una vez cargado, debe hacer clic en 'Encienda la cámara' para que la otra parte puede ver tu cámara web.",
-	t327: "Al iniciar la cámara web, la otra parte de forma automática serán invitados a unirse a usted.",
+	t327: "Al iniciar la cámara web, la otra parte de forma automática serán invitados a unirse a usted.<br><b>Nota: Se requiere Flash Player 11 o superior.",
 	t328: "Continuar",
 	t329: "Cargando ... Por favor espere",
 	
@@ -544,5 +544,15 @@ FCChatConfig.txt = {
 	t381:"Volver al Chat",
 	t382:"buscar...",
 	t383:"La búsqueda es demasiado grande (50 caracteres máximo).",
-	t384:"Por favor, introduzca al menos un carácter."
+	t384:"Por favor, introduzca al menos un carácter.",
+		
+	//added 2.3
+	t385:"Opcions",
+	settings_width:42,
+	t386:"Abrir MsgCenter",
+	t387:"Entrar MsgCenter",
+	t388:"MsgCenter",
+	t389:"Para enviar un mensaje, resalte un usuario en tu lista de amigos, en primer lugar. Para añadir un usuario a su lista de amigos, haga clic en su nombre de pantalla, y seleccione 'Añadir a amigos'.",
+	t390:"No está en uso",
+	t391:"Despedir"
 };

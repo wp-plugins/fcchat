@@ -136,7 +136,7 @@ startdoc="<script>function useCurrentAvatar(){" & ref & ".fc_chat.newAvatar('',3
 "	tester.src=imagelink" & _
 "}function isGood(){" & ref & ".fc_chat.newAvatar('/'+imagelink,4,'" & ref2 & "','" & flext & "','" & rspln & "','" & rspln2 & "')}" & _
 "function isBad(){alert('Cannot load image');return false}" & _
-"</script><style>BODY {background-color: #DBDBDD;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#444444'><b><i><script>document.write(" & ref & ".fc_chat.textSetter(184))</script></i></b></div><div id='wait1' style='margin-top:100px;display:none'><center><script>document.write(" & ref & ".fc_chat.textSetter(185))</script></center></div><div id='content1'>"
+"</script><style>BODY {background-color: #dddddd;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#444444'><b><i><script>document.write(" & ref & ".fc_chat.textSetter(184))</script></i></b></div><div id='wait1' style='margin-top:100px;display:none'><center><script>document.write(" & ref & ".fc_chat.textSetter(185))</script></center></div><div id='content1'>"
 
 
 function write_upload_option()
@@ -217,7 +217,7 @@ function SaveFiles
 					"	tester.src=imagelink" & _
 					"}function isGood(){" & ref & ".fc_chat.newAvatar('/'+imagelink,4,'" & ref2 & "','" & flext & "','" & rspln & "','" & rspln2 & "')}" & _
 					"function isBad(){alert('Cannot load image');return false}" & _
-            		"</script><style>BODY {background-color: #DBDBDD;font-family:arial; font-size:12}</style><body onload=""setTimeout('relayAvatar()',1000);""><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#444444'><script>document.write(" & ref & ".fc_chat.textSetter(183))</script></div><div id='wait1' style='margin-top:100px'><center><script>document.write(" & ref & ".fc_chat.textSetter(185))</script></center></div><div id='content1' style='display:none'><br><font face=arial><b>" & Upload.UploadedFiles(fileKey).FileName & " (" & Upload.UploadedFiles(fileKey).Length & " bytes)</font><font face=arial> <script>document.write(" & ref & ".fc_chat.textSetter(186))</script></b></font><br><br><a href='javascript:this.location.replace(" & ref & ".FCChatConfig.alt_dir+""html/Avatars.asp?id=" & userID & """)'><script>document.write(" & ref & ".fc_chat.textSetter(181))</script></a>&nbsp;<a href='javascript:" & ref & ".fc_chat.rem()'><script>document.write(" & ref & ".fc_chat.textSetter(182))</script></a><br><br>"
+            		"</script><style>BODY {background-color: #dddddd;font-family:arial; font-size:12}</style><body onload=""setTimeout('relayAvatar()',1000);""><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#444444'><script>document.write(" & ref & ".fc_chat.textSetter(183))</script></div><div id='wait1' style='margin-top:100px'><center><script>document.write(" & ref & ".fc_chat.textSetter(185))</script></center></div><div id='content1' style='display:none'><br><font face=arial><b>" & Upload.UploadedFiles(fileKey).FileName & " (" & Upload.UploadedFiles(fileKey).Length & " bytes)</font><font face=arial> <script>document.write(" & ref & ".fc_chat.textSetter(186))</script></b></font><br><br><a href='javascript:this.location.replace(" & ref & ".FCChatConfig.alt_dir+""html/Avatars.asp?id=" & userID & """)'><script>document.write(" & ref & ".fc_chat.textSetter(181))</script></a>&nbsp;<a href='javascript:" & ref & ".fc_chat.rem()'><script>document.write(" & ref & ".fc_chat.textSetter(182))</script></a><br><br>"
         	next
 	else
 		SaveFiles = startdoc & "<script>document.write(" & ref & ".fc_chat.textSetter(" & errorstring & "))</script>"
@@ -233,7 +233,7 @@ end function
 <HEAD>
 <TITLE>Avatar</TITLE>
 <style>
-BODY {background-color: #bbbbbb;font-family:arial; font-size:12}
+BODY {background-color: #dddddd;font-family:arial; font-size:12}
 </style>
 <script>
 function onSubmitForm() {

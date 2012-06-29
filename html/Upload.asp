@@ -97,7 +97,7 @@ end function
 <HEAD>
 <TITLE>Free ASP Upload</TITLE>
 <style>
-BODY {background-color: #bbbbbb;font-family:arial; font-size:12}
+BODY {background-color: #dddddd;font-family:arial; font-size:12}
 </style>
 <script>
 function onSubmitForm() {

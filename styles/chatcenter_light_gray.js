@@ -35,6 +35,7 @@ FCChatConfig.styles={
 			opacity:.95,
 			send_to_room_button:{
 				default_css:"background-color:#cfcfcf;border:1px solid #888888; padding:2px 49px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				single_button_css:"padding:5px 45px;font:14px arial;font-weight:bold;",
 				states:{
 					link_css:"color:#163663",
 					hover_css:"color:white",
@@ -43,6 +44,7 @@ FCChatConfig.styles={
 			},
 			send_private_button:{
 				default_css:"background-color:#cfcfcf;border:1px solid #888888; padding:2px 48px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				single_button_css:"padding:5px 45px;font:14px arial;font-weight:bold;",
 				states:{
 					link_css:"color:#163663",
 					hover_css:"color:white",
@@ -89,6 +91,7 @@ FCChatConfig.styles={
 				},
 				private_chat_panel:{
 					background_image:"private_chat_light_background.jpg",
+					msgcenter_background_image:"chat_window_light_background.jpg",
 					background_color:"#f6f6f6",
 					border:"2px solid #a0a0a0",
 					css:{opacity:.65,"box-shadow":"inset 5px 5px 10px 0px rgba(0,0,0,0.2)","-webkit-box-shadow": "inset 5px 5px 10px 0px rgba(0,0,0,0.2)"}
@@ -145,7 +148,7 @@ FCChatConfig.styles={
 				},
 				room_display_panel:{
 					background_color:"transparent",
-					divider_color:"#c0c0d0",
+					divider_color:"transparent",
 					text_css:"font-family:arial;font-size:8pt;font-weight:500;color:#204096;"
 				},
 				private_group_panel:{

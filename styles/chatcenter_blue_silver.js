@@ -34,7 +34,8 @@ FCChatConfig.styles={
 			border:"1px solid #aaaaaa",
 			opacity:.95,
 			send_to_room_button:{
-				default_css:"background-color:#cfcfcf;border:1px solid #eeeeee; padding:2px 49px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				default_css:"background-color:#cfcfcf;border:1px solid #eeeeee; padding:2px 51px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				single_button_css:"padding:5px 45px;font:14px arial;font-weight:bold;",
 				states:{
 					link_css:"color:#264673",
 					hover_css:"color:white",
@@ -42,7 +43,8 @@ FCChatConfig.styles={
 				}
 			},
 			send_private_button:{
-				default_css:"background-color:#cfcfcf;border:1px solid #eeeeee; padding:2px 48px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				default_css:"background-color:#cfcfcf;border:1px solid #eeeeee; padding:2px 50px; font:10px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				single_button_css:"padding:5px 45px;font:14px arial;font-weight:bold;",
 				states:{
 					link_css:"color:#264673",
 					hover_css:"color:white",
@@ -80,7 +82,7 @@ FCChatConfig.styles={
 				chat_room_panel:{
 					background_image:"chat_window_background.jpg",
 					background_color:"#000000",
-					border:"2px solid #808080",
+					border:"2px solid #848484",
 					css:{opacity:.5},
 					infobox:{
 						border:"4px solid silver",
@@ -89,8 +91,9 @@ FCChatConfig.styles={
 				},
 				private_chat_panel:{
 					background_image:"private_chat_background.jpg",
+					msgcenter_background_image:"chat_window_background.jpg",
 					background_color:"#000000",
-					border:"2px solid #808080",
+					border:"2px solid #888888",
 					css:{opacity:.5}
 				},
 				user_icon:{
@@ -145,7 +148,7 @@ FCChatConfig.styles={
 				},
 				room_display_panel:{
 					background_color:"transparent",
-					divider_color:"#c0c0d0",
+					divider_color:"transparent",
 					text_css:"font-family:arial;font-size:8pt;font-weight:500;color:#204096;"
 				},
 				private_group_panel:{

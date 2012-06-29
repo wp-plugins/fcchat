@@ -20,7 +20,7 @@
  * support@fastcatsoftware.com
  */
 
-jGo.toolbar.style={
+jGo.fcchat_toolbar.style={
 		height:30,
 		css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);background-color:#444444;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 		text:"color:white;font-size:10pt;font-family:arial",

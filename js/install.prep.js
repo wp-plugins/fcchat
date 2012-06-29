@@ -31,7 +31,7 @@ jGo.mobile = (jGo.mobile_list.test(navigator.userAgent.toLowerCase()));
 jGo.istuff=/iphone|ipad|ipod/i;
 jGo.iphone = (jGo.istuff.test(navigator.userAgent.toLowerCase()));
 
-jGo.toolbar_left=5;
+jGo.toolbar_left=0;
 jGo.toolbar_top=0;
 
 if(jGo.mobile&&FCChatConfig.toolbar_banner_mode){

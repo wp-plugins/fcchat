@@ -460,9 +460,9 @@ FCChatConfig.txt={
 	t322: "is now viewing your webcam.",
 	t323: "Sorry, this user is not available for video chat at the moment.",
 	t324: "Public Video Chat",
-	t325: "Your webcam will be visible to everyone.",
-	t326: "Click below to accept your invitation to a one on one video chat.<br><br> Once loaded, you must click 'Start Webcam' in order for the other party to view your webcam.",
-	t327: "When you start your webcam, the other party will automatically be invited to join you.",
+	t325: "Your webcam will be visible to everyone.<br><br><b>Note: Requires Flash Player 11 or higher.</b>",
+	t326: "Click below to accept your invitation to a one on one video chat.<br> Once loaded, you must click 'Start Webcam' in order for the other party to view your webcam.",
+	t327: "When you start your webcam, the other party will automatically be invited to join you.<br><b>Note: Requires Flash Player 11 or higher.</b>",
 	t328: "Continue",
 	t329: "Loading...Please Wait",
 		
@@ -543,6 +543,15 @@ FCChatConfig.txt={
 	t381:"Return to chat",
 	t382:"search...",
 	t383:"Search is too big (50 chars max).",
-	t384:"Please enter at least one character."
-	
+	t384:"Please enter at least one character.",
+		
+	//added 2.3
+	t385:"Settings",
+	settings_width:42,
+	t386:"Open MsgCenter",
+	t387:"Enter MsgCenter",
+	t388:"MsgCenter",
+	t389:"To send a message, highlight a user in your friends list, first. To add a user to your friends list, click on their screen name, and then select 'add to Friends'.",
+	t390:"Not in Use",
+	t391:"Dismiss"
 };

@@ -4,10 +4,10 @@
 	var fc_tb_ab = fc_tb.control.info_box;
 	var fc_tb_nm = fc_tb.new_messages_box;
 	var fc_tb_f = fc_tb.friends_box;
-	var fc_fr_tb = jGo.toolbar.style;
+	var fc_fr_tb = jGo.fcchat_toolbar.style;
 	var fc_tb_pl = fc_tb.toolbar_item;
 	var fc_pl_btn = fc_tb.toolbar_item.buttons;
-	var fc_promo  = (jGo.toolbar.style.prompt?jGo.toolbar.style.prompt.dialog_box.bubble.triangle_color:'');
+	var fc_promo  = (jGo.fcchat_toolbar.prompt.style?jGo.fcchat_toolbar.prompt.style.dialog_box.bubble.triangle_color:'');
 	var fc_cw_mp_cp = FCChatConfig.styles.chat_window.main_panel.chat_panels;
 	var fc_cw_mp_sp = FCChatConfig.styles.chat_window.main_panel.side_panels;
 	var fc_cwtmc=fc_cw_mp_cp.font.color.default_text_color;
@@ -138,7 +138,7 @@
 	fc_rule+"div.fc_blkbtn a:hover, "+fc_rule2+"div.fc_blkbtn a:hover{"+fc_blk_btn.states.hover_css+"}" +
 	fc_rule+"div.fc_blkbtn_dis a, "+fc_rule2+"div.fc_blkbtn_dis a{"+fc_blk_btn.default_css+";display:block;float:left;margin:0 5px 0 0;text-align:center;text-decoration:none;}" +
 	fc_rule+"div.fc_blkbtn_dis a.fc_blkbtn_disa, "+fc_rule2+"div.fc_blkbtn_dis a.fc_blkbtn_disa{"+fc_blk_btn.states.disabled_css+";cursor:default;}";
-	
+
 	FCChatConfig.dynamicStyles=firstPart+
 	
 	//promo

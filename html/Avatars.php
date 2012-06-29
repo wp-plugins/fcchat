@@ -221,7 +221,7 @@ function useimagelink(){
 	tester.src=imagelink
 }function isGood(){".$ref.".fc_chat.newAvatar('/'+imagelink,4,'".$ref2."','".$flext."','".$rspln."','".$rspln2."')}
 function isBad(){alert('Cannot load image');return false}
-</script><style>BODY {background-color: #DBDBDD;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#444444'><b><i><script>document.write(".$ref.".fc_chat.textSetter(184))</script></i></b></div><div id='wait1' style='margin-top:100px;display:none'><center><script>document.write(".$ref.".fc_chat.textSetter(185))</script></center></div><div id='content1'>";
+</script><style>BODY {background-color: #DDDDDD;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#444444'><b><i><script>document.write(".$ref.".fc_chat.textSetter(184))</script></i></b></div><div id='wait1' style='margin-top:100px;display:none'><center><script>document.write(".$ref.".fc_chat.textSetter(185))</script></center></div><div id='content1'>";
 
  if(isset($_POST['Submit'])) 
  {
@@ -311,9 +311,9 @@ function useimagelink(){
 	tester.src=imagelink
 }function isGood(){".$ref.".fc_chat.newAvatar('/'+imagelink,4,'".$ref2."','".$flext."','".$rspln."','".$rspln2."')}
 function isBad(){alert('Cannot load image');return false}
-</script><style>BODY {background-color: #DBDBDD;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#44444
+</script><style>BODY {background-color: #DDDDDD;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#44444
 
-</script><style>BODY {background-color: #bbbbbb;font-family:arial; font-size:12}</style><body onload=\"setTimeout('relayAvatar()',1000);\"><br><div style='border-bottom: #A91905 2px solid;font-size:16'><script>document.write(".$ref.".fc_chat.textSetter(183))</script></div><div id='wait1' style='margin-top:100px'><center><script>document.write(".$ref.".fc_chat.textSetter(185))</script></center></div><div id='content1' style='display:none'>";
+</script><style>BODY {background-color: #dddddd;font-family:arial; font-size:12}</style><body onload=\"setTimeout('relayAvatar()',1000);\"><br><div style='border-bottom: #A91905 2px solid;font-size:16'><script>document.write(".$ref.".fc_chat.textSetter(183))</script></div><div id='wait1' style='margin-top:100px'><center><script>document.write(".$ref.".fc_chat.textSetter(185))</script></center></div><div id='content1' style='display:none'>";
 						}else{
 							$deleted=user_avatar_delete($newname);
 							$errorstring='<br><font face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter(187))</script>'.MAX_WIDTH.'<script>document.write(window.parent.fc_chat.textSetter(188))</script> '.MAX_HEIGHT.'<script>document.write('.$ref.'.fc_chat.textSetter(189))</script></font><br><br>';

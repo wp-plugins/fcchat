@@ -8,109 +8,56 @@
 *
 */
 
-$forum_version = 'SMF 1.1.13';
 
-// Get everything started up...
-define('SMF', 1);
-@set_magic_quotes_runtime(0);
-error_reporting(E_ALL);
-$time_start = microtime();
+require_once(dirname(__FILE__) . '/../../SSI.php');
 
-// Make sure some things simply do not exist.
-foreach (array('db_character_set') as $variable)
-	if (isset($GLOBALS[$variable]))
-		unset($GLOBALS[$variable]);
+define('SECRET_KEY', 'OqO,X<rU_&=F;V}f39< bh,+&Qlr>:20=V6a^FkQ9N!<Uwp|y}]}<!5(|W|N4E>8');
+define('USERNAMES_ENCODED', true);
+define('RETURN_AVATAR', true);
 
-// Load the settings...
-require_once(dirname(__FILE__) . '/../../Settings.php');
+$user_id='';
+$password='';
 
-// And important includes.
-require_once($sourcedir . '/QueryString.php');
-require_once($sourcedir . '/Subs.php');
-require_once($sourcedir . '/Errors.php');
-require_once($sourcedir . '/Load.php');
-require_once($sourcedir . '/Security.php');
+$request = ( isset($_POST['f']) ) ? (int) $_POST['f'] : 0;
 
-// Using an old version of PHP?
-if (@version_compare(PHP_VERSION, '4.2.3') != 1)
-	require_once($sourcedir . '/Subs-Compat.php');
-
-// If $maintenance is set specifically to 2, then we're upgrading or something.
-if (!empty($maintenance) && $maintenance == 2)
-	db_fatal_error();
-
-// Connect to the MySQL database.
-if (empty($db_persist))
-	$db_connection = @mysql_connect($db_server, $db_user, $db_passwd);
-else
-	$db_connection = @mysql_pconnect($db_server, $db_user, $db_passwd);
-
-// Show an error if the connection couldn't be made.
-if (!$db_connection || !@mysql_select_db($db_name, $db_connection))
-	db_fatal_error();
-
-// Load the settings from the settings table, and perform operations like optimizing.
-//reloadSettings();
-// Clean the request variables, add slashes, etc.
-cleanRequest();
-//$context = array();
-
-// Seed the random generator?
-if (empty($modSettings['rand_seed']) || mt_rand(1, 250) == 69)
-	smf_seed_generator();
-
-// Start the session. (assuming it hasn't already been.)
-//loadSession();
-
-// What function shall we execute? (done like this for memory's sake.)
-call_user_func(smf_main());
-
-// Call obExit specially; we're coming from the main area ;).
-obExit(null, null, true);
-
-// The main controlling function.
-function smf_main()
-{
-	global $ID_MEMBER, $modSettings, $settings, $user_info, $board, $topic, $maintenance, $sourcedir;
-
-	// Special case: session keep-alive.
-	if (isset($_GET['action']) && $_GET['action'] == 'keepalive')
-		die;
-
-	// Load the user's cookie (or set as guest) and load their settings.
-	loadUserSettings();
-     	define('SECRET_KEY', 'OqO,X<rU_&=F;V}f39< bh,+&Qlr>:20=V6a^FkQ9N!<Uwp|y}]}<!5(|W|N4E>8');
-	define('USERNAMES_ENCODED', true);
-
-	$user_id='';
-	$password='';
-
-	$request = ( isset($_POST['f']) ) ? (int) $_POST['f'] : 0;
-
-	if($request==0){
-		if ( 0 == $ID_MEMBER) {
-    			// Not logged in.
-	 		echo "<fcchatresponse><fcchatresponse>";
-		} else {
-    			// Logged in.
-			$t1 = time();
-			if(USERNAMES_ENCODED){
-				$username = htmlspecialchars_decode($user_info['username']);
-			}
-			$name_length = strlen($username);
-			if($name_length<10){
-				$name_length = '00' . $name_length;
-			}else if($name_length<100){
-				$name_length = '0' . $name_length;
-			}
-			$password = md5('smf' . $ID_MEMBER . SECRET_KEY);
-			$signature = md5($t1 . $password . SECRET_KEY);
-			echo "<fcchatresponse>" . 'smf' . $ID_MEMBER . '&' . $password . '&' . $name_length . $username . $signature . $t1 . "<fcchatresponse>";
-
+if($request==0){
+	if ( 0 != $user_info['is_guest']) {
+    		// Not logged in.
+		echo "<fcchatresponse><fcchatresponse>";
+	} else {
+    		// Logged in.
+		$t1 = time();
+		if(USERNAMES_ENCODED){
+			$username = htmlspecialchars_decode($user_info['username']);
 		}
-	}else{
-		echo "<fcchatresponse>0<fcchatresponse>";		
+		$name_length = strlen($username);
+		if($name_length<10){
+			$name_length = '00' . $name_length;
+		}else if($name_length<100){
+			$name_length = '0' . $name_length;
+		}
+		$password = md5('smf' . $user_info['id'] . SECRET_KEY);
+		$signature = md5($t1 . $password . SECRET_KEY);
+		echo "<fcchatresponse>" . 'smf' . $user_info['id'] . '&' . $password . '&' . $name_length . $username . $signature . $t1 . "<fcchatresponse>";
+
+		//Grab the avatar
+		if(RETURN_AVATAR){
+			if (!empty($context['user']['avatar'])){
+				$url =  explode('"',$context['user']['avatar']['image']);
+				echo "<fcchatresponse2>/" . $url[1] . "<fcchatresponse2>";
+			}else{
+				echo "<fcchatresponse2><fcchatresponse2>";
+			}
+		}
 	}
+}else{
+	if (!empty($context['user']['avatar'])){
+		$url =  explode('"',$context['user']['avatar']['image']);
+		echo "<fcchatresponse>/" . $url[1] . "<fcchatresponse>";		
+	}else{
+		echo "<fcchatresponse>0<fcchatresponse>";
+	}		
 }
+
 
 ?>
