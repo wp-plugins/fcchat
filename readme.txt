@@ -15,7 +15,7 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 MOST RECENT FEATURES
 
-The video chat now supports Flash player 11's h264 streaming capability. This represents a significant enhancement in terms of video resolution and bandwidth usage. There are now 2 different layouts available for the chat window: Chatcenter and MsgCenter. The new MsgCenter layout is for those of you wish to use the Instant Messanger feature exclusively. 
+The video chat now supports Flash player 11's h264 streaming capability. This represents a significant enhancement, in terms of video resolution and bandwidth usage. There are now 2 different layouts available for the chat window: Chatcenter and MsgCenter. The new MsgCenter layout is for those of you wish to use the Instant Messanger feature exclusively. 
 
 UPGRADE NOTICE
 
