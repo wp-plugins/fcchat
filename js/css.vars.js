@@ -7,7 +7,7 @@
 	var fc_fr_tb = jGo.fcchat_toolbar.style;
 	var fc_tb_pl = fc_tb.toolbar_item;
 	var fc_pl_btn = fc_tb.toolbar_item.buttons;
-	var fc_promo  = (jGo.fcchat_toolbar.prompt.style?jGo.fcchat_toolbar.prompt.style.dialog_box.bubble.triangle_color:'');
+	var fc_promo  = (jGo.fcchat_toolbar.prompt?jGo.fcchat_toolbar.prompt.style.dialog_box.bubble.triangle_color:'');
 	var fc_cw_mp_cp = FCChatConfig.styles.chat_window.main_panel.chat_panels;
 	var fc_cw_mp_sp = FCChatConfig.styles.chat_window.main_panel.side_panels;
 	var fc_cwtmc=fc_cw_mp_cp.font.color.default_text_color;
