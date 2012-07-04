@@ -12,10 +12,10 @@ function fcchat_includes(){
 		jGo.scripts.importClass('jGo.postMessage.min.js', 'static', this,
 				null);
 	}
-	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "languages/" + FCChatConfig.language_template + "'></script>");
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.toolbar_style_template + "'></script>");
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.chatcenter_style_template + "'></script>");
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.widget_style_template + "'></script>");
+	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "languages/" + FCChatConfig.language_template + "'></script>");
 	for(var i = 0;i<FCChatConfig.toolbar_items.length;i++){
 		if(FCChatConfig.toolbar_items[i]!="friendscenter"){
 			document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "toolbar_items/"+FCChatConfig.toolbar_items[i].replace(/:/g, '/')+".js'></script>");
@@ -25,6 +25,9 @@ function fcchat_includes(){
 	}
 	if(FCChatConfig.prompt_user){
 		document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/prompt.js'></script>");
+	}
+	if(FCChatConfig.use_template_overrides){
+		document.write("<script language='JavaScript' src='" + (FCChatConfig.template_overrides_url!=''?FCChatConfig.template_overrides_url:FCChatConfig.dir + "styles/fcchat_template_overrides.js")+"'></script>");
 	}
 	if(FCChatConfig.flashEnabled=='test'){
 		FCChatConfig.flashEnabled=false;

@@ -5,13 +5,15 @@
 var FCChatConfig_wp = {
 	port:443,
 	policy_port:443,
-	version:"2.3",
+	version:"2.3.1",
 	subversion:"0",
 	jQuery_stable:"1.6.4",
 	language_template:"english.js",
 	widget_style_template:"widget_default_sidebar.js",
 	toolbar_style_template:"toolbar_default.js",
 	chatcenter_style_template:"chatcenter_light_gray.js",
+	use_template_overrides:false,
+	template_overrides_url:"", 
 	toolbar_items:["friendscenter","social_media:social_media"], // List MUST include "friendscenter"
 	prompt_user:true,
 	facebook_connect:true,

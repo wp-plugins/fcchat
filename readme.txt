@@ -4,8 +4,8 @@ Contributors: rdbeach
 Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
-Tested up to: 3.3
-Stable tag: 2.3
+Tested up to: 3.4
+Stable tag: 2.3.1
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -474,6 +474,9 @@ Fixed security issue with fcchat/html/uploads.php file.
 
 = 2.3 =
 Updated the video chat to support h264 streaming. Added a new layout - "MsgCenter" which features instant messaging only.
+
+= 2.3.1 =
+Corrected an issue that manifested itself when the configuration variable prompt_user was set to false.
 
 == Upgrade Notice ==
 
