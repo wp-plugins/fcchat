@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 2.3.1.1
+Stable tag: 2.3.1.2
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -478,7 +478,7 @@ Updated the video chat to support h264 streaming. Added a new layout - "MsgCente
 = 2.3.1 =
 Corrected an issue that manifested itself when the configuration variable prompt_user was set to false.
 
-= 2.3.1.1 =
+= 2.3.1.1-2 =
 Corrected an issue that manifested itself when the configuration variable require_login was set to true, and popup_window_on_open was set to true. User could not sign in.
 
 == Upgrade Notice ==
