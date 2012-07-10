@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 2.3.1.4
+Stable tag: 2.3.1.5
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -480,6 +480,9 @@ Corrected an issue that manifested itself when the configuration variable prompt
 
 = 2.3.1.1-4 =
 Corrected an issue that manifested itself when the configuration variable require_login was set to true, and popup_window_on_open was set to true. User could not sign in.
+
+= 2.3.1.5 =
+Corrected an issue with table css not being properly shielded. Also, an issue with avatar heights was corrected.
 
 == Upgrade Notice ==
 
