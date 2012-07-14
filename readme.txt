@@ -19,7 +19,7 @@ The video chat now supports Flash player 11's h264 streaming capability. This re
 
 UPGRADE NOTICE
 
-When you upgrade to a new version, any customizations you made to the chat files will be erased. In order to save those changes, do the following:
+When you upgrade to a new version any customizations you made to the chat files will be erased. In order to save those changes, do the following:
 
 1. Make backup copies of any files that you have altered. You may wish to make backups of the following folders: (fcchat/config, fcchat/languages, fcchat/styles, fcchat/html/config). Place them in a safe place where they will not be deleted. 
 1. Next install the new version. 
@@ -92,14 +92,12 @@ When you install the FCChat Widget, you will only be installing the chat client 
 1. Activate the Plugin
 1. Add the Widget to the desired sidebar in the WordPress Widgets menu.
 1. Open the `FCChat Widget' options dialog by clicking on the widget once added to the sidebar.
-1. Follow the Steps listed in the dialog in order to activate the chat service. This will include signing up for a subscription to the service on www.fastcatsoftware.com. This is a paid service, however, you will receive a free trial when you sign up.
+1. Follow the Steps listed in the dialog in order to activate the chat service. This will include signing up for a subscription to the service on www.fastcatsoftware.com.
 1. Rate the plugin and verify that it works at wordpress.org.
 1. Leave a comment regarding bugs, feature request, cocktail recipes at http://www.fastcatsoftware.com
 
 
 
-
-= Upgrading from a previous version (This applies to version 2.1.12 and later)=
 
 When you upgrade to a new version, any customizations you made to the chat will be erased. In order to save those changes, do the following:
 
