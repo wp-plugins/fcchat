@@ -13,6 +13,7 @@ jGo.InfoBox = function() {
     this.parent;
     this.frame;
     this.style;
+    this.debug="DEBUG";
     this.fixed=false;
     this.fadeInt=200;
     this.fadeTimer=10000;
@@ -46,12 +47,12 @@ var proto = jGo.InfoBox.prototype;
 proto.create = function(id, args){
     this.parent=args[0];
 	var s = this.style = $.extend({},args[1]);
-    this.fixed=args[2]||true;
+    this.fixed=(args[2]!=null?args[2]:true);
     this.fadeInt=args[3] || 200;
     this.fadeTimer=args[4] || 10000;
     var menucontrol = (args[5]!=null?args[5]:true);
 	var outerClass = 'jGo_app jGo_myapp infobox'+id;
-	this.frame=$('<div></div>').addClass(outerClass).attr('id', 'jGo_infoboxF' + id).css({position:(this.fixed?'fixed':'relative'),display:'none','z-index':jGo.config.max_z_index});
+	this.frame=$('<div></div>').addClass(outerClass).attr('id', 'jGo_infoboxF' + id).css({position:(this.fixed?'fixed':'absolute'),display:'none','z-index':jGo.config.max_z_index});
 	this.parent.append(this.frame);
 	if(menucontrol){
 		//connect to menu control
@@ -63,7 +64,11 @@ proto.create = function(id, args){
  *  fill
  *  	content - stuff you put in the infobox
  */
-proto.fill = function(content){
+proto.fill = function(content,debug){
+	if(debug){
+		this.debug+="</br>" + content;
+		content=this.debug;
+	};
 	this.frame.html("<div id='jGo_infobox_content" + this.id + "' style='"+this.style.css+"'>"+content+"</div>");
 };
 /*

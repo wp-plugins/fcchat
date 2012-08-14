@@ -16,17 +16,19 @@ $fcchat_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dir
 $fcchat_options = get_fcchat_widget_options();
 	echo 'if(!window["FCChatConfig"]){window["FCChatConfig"] = {}}(function(){var a = window["FCChatConfig"];';
 	foreach($fcchat_options as $key => $value){
-		if($fcchat_options[$key]['type']!='comment'&&$key!='template_overrides'){
+		if($key=='templates'||$key=='quickstyling'){
+			echo 'a.' . $key . '=' . '{' . $fcchat_options[$key]['value'] . '};';
+		}else if($fcchat_options[$key]['type']!='comment'&&$key!='template_overrides'){
 			if($fcchat_options[$key]['quote']=='1'||($fcchat_options[$key]['quote']=='2'&&$fcchat_options[$key]['value']!='true'&&$fcchat_options[$key]['value']!='false')){
-				echo 'a.' . $key . '=' . '"' . $fcchat_options[$key]['value'] . '";';
-			}else{
-				if($fcchat_options[$key]['value']==''){
-					$fcchat_options[$key]['value']='""';
+					echo 'a.' . $key . '=' . '"' . $fcchat_options[$key]['value'] . '";';
+				}else{
+					if($fcchat_options[$key]['value']==''){
+						$fcchat_options[$key]['value']='""';
+					}
+					echo 'a.' . $key . '=' . str_replace("window['fc_chat_path']",'"' . $fcchat_plugin_url . '"',$fcchat_options[$key]['value']) . ';';
 				}
-				echo 'a.' . $key . '=' . str_replace("window['fc_chat_path']",'"' . $fcchat_plugin_url . '"',$fcchat_options[$key]['value']) . ';';
 			}
 		}
-	}
 	echo '})();';
 
 ?>

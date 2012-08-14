@@ -13,6 +13,7 @@ jGo.DefaultToolbar = function() {
     this.context;
     this.items;
     this.placement;
+    this.left_offset;
     this.minimized_text;
     this.isVisible;
     this.minimized;
@@ -78,7 +79,8 @@ proto.create = function(id, p){
 	this.isVisible = (p[7]!=null?p[7]:true);
     this.parent= p[9] || $(document.body);
     this.track_window_events = (p[11]!=null?p[11]:true);
-
+    this.left_offset=p[6]||26;
+    
     //dim
 	
 	this.width=this.calculateWidth(0)+style.icon_tray.width;
@@ -88,9 +90,8 @@ proto.create = function(id, p){
 		this.min_width=style.icon_tray.restore.width+style.icon_tray.width+10+this.calculateWidth(hiddenItemStart);
 	}
 	var width=this.getCurrentWidth();
-	
 	var top =  (this.placement.indexOf('top')!=-1?-1:jGo.util.getInnerHeight()-style.height)+(p[5]?p[5]:0);
-	var left = (this.placement.indexOf('left')!=-1?5:jGo.util.getSWidth()-(width+26))+(p[6]?p[6]:0);
+	var left = (this.placement.indexOf('left')!=-1?5:jGo.util.getSWidth()-(width+this.left_offset));
 	
 	//workarounds for browser idiosyncrasies 
     var ie_offset=0;
@@ -230,7 +231,7 @@ proto.reposition = function(){
 			elem.css('top',(jGo.util.getInnerHeight()-this.style.height)+'px');
 		}
 		if(this.placement.indexOf('right')!=-1){
-			elem.css('left',(jGo.util.getSWidth()-(this.getCurrentWidth()+26))+'px');
+			elem.css('left',(jGo.util.getSWidth()-(this.getCurrentWidth()+this.left_offset))+'px');
 		}
 		this.frame.css("display","block");
 	}

@@ -20,3 +20,7 @@ if (!window["jGo"] || window["jGo"].version < 1.0) {
 				+ "jGo/css/jGo.min.css' type='text/css'>");
 	}
 }
+//Load Global Config
+if(FCChatConfig.use_global_configuration){
+	document.write("<script language='JavaScript' src='" + (FCChatConfig.global_configuration_url!=''?FCChatConfig.global_configuration_url:FCChatConfig.dir + "config/global.config.js")+"'></script>");
+}

@@ -29,7 +29,7 @@ jGo.fcchat_toolbar.social_media.style={
 (function () {
 	
 	var jQ = jGo.$;
-	var z_b = FCChatConfig.zindex_base;
+	var z_b = jGo.config.max_z_index - 100;
 	var basedir = FCChatConfig.dir;
 	var rendered=0;
 	var sitecode={};
@@ -91,7 +91,7 @@ jGo.fcchat_toolbar.social_media.style={
 			"<div class='fc_abbtn' ><a title='"+fc_chat.textSetter(343,'Share')+"' href='javascript:jGo.fcchat_toolbar.social_media.tgl_dialog()' ><img src='"+basedir+"current_skin/twitter.png'><img src='"+basedir+"current_skin/facebook.png'>&nbsp;</a></div></div>";
 	};
 	var create_dialog = function(){
-		  dialog= "<div class='jGo_app jGo_myapp jGo_dialog' id='fc_social_media_dialog' style='position:absolute;display: none;visibility: visible;"+config.dialog_box.css+";text-align:left;height:"+config.dialog_box.height+"px;width:"+config.dialog_box.width+"px;top: 113px; left:210px; z-index:" + (z_b + 104) + ";overflow:hidden;'>" +
+		  dialog= "<div class='jGo_app jGo_myapp jGo_dialog' id='fc_social_media_dialog' style='position:absolute;display: none;visibility: visible;"+config.dialog_box.css+";text-align:left;height:"+config.dialog_box.height+"px;width:"+config.dialog_box.width+"px;top: 113px; left:210px; z-index:" + z_b + ";overflow:hidden;'>" +
 			"<div id='fc_social_media_dialog_title' style='position:absolute;width:"+config.dialog_box.width+"px;"+config.dialog_box.title_box_css+";overflow:hidden'><div style='padding:4px;'><span style='"+config.dialog_box.text.title_css+"'>"+fc_chat.textSetter(343,'Share')+"</span>&nbsp;&nbsp;&nbsp;<a style='"+config.dialog_box.text.link_css+"' href='javascript:jGo.fcchat_toolbar.social_media.tgl_dialog()'>"+fc_chat.textSetter(360,'Close')+"</a></div></div>" +
 			"<div  id='fc_view_social_media_dialog' style='position:absolute;width:"+config.dialog_box.width+"px;"+config.dialog_box.info_box_css+";overflow:auto'></div></div>";
 			return dialog;

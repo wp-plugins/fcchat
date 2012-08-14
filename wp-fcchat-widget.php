@@ -3,7 +3,7 @@
 Plugin Name: FCChat Widget
 Plugin URI: http://www.fastcatsoftware.com
 Description: Add full featured chat to the sidebar.
-Version: 2.3.1.5
+Version: 3.0
 Author: Fastcat Software
 Author URI: http://www.fastcatsoftware.com
 License: GPL2
@@ -61,7 +61,9 @@ function fcchat_add_header_js(){
 		$fcchat_options = get_fcchat_widget_options();
 		echo '<script type="text/javascript">if(!window["FCChatConfig"]){window["FCChatConfig"] = {}}(function(){var a = window["FCChatConfig"];';
 		foreach($fcchat_options as $key => $value){
-			if($fcchat_options[$key]['type']!='comment'&&$key!='template_overrides'){
+			if($key=='templates'||$key=='quickstyling'){
+				echo 'a.' . $key . '=' . '{' . $fcchat_options[$key]['value'] . '};';
+			}else if($fcchat_options[$key]['type']!='comment'&&$key!='template_overrides'){
 				if($fcchat_options[$key]['quote']=='1'||($fcchat_options[$key]['quote']=='2'&&$fcchat_options[$key]['value']!='true'&&$fcchat_options[$key]['value']!='false')){
 					echo 'a.' . $key . '=' . '"' . $fcchat_options[$key]['value'] . '";';
 				}else{
@@ -174,7 +176,7 @@ function fcchat_widget_init() {
 		//Links
 		echo '<p style="text-align:left">Here are some other helpful links:</p>';
 		echo '<p style="text-align:left"><a href="http://www.fastcatsoftware.com/chat/userguide/Step6.asp" TARGET="_blank" >FCChat Configuration Topics</a></p>';
-		echo '<p style="text-align:left"><a href="http://www.fastcatsoftware.com/chat/Manual.html" TARGET="_blank" >FCChat Manual</a></p>';
+		echo '<p style="text-align:left"><a href="http://www.fastcatsoftware.com/chat/Manual3.html" TARGET="_blank" >FCChat Manual</a></p>';
 		echo '<p style="text-align:left">If you need assistance, or have any ideas on making this product better, please contact us at <a href="mailto:support@fastcatsoftware.com">support@fastcatsoftware.com</a></p>';
 
                 // Submit
@@ -273,7 +275,7 @@ function fcchat_settings_page() {
 <input type="hidden" id="fcchat-settings-submit" name="fcchat-settings-submit" value="1" />
 
 <?php
-_e('This page is an HTML implemention of the FCChat configuration file (fcchat/config/config.js). For a complete description of the functions and usage of the variables below, refer to the FCChat manual. You can restore the settings to their default values by pressing the reset button below', 'menu-test' );
+_e('This page is an HTML implemention of the FCChat configuration file (fcchat/config/config.js). For a complete description of the functions and usage of the variables below, refer to the <a href="http://www.fastcatsoftware.com/chat/Manual3.html" TARGET="_blank" >FCChat Manual</a>. Some additional tutorials are found in the <a href="http://www.fastcatsoftware.com/chat/userguide/index.html" TARGET="_blank" >User Guide</a>. You can restore all the settings to their default values by pressing the reset button below.', 'menu-test' );
 echo '<br /><br />';
 foreach($fcchat_options as $key => $value){
 	if($fcchat_options[$key]['type']=='comment'){
@@ -290,7 +292,7 @@ foreach($fcchat_options as $key => $value){
 		echo '</p><hr />';
 	}else if($fcchat_options[$key]['type']=='textarea'){
 		echo '<p>' . _e($fcchat_options[$key]['desc'], 'menu-test' ); 
-		echo '&nbsp;&nbsp;<b>' . $key . '</b><br>&nbsp; <textarea style="font-size:16px;font-family:arial;width:100%;height:200px" name="fcchat-' . $key . '">' . $fcchat_options[$key]['value'] . '</textarea>';
+		echo '&nbsp;&nbsp;<b>' . $key . '</b><br>&nbsp; <textarea style="font-size:16px;font-family:arial;width:100%;height:300px" name="fcchat-' . $key . '">' . $fcchat_options[$key]['value'] . '</textarea>';
 		echo '</p><hr />';
 	}else{
 		echo '<p><b>' . $key . '</b>&nbsp; ' . _e($fcchat_options[$key]['desc'], 'menu-test' ); 
@@ -324,18 +326,70 @@ function fcchat_add_pages() {
 }
 
 function fcchat_activate() {
-    /*
     if(($fcchat_options = get_option('fcchat_widget')) !== FALSE){
+	$updates_found=false;
+	$updated=false;
+
+
+	// look for 3.0 updates
     	foreach($fcchat_options as $key => $value){
-	 	
-         
+	 	if($key=='updates'){
+			if(strpos($value , "update 3.0;")){
+				$updated=true;
+			}
+			$updates_found=true;
+         	}
     	}
+	if(!$updates_found){
+		$fcchat_options['updates']='update 3.0;';
+	}else{
+		if(!$updated){
+			$fcchat_options['updates']+='update 3.0;';
+		}
+	}
+
+	// apply 3.0 updates
+	if(!$updated){
+		foreach($fcchat_options as $key => $value){
+	 		if($key=='forum_proxy'){
+				$proxy="";
+				if(strpos($value , "wordpress_proxy")){
+					$proxy="wordpress";
+				}
+				if(strpos($value , "wordpress_proxy2")){
+					$proxy="wordpress2";
+				}
+				if(strpos($value , "joomla")){
+					$proxy="joomla";
+				}
+				if(strpos($value , "phpbb3")){
+					$proxy="phpbb";
+				}
+				if(strpos($value , "smf")){
+					$proxy="smf";
+				}
+				if(strpos($value , "mybb")){
+					$proxy="mybb";
+				}
+				$fcchat_options['user_integration_bridge']=$proxy;
+			}
+         	}
+		$fcchat_options['startText']="Click here to join our chat.";
+		$fcchat_options['loginText']="Please sign in to join our chat.";
+		$fcchat_options['autoGreet']="Wellcome!! ";
+		$fcchat_options['max_video_streams']="100";
+		$fcchat_options['avatars_dir']="";
+		$fcchat_options['images_dir']="";
+		$fcchat_options['smileys_dir']="";
+		$fcchat_options['avatar_sz']="18";
+		$fcchat_options['window_height_offset']="-160";
+		$fcchat_options['chat_room_height_offset']="105";
+	}
     	// Save changes
     	update_option('fcchat_widget', $fcchat_options);
     }
-    */
 }
 
-//register_activation_hook( __FILE__, 'fcchat_activate' );
+register_activation_hook( __FILE__, 'fcchat_activate' );
 
 ?>

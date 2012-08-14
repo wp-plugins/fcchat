@@ -22,6 +22,9 @@
 		this.restore_label;
 		this.pin_label;
 		this.unpin_label;
+		this.clientX=5;
+		this.clientY=40;
+		this.borderWidth=0;
 		this.t;
 		this.tI;
 		this.tC;
@@ -126,17 +129,23 @@
 		if (!this.frame[0]) {
 			this.frame = $(document.createElement('div')).attr({
 				'id' : 'jGo_win' + id
-			}).addClass('jGo_app jGo_myapp jGo_ydsf');
+			}).addClass('jGo_app jGo_myapp');
 			$(document).append(this.frame);
 		}
 		this.frame.css({
 			display : "block",
 			width : (jGo.util.eN(width) + 10) + "px",
-			height : (jGo.util.eN(height) + 35) + "px",
+			height : (jGo.util.eN(height) + 45) + "px",
 			position : (this.fixed ? "fixed" : "absolute"),
+			border: this.borderWidth + "px solid silver",
+			//"-moz-border-radius": "5px",
+			//"-webkit-border-radius": "5px",
+			//"border-radius":"5px",
 			top : top + "px",
 			left : left + "px"
 		});
+		this.clientX+=this.borderWidth;
+		this.clientY+=this.borderWidth;
 		var background = "background-color:#" + _backgroundColor + ";";
 		var top_left = "border-top-left-radius:";
 		var top_right = "border-top-right-radius:";
@@ -145,16 +154,17 @@
 		if (_backgroundColor == '') {
 			background = "background-image:url(" + _backgroundImage + ");";
 		}
-		this.frame[0].innerHTML = "<table id='jGo_inner" + id
-				+ "' cellpadding=0 cellspacing=0 class='jGo_inner' >" + "<tr>"
+		var inner_border_curve='5px;';
+		this.frame[0].innerHTML = "<table "
+				+ " cellpadding=0 cellspacing=0  style='-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);'>" + "<tr>"
 				+ "<td id='jGo_dragtl" + id + "' class='jGo_tl_" + winstyle
-				+ "' style='-moz-" + top_left + "5px;-webkit-" + top_left
-				+ "5px;" + top_left + "5px;" + style + "'>" + c[0] + "</td>"
+				+ "' style='-moz-" + top_left + inner_border_curve + "-webkit-" + top_left
+				+ inner_border_curve + top_left + inner_border_curve  + style + "'>" + c[0] + "</td>"
 				+ "<td id='jGo_dragtm" + id + "' class='jGo_tm_" + winstyle
 				+ "' style='" + style + "'>" + c[1] + "</td>"
 				+ "<td id='jGo_dragtr" + id + "' class='jGo_tr_" + winstyle
-				+ "' style='-moz-" + top_right + "5px;-webkit-" + top_right
-				+ "5px;" + top_right + "5px;" + style + "'>" + c[2] + "</td>"
+				+ "' style='-moz-" + top_right + inner_border_curve + "-webkit-" + top_right
+				+ inner_border_curve + top_right + inner_border_curve + style + "'>" + c[2] + "</td>"
 				+ "</tr>" + "<tr>" + "<td id='" + id_prefix + "rl" + id
 				+ "' class='jGo_rl_" + winstyle + "' style='" + style + "'>"
 				+ c[3] + "</td>" + "<td>" + "<div id='jGo_cnt_wrap" + id
@@ -189,51 +199,51 @@
 		this.cN.css({
 			"position" : (this.fixed ? "fixed" : "absolute"),
 			"z-index" : (this.frame.css("z-index") + 1),
-			left : (parseInt(this.frame[0].style.left) + 5) + 'px',
-			top : (parseInt(this.frame[0].style.top) + 30) + 'px'
+			left : (parseInt(this.frame[0].style.left)+this.clientX) + 'px',
+			top : (parseInt(this.frame[0].style.top)+this.clientY) + 'px'
 		});
 		var elements = [];
 		var offset = this.frame.width();
 		this.cB = $(document.createElement('div')).attr("id",
-				"jGo_clickcl" + id).css("left", (offset - 40) + "px");
+				"jGo_clickcl" + id).css("left", (offset - 35) + "px");
 		this.MB = $(document.createElement('div')).attr("id",
-				"jGo_clickmx" + id).css("left", (offset - 65) + "px");
+				"jGo_clickmx" + id).css("left", (offset - 60) + "px");
 		this.mB = $(document.createElement('div')).attr("id",
-				"jGo_clickmn" + id).css("left", (offset - 90) + "px");
+				"jGo_clickmn" + id).css("left", (offset - 85) + "px");
 		this.pB = $(document.createElement('div')).attr("id",
-				"jGo_clickpn" + id).css("left", (offset - 115) + "px");
+				"jGo_clickpn" + id).css("left", (offset - 110) + "px");
 		$([ this.cB[0], this.MB[0], this.mB[0], this.pB[0] ]).css({
 			position : "absolute",
 			width : "21px",
 			height : "21px",
 			display : "block",
-			top : "-5px"
+			top : "9px"
 		});
-		this.tI = $(document.createElement('div')).attr("id",
-				"jGo_title_inner" + id).css({
+		this.tI = $(document.createElement('img')).attr({"id":
+				"jGo_title_inner" + id,"src":logo}).css({
 			width : "16px",
-			background : "url(" + logo + ") no-repeat",
-			left : "0px"
+			left : "5px",
+			opacity:this.opacity / 100
 		});
 		this.t = $(document.createElement('div')).attr("id", "jGo_title" + id)
 				.css({
 					width : (offset - 116) + "px",
-					left : "16px",
+					left : "21px",
 					overflow : "hidden"
 				});
 		this.tC = $(document.createElement('div'))
 				.attr("id", "jGo_dragtc" + id).css({
 					width : (offset - 100) + "px",
-					left : "0px",
+					left : "5px",
 					"background-color" : color,
 					opacity : .0001
 				});
 		$([ this.tI[0], this.t[0], this.tC[0] ]).addClass("jGo_title_default")
 				.css({
 					position : "absolute",
-					height : "15px",
+					height : "16px",
 					display : "block",
-					top : "-5px",
+					top : "7px",
 					cursor : "default"
 				});
 		this.frame.append(this.cB, this.MB, this.mB, this.tI, this.t, this.tC);

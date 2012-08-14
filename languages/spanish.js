@@ -43,18 +43,18 @@ FCChatConfig.txt = {
 	// Botones
 	t4: "Encender",
 	t5: "Apagar",
-	t6: "Abrir ChatCenter",
+	t6: "Página Completa",
 	t7: "Ayuda?",
-	help_width:160,
+	help_offset:1,
 	t8: "Cerrar",
-	close_width: 54,
-	t9: "Salas&nbsp;/&nbsp;Opciones",
+	close_offset:0,
+	t9: "Opciones",
 	t10: "Enviar a la Sala",
-	t11: "Enviar a amigo&nbsp;&nbsp;",
-	send_buttons_width: 178,
+	t11: "Enviar a amigo",
+	functions_bar_width: 255, //sign in, user list, help etc. 
 	
 	// Sección de Títulos
-	t12: "Sala de Chat",
+	t12: "Salas de Chat",
 	chat_room_width: 72,
 	t13: "Volver",
 	t14: "Mensajes",
@@ -166,14 +166,14 @@ FCChatConfig.txt = {
 	t95: "¡Perdón! El número máximo de salas ha sido alcanzado.",
 	
 	// Diálogo de alerta
-	alert_dialog_width: 260,
+	alert_dialog_width: 350,
 	t96: "<font style='color:red;font-weight:700'>Conexión pérdida...</font> <a href='javascript:fc_chat.reqRecon()'>Reconectar</a> <a href = 'javascript:fc_chat.closeChat()'>Cerrar</a> ",
 	t97: "Desconectando ...",
-	t98: "<font style='color:red;font-weight:700'>¡Perdón! La sala ha cerrado...</font><br><center><a href='javascript:fc_chat.reqRecon()'>Reconectar</a> <a href='javascript:fc_chat.closeChat()'>Cerrar</a></center>",
+	t98: "¡Perdón! Esta sala ha cerrado.",
 	t99: "Para entrar,<b> Login </b> primera, por favor. <a href='javascript:fc_chat.closeChat()'>Cerrar</a>",
 	
 	// Widget Msgs
-	t100: "<b>Conectando. Espere, por favor...</b>",
+	t100: "<b>Conectando. Espere, por favor</b>",
 	t101: "<b>Ha cerrado la sesión... <a class='fc_link' href='javascript:fc_chat.reqRecon()'>Reconnectar</a></b>",
 	t102: "<b>&nbsp;Chat está apagado.&nbsp;&nbsp;</b>",
 	t103: "<b>Chat en pausa... <a class='fc_link' href='javascript:fc_chat.unPause()'>Reanudar</a></b>",
@@ -181,11 +181,11 @@ FCChatConfig.txt = {
 	t105: "Error de conexión. Intentando de nuevo. Intento",
 	t106: "¡Perdón! No se pude conectar. Renunciando..",
 	t254: "Nuevo mensaje...",
-	t258: "<b>Pop-out Ventana abierto...<a class='fc_link' href='javascript:fc_chat.reqRecon()'>Reanudar</a></b>",
+	t258: "<b>Chat en pausa...<a class='fc_link' href='javascript:fc_chat.reqRecon()'>Reanudar</a></b>",
 	
 	// Salas de Chat
-	t107: "¡Bienvenido! Tu nombre de usuario es",
-	t108: "Para iniciar sesión, haga clic en el nombre de usuario en la barra lateral.",
+	t107: "Tu nombre de usuario es",
+	t108: "Para iniciar sesión, haga clic en 'Iniciar sesión' abajo.",
 	t109: "En este momento, está en la sala: ",
 	t110: "<a href='javascript:void' onClick='fc_chat.tgl_options();return false'>Vea la lista de salas</a>",
 	t111: "Ante",
@@ -196,10 +196,10 @@ FCChatConfig.txt = {
 	t116: "Historia Pagina",
 	t117: "Chat actual",
 	t118: "Auto-borrar. Sobrepasado el límite de mensajes.",
-	t119: "**Comentarios Borrados**",
-	t120: "<b><div style='margin-left:10px;margin-top:10px;font-size:12pt;'>&nbsp;Chat cargando ... Espere, por favor...</div></b>",
-	t121: "<b><div style='margin-left:10px;margin-top:10px;font-size:12pt;'>&nbsp;Pagina cargando... Espere, por favor...</div></b>",
-	t122: "<b><div style='margin-left:10px;margin-top:10px;font-size:12pt;'>&nbsp;Sala cargando... Espere, por favor...</div></b>",
+	t119: "*****",
+	t120: "Chat cargando ... Espere, por favor...",
+	t121: "Pagina cargando... Espere, por favor...",
+	t122: "Sala cargando... Espere, por favor...",
 	
 	//Tipos de cuenta
 	t123: "mod",
@@ -252,8 +252,8 @@ FCChatConfig.txt = {
 	
 	// Aplicación de Windows
 	t151: "ChatCenter",
-	t152: "FCChat Video",
-	t153: "FCChat Video",
+	t152: "Video",
+	t153: "Video",
 	t154: "minimizar",
 	t155: "maximizar",
 	t156: "restaurar",
@@ -261,7 +261,7 @@ FCChatConfig.txt = {
 	
 	// Msgs Otros Estado
 	t158: "Espere, por favor",
-	t159: "<b>Conectando. Espere, por favor...</b>",
+	t159: "<b>Conectando. Espere, por favor</b>",
 	t160: "No está listo... Usted puede usar el chat-box, que se encuentra en la barra lateral, para entrar en las salas de chat.",
 	t161: "Perdón... Ha ocurrido un error. Recargar.",
 	
@@ -335,7 +335,7 @@ FCChatConfig.txt = {
 	
 	// Video
 	t224: "Video Chat Cargando ... Este proceso puede tardar unos segundos.",
-	t225: "¡Perdón! Usted no puede abrir el vídeo chat publico de esta sala. Para utilizar el vídeo chat publico, debe estar en una habitación que tiene (a/v) al lado de él.",
+	t225: "Para utilizar el vídeo chat publico, debe estar en una sala que tiene (a/v) al lado de él.",
 	t226: "Este usuario está charlando en una sala privada: ",
 	t227: ". Usted debe ser un miembro de esta sala para ver su webcam.",
 	t228: "¡Perdón! El vídeo chat ha alcanzado su capacidad. Inténtelo más tarde.",
@@ -385,7 +385,7 @@ FCChatConfig.txt = {
 	t270: "Este usuario no está conectado.",
 
 	// Barra de herramientas flotante
-	t266: "Ver mensajes",
+	t266: "Mensajes",
 	t267: "nuevo",
 	t269: "Amigos",
 	t271: "Nuevos mensajes",
@@ -398,7 +398,7 @@ FCChatConfig.txt = {
 	t276: "A",
 	t277: "No tiene mensajes nuevos.",
 	t278: "Haga clic en Abrir ChatCenter para acceder",
-	t279: "Haga clic en Abrir ChatCenter para más opciones",
+	t279: "Haga clic en Abrir Chat Completo para más opciones",
 	t280: "invitar a compartir su pizarra",
 	t281: "Añadir a amigos",
 	t282: "Haga clic aquí para enviar un mensaje",
@@ -408,7 +408,10 @@ FCChatConfig.txt = {
 	t284: "Cerrar",
 	t285: "Los usuarios con indicadores verdes están disponibles para chat.<br> su nombre de chat. Clic nombre para chatear y otras opciones.",
 	t286: "Eliminar de amigos",
-	t290: "FriendsCenter",
+	
+	// Minimized
+	t290: "Chat",
+	minimized_text_width_offset:0,
 	
 	//Online Box
 	t291: "Cerrar",
@@ -483,7 +486,7 @@ FCChatConfig.txt = {
 	//added 2.2.5.1
 	t340: "Configurar",
 	t341: "¡Perdón! No se puede enviar este mensaje.",
-	t342: "Cambiar nombre",
+	t342: "Iniciar session",
 	
 	//added 2.2.5.2
 	//social media plugin
@@ -527,9 +530,9 @@ FCChatConfig.txt = {
 	
 	//Added in 2.2.12
 	t367:"Chats",
-	t368:"Fuera de línea",
+	t368:" Fuera de línea",
 	t369:"Opciones",
-	t370:", su sala actual y su configuración se muestra a continuación.",
+	t370:", su configuración se muestra a continuación.",
 	t371:"Cerrar esta pantalla",
 	t372:"cuando termine de ver.",
 	
@@ -548,11 +551,54 @@ FCChatConfig.txt = {
 		
 	//added 2.3
 	t385:"Opcions",
-	settings_width:42,
 	t386:"Abrir MsgCenter",
 	t387:"Entrar MsgCenter",
 	t388:"MsgCenter",
-	t389:"Para enviar un mensaje, resalte un usuario en tu lista de amigos, en primer lugar. Para añadir un usuario a su lista de amigos, haga clic en su nombre de pantalla, y seleccione 'Añadir a amigos'.",
+	t389:"Para enviar un mensaje, resalte un usuario, en primer lugar. Para añadir un usuario a su lista de amigos, haga clic en su nombre de pantalla, y seleccione 'Añadir a amigos'.",
 	t390:"No está en uso",
-	t391:"Despedir"
+	t391:"Despedir",
+	
+	//added 3.0
+	t392:"<font style='color:red;font-weight:700'>Conexión Perdido...</font> <a href='javascript:fc_chat.reqRecon()'>Reconectar</a>",
+	t393:"Por favor inicie sesión.",
+	t394:"Los invitados pueden observar habitaciones sólo. Para chatear, favor inicia una sesión",
+	t395:"Salir sala",
+	t396:"Mens: ",
+	t397:"Nuevo: ",
+	t398:"Última puesta ",
+	t399:" por ",
+	t400:"Salir de la sala actual",
+	t401:"Cargando lista de salas... Por favor espere...",
+	t402:"No hay sala seleccionado",
+	t403:"Seleccione una Sala",
+	t404:"Tiene mensajes sin leer en su caja de mensajes. Haga click en 'Abrir Chat Completo' para ver.",
+	t405:"Salas de Chat",
+	t406:"No hay imagen",
+	t407:"Sala",
+	t408:"Mens",
+	t409:"Lo sentimos, este usuario no está disponible para chat privado.",
+	t410:"Por favor inicie sesión para chatear.",
+	t411:"Por favor, seleccione una sala.",
+	t412:"Video chat está deshabilitado para las cuentas de invitados.",
+	t413:"Los invitados no pueden video chat. Por favor inicie sesión.",
+	t414:"Conn. Perdido... Intentar de nuevo en 5 segs. <a href='javascript:fc_chat.stop()'>Parar</a>",
+	t415:"Abrir tu casilla de mensajes.",
+	t416:"Abrir Chat Completo",
+	t417:"Este usuario está charlando en la sala: "
 };
+
+//Language style overrides
+if(FCChatConfig.quickstyling.alldomains.widget.width_prop_offsets=="0:0:0"){
+	FCChatConfig.quickstyling.alldomains.widget.width_prop_offsets="0:40:30";
+}
+if(FCChatConfig.quickstyling.alldomains.widget.width_offset==0){
+	FCChatConfig.quickstyling.alldomains.widget.width_offset=10;
+}
+if(FCChatConfig.quickstyling.alldomains.toolbar.width_prop_offsets=="0:0:0"){
+	FCChatConfig.quickstyling.alldomains.toolbar.width_prop_offsets="30:60:0";
+}
+FCChatConfig.language_template_overrides=function(){
+	FCChatConfig.styles.chat_window.main_panel.send_to_room_button.default_css+=";padding:2px 64px;";
+	FCChatConfig.styles.widget.toolbar_item.chatcenter_layout.off_button.left+=5;
+	FCChatConfig.styles.widget.toolbar_item.msgcenter_layout.off_button.left+=5;
+}

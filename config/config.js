@@ -5,9 +5,11 @@
 var FCChatConfig_wp = {
 	port:443,
 	policy_port:443,
-	version:"2.3.1",
+	version:"3.0",
 	subversion:"0",
 	jQuery_stable:"1.6.4",
+	use_global_configuration:false,
+	global_configuration_url:"", 
 	language_template:"english.js",
 	widget_style_template:"widget_default_sidebar.js",
 	toolbar_style_template:"toolbar_default.js",
@@ -25,7 +27,7 @@ var FCChatConfig_wp = {
 	websocketEnabled:"test",
 	domain:null,
 	dir: window["fc_chat_path"] || "/FCChat/",
-	alt_dir: window["fc_chat_path"] || "/FCChat/",
+	alt_dir:"",
 	proxy_type:"wordpress",
 
 	// LOADING PHRASES

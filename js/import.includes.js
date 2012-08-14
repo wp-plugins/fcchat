@@ -12,10 +12,17 @@ function fcchat_includes(){
 		jGo.scripts.importClass('jGo.postMessage.min.js', 'static', this,
 				null);
 	}
-	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.toolbar_style_template + "'></script>");
-	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.chatcenter_style_template + "'></script>");
-	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + FCChatConfig.widget_style_template + "'></script>");
+	var template = FCChatConfig.templates;
+	if(window["fcchat_domain"]&&template[window["fcchat_domain"]]){
+			template = template[window["fcchat_domain"]];
+	}else{
+			template = template.alldomains;
+	}
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "languages/" + FCChatConfig.language_template + "'></script>");
+	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + template.application_window + "'></script>");
+	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + template.toolbar + "'></script>");
+	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + template.widget + "'></script>");
+	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/template_overrides.js'></script>");
 	for(var i = 0;i<FCChatConfig.toolbar_items.length;i++){
 		if(FCChatConfig.toolbar_items[i]!="friendscenter"){
 			document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "toolbar_items/"+FCChatConfig.toolbar_items[i].replace(/:/g, '/')+".js'></script>");
@@ -25,9 +32,6 @@ function fcchat_includes(){
 	}
 	if(FCChatConfig.prompt_user){
 		document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/prompt.js'></script>");
-	}
-	if(FCChatConfig.use_template_overrides){
-		document.write("<script language='JavaScript' src='" + (FCChatConfig.template_overrides_url!=''?FCChatConfig.template_overrides_url:FCChatConfig.dir + "styles/fcchat_template_overrides.js")+"'></script>");
 	}
 	if(FCChatConfig.flashEnabled=='test'){
 		FCChatConfig.flashEnabled=false;
@@ -85,19 +89,6 @@ function fcchat_includes(){
 		  }
 		});
 	};
-};
-
-function fc_chat_load_from_link(elem,mode){
-	try{
-		if(window.fc_chat && fc_chat.try_connection(mode) =="1"){
-			jGo.$("span.fc_chat_link_msg").remove();
-			fc_chat.open_chat_box(null,1,mode);
-		}else{
-			alert(FCChatConfig.txt.t160);
-		}
-	}catch(e){
-		alert(FCChatConfig.txt.t160);
-	}
 };
 
 if(!FCChatConfig['delay_import']){

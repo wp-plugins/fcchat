@@ -5,16 +5,17 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 2.3.1.5
+Stable tag: 3.0
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
 == Description ==
 
-FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
+FCChat 3.0 BETA. (Stable version 2.3.1.5) FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
 
 MOST RECENT FEATURES
 
+FCChat 3.0 is here! It's still Beta, and will be for a few weeks. If you don't want to try the beta version, you can pick up the previous stable version (2.3.1.5)
 The video chat now supports Flash player 11's h264 streaming capability. This represents a significant enhancement, in terms of video resolution and bandwidth usage. There are now 2 different layouts available for the chat window: Chatcenter and MsgCenter. The new MsgCenter layout is for those of you wish to use the Instant Messanger feature exclusively. 
 
 UPGRADE NOTICE
@@ -33,7 +34,7 @@ Real time text chat
 
 Video Chat: 1 on 1 video chat and video conferencing (6 Simulaneous Cams)
 
-Pop-out Mode: Launch Chat into a separate window
+Full Page Mode: Launch Chat into a separate tab
 
 Public rooms/Private Rooms
 
@@ -484,8 +485,8 @@ Corrected an issue with table css not being properly shielded. Also, an issue wi
 
 == Upgrade Notice ==
 
-= 2.x =
+= 2.x - 3.x =
 
-*Version 2.x requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
+*Requires that you obtain a new chat ID if you are upgrading from a version prior to 2.1.8.
 
 To upgrade from any previous version to the current version, first, make backup copies of the 2 configuration files in your old installation (fcchat/config/config.js, fcchat/html/config/config.php) and place them in a safe place where they will not be deleted. Next uninstall the old version and install the current version. Finally, copy your old configuration setting manually to the current version's configuration files. Of course, if you made no alterations to the config files in your previous installation, you may just simply install the new version. Refresh your browser's cache and cookies after upgrading to insure that the browser is displaying the new installation correctly.

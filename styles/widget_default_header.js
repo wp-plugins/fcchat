@@ -19,129 +19,161 @@
  * If you create a decent style template. Please email us the template at 
  * support@fastcatsoftware.com
  */
-
-FCChatConfig.styles.widget={
-	control:{
-		top:0, //for absolute positioning
-		left:310, //"     "
-		width:580,
-		height:35,
-		css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
-		topband:{
-			css:"display: block;background-color:gray;text-align:left;width:190px;height:35px; top: 0px; left:0px;"
-		},
-		buttons:{
-			default_css:"border:1px solid #aaaaaa; padding:4px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
-			states:{
-				link_css:"color:#efefef",
-				hover_css:"color:lightblue",
-				disabled_css:"color:#dddddd;border:1px solid #aaaaaa"
-			},
-			open_chat_button:{
-				top:5,
-				left:5
-			},
-			on_off_button:{
-				top:5,
-				left:127
-			}
-		},
-		info_box:{
-			top:5,
-			left:193,
-			width:390,
-			height:25,
-			css:"background-color:transparent",
-			linebreak:"",
-			text:{
-				css:"font-family:arial;font-size:9pt;color:#444444",
-				alert_css:"font-family:arial;font-size:9pt;color:green;font-weight:bold",
-				link_css:"text-decoration:none;font-family:arial;font-size:9pt;color:blue",
-				info_css:"color:green"
-			}
-		}
-    },
+(function(){
+	var widget_base_font = "font-family:arial;font-size:12px;color:#444444;";
+	var toolbar_base_font = jGo.fcchat_toolbar.style.text;
+	FCChatConfig.styles.widget={
+			control:{
+				top:0, //for absolute positioning
+				left:310, //"     "
+				width:680,
+				height:35,
+				align_dialogs:false,
+				css:"background-color:#eeeeee;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;",
+				logo:{
+					top:9,
+					left:10,
+					css:""
+				},
+				title_box:{
+					top:6,
+					left:30,
+					width:90,
+					height:30,
+					css:"background-color:transparent;",
+					text:{
+						css:widget_base_font+";font-weight:bold;font-size:12px;color:#777777;"
+					}
+				},
+				status:{
+					css:""
+				},
+				buttons:{
+					top:6,
+					left:120,
+					width:140,
+					height:25,
+					default_css:widget_base_font+";text-decoration:none;",
+					states:{
+						link_css:"color:rgb(22, 125, 200);",
+						hover_css:"color:darkblue;",
+						disabled_css:"color:#aaaaaa;"
+					},
+					full_page_button:{
+						css:""
+					},
+					on_off_button:{
+						css:"margin-left:20px;"
+					}
+				},
+				info_box:{
+					top:6,
+					left:260,
+					width:450,
+					height:25,
+					css:"background-color:transparent;",
+					linebreak:"",
+					text:{
+						css:widget_base_font,
+						alert_css:widget_base_font+"font-weight:bold;color:green;",
+						info_css:widget_base_font+"color:#444444;"
+					}
+				}	
+		    }
+	,
 	toolbar_item:{
 		text:{
-			css:"font-family:arial;font-size:8pt;font-weight:bold;color:white",
-			alert_css:"font-family:arial;font-size:8pt;font-weight:bold;color:pink",
-			link_css:"font-family:arial;font-size:8pt;font-weight:bold;color:white",
-			info_css:"color:lightgreen"
+			css:toolbar_base_font+"color:white;",
+			alert_css:toolbar_base_font+"color:pink;",
+			link_css:toolbar_base_font+"color:white;",
+			info_css:toolbar_base_font+"color:#BFEFFF;"
 		},
 		buttons:{
-			default_css:"font-size:10px;font-weight:bold;font-family:arial;text-decoration:none",
+			default_css:toolbar_base_font+"text-decoration:none;",
 			states:{
-				link_css:"color:white",
-				hover_css:"color:yellow",
+				link_css:"color:white;",
+				hover_css:"color:yellow;",
 				disabled_css:"color:lightgray;"
 			}
 		},
 		chatcenter_layout:{
-			width:550,
+			width:610,
 			info_box:{
-				css:"width:360px;height:30px;left:10px;top:0px;",
-				padding_top:8
+				width:420,
+				css:"height:35px;left:10px;top:0px;",
+				padding_top:11
 			},
 			open_chat_button:{
-				top:7,
-				left:405
+				top:10,
+				left:465
 			},
 			off_button:{
-				top:7,
-				left:500
+				top:10,
+				left:560
 			},
 			status:{
-				css:"top:13px;left:378px;"
+				top:15,
+				left:438,
+				css:""
 			},
 			divider:{
-				css:"top:2px;left:395px;width:1px;height:26px;background-color:lightgray;"
+				top:0,
+				left:455,
+				css:"width:1px;height:35px;background-color:#aaaaaa;"
 			}
 		},
 		msgcenter_layout:{
-			width:450,
+			width:490,
 			info_box:{
-				css:"width:260px;height:30px;left:10px;top:0px;",
-				padding_top:8
+				width:300,
+				css:"height:30px;left:10px;top:0px;",
+				padding_top:11
 			},
 			open_chat_button:{
-				top:7,
-				left:305
+				top:10,
+				left:345
 			},
 			off_button:{
-				top:7,
-				left:400
+				top:10,
+				left:440
 			},
 			status:{
-				css:"top:13px;left:278px;"
+				top:15,
+				left:318,
+				css:""
 			},
 			divider:{
-				css:"top:2px;left:295px;width:1px;height:26px;background-color:lightgray"
+				top:0,
+				left:335,
+				css:"width:1px;height:30px;background-color:#aaaaaa;"
 			}
 		}
 	},
 	online_box:{
 		top:43,
-		left:240,
+		left:180,
 		toolbar_offset:3,
 		width:230,
 		height:343,
 		css:jGo.fcchat_toolbar.style.dialog_box.css,
 		title_box_css:jGo.fcchat_toolbar.style.dialog_box.title_box_css,
 		greeting_box_css:"top:40px;left:0px;height:53px;background-color:#dddddd;",
+		greeting_box_link:jGo.fcchat_toolbar.style.dialog_box.text.secondary_link_css,
 		list_box_css:"top:93px;left:0px;height:180px;",
 		list_divider_css:jGo.fcchat_toolbar.style.dialog_box.list_divider_css,
 		info_box_css:"top:273px;left:0px;height:70px;background-color:#dddddd;",
 		text:jGo.fcchat_toolbar.style.dialog_box.text
 	},
 	new_messages_box:{
-		top:null,
-		left:null,
+		top:43,
+		left:0,
 		toolbar_offset:3,
-		width:230,
+		width:300,
 		height:343,
 		css:jGo.fcchat_toolbar.style.dialog_box.css,
 		title_box_css:jGo.fcchat_toolbar.style.dialog_box.title_box_css,
 		greeting_box_css:"top:40px;left:0px;height:53px;background-color:#dddddd;",
+		greeting_box_link:jGo.fcchat_toolbar.style.dialog_box.text.secondary_link_css,
 		view_msg_box_css:"top:93px;left:0px;height:180px;",
 		send_msg_box_css:"top:273px;left:0px;height:70px;background-color:#dddddd;",
 		input_css:"height:18px !important;background-color:white !important;border:1px solid silver !important;margin-left:2px !important;color:#44444 !important;",
@@ -149,7 +181,7 @@ FCChatConfig.styles.widget={
 	},
 	friends_box:{
 		top:43,
-		left:240,
+		left:180,
 		toolbar_offset:3,
 		width:230,
 		height:343,
@@ -160,8 +192,32 @@ FCChatConfig.styles.widget={
 		info_box_css:"top:273px;left:0px;height:70px;background-color:#dddddd;",
 		text:jGo.fcchat_toolbar.style.dialog_box.text
 	},
+	chatrooms_box:{
+		top:43,
+		left:240,
+		width:400,
+		height:343,
+		css:jGo.fcchat_toolbar.style.dialog_box.css,
+		title_box_css:jGo.fcchat_toolbar.style.dialog_box.title_box_css,
+		list_box_css:"top:93px;left:0px;height:180px;",
+		text:jGo.fcchat_toolbar.style.dialog_box.text,
+		selected_color:"lightblue",
+		hover_color:"#dddddd",
+		background_color:"transparent",
+		separator:"1px solid #dddddd",
+		room_name_font_css:"font-size:14px;font-weight:bold;color:#444444;",
+		font_css:"color:#444444;font-family:arial;font-weight:normal;font-size:12px;",
+		count_font_css:"font-size:14px;color:blue;font-weight:bold;",
+		disabled_room_name_font_css:"font-size:12px;font-weight:bold;color:#dddddd;",
+		room_passwords:{
+			font:{
+				textfield_description_css:"font-family:arial;font-size:12px;color:#darkgray;font-style:italic;font-weight:bold;"
+			},
+			textfield_css:"background-color:white;border:1px solid #444444;padding:5px;color:#444444"
+		}
+	},
 	login_panel:{
-		top:40,
+		top:43,
 		left:5,
 		box_shadow:"0px 0px 12px 2px rgba(0,0,0,0.5)",
 		background_color:"#eeeeee",
@@ -172,4 +228,97 @@ FCChatConfig.styles.widget={
 		},
 		textfield_css:"background-color:#dddddd !important;color:#444444 !important;width:120px !important;height:18px !important;"
 	}
-};
+	};
+	function applyQuickStyles(){
+		var d = FCChatConfig.quickstyling;
+		var c;
+		var s = "FCChatConfig.styles.widget.control";
+		var x = jGo.util.mergeOption;
+		if(!window["fcchat_domain"]){
+			c=d.alldomains.widget;
+		
+			var w = c.width_prop_offsets.split(':');	
+			w[0]-=0;
+			w[1]-=0;
+			w[2]-=0;
+			x(s+".css",c.background_css);
+			x(s+".height",c.height_offset);
+			x(s+".width",w[0]+w[1]+w[2]);
+			x(s+".logo.top",c.logo_top_offset);
+			x(s+".logo.left",c.logo_left_offset);
+			x(s+".logo.css",c.logo_css);
+			x(s+".title_box.height",c.height_offset);
+			x(s+".title_box.top",c.text_top_offset);
+			x(s+".title_box.width",w[0]);
+			x(s+".title_box.css",c.title_css);
+			x(s+".title_box.text.css",c.base_font_css+c.title_font_css);
+			x(s+".buttons.left",w[0]);
+			x(s+".buttons.top",c.text_top_offset);
+			x(s+".buttons.height",c.height_offset);
+			x(s+".buttons.width",w[1]);
+			x(s+".buttons.default_css",c.base_font_css);
+			x(s+".buttons.states.link_css",c.link_css);
+			x(s+".buttons.states.hover_css",c.link_hover_css);
+			x(s+".buttons.states.disabled_css",c.link_disabled_css);
+			x(s+".buttons.full_page_button.css",c.full_page_button_css);
+			x(s+".buttons.on_off_button.css",c.off_button_css);
+			x(s+".info_box.left",w[0]+w[1]);
+			x(s+".info_box.top",c.text_top_offset);
+			x(s+".info_box.height",c.height_offset);
+			x(s+".info_box.width",w[2]);
+			x(s+".info_box.css",c.infobox_css);
+			x(s+".info_box.text.css",c.base_font_css);
+			x(s+".info_box.text.alert_css",c.base_font_css+c.alert_css);
+			x(s+".info_box.text.link_css",c.base_font_css+c.link_css);
+			x(s+".info_box.text.info_css",c.base_font_css+c.info_css);
+			
+			s = "FCChatConfig.styles.widget";
+			x(s+".online_box.top",c.height_offset);
+			x(s+".login_panel.top",c.height_offset);
+			x(s+".friends_box.top",c.height_offset);
+			x(s+".chatrooms_box.top",c.height_offset);
+			x(s+".new_messages_box.top",c.height_offset);
+		}
+		if(window["fcchat_domain"]&&d[window["fcchat_domain"]]){
+			c = d[window["fcchat_domain"]];
+		}else{
+			c = d.alldomains;
+		}
+		c = c.toolbar;
+		s = "FCChatConfig.styles.widget.toolbar_item";
+		var w = c.width_prop_offsets.split(':');
+		
+		w[0]-=0;
+		w[1]-=0;
+		w[2]-=0;
+		x(s+".text.css",c.base_font_css);
+		x(s+".text.link_css",c.base_font_css+c.link_css);
+		x(s+".text.alert_css",c.base_font_css+c.alert_css);
+		x(s+".text.info_css",c.base_font_css+c.info_css);
+		x(s+".buttons.default_css",c.base_font_css);
+		x(s+".buttons.states.link_css",c.link_css);
+		x(s+".buttons.states.hover_css",c.link_hover_css);
+		x(s+".buttons.states.disabled_css",c.link_disabled_css);
+		x(s+".chatcenter_layout.info_box.padding_top",c.text_top_offset);
+		x(s+".chatcenter_layout.open_chat_button.top",c.text_top_offset);
+		x(s+".chatcenter_layout.off_button.top",c.text_top_offset);
+		x(s+".chatcenter_layout.width",w[0]+w[1]);
+		x(s+".msgcenter_layout.width",w[0]+w[1]);
+		x(s+".chatcenter_layout.info_box.width",w[0]);
+		x(s+".msgcenter_layout.info_box.width",w[0]);
+		x(s+".chatcenter_layout.open_chat_button.left",w[0]);
+		x(s+".msgcenter_layout.open_chat_button.left",w[0]);
+		x(s+".chatcenter_layout.off_button.left",w[0]);
+		x(s+".msgcenter_layout.off_button.left",w[0]);
+		x(s+".chatcenter_layout.status.left",w[0]);
+		x(s+".msgcenter_layout.status.left",w[0]);
+		x(s+".chatcenter_layout.divider.left",w[0]);
+		x(s+".msgcenter_layout.divider.left",w[0]);
+		x(s+".chatcenter_layout.divider.css",c.divider_css);
+		x(s+".msgcenter_layout.divider.css",c.divider_css);
+		
+	}
+
+	applyQuickStyles();	
+
+})();

@@ -20,21 +20,26 @@
  * support@fastcatsoftware.com
  */
 
+(function(){
+	
+
 jGo.fcchat_toolbar.style={
-		height:30,
-		css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);background-color:gray;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
-		text:"color:white;font-size:10pt;font-family:arial",
+		height:35,
+		css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);background-color:gray;-moz-border-radius: 4px;-webkit-border-radius: 2px;border-radius:4px;border: 1px solid #b0b0b0;",
+		text:"color:white;font-size:8pt;font-family:arial;font-weight:bold;",
 		dialog_box:{
-			css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:2px solid gray;background-color:#eeeeee;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;",
+			css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:1px solid #b0b0b0;background-color:#eeeeee;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;",
 			title_box_css:"top:0px;left:0px;height:40px;background-color:gray;",
-			list_divider_css:"border-bottom:1px solid #dddddd",
+			list_divider_css:"border-bottom:1px solid #dddddd;",
 			text:{
-				css:"font-family:arial;font-size:12px;color:#444444",
-				title_css:"font-weight:bold;color:white",
-				link_css:"color:lightblue",
-				screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700;text-decoration:none",
-				user_info_css:"color:#888888",
-				offline_css:"font-style:italic;color:green"
+				css:"font-family:arial;font-size:12px;color:#444444;",
+				title_css:"font-weight:bold;color:white;",
+				link_css:"color:lightblue;",
+				disabled_css:"color:#dddddd;",
+				secondary_link_css:"color:#163663;",
+				screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700;text-decoration:none;",
+				user_info_css:"color:#888888;",
+				offline_css:"font-style:italic;color:green;"
 			}
 		},
 		menus:{
@@ -47,7 +52,7 @@ jGo.fcchat_toolbar.style={
 				},
 				css:{
 					width:"200px",
-					height:"150px",
+					height:"230px",
 					"-webkit-box-shadow": "2px 2px 2px 2px rgba(0,0,0,0.5)",
 					"box-shadow": "2px 2px 2px 2px rgba(0,0,0,0.5)",
 					"background-color":"#eeeeee",
@@ -113,24 +118,61 @@ jGo.fcchat_toolbar.style={
 				}
 			}
 		},
-		divider_css:"top:2px;width:1px;height:26px;background-color:lightgray;",
+		divider_css:"top:0px;width:1px;height:35px;background-color:#aaaaaa;",
 		icons_16px:{
-			top:7
+			top:10
 		},
 		icon_tray:{
 			width:35,
 			minimize_icon:{
-				top:6,
+				top:10,
 				offset:35,
-				css:"color:white;font-stretch:wider;font-size:10px;font-weight:bold;text-decoration:none"
+				css:"color:white;font-stretch:wider;font-size:8pt;font-weight:bold;text-decoration:none;"
 			},
 			restore:{
-				width:75
+				width:40
 			},
 			hide_icon:{
-				top:6,
+				top:10,
 				offset:15,
-				css:"color:white;font-stretch:wider;font-size:10px;font-weight:bold;text-decoration:none"
+				css:"color:white;font-stretch:wider;font-size:8pt;font-weight:bold;text-decoration:none;"
 			}
 		}
 	};
+
+function applyQuickStyles(){
+	var d = FCChatConfig.quickstyling;
+	if(window["fcchat_domain"]&&d[window["fcchat_domain"]]){
+		d = d[window["fcchat_domain"]];
+	}else{
+		d = d.alldomains;
+	}
+	var c = d.toolbar;
+	var s = "jGo.fcchat_toolbar.style";
+	var x = jGo.util.mergeOption;
+	var w = c.width_prop_offsets.split(':');
+	
+	w[0]-=0;
+	w[1]-=0;
+	w[2]-=0;
+	x(s+".css",c.background_css);
+	x(s+".text",c.base_font_css);
+	x(s+".divider_css",c.divider_css);
+	x(s+".icon_tray.minimize_icon.css",c.base_font_css);
+	x(s+".icon_tray.hide_icon.css",c.base_font_css);
+	x(s+".icon_tray.minimize_icon.top",c.text_top_offset);
+	x(s+".icon_tray.hide_icon.top",c.text_top_offset);
+	x(s+".icon_tray.restore.width",w[2]);
+	
+	c = d.dialog;
+
+	s = "jGo.fcchat_toolbar.style.dialog_box";
+	x(s+".css",c.border_css);
+	x(s+".title_box_css",c.title_background_css);
+	x(s+".text.title_css",c.title_css);
+	x(s+".text.link_css",c.link_css);
+};
+		
+applyQuickStyles();	
+
+}());

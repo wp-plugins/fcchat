@@ -11,8 +11,7 @@
 
 define("IN_MYBB", 1);
 define('THIS_SCRIPT', 'index.php');
-
-require_once "./global.php";
+require_once(dirname(__FILE__) . '/../../global.php');
 
 define('SECRET_KEY', 'OqO,X<rU_&=F;V}f39< bh,+&Qlr>:20=V6a^FkQ9N!<Uwp|y}]}<!5(|W|N4E>8');
 define('USERNAMES_ENCODED', true);

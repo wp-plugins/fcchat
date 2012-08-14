@@ -32,7 +32,7 @@ var channel_id = "174447";
 var channel_key = "464036582";
 var uid=getQuerystring("uid")+getQuerystring("domain");
 var uid2=getQuerystring("uid2")+getQuerystring("domain");
-var nick_name=getQuerystring("nm");
+var nick_name=decodeURIComponent(getQuerystring("nm"));
 var matching_uids=(getQuerystring("typ")=='0'?uid+","+uid2:uid2+","+uid);
 var matching_stake="0";
 var matching_game_id=getQuerystring("id");

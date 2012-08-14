@@ -5,7 +5,7 @@
 <SCRIPT TYPE="text/javascript">
 <!--
 var fc_chat_path = "";
-var fc_admin_page = 1;
+var fcchat_domain = "admin";
 document.documentElement.style.overflow= 'auto';
 
 function numbersonly(myfield, e, dec)
@@ -39,50 +39,39 @@ else if (dec && (keychar == "."))
 else
    return false;
 }
-
-function getQuerystring(key, default_){
-    		if (default_==null){
-        		default_=null;
-    		}
-    		var search = unescape(location.search);
-    		if (search == ""){
-        		return default_;
-    		}
-   	 	search = search.substr(1);
-    		var params = search.split("&");
-    		for (var i = 0; i < params.length; i++){
-        		var pairs = params[i].split("=");
-        		if(pairs[0] == key){
-            			return pairs[1];
-        		}
-    		}
-    		return default_;
-	}
 //-->
 </SCRIPT>
 <!-- Begin Fastcat Header Insert -->
-<script type="text/javascript" src="../js/import.google.loader.js"></script><script type="text/javascript" src="../js/import.config.js"></script>
+<script type="text/javascript" src="../js/import.google.loader.js"></script>
+<script type="text/javascript" src="../js/import.config.js"></script>
 
 <script type="text/javascript">
+//Proxy config
 if(FCChatConfig['proxy_type']){
 document.write("<script type='text/javascript' src='../proxies/" + FCChatConfig['proxy_type'] + "_config_proxy.php'></" + "script>");
 }
 </script>
-<script type="text/javascript" src="../js/import.libs.js"></script><script type="text/javascript" src="../js/import.includes.js"></script>
+<script type="text/javascript" src="../js/import.libs.js"></script>
+
 <script type="text/javascript">
+//toolbar items
+FCChatConfig.toolbar_items=["fullpage:logo","friendscenter","fullpage:spacer"];
+</script>
+<script type="text/javascript" src="../js/import.includes.js"></script>
+<script type="text/javascript">
+
+//Proxy template adjustments
 if(FCChatConfig['proxy_type']){
 document.write("<script type='text/javascript' src='../proxies/" + FCChatConfig['proxy_type'] + "_template_proxy.php'></" + "script>");
 }
 </script>
 <script type="text/javascript">
 <!--
-	//Connection
-	FCChatConfig.chat_id = getQuerystring("chatid") || FCChatConfig.chat_id;
-	FCChatConfig.host = getQuerystring("host") || FCChatConfig.host;
-	
 	//Page Level Configuration
+	FCChatConfig.default_on=true;
 	FCChatConfig.control_visible=false;
 	FCChatConfig.toolbar_mode=2;
+	FCChatConfig.toolbar_default_display=1; 
 	FCChatConfig.toolbar_position="bottomright";
 	FCChatConfig.alignment="left";
 	FCChatConfig.startText="&nbsp;Please exit the administration panel and sign in again.&nbsp;&nbsp; <a href='"+FCChatConfig.dir+"html/ChatHelp.html'>Chat Help</a></b>";
@@ -336,6 +325,7 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 					<option value=3>smf</option>
 					<option value=4>drupal</option>
 					<option value=5>joomla</option>
+					<option value=6>mybb</option>
 				</select>
 			</td>
 			</tr>

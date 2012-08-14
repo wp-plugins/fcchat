@@ -41,19 +41,19 @@ FCChatConfig.txt={
 	//Buttons
 	t4: "On",
 	t5: "Off",
-	t6: "Open ChatCenter",
+	t6: "Full Page Chat",
 	t7: "Help?",
-	help_width: 110,
+	help_offset:0,
 	t8: "Close",
-	close_width: 50,
-	t9: "Rooms&nbsp;/&nbsp;Settings",
+	close_offset:0,
+	t9: "Settings",
 	t10: "Send to Room",
 	t11: "Send to Friend",
-	send_buttons_width: 175,
+	functions_bar_width: 170, //sign in, user list, help etc. 
 	
 	//Section Headings
-	t12: "Chat Room",
-	chat_room_width: 61,
+	t12: "Chat Rooms",
+	chat_room_width: 65,
     t13: "Back",
 	t14: "Messages",
 	private_chat_width: 57,
@@ -164,14 +164,14 @@ FCChatConfig.txt={
 	t95: "Sorry, the maximum number of rooms has been reached.",
 	
 	//Alert Dialog
-	alert_dialog_width: 260,
+	alert_dialog_width: 330,
 	t96: "<font style='color:red;font-weight:700'>Connection lost...</font> <a href='javascript:fc_chat.reqRecon()'>Reconnect</a> <a href='javascript:fc_chat.closeChat()'>Close</a>",
 	t97: "Signing Off...",
-	t98: "<font style='color:red;font-weight:700'>Sorry, the room has closed...</font><br><center><a href='javascript:fc_chat.reqRecon()'>Reconnect</a> <a href='javascript:fc_chat.closeChat()'>Close</a></center>",
+	t98: "Sorry, the room you were in has closed.",
 	t99: "To enter, please <b>Login</b> first. <a href='javascript:fc_chat.closeChat()'>Close</a>",
 	
 	//Widget Msgs
-	t100: "<b>Connecting, please wait...</b>",
+	t100: "<b>Connecting, please wait</b>",
 	t101: "<b>You have logged out... <a class='fc_link' href='javascript:fc_chat.reqRecon()'>Reconnect</a></b>",
 	t102: "<b>&nbsp;Chat is off.&nbsp;&nbsp;</b>",
 	t103: "<b>Chat Paused... <a class='fc_link' href='javascript:fc_chat.unPause()'>Resume</a></b>",
@@ -179,11 +179,11 @@ FCChatConfig.txt={
 	t105: "Connection failed. Trying again. Attempt",
 	t106: "Sorry, could not connect. Giving up.",
 	t254: "New message...",
-	t258: "<b>Pop-out window opened...<a class='fc_link' href='javascript:fc_chat.reqRecon()'>Resume</a></b>",
+	t258: "<b>Chat Paused... <a class='fc_link' href='javascript:fc_chat.reqRecon()'>Resume</a></b>",
 	
 	//Chat Rooms
-	t107: "Welcome!!! Your screen name is",
-	t108: "To sign in, click on your screen name in the side bar.",
+	t107: "Your screen name is",
+	t108: "To sign in, click on the \"Sign in\" link below.",
 	t109: "You are currently chatting in: ",
 	t110: "<a href='javascript:void' onClick='fc_chat.tgl_options();return false'>See Room List</a>",
 	t111: "Prev",
@@ -194,10 +194,10 @@ FCChatConfig.txt={
 	t116: "History Page",
 	t117: "Current Chat",
 	t118: "Autoclear. Room message limit exceded.",
-	t119: "**Comment Erased**",
-	t120: "<b><div style='margin-left:10px;margin-top:10px;font-size:12pt;'>&nbsp;Loading Chat...Please wait...</div></b>",
-	t121: "<b><div style='margin-left:10px;margin-top:10px;font-size:12pt;'>&nbsp;Loading Page...Please wait...</div></b>",
-	t122: "<b><div style='margin-left:10px;margin-top:10px;font-size:12pt;'>&nbsp;Loading Room...Please wait...</div></b>",
+	t119: "*****",
+	t120: "Loading Chat...Please wait...",
+	t121: "Loading Page...Please wait...",
+	t122: "Loading Room...Please wait...",
 	
 	//Account types
 	t123: "mod",
@@ -250,8 +250,8 @@ FCChatConfig.txt={
 	
 	//Application Windows
 	t151: "ChatCenter",
-	t152: "FCChat Video",
-	t153: "FCChat Video",
+	t152: "Video Chat",
+	t153: "Video Chat",
 	t154: "minimize",
 	t155: "maximize",
 	t156: "restore",
@@ -259,7 +259,7 @@ FCChatConfig.txt={
 	
 	//Other Status Msgs
 	t158: "Please wait",
-	t159: "<b>Connecting, please wait...</b>",
+	t159: "<b>Connecting, please wait</b>",
 	t160: "Not Ready... You may use the chat-box, located in the sidebar, to enter the chat rooms.",
 	t161: "Sorry...An Error Occurred. Please Refresh",
 	
@@ -333,7 +333,7 @@ FCChatConfig.txt={
 		
 	//Video
 	t224: "Video Chat Loading...This may take a few seconds.",
-	t225: "Sorry, you may not open the public video chat from this room. To use the public video chat, you must be in a room which has (a/v) next to it.",
+	t225: "To use the public video chat, enter a room which has (a/v) next to it.",
 	t226: "This user is chatting in a private room: ",
 	t227: ". You must be a member of this room in order to view their webcam.",
 	t228: "Sorry, the video chat has reached its capacity. Try again later.",
@@ -384,7 +384,7 @@ FCChatConfig.txt={
 	t270: "This user is currently offline.",
 	
 	//Floating toolbar
-	t266: "Check messages",
+	t266: "Messages",
 	t267: "new",
 	t269: "Friends",
 	t271: "New Messages",
@@ -397,7 +397,7 @@ FCChatConfig.txt={
 	t276: "To",
 	t277: "You have no new messages",
 	t278: "Click Open ChatCenter to sign in",
-	t279: "Click Open ChatCenter for more options",
+	t279: "Click Open Full Chat for more options",
 	t280: "Invite to share your whiteboard",
 	t281: "Add to friends",
 	t282: "Click to send a message",
@@ -407,7 +407,10 @@ FCChatConfig.txt={
 	t284: "Close",
 	t285: "Users with green indicators are available for chat.<br>Click user's name for chat and other options.",
 	t286: "Remove from friends",
-	t290: "FriendsCenter",
+	
+	//Mimimized Text
+	t290: "Chat",
+	minimized_text_width_offset:0,
 	
 	//Online Box
 	t291: "Close",
@@ -460,7 +463,7 @@ FCChatConfig.txt={
 	t322: "is now viewing your webcam.",
 	t323: "Sorry, this user is not available for video chat at the moment.",
 	t324: "Public Video Chat",
-	t325: "Your webcam will be visible to everyone.<br><br><b>Note: Requires Flash Player 11 or higher.</b>",
+	t325: "Your webcam will be visible to everyone.<br><br><b>Note: Requires Flash player 11 or higher.</b>",
 	t326: "Click below to accept your invitation to a one on one video chat.<br> Once loaded, you must click 'Start Webcam' in order for the other party to view your webcam.",
 	t327: "When you start your webcam, the other party will automatically be invited to join you.<br><b>Note: Requires Flash Player 11 or higher.</b>",
 	t328: "Continue",
@@ -482,7 +485,7 @@ FCChatConfig.txt={
 	//added 2.2.5.1
 	t340: "Set",
 	t341: "Sorry, unable to send this message.",
-	t342: "Change name",
+	t342: "Sign in",
 	
 	//added 2.2.5.2
 	//social media plugin
@@ -526,9 +529,9 @@ FCChatConfig.txt={
 		
 	//Added in 2.2.12
 	t367:"Chats",
-	t368:"Offline",
+	t368:" Offline",
 	t369:"Settings",
-	t370:", your current room and settings are shown below.",
+	t370:", your current settings are shown below.",
 	t371:"Close this window",
 	t372:"when finished viewing",
 	
@@ -547,11 +550,38 @@ FCChatConfig.txt={
 		
 	//added 2.3
 	t385:"Settings",
-	settings_width:42,
 	t386:"Open MsgCenter",
 	t387:"Enter MsgCenter",
 	t388:"MsgCenter",
-	t389:"To send a message, highlight a user in your friends list, first. To add a user to your friends list, click on their screen name, and then select 'add to Friends'.",
+	t389:"To send a message, highlight a user first. To add a user to your friends list, click on their screen name, and then select 'add to Friends'.",
 	t390:"Not in Use",
-	t391:"Dismiss"
+	t391:"Dismiss",
+	
+	//added 3.0
+	t392:"<font style='color:red;font-weight:700'>Connection lost...</font> <a href='javascript:fc_chat.reqRecon()'>Reconnect</a>",
+	t393:"Please sign in.",
+	t394:"Guests may observe rooms only. To chat, please sign in.",
+	t395:"Exit Room",
+	t396:"Msgs: ",
+	t397:"New: ",
+	t398:"Last update ",
+	t399:" by ",
+	t400:"Exit Current Room",
+	t401:"Loading Room List...Please wait...",
+	t402:"No Room Selected",
+	t403:"Select a Room",
+	t404:"You have unread messages in your Messages Box. Click 'Open Full Chat' above to view.",
+	t405:"Chat Rooms",
+	t406:"No image found",
+	t407:"Room",
+	t408:"Msgs",
+	t409:"Sorry, this user is not available for private chat.",
+	t410:"Please sign in to chat",
+	t411:"Please select a room",
+	t412:"Video chat is disabled for guest accounts.",
+	t413:"Guests cannot video chat. Please sign in.",
+	t414:"Connection lost... Trying again in 5 secs. <a href='javascript:fc_chat.stop()'>Stop</a>",
+	t415:"Open Your messages inbox.",
+	t416:"Open Full Chat",
+	t417:"This user is chating in room: "
 };

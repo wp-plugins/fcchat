@@ -229,7 +229,7 @@ dwp.moveWindow = function(x, y) {
     this.frame.css({left:x + "px"});
     this.frame.css({top:y + "px"});
     if (!this.shieldOnDrag) {
-    	this.cN.css({left:(parseInt(this.frame[0].style.left)+5)+'px',top:(parseInt(this.frame[0].style.top)+30)+'px'});
+    	this.cN.css({left:(parseInt(this.frame[0].style.left)+this.clientX)+'px',top:(parseInt(this.frame[0].style.top)+this.clientY)+'px'});
     }
 };
 dwp.raiseDragShield = function() {
@@ -252,7 +252,7 @@ dwp.lowerDragShield = function() {
     //}
     //catch(err) {}
 	//this.cN.css({"top":"30px"});
-	this.cN.css({left:(parseInt(this.frame[0].style.left)+5)+'px',top:(parseInt(this.frame[0].style.top)+30)+'px'});
+	this.cN.css({left:(parseInt(this.frame[0].style.left)+this.clientX)+'px',top:(parseInt(this.frame[0].style.top)+this.clientY)+'px'});
 	
     //this.cN.css({position:"static","top":"0px"});
    //this.cN.css({visibility:"visible"});
@@ -350,8 +350,8 @@ dwp.resizeBottomLeft = function(offsetX, offsetY, findDimensions) {
 };
 dwp.setWindowHeight = function(y) {
     this.frame.css("height",y + "px");
-    this.cN.css("height",(y - 35) + "px");
-    this.cA.css("height",(y - 35) + "px");
+    this.cN.css("height",(y - 45) + "px");
+    this.cA.css("height",(y - 45) + "px");
 };
 dwp.setWindowWidth = function(x) {
     var dim = new Array();
@@ -389,7 +389,7 @@ dwp.minimize = function() {
 			top :this.lT,left :this.lL
 		});
 		this.cN.css( {
-			top :(jGo.util.eN(this.lT)+30) + 'px',left :(jGo.util.eN(this.lL)+5) + 'px'
+			top :(jGo.util.eN(this.lT)+this.clientY) + 'px',left :(jGo.util.eN(this.lL)+this.clientX) + 'px'
 		});
 	    this.MB.attr("id","jGo_clickmx" + this.id);
 	    this.MB.html("<a href='javascript:void(0)' title='"+this.max_label+"' id='jGo_clickb2" + this.id + "' class='jGo_maxwindow_default'>&nbsp;</a>");
@@ -406,7 +406,7 @@ dwp.minimize = function() {
     }
     this.lW = this.frame.width();
     this.lH = this.frame.height();
-    this.setWindowHeight(38);
+    this.setWindowHeight(48);
     this.mB.attr("id", "jGo_clickrs" + this.id);
     this.mB.html("<a href='javascript:void(0)' title='"+this.restore_label+"' id='jGo_clickb0" + this.id + "' class='jGo_restorewindow_default'>&nbsp;</a>");
     this.state = 0;
@@ -443,8 +443,8 @@ dwp.maximize = function() {
     this.lH = this.frame.height();
     this.lT = this.frame.css("top");
     this.lL = this.frame.css("left");
-    this.frame.css({top:root.scrollTop-20,left:root.scrollLeft});
-    this.cN.css({top:root.scrollTop+10,left:root.scrollLeft+5});
+    this.frame.css({top:root.scrollTop,left:root.scrollLeft});
+    this.cN.css({top:root.scrollTop+30,left:root.scrollLeft+5});
     this.setWindowHeight(jGo.util.getSHeight()+20);
     this.setWindowWidth(jGo.util.getSWidth());
     this.MB.attr("id", "jGo_clickrs" + this.id);
@@ -482,7 +482,7 @@ dwp.restore = function() {
 			top :this.lT,left :this.lL
 		});
 		this.cN.css( {
-			top :(jGo.util.eN(this.lT)+30) + 'px',left :(jGo.util.eN(this.lL)+5) + 'px'
+			top :(jGo.util.eN(this.lT)+this.clientY) + 'px',left :(jGo.util.eN(this.lL)+this.clientX) + 'px'
 		});
     	this.MB.attr("id","jGo_clickmx" + this.id);
         this.MB.html("<a href='javascript:void(0)' title='"+this.max_label+"' id='jGo_clickb2" + this.id + "' class='jGo_maxwindow_default'>&nbsp;</a>");
@@ -500,9 +500,9 @@ dwp.togglePin = function(){
 	}
 	var offset = (this.fixed?-jGo.$(document).scrollTop():0);
 	this.cN.css({"position":pos,"top":this.cN.offset().top+offset+'px'});
-	this.frame.css({"position":pos,"top":this.frame.offset().top+offset-9+'px'});
+	this.frame.css({"position":pos,"top":this.frame.offset().top+offset+'px'});
 };
 })();
 
 //Class Initialization
-jGo.scripts.onLoad('jGo.DefaultWindow.ext.js');
+jGo.scripts.onLoad('jGo.DefaultWindow.ext.min.js');

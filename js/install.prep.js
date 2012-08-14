@@ -41,7 +41,7 @@ if(jGo.mobile&&FCChatConfig.toolbar_banner_mode){
 	jGo.toolbar_left=FCChatConfig.toolbar_banner_left_offset;
 	jGo.toolbar_top=FCChatConfig.toolbar_banner_top_offset;
 }
-document.write("<div class='jGo_myapp'><div id='jGo_win0' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win1' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win2' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win3' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win4' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win5' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win6' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win7' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win8' class='jGo_app jGo_myapp jGo_ydsf'></div><div id='jGo_win9' class='jGo_app jGo_myapp jGo_ydsf'></div></div>");
+document.write("<div class='jGo_myapp'><div id='jGo_win0' class='jGo_app jGo_myapp'></div><div id='jGo_win1' class='jGo_app jGo_myapp'></div><div id='jGo_win2' class='jGo_app jGo_myapp'></div><div id='jGo_win3' class='jGo_app jGo_myapp'></div><div id='jGo_win4' class='jGo_app jGo_myapp'></div><div id='jGo_win5' class='jGo_app jGo_myapp'></div><div id='jGo_win6' class='jGo_app jGo_myapp'></div><div id='jGo_win7' class='jGo_app jGo_myapp'></div><div id='jGo_win8' class='jGo_app jGo_myapp'></div><div id='jGo_win9' class='jGo_app jGo_myapp'></div></div>");
 //Initialization
 jGo.scripts.onLoad('jGo.DefaultWindow.pack.js');
 document.write("<div id='fc_fla' style='position:absolute; top: 0px; left:-9px;border:0px solid #aaaaaa'><div  id='fc_flaToggle'>");

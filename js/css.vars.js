@@ -36,7 +36,8 @@
 	fc_rule+"*.fc_d1 div, "+fc_rule2+"*.fc_d1 div{border:0px;}"+
 	fc_rule+"*.fc_d1 a, "+fc_rule2+"*.fc_d1 a{color:"+fc_cw_mp_cp.font.color.link_color+"}"+
 	fc_rule+"*.fc_d1 span, "+fc_rule2+"*.fc_d1 span{color:"+fc_cwsnc.online.link+"}" +
-	fc_rule+"*.fc_d1 small a, "+fc_rule2+"*.fc_d1 small a{font-size:"+(fc_cw_mp_cp.font.size+2)+"pt;}" +
+	fc_rule+"*.fc_d1 small a, "+fc_rule2+"*.fc_d1 small a{font-size:"+(fc_cw_mp_cp.font.size+1)+"pt;}" +
+	fc_rule+"*.fc_d1 i.fc_aside, "+fc_rule2+"*.fc_d1 i.fc_aside{font-size:"+(fc_cw_mp_cp.font.timestamp_size)+"pt;}" +
 	
 	//Side panels
 	fc_rule+"*.fc_d2, "+fc_rule2+"*.fc_d2{font-family:"+fc_cw_mp_sp.font.family+";font-size:"+fc_cw_mp_sp.font.size+"pt;font-weight:"+fc_cw_mp_sp.font.weight+";color:black;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px}"+
@@ -84,12 +85,12 @@
 	
 	
 	//alert box buttons
-	fc_rule+"div.fc_controlbox div.fc_abbtn a, "+fc_rule2+"div.fc_controlbox div.fc_abbtn a{"+fc_tb_btn.default_css+";display:block;float:left;margin:0 5px 0 0;text-align:center;text-decoration:none;}" +
-	fc_rule+"div.fc_controlbox div.fc_abbtn a:link, "+fc_rule2+"div.fc_controlbox div.fc_abbtn a:link{"+fc_tb_btn.states.link_css+"}" +
-	fc_rule+"div.fc_controlbox div.fc_abbtn a:visited, "+fc_rule2+"div.fc_controlbox div.fc_abbtn a:visited{"+fc_tb_btn.states.link_css+"}" +
-	fc_rule+"div.fc_controlbox div.fc_abbtn a:hover, "+fc_rule2+"div.fc_controlbox div.fc_abbtn a:hover{"+fc_tb_btn.states.hover_css+"}" +
-	fc_rule+"div.fc_controlbox div.fc_abbtn_dis a, "+fc_rule2+"div.fc_controlbox div.fc_abbtn_dis a{"+fc_tb_btn.default_css+";display:block;float:left;margin:0 5px 0 0;text-align:center;text-decoration:none;}" +
-	fc_rule+"div.fc_controlbox div.fc_abbtn_dis a.fc_abbtn_disa, "+fc_rule2+"div.fc_controlbox div.fc_abbtn_dis a.fc_abbtn_disa{"+fc_tb_btn.states.disabled_css+";cursor:default;}" +
+	fc_rule+"div.fc_controlbox *.fc_abbtn a, "+fc_rule2+"div.fc_controlbox *.fc_abbtn a{"+fc_tb_btn.default_css+";}" +
+	fc_rule+"div.fc_controlbox *.fc_abbtn a:link, "+fc_rule2+"div.fc_controlbox *.fc_abbtn a:link{"+fc_tb_btn.states.link_css+"}" +
+	fc_rule+"div.fc_controlbox *.fc_abbtn a:visited, "+fc_rule2+"div.fc_controlbox *.fc_abbtn a:visited{"+fc_tb_btn.states.link_css+"}" +
+	fc_rule+"div.fc_controlbox *.fc_abbtn a:hover, "+fc_rule2+"div.fc_controlbox *.fc_abbtn a:hover{"+fc_tb_btn.states.hover_css+"}" +
+	fc_rule+"div.fc_controlbox *.fc_abbtn_dis a, "+fc_rule2+"div.fc_controlbox *.fc_abbtn_dis a{"+fc_tb_btn.default_css+"}" +
+	fc_rule+"div.fc_controlbox *.fc_abbtn_dis a.fc_abbtn_disa, "+fc_rule2+"div.fc_controlbox *.fc_abbtn_dis a.fc_abbtn_disa{"+fc_tb_btn.states.disabled_css+";cursor:default;}" +
 	
 	//toolbar buttons
 	fc_rule+"div.fc_toolbar *.fc_abbtn a, "+fc_rule2+"div.fc_toolbar *.fc_abbtn a{"+fc_pl_btn.default_css+"}" +

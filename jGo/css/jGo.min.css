@@ -24,7 +24,7 @@ margin:0px;
 
 #jGo_app.jGo_myapp *.jGo_drag, .jGo_app.jGo_myapp *.jGo_drag{position:relative;cursor:move}
 #jGo_app.jGo_myapp td.jGo_tl_default, .jGo_app.jGo_myapp td.jGo_tl_default{width:5px;cursor:default}
-#jGo_app.jGo_myapp td.jGo_tm_default, .jGo_app.jGo_myapp td.jGo_tm_default{position:relative;cursor:default;height:30px}
+#jGo_app.jGo_myapp td.jGo_tm_default, .jGo_app.jGo_myapp td.jGo_tm_default{position:relative;cursor:default;height:40px}
 #jGo_app.jGo_myapp td.jGo_tr_default, .jGo_app.jGo_myapp td.jGo_tr_default{width:5px;cursor:default}
 #jGo_app.jGo_myapp td.jGo_rl_default, .jGo_app.jGo_myapp td.jGo_rl_default{cursor:w-resize}
 #jGo_app.jGo_myapp td.jGo_rr_default, .jGo_app.jGo_myapp td.jGo_rr_default{cursor:e-resize}
