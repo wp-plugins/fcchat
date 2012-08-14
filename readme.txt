@@ -115,7 +115,7 @@ Also, when you upgrade to a new version, it is NOT required that you obtain a ne
 
 Here:
 
-http://www.fastcatsoftware.com/wordpress
+http://www.fastcatsoftware.com/wp3.3/
 
 = How do I use/configure/administrate FCChat? =
 
@@ -123,7 +123,7 @@ Here are some places to look for information:
 
 http://www.fastcatsoftware.com/chat/userguide/Index.html
 
-http://www.fastcatsoftware.com/chat/Manual2.2.html
+http://www.fastcatsoftware.com/chat/Manual3.html
 
 = How do I contact you if I have questions? =
 
