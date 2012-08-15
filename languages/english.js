@@ -583,5 +583,8 @@ FCChatConfig.txt={
 	t414:"Connection lost... Trying again in 5 secs. <a href='javascript:fc_chat.stop()'>Stop</a>",
 	t415:"Open Your messages inbox.",
 	t416:"Open Full Chat",
-	t417:"This user is chating in room: "
+	t417:"This user is chating in room: ",
+		
+	//added 3.0.1
+	t418:"YouTube video"
 };
