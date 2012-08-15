@@ -584,7 +584,10 @@ FCChatConfig.txt = {
 	t414:"Conn. Perdido... Intentar de nuevo en 5 segs. <a href='javascript:fc_chat.stop()'>Parar</a>",
 	t415:"Abrir tu casilla de mensajes.",
 	t416:"Abrir Chat Completo",
-	t417:"Este usuario está charlando en la sala: "
+	t417:"Este usuario está charlando en la sala: ",
+	
+	//added 3.0.1
+	t418:"YouTube video"
 };
 
 //Language style overrides
