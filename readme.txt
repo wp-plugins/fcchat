@@ -15,7 +15,7 @@ FCChat 3.0.1 BETA. (Stable version 2.3.1.5) FCChat connects your web site users 
 
 MOST RECENT FEATURES
 
-FCChat 3 is here! It's still beta, and will be for a few weeks. If you don't want to try the beta version, you can pick up the previous stable version (2.3.1.5).
+FCChat 3 is here! It's still beta, and will be for a few weeks. If you don't want to try the beta version, you can pick up the previous stable version (2.3.1.5)
 
 Version 3.0.1 adds the ability to post Youtube videos (thumbnail with link) simply by entering the url of the video.
 
