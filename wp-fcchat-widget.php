@@ -247,6 +247,9 @@ function fcchat_settings_page() {
 		if(isset($fcchat_options3['host'])){
 			$fcchat_options2['host'] = $fcchat_options3['host'];
 		}
+		if(isset($fcchat_options3['updates'])){
+			$fcchat_options2['updates'] = $fcchat_options3['updates'];
+		}
                         
                 // Save changes
 		update_option('fcchat_widget', $fcchat_options2);
@@ -385,9 +388,13 @@ function fcchat_activate() {
 		$fcchat_options['window_height_offset']="-160";
 		$fcchat_options['chat_room_height_offset']="105";
 	}
-    	// Save changes
-    	update_option('fcchat_widget', $fcchat_options);
+    }else{
+	$fcchat_options = array();
+	$fcchat_options['updates']='update 3.0;';
+	
     }
+    // Save changes
+    update_option('fcchat_widget', $fcchat_options);
 }
 
 register_activation_hook( __FILE__, 'fcchat_activate' );
