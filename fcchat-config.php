@@ -15,9 +15,9 @@ function fcchat_widget_options() {
 		"widget_title"=>array("value"=>"ChatCenter","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"The title displayed on the embedded widget."),
 		"branding_bar_title"=>array("value"=>"Yourdomain Chat","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"Title displayed on the branding bar. Add the branding bar to the toolbar by inserting 'fullpage:logo' into <strong>toolbar_items</strong> field below"),
 		"branding_bar_width"=>array("value"=>"140","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"Width of the branding bar."),
-		"startText"=>array("value"=>"To begin chatting, press the <b>Open Button. </b>","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"Text displayed by the widget when it starts up."),
-		"loginText"=>array("value"=>"Please login using your site account.","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"Text displayed by the login panel when user integration is enabled."),
-		"autoGreet"=>array("value"=>"","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"A message that is displayed when a user opens the ChatCenter window."),
+		"startText"=>array("value"=>"Click here to join our chat.","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"Text displayed by the widget when it starts up."),
+		"loginText"=>array("value"=>"Please sign in to join our chat.","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"Text displayed by the login panel when user integration is enabled."),
+		"autoGreet"=>array("value"=>"Wellcome!! ","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"A message that is displayed when a user opens the ChatCenter window."),
 		"full_page_loading"=>array("value"=>"Yourdomain chat will load momentarily.","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"Text displayed when the full page chat is loading."),
 		"full_page_login"=>array("value"=>"Welcome to Yourdomain chat. Sign in to enter.","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"Text displayed if the full page chat requires signin."),
 		
@@ -119,11 +119,11 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		
 		"cmntwmodes"=>array("value"=>"","type"=>"comment","desc"=>"CHATCENTER WINDOW MODES"),
 		"chatcenter_layout"=>array("value"=>"0","type"=>"radio2","ops"=>array(array("value"=>"0","desc"=>"Chat rooms and messages"),array("value"=>"1","desc"=>"Messages only")), "quote"=>"0","desc"=>""),
-		"open_chatcenter_in_new_tab"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Launch the ChatCenter into a new tab when a user trys to open it."),
+		"open_chatcenter_in_new_tab"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Launch the ChatCenter into a new tab when a user tries to open it."),
 		"allow_split_screen_mode"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Allow split screen mode."),
 		
 		"cmntwsz"=>array("value"=>"","type"=>"comment","desc"=>"CHATCENTER WINDOW SIZE"),
-		"window_width"=>array("value"=>"853","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The width of the ChatCenter window.."),
+		"window_width"=>array("value"=>"853","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The width of the ChatCenter window."),
 		"window_height_offset"=>array("value"=>"-160","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The height offset of the ChatCenter window relative the default height."),
 		"chat_room_height_offset"=>array("value"=>"105","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The height offset of the chat room panel relative the default height."),
 		
@@ -179,7 +179,7 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		"cmntvid"=>array("value"=>"","type"=>"comment","desc"=>"VIDEO"),
 		"video_enabled"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Enable video."),
 		"video_access_level"=>array("value"=>"3","type"=>"radio2","ops"=>array(array("value"=>"0","desc"=>"None"),array("value"=>"1","desc"=>"Private only"),array("value"=>"2","desc"=>"Public only"),array("value"=>"3","desc"=>"Private and Public")),"quote"=>"0","desc"=>""),
-		"max_video_streams"=>array("value"=>"30","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The maximum number of simultaneous video streams."),
+		"max_video_streams"=>array("value"=>"100","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The maximum number of simultaneous video streams."),
 		"capture_width"=>array("value"=>"160","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"Camera capture width."),
 		"capture_height"=>array("value"=>"120","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"Camera capture height."),
 		"hd_capture_width"=>array("value"=>"320","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"HD Camera capture width."),
