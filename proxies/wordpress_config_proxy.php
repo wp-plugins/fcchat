@@ -18,7 +18,7 @@ $fcchat_options = get_fcchat_widget_options();
 	foreach($fcchat_options as $key => $value){
 		if($key=='templates'||$key=='quickstyling'){
 			echo 'a.' . $key . '=' . '{' . $fcchat_options[$key]['value'] . '};';
-		}else if($fcchat_options[$key]['type']!='comment'&&$key!='template_overrides'){
+		}else if($fcchat_options[$key]['type']!='hidden'&&$fcchat_options[$key]['type']!='comment'&&$key!='template_overrides'){
 			if($fcchat_options[$key]['quote']=='1'||($fcchat_options[$key]['quote']=='2'&&$fcchat_options[$key]['value']!='true'&&$fcchat_options[$key]['value']!='false')){
 					echo 'a.' . $key . '=' . '"' . $fcchat_options[$key]['value'] . '";';
 				}else{

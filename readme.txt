@@ -5,13 +5,13 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 3.0.1
+Stable tag: 3.0.2
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
 == Description ==
 
-FCChat 3.0.1 BETA. (Stable version 2.3.1.5) FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
+FCChat 3.0.2 BETA. (Stable version 2.3.1.5) FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
 
 MOST RECENT FEATURES
 
@@ -490,6 +490,9 @@ Corrected an issue with table css not being properly shielded. Also, an issue wi
 = 3.0.1 =
 Corrected an issue with the textarea tags in ie.
 Added the ability to post YouTube videos (thumbnail with link) simply by entering the url of the video.
+
+= 3.0.2 =
+Corrected an issue with the updating mechanism.
 
 == Upgrade Notice ==
 

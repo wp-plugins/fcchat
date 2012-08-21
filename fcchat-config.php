@@ -218,7 +218,8 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		"flashEnabled"=>array("value"=>"test","type"=>"radio2","ops"=>array(array("value"=>"test","desc"=>"Automatically detect"),array("value"=>"true","desc"=>"Enabled"),array("value"=>"false","desc"=>"Disabled")),"quote"=>"2","desc"=>"Flash Enabled."),
 		"websocketEnabled"=>array("value"=>"test","type"=>"radio2","ops"=>array(array("value"=>"test","desc"=>"Automatically detect"),array("value"=>"true","desc"=>"Enabled"),array("value"=>"false","desc"=>"Disabled")),"quote"=>"2","desc"=>"Websockets Enabled."),
 		"userbox_mode"=>array("value"=>"0","type"=>"radio2","ops"=>array(array("value"=>"0","desc"=>"Click to open user dialog"),array("value"=>"1","desc"=>"Hover to open user dialog")),"quote"=>"0","desc"=>"User dialog box mode."),
-		"zindex_base"=>array("value"=>"20477","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"z-index base.")
+		"zindex_base"=>array("value"=>"20477","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"z-index base."),
+		"updates"=>array("value"=>"","type"=>"hidden")
 	);
 }
 

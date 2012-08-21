@@ -3,7 +3,7 @@
 Plugin Name: FCChat Widget
 Plugin URI: http://www.fastcatsoftware.com
 Description: Add full featured chat to the sidebar.
-Version: 3.0.1
+Version: 3.0.2
 Author: Fastcat Software
 Author URI: http://www.fastcatsoftware.com
 License: GPL2
@@ -63,7 +63,7 @@ function fcchat_add_header_js(){
 		foreach($fcchat_options as $key => $value){
 			if($key=='templates'||$key=='quickstyling'){
 				echo 'a.' . $key . '=' . '{' . $fcchat_options[$key]['value'] . '};';
-			}else if($fcchat_options[$key]['type']!='comment'&&$key!='template_overrides'){
+			}else if($fcchat_options[$key]['type']!='hidden'&&$fcchat_options[$key]['type']!='comment'&&$key!='template_overrides'){
 				if($fcchat_options[$key]['quote']=='1'||($fcchat_options[$key]['quote']=='2'&&$fcchat_options[$key]['value']!='true'&&$fcchat_options[$key]['value']!='false')){
 					echo 'a.' . $key . '=' . '"' . $fcchat_options[$key]['value'] . '";';
 				}else{
@@ -297,6 +297,8 @@ foreach($fcchat_options as $key => $value){
 		echo '<p>' . _e($fcchat_options[$key]['desc'], 'menu-test' ); 
 		echo '&nbsp;&nbsp;<b>' . $key . '</b><br>&nbsp; <textarea style="font-size:16px;font-family:arial;width:100%;height:300px" name="fcchat-' . $key . '">' . $fcchat_options[$key]['value'] . '</textarea>';
 		echo '</p><hr />';
+	}else if($fcchat_options[$key]['type']=='hidden'){
+		
 	}else{
 		echo '<p><b>' . $key . '</b>&nbsp; ' . _e($fcchat_options[$key]['desc'], 'menu-test' ); 
 		foreach($fcchat_options[$key]['ops'] as $op => $val){
