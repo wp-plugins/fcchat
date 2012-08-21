@@ -334,7 +334,7 @@ function fcchat_activate() {
 	// look for 3.0 updates
     	foreach($fcchat_options as $key => $value){
 	 	if($key=='updates'){
-			if(strpos($value , "update 3.0;") === false){
+			if(strpos($value , "update 3.0;") !== false){
 				$updated=true;
 			}
 			$updates_found=true;
