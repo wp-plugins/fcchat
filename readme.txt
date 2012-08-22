@@ -11,7 +11,7 @@ An interface for real time chat, video conferencing, instant messaging, and more
 
 == Description ==
 
-FCChat 3.0.2 BETA. (Stable version 2.3.1.5) FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
+FCChat 3.0.2 BETA (Stable version 2.3.1.5) FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
 
 MOST RECENT FEATURES
 
