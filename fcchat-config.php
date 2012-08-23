@@ -39,7 +39,7 @@ function fcchat_widget_options() {
 		"cmntstyle"=>array("value"=>"","type"=>"comment","desc"=>"STYLE TEMPLATES"),
 		"templates"=>array(
 "value"=>"alldomains:{
-	widget:'widget_default_header.js',
+	widget:'widget_default_sidebar.js',
 	toolbar:'toolbar_default.js',
 	application_window:'chatcenter_light_gray.js'
 }","type"=>"textarea","desc"=>"Templates located in the <strong>fcchat/styles/</strong> folder. There are three templates. One for the embedded widget, one for the toolbar, and one for the application window. It is recommended that you copy the original contents of this field and save them to a safe location. That way, you can restore the contents of this field if you make a mistake."),
