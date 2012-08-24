@@ -17,7 +17,7 @@ MOST RECENT FEATURES
 
 FCChat 3 is here! It's still beta, and will be for a few weeks. If you don't want to try the beta version, you can pick up the previous stable version (2.3.1.5)
 
-Version 3.0.1 adds the ability to post Youtube videos (thumbnail with link) simply by entering the url of the video.
+Version 3.0.2 adds the ability to post Youtube videos (thumbnail with link) simply by entering the url of the video.
 
 The video chat now supports Flash player 11's h264 streaming capability. This represents a significant enhancement, in terms of video resolution and bandwidth usage. There are now 2 different layouts available for the chat window: Chatcenter and MsgCenter. The new MsgCenter layout is for those of you wish to use the Instant Messanger feature exclusively. 
 
