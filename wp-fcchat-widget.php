@@ -214,7 +214,7 @@ function fcchat_settings_page() {
                   // Remember to sanitize and format use input appropriately.
                  foreach($fcchat_options as $key => $value){
 			if(isset($_POST['fcchat-'.$key])){
-				if($key!='template_overrides'){
+				if($key!='custom_buttons'&&$key!='templates'&&$key!='quickstyling'&&$key!='template_overrides'){
     					$fcchat_options[$key]['value'] = str_replace('"', '&quot;', stripslashes($_POST['fcchat-'.$key]));	
 				}else{
 					$fcchat_options[$key]['value'] = stripslashes($_POST['fcchat-'.$key]);	
