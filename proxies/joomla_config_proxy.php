@@ -46,7 +46,7 @@ jimport( 'joomla.html.parameter' );
       		if($params->get($key))
       		$Arr1[$key]['value'] = $params->get($key);
   	}
-  	return $Arr1;
+  	return$Arr1;
     }
 
 	
@@ -56,7 +56,9 @@ jimport( 'joomla.html.parameter' );
 	$plugin_url = JURI::base() . '../';
 	$javascript = 'if(!window["FCChatConfig"]){window["FCChatConfig"] = {}}(function(){var a = window["FCChatConfig"];a.delay_import=false;';
 	foreach($options as $key => $value){
-		if($options[$key]['type']!='comment'&&$key!='template_overrides'){
+		if($key=='templates'||$key=='quickstyling'){
+				$javascript .= 'a.' . $key . '=' . '{' . $options[$key]['value'] . '};';
+		}else if($options[$key]['type']!='hidden'&&$options[$key]['type']!='comment'&&$key!='template_overrides'){
 			if($options[$key]['quote']=='1'||($options[$key]['quote']=='2'&&$options[$key]['value']!='true'&&$options[$key]['value']!='false')){
 				$javascript .= 'a.' . $key . '=' . '"' . $options[$key]['value'] . '";';
 			}else{

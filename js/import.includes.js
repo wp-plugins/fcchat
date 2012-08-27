@@ -23,11 +23,20 @@ function fcchat_includes(){
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + template.toolbar + "'></script>");
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + template.widget + "'></script>");
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "js/template_overrides.js'></script>");
+	var buttons_loaded=false;
 	for(var i = 0;i<FCChatConfig.toolbar_items.length;i++){
 		if(FCChatConfig.toolbar_items[i]!="friendscenter"){
-			document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "toolbar_items/"+FCChatConfig.toolbar_items[i].replace(/:/g, '/')+".js'></script>");
 			var item=FCChatConfig.toolbar_items[i].split(":");
-			FCChatConfig.toolbar_items[i]=item[item.length-1];
+			if(FCChatConfig.toolbar_items[i].indexOf("custom_buttons:")>=0){
+				if(!buttons_loaded){
+					buttons_loaded=true;
+					document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "toolbar_items/custom_buttons/custombutton.js'></script>");
+				}
+				FCChatConfig.toolbar_items[i]='custombutton:'+item[item.length-1].replace(/ /g, '_');
+			}else{
+				document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "toolbar_items/"+FCChatConfig.toolbar_items[i].replace(/:/g, '/')+".js'></script>");
+				FCChatConfig.toolbar_items[i]=item[item.length-1];
+			}
 		}
 	}
 	if(FCChatConfig.prompt_user){
