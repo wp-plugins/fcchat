@@ -109,6 +109,7 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		"toolbar_default_display"=>array("value"=>"1","type"=>"radio2","ops"=>array(array("value"=>"0","desc"=>"Minimized"),array("value"=>"1","desc"=>"Normal")), "quote"=>"0","desc"=>""),
 		"toolbar_position"=>array("value"=>"bottomright","type"=>"radio2","ops"=>array(array("value"=>"bottomright","desc"=>"Bottom right"),array("value"=>"bottomleft","desc"=>"Bottom left"),array("value"=>"topright","desc"=>"Top right"),array("value"=>"topleft","desc"=>"Top left")), "quote"=>"1","desc"=>""),
 		"toolbar_items"=>array("value"=>"['friendscenter','social_media']","type"=>"text","quote"=>"0","sz"=>"80","desc"=>"A list of items to place in the toolbar. The list MUST include 'friendscenter'. Refer to the User Guide or Product Manual for available items. Place brackets around the list. Each item must be in single quotes."),
+		"custom_buttons"=>array("value"=>"","type"=>"textarea","desc"=>"Allows you to add your own customized buttons to the toolbar. Read the tutorial in the User Guide on adding custom buttons before editing this field."),
 		
 		"cmntmob"=>array("value"=>"","type"=>"comment","desc"=>"MOBILE BROWSER OPTIONS"),
 		"toolbar_banner_mode"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Run floating toolbar in banner mode for mobile apps."),

@@ -17,9 +17,6 @@ var FCChatConfig_wp = {
 	use_template_overrides:false,
 	template_overrides_url:"", 
 	toolbar_items:["friendscenter","social_media:social_media"], // List MUST include "friendscenter"
-	custom_buttons:{
-		
-	},
 	prompt_user:true,
 	facebook_connect:true,
 	show_country_flags:true,
