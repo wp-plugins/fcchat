@@ -34,7 +34,7 @@ After upgrading, make sure you clear your browser cache and refresh the page.
 
 FEATURE LIST:
 
-Real time text chat
+Real time text chat.
 
 Video Chat: 1 on 1 video chat and video conferencing (6 Simulaneous Cams)
 
