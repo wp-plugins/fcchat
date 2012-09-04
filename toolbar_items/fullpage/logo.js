@@ -30,7 +30,7 @@ jGo.fcchat_toolbar.logo.style={
 	
 	var create_menu_item = function(){
 	  return"<div class='fc_logo_fullpage' style='position: absolute;top:0px;left:0pxwidth:"+config.menu_item.width+"px;'>" +
-			"<img height='16px' style='display:block;position:absolute;top:"+ (jGo.fcchat_toolbar.style.icons_16px.top+fc_chat.get_ie_offset()) + "px; left: "+config.menu_item.img.left+"px;width:16px;height:16px;filter:alpha(opacity=60); -moz-opacity:.60; opacity:.60;' src='"+config.menu_item.img.src+"'>" +
+			"<img height='16px' style='display:block;position:absolute;top:"+ (jGo.fcchat_toolbar.style.icons_16px.top) + "px; left: "+config.menu_item.img.left+"px;width:16px;height:16px;filter:alpha(opacity=60); -moz-opacity:.60; opacity:.60;' src='"+config.menu_item.img.src+"'>" +
 					
 			"<div id='jGo_logo_bar_txt_inner' style='position:absolute;top:0px;left:28px;width:"+(config.menu_item.width-28)+"px;"+jGo.fcchat_toolbar.style.text+";padding-top:"+(config.menu_item.padding_top+fc_chat.get_ie_offset())+"px'>" +config.menu_item.txt+ "</div>" +
 			"</div>";

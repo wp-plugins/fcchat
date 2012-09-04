@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 3.1
+Stable tag: 3.1.1
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -500,6 +500,8 @@ Corrected multiple issues with the video chat.
 = 3.1 =
 Corrected multiple issues with the video chat. Added the ability to quickly add customized buttons to the chat toolbar. Add a like button, a twitter button, a recent news button, top articles, etc. 
 
+= 3.1.1 =
+Corrected an issue with the quickstyling. Added disabled and hidden rooms that can be enabled on select pages. 
 
 == Upgrade Notice ==
 

@@ -74,6 +74,7 @@ function fcchat_widget_options() {
 		divider_css:'',
 		width_prop_offsets:'0:0:0', /*info box : buttons : minimized*/
 		text_top_offset:0, 
+		off_button_left_offset:0,
 		base_font_css:'',
 		alert_css:'',
 		link_css:'',
@@ -129,6 +130,9 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		"chat_room_height_offset"=>array("value"=>"105","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The height offset of the chat room panel relative the default height."),
 		
 		"cmntchat"=>array("value"=>"","type"=>"comment","desc"=>"CHAT ROOM PARAMS"),
+		"disabled_rooms"=>array("value"=>"[]","type"=>"text","quote"=>"0","sz"=>"80","desc"=>"A list of rooms to be disabled. After disabling a room, you may enable it on a page by page basis. To do this, you must override this variable on the page in question, by inserting Javascript code into the page which includes the line FCChatConfig.disabled_rooms=[]; The code must be inserted after the FCChat configuration code has loaded."),
+		"disabled_room_msg"=>array("value"=>"You must be a member to enter this room.","type"=>"text","quote"=>"1","sz"=>"80","desc"=>""),
+		"hidden_rooms"=>array("value"=>"[]","type"=>"text","quote"=>"0","sz"=>"80","desc"=>"A list of rooms to be hidden from the user. After hiding a room, you may enable it on a page by page basis. To do this, you must override this variable on the page in question, by inserting Javascript code into the page which includes the line FCChatConfig.hidden_rooms=[]; The code must be inserted after the FCChat configuration code has loaded."),
 		"room_message_limit"=>array("value"=>"300","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"Maximum number of room messages allowed before the room will auto-adjust."),
 		"min_room_messages"=>array("value"=>"50","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The number of messages left in the room after an auto-adjust."),
 		"max_chat_size"=>array("value"=>"2000","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The maximum size of a single chat message."),

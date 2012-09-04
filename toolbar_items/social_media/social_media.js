@@ -87,7 +87,7 @@ jGo.fcchat_toolbar.social_media.style={
 	jGo.fcchat_toolbar.social_media.tgl_dialog = function()    {return tgl_dialog();};
 	
 	var create_menu_item = function(){
-	  return"<div class='fc_share_button' style='position: absolute;width:"+config.menu_item.width+"px;top:"+ (jGo.fcchat_toolbar.style.icons_16px.top+fc_chat.get_ie_offset()) + "px; left: "+config.menu_item.button.left+"px;'>" +
+	  return"<div class='fc_share_button' style='position: absolute;width:"+config.menu_item.width+"px;top:"+ (jGo.fcchat_toolbar.style.icons_16px.top) + "px; left: "+config.menu_item.button.left+"px;'>" +
 			"<div class='fc_abbtn' ><a title='"+fc_chat.textSetter(343,'Share')+"' href='javascript:jGo.fcchat_toolbar.social_media.tgl_dialog()' ><img src='"+basedir+"current_skin/twitter.png'><img src='"+basedir+"current_skin/facebook.png'>&nbsp;</a></div></div>";
 	};
 	var create_dialog = function(){

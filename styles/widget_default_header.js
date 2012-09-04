@@ -208,7 +208,7 @@
 		room_name_font_css:"font-size:14px;font-weight:bold;color:#444444;",
 		font_css:"color:#444444;font-family:arial;font-weight:normal;font-size:12px;",
 		count_font_css:"font-size:14px;color:blue;font-weight:bold;",
-		disabled_room_name_font_css:"font-size:12px;font-weight:bold;color:#dddddd;",
+		disabled_room_name_font_css:"font-size:14px;font-weight:bold;color:#8888aa;",
 		room_passwords:{
 			font:{
 				textfield_description_css:"font-family:arial;font-size:12px;color:#darkgray;font-style:italic;font-weight:bold;"
@@ -302,14 +302,17 @@
 		x(s+".chatcenter_layout.info_box.padding_top",c.text_top_offset);
 		x(s+".chatcenter_layout.open_chat_button.top",c.text_top_offset);
 		x(s+".chatcenter_layout.off_button.top",c.text_top_offset);
+		x(s+".msgcenter_layout.info_box.padding_top",c.text_top_offset);
+		x(s+".msgcenter_layout.open_chat_button.top",c.text_top_offset);
+		x(s+".msgcenter_layout.off_button.top",c.text_top_offset);
 		x(s+".chatcenter_layout.width",w[0]+w[1]);
 		x(s+".msgcenter_layout.width",w[0]+w[1]);
 		x(s+".chatcenter_layout.info_box.width",w[0]);
 		x(s+".msgcenter_layout.info_box.width",w[0]);
 		x(s+".chatcenter_layout.open_chat_button.left",w[0]);
 		x(s+".msgcenter_layout.open_chat_button.left",w[0]);
-		x(s+".chatcenter_layout.off_button.left",w[0]);
-		x(s+".msgcenter_layout.off_button.left",w[0]);
+		x(s+".chatcenter_layout.off_button.left",w[0]+(c.off_button_left_offset||0));
+		x(s+".msgcenter_layout.off_button.left",w[0]+(c.off_button_left_offset||0));
 		x(s+".chatcenter_layout.status.left",w[0]);
 		x(s+".msgcenter_layout.status.left",w[0]);
 		x(s+".chatcenter_layout.divider.left",w[0]);

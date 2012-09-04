@@ -9,12 +9,13 @@ jGo.fcchat_toolbar.prompt = {};
 //Style template
 jGo.fcchat_toolbar.prompt.style={
 	dialog_box:{
-		width:300,
+		width:330,
 		height:85,
 		bubble:{
 			css:jGo.fcchat_toolbar.style.css+";margin:12px;",
 			triangle_color:jGo.util.extractFromCSSString("background-color",jGo.fcchat_toolbar.style.css),
-			text:jGo.fcchat_toolbar.style.text,
+			text:jGo.fcchat_toolbar.style.text+";font-size:12px",
+			link_text:FCChatConfig.styles.widget.toolbar_item.text.link_css+";font-size:12px",
 			hide_icon:{
 				css:jGo.fcchat_toolbar.style.icon_tray.hide_icon.css+";font-size:14px;"
 			}
@@ -53,7 +54,7 @@ jGo.fcchat_toolbar.prompt.style={
 	};
 	var render_promo = function(username){
 		if(rendered==0){
-			var content="<div style='position:relative;top:0px;float:right;'><a style='"+config.dialog_box.bubble.hide_icon.css+"' HREF='javascript:void' onclick='fc_chat.promo_close();return false;'>x</a>&nbsp;&nbsp;</div>"+fc_chat.textSetter(364,'Hi, your chat name is ')+username+".<br><a style='color:white' href='javascript:fc_chat.promo_change_name()'>"+fc_chat.textSetter(365,'Create new name')+"</a>&nbsp;&nbsp;<a style='color:white' href='javascript:void()' onclick='fc_chat.promo_close();return false;'>"+fc_chat.textSetter(366,'No thanks')+"</a>";
+			var content="<div style='position:relative;top:0px;float:right;'><a style='"+config.dialog_box.bubble.hide_icon.css+"' HREF='javascript:void' onclick='fc_chat.promo_close();return false;'>x</a>&nbsp;&nbsp;</div>"+fc_chat.textSetter(364,'Hi, your chat name is ')+username+".<br><a style='"+config.dialog_box.bubble.link_text+"' href='javascript:fc_chat.promo_change_name()'>"+fc_chat.textSetter(365,'Create new name')+"</a>&nbsp;&nbsp;<a style='"+config.dialog_box.bubble.link_text+"' href='javascript:void()' onclick='fc_chat.promo_close();return false;'>"+fc_chat.textSetter(366,'No thanks')+"</a>";
 			jQ("#fc_prompt_content").html(content);
 			rendered=1;
 		}

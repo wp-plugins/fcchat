@@ -22,7 +22,7 @@ jGo.fcchat_toolbar.joomla_search_in_menu.style={
 (function () {
 	var action_url = "index.php";
 	var jQ = jGo.$;
-	var z_b = FCChatConfig.zindex_base;
+	var z_b = jGo.config.max_z_index - 100;
 	var basedir = FCChatConfig.dir;
 	var rendered=0;
 	var config =jGo.fcchat_toolbar.joomla_search_in_menu.style;

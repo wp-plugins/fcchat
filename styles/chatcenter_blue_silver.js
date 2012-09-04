@@ -311,7 +311,7 @@ FCChatConfig.styles={
 				room_name_font_css:"font-size:14px;font-weight:bold;color:white;",
 				font_css:"color:white;font-family:arial;font-weight:normal;font-size:12px;",
 				count_font_css:"font-size:14px;color:cyan;font-weight:bold;",
-				disabled_room_name_font_css:"font-size:12px;font-weight:bold;color:#dddddd;",
+				disabled_room_name_font_css:"font-size:14px;font-weight:bold;color:#8888aa;",
 				exit_room_link_disabled_css:"color:#eeeeee;",
 				room_passwords:{
 					font:{
