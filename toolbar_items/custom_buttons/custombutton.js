@@ -43,7 +43,7 @@ jGo.fcchat_toolbar.custombutton = function(id,s){
   				//"<div class='fc_abbtn' >" +
   					"<a style='text-decoration:none;' "+(config.menu_item.newtab?"target=_blank":"")+" title='"+config.menu_item.text+"' href=\""+(config.menu_item.href?config.menu_item.href:"javascript:jGo.fcchat_toolbar.custombutton"+id+".tgl_dialog()")+"\" onclick=\""+(config.menu_item.onclick||"")+"\">" +
   						(config.menu_item.icon!=''?"<img style='display:block;position:absolute;top:"+ (jGo.fcchat_toolbar.style.icons_16px.top) + "px; left: "+config.menu_item.padding_left+"px;width:16px;height:16px;"+config.menu_item.icon_css+"' src='"+config.menu_item.icon+"'>":"") +
-  						"<div id='jGo_custombutton"+id+"_txt_inner' style='text-decoration:none;position:absolute;top:0px;left:"+(config.menu_item.icon!=''?31:10)+"px;width:"+(config.menu_item.width-28)+"px;padding-top:"+(config.menu_item.padding_top+fc_chat.get_ie_offset())+"px;"+jGo.fcchat_toolbar.style.text+";"+config.menu_item.text_css+";'>" +config.menu_item.text+ "</div>" +
+  						"<div id='jGo_custombutton"+id+"_txt_inner' style='text-decoration:none;position:absolute;top:0px;left:"+(config.menu_item.icon!=''?31:10)+"px;width:"+(config.menu_item.width-(config.menu_item.icon!=''?28:7))+"px;padding-top:"+(config.menu_item.padding_top+fc_chat.get_ie_offset())+"px;"+jGo.fcchat_toolbar.style.text+";"+config.menu_item.text_css+";'>" +config.menu_item.text+ "</div>" +
   					"</a>" +
   				//"</div>" +
   			"</div>";
