@@ -17,7 +17,7 @@ MOST RECENT FEATURES
 
 Version 3.1 adds the ability to quickly add customized buttons with content dialog boxes to the chat toolbar. Add a like button, a twitter button, a recent news button, top articles, etc. 
 
-Version 3.0.3 adds the ability to post Youtube videos (thumbnail with link) simply by entering the url of the video.
+Version 3.0.3. adds the ability to post Youtube videos (thumbnail with link) simply by entering the url of the video.
 
 The video chat now supports Flash player 11's h264 streaming capability. This represents a significant enhancement, in terms of video resolution and bandwidth usage. There are now 2 different layouts available for the chat window: Chatcenter and MsgCenter. The new MsgCenter layout is for those of you wish to use the Instant Messanger feature exclusively. 
 
