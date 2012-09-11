@@ -168,9 +168,9 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		"current_domain"=>array("value"=>"fastcatsoftware.com","type"=>"text","quote"=>"1","sz"=>"80","desc"=>"The current domain."),
 		"import_default_avatar"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"When user integration is enabled, the users site account avatar will be used. (if possible)."),
 		"script_type"=>array("value"=>"php","type"=>"radio2","ops"=>array(array("value"=>"php","desc"=>"PHP"),array("value"=>"asp","desc"=>"ASP")),"quote"=>"1","desc"=>""),
-		"avatars_dir"=>array("value"=>"","type"=>"text","quote"=>"0","sz"=>"80","desc"=>"The directory in which avatars are placed."),
-		"images_dir"=>array("value"=>"","type"=>"text","quote"=>"0","sz"=>"80","desc"=>"The directory in which uploaded images are placed."),
-		"smileys_dir"=>array("value"=>"","type"=>"text","quote"=>"0","sz"=>"80","desc"=>"The directory in which smileys are placed."),
+		"avatars_dir"=>array("value"=>"","type"=>"text","quote"=>"1","sz"=>"80","desc"=>"The directory in which avatars are placed."),
+		"images_dir"=>array("value"=>"","type"=>"text","quote"=>"1","sz"=>"80","desc"=>"The directory in which uploaded images are placed."),
+		"smileys_dir"=>array("value"=>"","type"=>"text","quote"=>"1","sz"=>"80","desc"=>"The directory in which smileys are placed."),
 		"avatar_sz"=>array("value"=>"18","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The default height of avatars."),
 		"show_avatar_in_chats"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Display user's avatar in chat messages."),
 		
