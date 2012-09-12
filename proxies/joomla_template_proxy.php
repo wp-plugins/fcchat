@@ -1,7 +1,7 @@
 <?php
 /**
 *
-* @FCChat proxy for wordpress 
+* @FCChat template overrides proxy for joomla 
 * @copyright (c) 2009- Robert Beach (fastcatsoftware.com)
 *
 * Use this file to establish a proxy between fcchat and joomla.
@@ -26,6 +26,7 @@ JDEBUG ? $_PROFILER->mark( 'afterLoad' ) : null;
  * NOTE :
  */
 $mainframe =& JFactory::getApplication('site');
+$mainframe->initialise();
 jimport( 'joomla.application.module.helper' );
 jimport( 'joomla.html.parameter' );
 
@@ -50,8 +51,17 @@ jimport( 'joomla.html.parameter' );
     }
 
 	
-	$module = &JModuleHelper::getModule('mod_fcchat');
-	$params = new JParameter($module->params); 
+	//$module = &JModuleHelper::getModule('fcchat');
+	$db = JFactory::getDBO();
+	$query = "
+  	SELECT params
+    	FROM ".$db->nameQuote('#__modules')."
+    	WHERE ".$db->nameQuote('module')." = ".$db->quote('mod_fcchat').";
+  	";
+	$db->setQuery($query);
+	$result = $db->loadResult();
+	$params = new JRegistry();
+	$params->loadString($result); 
 	$options = get_fcchat_widget_options($params);
 	$plugin_url = JURI::base() . '../';
 	$javascript='';

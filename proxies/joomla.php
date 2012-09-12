@@ -65,7 +65,11 @@ function fc_get_avatar(){
 	$avatar=$user->getAvatarURL($sizex, $sizey);
 	if(!empty($avatar)){
 		if($version==2){
-			return JURI::base() . substr($avatar, 1);
+			if(substr($avatar, 0, 1)=="/"){
+				return JURI::base() . substr($avatar, 1);
+			}else{
+				return $avatar;
+			}
 		}else{
 			$url = preg_split('/modules\/mod_fcchat\/FCChat\/proxies\//i',JURI::base());
 			$url = $url[0];

@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 3.1.3
+Stable tag: 3.1.4
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -508,6 +508,9 @@ Corrected an issue with the access to locked rooms. The first room in the room l
 
 = 3.1.3 =
 Corrected an issue that was freezing the chat when "Open full chat" was pressed.
+
+= 3.1.4 =
+Corrected an issue that with the processing of non latin alphabets.
 
 == Upgrade Notice ==
 
