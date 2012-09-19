@@ -39,6 +39,13 @@ $password='';
 
 $request = ( isset($_POST['f']) ) ? (int) $_POST['f'] : 0;
 
+function str_decode_utf8($string) {
+  if (mb_detect_encoding($string.'a', 'UTF-8', true) === 'UTF-8') {
+    $string = utf8_decode($string);
+  }
+return $string;
+}
+
 
 //Pull the kunena avatar
 function fc_get_avatar(){
@@ -92,8 +99,10 @@ if($request==0){
 		$t1 = time();
 		if(USERNAMES_ENCODED){
 			$username = htmlspecialchars_decode($current_user->username);
+		}else{
+			$username = $current_user->username;
 		}
-		$name_length = strlen($username);
+		$name_length = strlen(str_decode_utf8($username));
 		if($name_length<10){
 			$name_length = '00' . $name_length;
 		}else if($name_length<100){

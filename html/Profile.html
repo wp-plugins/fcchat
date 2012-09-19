@@ -1,6 +1,7 @@
 <!-- This is a default profile page. Feel free to customize it any way you like. -->
 <HTML>
 <HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
 <TITLE>Profile Page</TITLE>
 <style>
 BODY {background-color: #b0b0b0;font-family:arial; font-size:12;color:white}
@@ -19,7 +20,7 @@ var insave=false;
 function $(u){
 	return document.getElementById(u)
 };
-function escape(s){
+function escapeChars(s){
 	s = s.replace(/%/g, '%25');
     s = s.replace(/&/g, '%26amp;');
     s = s.replace(/</g, '%26lt;');
@@ -27,7 +28,7 @@ function escape(s){
     s = s.replace(/\\/g, '\\\\');
     return s;
 };
-function unescape(s){
+function unescapeChars(s){
 	 s = s.replace(/%26/g, '&');
      s = s.replace(/%25/g, '%');
      return s;
@@ -76,8 +77,8 @@ function saveProfile(){
 	var sex = 0;
 	var male = $('sexradio1').checked;
 	var female = $('sexradio2').checked;
-	var location = escape($('locationtxt').value.substr(0,50));
-	var aboutme = escape($('aboutmetxt').value.substr(0,500));
+	var location = escapeChars($('locationtxt').value.substr(0,50));
+	var aboutme = escapeChars($('aboutmetxt').value.substr(0,500));
 	if(male){
 		sex=1;
 	}else if(female){
@@ -119,10 +120,10 @@ function writeProfile(user,profile){
 			age=(age==''?'?':age);
 			if(profile.length>4){
 				var remainder = profile.substr(4).split('%%');
-				location = unescape(remainder[0]);
+				location = unescapeChars(remainder[0]);
 				location=(location==''?'?':location);
 				if(remainder.length>1){
-					aboutme = unescape(remainder[1]);
+					aboutme = unescapeChars(remainder[1]);
 				}
 			}
 		}
@@ -145,7 +146,8 @@ function writeProfile(user,profile){
 };
 function getArgs() {
 	var args = new Object();
-	var query = location.search.substring(1);
+	var search = unescape(location.search);
+	var query = search.substring(1);
 	query.replace(/</g, '&lt;');
 	query.replace(/>/g, '&gt;');
 	var pairs = query.split("&");
@@ -154,7 +156,8 @@ function getArgs() {
 		if (pos == -1) continue;
 		var argname = pairs[i].substring(0,pos);
 		var value = pairs[i].substring(pos+1);
-		args[argname] = unescape(value);
+		value=decodeURIComponent(escape(value));
+		args[argname] = value; //unescapeChars(value);
 	}
 	return args;
 }
@@ -166,8 +169,8 @@ var args = getArgs();
 <div style="border-bottom: #A91905 2px solid;font-size:16;color:black"><b><i><script>document.write(window.parent.fc_chat.textSetter(207))</script></i></b></div>
 <br>
 <script>
-document.write("<div style='width:360px'><img src='" + decodeURIComponent(args['loc']).replace(/\|\|period\|\|/g, '.').replace(/\|\|protocol\|\|/g, 'http') + "' border=0>&nbsp;")
-document.write("<b>" + decodeURIComponent(args['nm']) + "&nbsp;&nbsp;&nbsp;" +(args['g']=='0'?"<span id='loading' style='color:green;font-style:italic'>("+window.parent.fc_chat.textSetter(208)+")</span>":"") + "</b></div><br>");
+document.write("<div style='width:360px'><img src='" + args['loc'].replace(/\|\|period\|\|/g, '.').replace(/\|\|protocol\|\|/g, 'http') + "' border=0>&nbsp;")
+document.write("<b>" + args['nm'] + "&nbsp;&nbsp;&nbsp;" +(args['g']=='0'?"<span id='loading' style='color:green;font-style:italic'>("+window.parent.fc_chat.textSetter(208)+")</span>":"") + "</b></div><br>");
 </script>
 
 <div id='displayprofile' style='display:none'>

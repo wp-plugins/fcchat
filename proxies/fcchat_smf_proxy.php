@@ -18,6 +18,13 @@ define('RETURN_AVATAR', true);
 $user_id='';
 $password='';
 
+function str_decode_utf8($string) {
+  if (mb_detect_encoding($string.'a', 'UTF-8', true) === 'UTF-8') {
+    $string = utf8_decode($string);
+  }
+return $string;
+}
+
 $request = ( isset($_POST['f']) ) ? (int) $_POST['f'] : 0;
 
 if($request==0){
@@ -29,8 +36,10 @@ if($request==0){
 		$t1 = time();
 		if(USERNAMES_ENCODED){
 			$username = htmlspecialchars_decode($user_info['username']);
+		}else{
+			$username = $user_info['username'];
 		}
-		$name_length = strlen($username);
+		$name_length = strlen(str_decode_utf8($username));
 		if($name_length<10){
 			$name_length = '00' . $name_length;
 		}else if($name_length<100){

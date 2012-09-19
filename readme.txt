@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 3.1.4
+Stable tag: 3.1.5
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -511,6 +511,9 @@ Corrected an issue that was freezing the chat when "Open full chat" was pressed.
 
 = 3.1.4 =
 Corrected an issue that with the processing of non latin alphabets.
+
+= 3.1.5 =
+Addressed several issues involiving UTF-8 compatibility. Resolved an issue in which a bug in ie9 was causing scrollbars in the administration panel to scroll back to the top automatically.
 
 == Upgrade Notice ==
 

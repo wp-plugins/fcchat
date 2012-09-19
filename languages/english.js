@@ -210,7 +210,7 @@ FCChatConfig.txt={
 	//Room Alerts
 	t127: " has left the room.",
 	t128: " has entered the room.",
-	t129: "You must be a member to enter this room.",
+	t129: "",
 	
 	//Send chat msgs
 	t130: "Guest accounts can't receive offline chats.",

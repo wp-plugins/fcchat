@@ -23,6 +23,13 @@ include($phpbb_root_path . 'common.' . $phpEx);
 $user_id='';
 $password='';
 
+function str_decode_utf8($string) {
+  if (mb_detect_encoding($string.'a', 'UTF-8', true) === 'UTF-8') {
+    $string = utf8_decode($string);
+  }
+return $string;
+}
+
 /*
 if (isset($_COOKIE[$config['cookie_name'] . "_u"])){
 	echo "1";
@@ -52,8 +59,10 @@ if($request==0){
 		$t1 = time();
 		if(USERNAMES_ENCODED){
 			$username = htmlspecialchars_decode($row['username']);
+		}else{
+			$username = $row['username'];
 		}
-		$name_length = strlen($username);
+		$name_length = strlen(str_decode_utf8($username));
 		if($name_length<10){
 			$name_length = '00' . $name_length;
 		}else if($name_length<100){

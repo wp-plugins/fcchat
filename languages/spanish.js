@@ -212,7 +212,7 @@ FCChatConfig.txt = {
 	// Alertas de habitaciones
 	t127: "ha salido de la sala.",
 	t128: "ha entrado en la sala.",
-	t129: "Tienes que ser miembro para entrar en esta sala.",
+	t129: "",
 	
 	// Enviar mens chat
 	t130: "Las cuentas de invitado no puede recibir mensajes fuera de línea.",
@@ -591,17 +591,24 @@ FCChatConfig.txt = {
 };
 
 //Language style overrides
+
+//Inceases the width of the widget buttons (40px) and info boxes (30px) (for header style)
 if(FCChatConfig.quickstyling.alldomains.widget.width_prop_offsets=="0:0:0"){
 	FCChatConfig.quickstyling.alldomains.widget.width_prop_offsets="0:40:30";
 }
+
+//Inceases the overall width of the widget by 10px (for sidebar style)
 if(FCChatConfig.quickstyling.alldomains.widget.width_offset==0){
 	FCChatConfig.quickstyling.alldomains.widget.width_offset=10;
 }
+//Inceases the width of the info boxes (30px) and the widget buttons (60px) for the toolbar
 if(FCChatConfig.quickstyling.alldomains.toolbar.width_prop_offsets=="0:0:0"){
 	FCChatConfig.quickstyling.alldomains.toolbar.width_prop_offsets="30:60:0";
 }
 FCChatConfig.language_template_overrides=function(){
+	//Changes width of Send to Room button
 	FCChatConfig.styles.chat_window.main_panel.send_to_room_button.default_css+=";padding:2px 64px;";
+	//Moves the Off Button over by 5px
 	FCChatConfig.styles.widget.toolbar_item.chatcenter_layout.off_button.left+=5;
 	FCChatConfig.styles.widget.toolbar_item.msgcenter_layout.off_button.left+=5;
 }
