@@ -8,6 +8,7 @@ $FCCHAT_BASE_URL="http://YOURDOMAIN.COM/FCChat/";
 <html>
 <head>
 <meta name="viewport" content="width=500, initial-scale=.8, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script>
 var fc_chat_path = "";
 var fcchat_domain="fullpage";
