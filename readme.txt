@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 3.1.5
+Stable tag: 3.1.6
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -17,7 +17,7 @@ MOST RECENT FEATURES
 
 Version 3.1 adds the ability to quickly add customized buttons with content dialog boxes to the chat toolbar. Add a like button, a twitter button, a recent news button, top articles, etc. 
 
-Version 3.0.3. adds the ability to post Youtube videos (thumbnail with link) simply by entering the url of the video.
+Version 3.0.3 adds the ability to post Youtube videos (thumbnail with link) simply by entering the url of the video.
 
 The video chat now supports Flash player 11's h264 streaming capability. This represents a significant enhancement, in terms of video resolution and bandwidth usage. There are now 2 different layouts available for the chat window: Chatcenter and MsgCenter. The new MsgCenter layout is for those of you wish to use the Instant Messanger feature exclusively. 
 
@@ -514,6 +514,9 @@ Corrected an issue that with the processing of non latin alphabets.
 
 = 3.1.5 =
 Addressed several issues involiving UTF-8 compatibility. Resolved an issue in which a bug in ie9 was causing scrollbars in the administration panel to scroll back to the top automatically.
+
+= 3.1.6 =
+Addressed a problem with user integration, which was preventing the assignment of a default administrative account.
 
 == Upgrade Notice ==
 
