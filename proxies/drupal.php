@@ -13,8 +13,9 @@
 define('SECRET_KEY', 'OqO,X<rU_&=F;V}f39< bh,+&Qlr>:20=V6a^FkQ9N!<Uwp|y}]}<!5(|W|N4E>8');
 define('USERNAMES_ENCODED', true);
 
-chdir('../../../../../');
-require('./includes/bootstrap.inc');
+define('DRUPAL_ROOT', dirname(__FILE__) . '/../../../../../');
+require_once DRUPAL_ROOT . 'includes/bootstrap.inc';
+  
 if (!isset($base_url)) {
     $fc_base_root = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 'https' : 'http';
     $base_url = $fc_base_root .= '://' . $_SERVER['HTTP_HOST'];

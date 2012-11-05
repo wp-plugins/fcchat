@@ -49,7 +49,7 @@ proto.create = function(id, args){
 	var s = this.style = $.extend({},args[1]);
     this.fixed=(args[2]!=null?args[2]:true);
     this.fadeInt=args[3] || 200;
-    this.fadeTimer=args[4] || 10000;
+    this.fadeTimer=(args[4]!=null?args[4]:10000);
     var menucontrol = (args[5]!=null?args[5]:true);
 	var outerClass = 'jGo_app jGo_myapp infobox'+id;
 	this.frame=$('<div></div>').addClass(outerClass).attr('id', 'jGo_infoboxF' + id).css({position:(this.fixed?'fixed':'absolute'),display:'none','z-index':jGo.config.max_z_index});
@@ -86,7 +86,7 @@ proto.show = function(parent,top,left) {
 	left = left || 0;
 	frame.css({"top":top+"px","left":left+"px"});
 	var _t=this;
-	this.fadeTimout = setTimeout(function(){_t.fade_out()}, this.fadeTimer);
+	if(this.fadeTimer!=0)this.fadeTimout = setTimeout(function(){_t.fade_out()}, this.fadeTimer);
 	this.frame.fadeIn(this.fadeInt);
 };
 proto.fade_out = function(){

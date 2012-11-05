@@ -73,7 +73,10 @@ function fc_get_avatar(){
 	if(!empty($avatar)){
 		if($version==2){
 			if(substr($avatar, 0, 1)=="/"){
-				return JURI::base() . substr($avatar, 1);
+				$url = preg_split('/modules\/mod_fcchat\/FCChat\/proxies\//i',JURI::base());
+				$url = $url[0];
+				$url2 = preg_split('/modules\/mod_fcchat\/FCChat\/proxies\//i',$avatar);
+				return $url . $url2[count($url2)-1];
 			}else{
 				return $avatar;
 			}
@@ -81,7 +84,7 @@ function fc_get_avatar(){
 			$url = preg_split('/modules\/mod_fcchat\/FCChat\/proxies\//i',JURI::base());
 			$url = $url[0];
 			$url2 = preg_split('/modules\/mod_fcchat\/FCChat\/proxies\//i',$avatar);
-			return $url . $url2[1];
+			return $url . $url2[count($url2)-1];
 		}
 	}else{
 		return null;

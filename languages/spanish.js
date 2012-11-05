@@ -196,7 +196,7 @@ FCChatConfig.txt = {
 	t116: "Historia Pagina",
 	t117: "Chat actual",
 	t118: "Auto-borrar. Sobrepasado el límite de mensajes.",
-	t119: "*****",
+	t119: "*@$*^",
 	t120: "Chat cargando ... Espere, por favor...",
 	t121: "Pagina cargando... Espere, por favor...",
 	t122: "Sala cargando... Espere, por favor...",
@@ -308,7 +308,7 @@ FCChatConfig.txt = {
 	t199: "Enlace a su gravatar imagen.<br>(es decir, http://www.gravatar.com/avatar/1234.png)",
 	t200: "Utiliza tu avatar foro actual",
 	t201: "Utilizar mi avatar actual",
-	t202: "Seleccione un avatar de la galería de abajo",
+	t202: "Seleccione un avatar de la galería de abajo. Haga clic <a href=\"javascript:window.parent.fc_chat.newAvatar('default.gif',2,'0','php','http://www.php.net','PHP')\">aqui</a> para restaurar su avatar en su valor predeterminado.",
 	t203: "Usted tiene",
 	t204: "seleccionado, con éxito, un avatar de la galería!",
 	t205: "decidió utilizar su avatar foro actual!",
@@ -573,7 +573,7 @@ FCChatConfig.txt = {
 	t403:"Seleccione una Sala",
 	t404:"Tiene mensajes sin leer en su caja de mensajes. Haga click en 'Abrir Chat Completo' para ver.",
 	t405:"Salas de Chat",
-	t406:"No hay imagen",
+	t406:"Imagen",
 	t407:"Sala",
 	t408:"Mens",
 	t409:"Lo sentimos, este usuario no está disponible para chat privado.",
@@ -587,7 +587,13 @@ FCChatConfig.txt = {
 	t417:"Este usuario está charlando en la sala: ",
 	
 	//added 3.0.1
-	t418:"YouTube video"
+	t418:"YouTube video",
+	
+	//added 3.2
+	t419:"Apodo",
+	t420:"Apodo",
+	t421:"Apodo se establece",
+	t422:"Apodo"
 };
 
 //Language style overrides

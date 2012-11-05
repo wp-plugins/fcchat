@@ -150,6 +150,7 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		
 		"cmntpromo"=>array("value"=>"","type"=>"comment","desc"=>"USER PROMPT"),
 		"prompt_user"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Prompt user to sign in to the chat when they first come to your site."),
+		"prompt_nickname"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Prompt guest user to add a nickname. Or, alternatively, sign in."),
 		
 		"cmntfb"=>array("value"=>"","type"=>"comment","desc"=>"FACEBOOK CONNECT"),
 		"facebook_connect"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Allow Facebook connect."),

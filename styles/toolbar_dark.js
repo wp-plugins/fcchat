@@ -116,6 +116,16 @@ jGo.fcchat_toolbar.style={
 						css:"color:#444444;font-stretch:wider;font-size:10px;font-weight:bold;text-decoration:none"
 					}
 				}
+			},
+			set_nickname:{
+				css:"font:10pt arial;width:300px;-webkit-box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);background-color:#eeeeee;padding:15px;border:1px solid black;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
+				menu_item:{
+					link_css:"font:10pt arial;",
+					input_css:"width:290px;",
+					set_notice:{
+						css:"color:green;font-weight:bold;font-style:italic"
+					}
+				}
 			}
 		},
 		divider_css:"top:0px;width:1px;height:35px;background-color:#aaaaaa;",

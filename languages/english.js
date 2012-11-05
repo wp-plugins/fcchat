@@ -194,7 +194,7 @@ FCChatConfig.txt={
 	t116: "History Page",
 	t117: "Current Chat",
 	t118: "Autoclear. Room message limit exceded.",
-	t119: "*****",
+	t119: "*@$*^",
 	t120: "Loading Chat...Please wait...",
 	t121: "Loading Page...Please wait...",
 	t122: "Loading Room...Please wait...",
@@ -306,7 +306,7 @@ FCChatConfig.txt={
 	t199: "Link to image.<br><span style='color:#269CDD'>(ie http://www.gravatar.com/avatar/1234.png)</span>",
 	t200: "Use your current forum avatar",
 	t201: "Use my current avatar",
-	t202: "Select an avatar from the gallery below",
+	t202: "Select an avatar from the gallery below. Click <a href=\"javascript:window.parent.fc_chat.newAvatar('default.gif',2,'0','php','http://www.php.net','PHP')\">here</a> to restore your avatar to its default.",
 	t203: "You have",
 	t204: "successfully selected an avatar from the gallery!",
 	t205: "elected to use your current forum avatar!",
@@ -572,7 +572,7 @@ FCChatConfig.txt={
 	t403:"Select a Room",
 	t404:"You have unread messages in your Messages Box. Click 'Open Full Chat' above to view.",
 	t405:"Chat Rooms",
-	t406:"No image found",
+	t406:"Image",
 	t407:"Room",
 	t408:"Msgs",
 	t409:"Sorry, this user is not available for private chat.",
@@ -586,5 +586,11 @@ FCChatConfig.txt={
 	t417:"This user is chating in room: ",
 		
 	//added 3.0.1
-	t418:"YouTube video"
+	t418:"YouTube video",
+	
+	//added 3.2
+	t419:"Enter your nickname",
+	t420:"Edit nickname",
+	t421:"Nickname Set",
+	t422:"Set Nickname"
 };
