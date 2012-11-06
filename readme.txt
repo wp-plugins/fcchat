@@ -17,7 +17,7 @@ MOST RECENT FEATURES
 
 Version 3.2.1 corrects a critical error in 3.2.
 
-Version 3.2 adds a nickname prompt for guest users. Avatar integration has been updated.
+Version 3.2.0 adds a nickname prompt for guest users. Avatar integration has been updated.
 
 Version 3.1 adds the ability to quickly add customized buttons with content dialog boxes to the chat toolbar. Add a like button, a twitter button, a recent news button, top articles, etc. 
 
