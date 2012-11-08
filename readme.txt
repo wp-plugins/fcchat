@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 3.2.1
+Stable tag: 3.2.2
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -15,7 +15,6 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 MOST RECENT FEATURES
 
-Version 3.2.1 corrects a critical error in 3.2.
 
 Version 3.2.0 adds a nickname prompt for guest users. Avatar integration has been updated.
 
@@ -527,6 +526,9 @@ Adds a nickname prompt for guest users. Avatar integration has been updated.
 
 = 3.2.1 =
 Corrects a critical error in 3.2.
+
+= 3.2.2 =
+Corrects a bug that appeared when the require_login variable was set to true.
 
 == Upgrade Notice ==
 
