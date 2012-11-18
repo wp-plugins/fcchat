@@ -70,13 +70,14 @@ function fc_get_avatar(){
  
 	// Get avatar URL "/media/kunena/avatars/path/file.jpg"
 	$avatar=$user->getAvatarURL($sizex, $sizey);
+
 	if(!empty($avatar)){
 		if($version==2){
+			$url = preg_split('/modules\/mod_fcchat\/FCChat\/proxies/i',$avatar);
+			$avatar = $url[count($url)-1];
 			if(substr($avatar, 0, 1)=="/"){
 				$url = preg_split('/modules\/mod_fcchat\/FCChat\/proxies\//i',JURI::base());
-				$url = $url[0];
-				$url2 = preg_split('/modules\/mod_fcchat\/FCChat\/proxies\//i',$avatar);
-				return $url . $url2[count($url2)-1];
+				return $url[0] . substr($avatar, 1);
 			}else{
 				return $avatar;
 			}

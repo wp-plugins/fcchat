@@ -54,15 +54,32 @@ if($request==0){
 		//Grab the avatar
 		if(RETURN_AVATAR){
 			if (!empty($mybb->user['avatar'])){
-				echo "<fcchatresponse2>/" . $mybb->user['avatar'] . "<fcchatresponse2>";
+				$avatar=$mybb->user['avatar'];
+				if(substr($avatar, 0, 6)=="images"){
+					$avatar= $mybb->settings['bburl'] . "/" . $avatar;
+				}else if(substr($avatar, 0, 2)=="./"){
+					$avatar= $mybb->settings['bburl'] . substr($avatar,1);	
+				}else{
+					$avatar= $mybb->settings['bburl'] . $avatar;
+				}
+				echo "<fcchatresponse2>/" . $avatar . "<fcchatresponse2>";
 			}else{
 				echo "<fcchatresponse2><fcchatresponse2>";
-			}
+			}	
+			
 		}
 	}
 }else{
 	if (!empty($mybb->user['avatar'])){
-		echo "<fcchatresponse>/" . $mybb->user['avatar'] . "<fcchatresponse>";		
+		$avatar=$mybb->user['avatar'];
+		if(substr($avatar, 0, 6)=="images"){
+			$avatar= $mybb->settings['bburl'] . "/" . $avatar;
+		}else if(substr($avatar, 0, 2)=="./"){
+			$avatar= $mybb->settings['bburl'] . substr($avatar,1);	
+		}else{
+			$avatar= $mybb->settings['bburl'] . $avatar;
+		}
+		echo "<fcchatresponse>/" . $avatar . "<fcchatresponse>";		
 	}else{
 		echo "<fcchatresponse>0<fcchatresponse>";
 	}		

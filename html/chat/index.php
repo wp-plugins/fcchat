@@ -96,6 +96,7 @@ jGo.$(document.body).css(FCChatConfig.quickstyling.alldomains.full_page_css_obj)
 </div>
 <script type="text/javascript">document.write((true?FCChatConfig.load_standalone_bsc:FCChatConfig.load_integrated_bsc));</script>
 <script>
+
 function clear_popup_header(){
 	var v = jGo.$('#popup_box_header')[0];
 	v.style.display="none";
@@ -104,8 +105,8 @@ function set_popup_header(top,txt){
 var v = jGo.$('#popup_box_header')[0];
 v.style.display="block";
 v.innerHTML=txt;
-jGo.$(v).css({"top": top - 60 + "px","left": ( jGo.$(window).width() - jGo.$(v).width() ) / 2+jGo.$(window).scrollLeft() + "px"});
+jGo.$(v).css({"top": top - 100 + "px","left": ( jGo.$(window).width() - jGo.$(v).width() ) / 2+jGo.$(window).scrollLeft() + "px"});
 }
-set_popup_header(180,(FCChatConfig.big_logo!=''?"<img align=absmiddle height=80px style='height:80px;width:80px;' src="+FCChatConfig.big_logo+">":"")+FCChatConfig.full_page_loading);
+set_popup_header((jGo.util.getInnerHeight()-100)/2,(FCChatConfig.big_logo!=''?"<img align=absmiddle height=80px style='height:80px;width:80px;' src="+FCChatConfig.big_logo+">":"")+ " " + FCChatConfig.full_page_loading);
 </script>
 </body></html>
