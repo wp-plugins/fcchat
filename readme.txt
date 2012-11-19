@@ -17,7 +17,7 @@ MOST RECENT FEATURES
 
 Version 3.3.0. updates the chat display in mobile environments.
 
-Version 3.2.0. adds a nickname prompt for guest users. Avatar integration has been updated.
+Version 3.2.0 adds a nickname prompt for guest users. Avatar integration has been updated.
 
 
 The video chat now supports Flash player 11's h264 streaming capability. This represents a significant enhancement, in terms of video resolution and bandwidth usage. There are now 2 different layouts available for the chat window: Chatcenter and MsgCenter. The new MsgCenter layout is for those of you wish to use the Instant Messanger feature exclusively. 
