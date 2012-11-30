@@ -140,7 +140,7 @@ proto.create = function(id, p){
 		content+="</div>";
 	}			
 
-	content+="<div id='"+prefix+"os_start' style='position: absolute;"+tbdo+"top: "+(style.icon_tray.hide_icon.top+ie_offset) + "px; left: "+(!align_right?this.min_width-style.icon_tray.minimize_icon.offset-70:7)+"px;z-index: " + (z_b + 102) + ";'>" +
+	content+="<div id='"+prefix+"os_start' style='position: absolute;"+tbdo+"top: "+(style.icon_tray.hide_icon.top+ie_offset) + "px; left: "+(!align_right?this.min_width-style.icon_tray.minimize_icon.offset-style.icon_tray.restore.width:7)+"px;z-index: " + (z_b + 102) + ";'>" +
 			"<a class='"+prefix+"toggle_toolbar' style='"+style.icon_tray.hide_icon.css+"' href='JavaScript:void(0);'>"+(!align_right?this.minimized_text+"&raquo;&raquo;":"&laquo;&laquo;"+this.minimized_text)+"</a>" +
 			"</div>" +
 			"<div id='"+prefix+"os_min' style='position: absolute;"+tbd+"top: "+(style.icon_tray.minimize_icon.top+ie_offset) + "px; left: "+(this.width-style.icon_tray.minimize_icon.offset)+"px;z-index: " + (z_b + 102) + ";'>" +

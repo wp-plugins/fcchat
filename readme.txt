@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 3.3.0.1
+Stable tag: 3.3.0.2
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -537,6 +537,9 @@ Version 3.3.0. updates the chat display in mobile environments.
 
 = 3.3.0.1 =
 Transferred the collaborative document widget to in house servers.
+
+= 3.3.0.2 =
+Corrects a bug in which the chat toolbar was displaying incorrectly when minimized in the "topleft" or "bottomleft" configuration.
 
 == Upgrade Notice ==
 
