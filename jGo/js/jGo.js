@@ -502,6 +502,9 @@ jGo.config = {
 				var n = parseInt(value);
 				return (n == null || isNaN(n) ? 0 : n);
 			},
+			trim : function(s) {
+		        return s.replace(/^\s+|\s+$/g,"");
+		    },
 			getSHeight : function() {
 				var b = document.body, d = document.documentElement;
 				var mH = 0;

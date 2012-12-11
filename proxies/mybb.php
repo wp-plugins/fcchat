@@ -10,6 +10,7 @@
  */
 
 define("IN_MYBB", 1);
+define('NO_ONLINE',1);
 define('THIS_SCRIPT', 'index.php');
 require_once(dirname(__FILE__) . '/../../global.php');
 
@@ -59,8 +60,6 @@ if($request==0){
 					$avatar= $mybb->settings['bburl'] . "/" . $avatar;
 				}else if(substr($avatar, 0, 2)=="./"){
 					$avatar= $mybb->settings['bburl'] . substr($avatar,1);	
-				}else{
-					$avatar= $mybb->settings['bburl'] . $avatar;
 				}
 				echo "<fcchatresponse2>/" . $avatar . "<fcchatresponse2>";
 			}else{
@@ -76,8 +75,6 @@ if($request==0){
 			$avatar= $mybb->settings['bburl'] . "/" . $avatar;
 		}else if(substr($avatar, 0, 2)=="./"){
 			$avatar= $mybb->settings['bburl'] . substr($avatar,1);	
-		}else{
-			$avatar= $mybb->settings['bburl'] . $avatar;
 		}
 		echo "<fcchatresponse>/" . $avatar . "<fcchatresponse>";		
 	}else{
