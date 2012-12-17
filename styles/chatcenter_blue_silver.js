@@ -333,9 +333,9 @@ FCChatConfig.styles={
 				border:"2px solid #666666",
 				font:{
 					textfield_description_css:{"font-family":"arial","font-size":"10pt",color:"black","font-style":"italic","font-weight":"bold"},
-					smalltext_css:{"margin-right":"10px","font-family":"arial","font-size":"8pt",color:"black"}
+					smalltext_css:{"margin-right":"10px","font-family":"arial","font-size":"10pt",color:"black"}
 				},
-				textfield_css:"background-color:#dddddd !important;color:#444444 !important;width:120px !important;height:18px !important;"
+				textfield_css:"background-color:#dddddd !important;color:#444444 !important;width:180px !important;height:18px !important;"
 			},
 			edit_room_panel:{
 				font:{

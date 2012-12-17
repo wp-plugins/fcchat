@@ -29,6 +29,7 @@ function fcchat_widget_options() {
 		
 		"cmntcms"=>array("value"=>"","type"=>"comment","desc"=>"USER ACCOUNT INTEGRATION"),
 		"user_integration_bridge"=>array("value"=>"","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"Sets up user integration. Refer to the User Guide for info on how to set up user integration."),
+		"login_redirect"=>array("value"=>"","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"The URL of your site's login page. The user will be redirected here if they have not signed in."),
 		
 		"cmntboxes"=>array("value"=>"","type"=>"comment","desc"=>"ONLINE, NEW MESSAGES, AND FRIENDS DIALOGS"),
 		"alignment"=>array("value"=>"auto","type"=>"radio2","ops"=>array(array("value"=>"left","desc"=>"Left alignment of widget dialogs. For when the widget is in the right sidebar"),array("value"=>"right","desc"=>"Right alignment of widget dialogs. For when the widget is in the left sidebar"),array("value"=>"auto","desc"=>"Automatically detect alignment")), "quote"=>"1","desc"=>""),
@@ -173,6 +174,7 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		"images_dir"=>array("value"=>"","type"=>"text","quote"=>"1","sz"=>"80","desc"=>"The directory in which uploaded images are placed."),
 		"smileys_dir"=>array("value"=>"","type"=>"text","quote"=>"1","sz"=>"80","desc"=>"The directory in which smileys are placed."),
 		"avatar_sz"=>array("value"=>"18","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The default height of avatars."),
+		"change_avatar"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Allow users to change their avatar."),
 		"show_avatar_in_chats"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Display user's avatar in chat messages."),
 		
 		"cmntgame"=>array("value"=>"","type"=>"comment","desc"=>"GAMES"),

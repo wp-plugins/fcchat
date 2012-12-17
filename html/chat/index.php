@@ -86,7 +86,7 @@ FCChatConfig.toolbar_position="bottomright";
 //-->
 </script>
 </head>
-<body style='background-color:#c3c3c3;font-family:arial;font-size:20px;font-weight:bold;'>
+<body style='background-color:#dddddd;font-family:arial;font-size:20px;font-weight:bold;'>
 <script>
 jGo.$(document.body).css(FCChatConfig.quickstyling.alldomains.full_page_css_obj);
 </script>
@@ -102,11 +102,11 @@ function clear_popup_header(){
 	v.style.display="none";
 }
 function set_popup_header(top,txt){
-var v = jGo.$('#popup_box_header')[0];
-v.style.display="block";
-v.innerHTML=txt;
-jGo.$(v).css({"top": top - 100 + "px","left": ( jGo.$(window).width() - jGo.$(v).width() ) / 2+jGo.$(window).scrollLeft() + "px"});
+	var v = jGo.$('#popup_box_header')[0];
+	v.style.display="block";
+	v.innerHTML=txt;
+	jGo.$(v).css({"top": top + "px","left": ( jGo.$(window).width() - jGo.$(v).width() ) / 2+jGo.$(window).scrollLeft() + "px"});
 }
-set_popup_header((jGo.util.getInnerHeight()-100)/2,(FCChatConfig.big_logo!=''?"<img align=absmiddle height=80px style='height:80px;width:80px;' src="+FCChatConfig.big_logo+">":"")+ " " + FCChatConfig.full_page_loading);
+set_popup_header((jGo.util.getInnerHeight())/2,(FCChatConfig.big_logo!=''?"<img align=absmiddle height=80px style='height:80px;width:80px;' src="+FCChatConfig.big_logo+">":"")+ " " + FCChatConfig.full_page_loading + "&nbsp;<img height='24px' onload='this.style.visibility=\"visible\";' style='visibility:hidden;width:24px;height:24px' ALIGN='absmiddle' src='<?php echo $FCCHAT_BASE_URL;?>current_skin/ajax-loader.gif'>");
 </script>
 </body></html>
