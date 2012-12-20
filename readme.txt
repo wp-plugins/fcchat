@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 3.3.0.4
+Stable tag: 3.3.0.5
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -15,10 +15,8 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 MOST RECENT FEATURES
 
+
 Version 3.3.0.4 updates the chat login panel display.
-
-Version 3.2.0 adds a nickname prompt for guest users. Avatar integration has been updated.
-
 
 The video chat now supports Flash player 11's h264 streaming capability. This represents a significant enhancement, in terms of video resolution and bandwidth usage. There are now 2 different layouts available for the chat window: Chatcenter and MsgCenter. The new MsgCenter layout is for those of you wish to use the Instant Messanger feature exclusively. 
 
@@ -546,6 +544,9 @@ Temporarily removed the Whiteboard icon. We are currently searching for a replac
 
 = 3.3.0.4 =
 updates the chat login panel display.
+
+= 3.3.0.5 =
+Changes the display of the toolbar from "fixed" positioning to "absolute" for mobile with top banner activated.
 
 == Upgrade Notice ==
 

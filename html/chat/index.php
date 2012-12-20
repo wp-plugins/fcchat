@@ -28,8 +28,6 @@ document.write("<script type='text/javascript' src='<?php echo $FCCHAT_BASE_URL;
 <script type="text/javascript" src="<?php echo $FCCHAT_BASE_URL;?>js/import.libs.js"></script>
 
 <script type="text/javascript">
-//toolbar items
-FCChatConfig.toolbar_items=["fullpage:logo","friendscenter","fullpage:spacer"];
 
 //General mobile browser
 var mobile_list=/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i;
@@ -37,6 +35,10 @@ var mobile = (mobile_list.test(navigator.userAgent.toLowerCase()));
 if(mobile){
 	FCChatConfig.toolbar_banner_mode=true;
 }
+
+//toolbar items
+FCChatConfig.toolbar_items=["fullpage:logo","friendscenter",(mobile?"":"fullpage:spacer")];
+
 </script>
 <script type="text/javascript" src="<?php echo $FCCHAT_BASE_URL;?>js/import.includes.js"></script>
 <script type="text/javascript">

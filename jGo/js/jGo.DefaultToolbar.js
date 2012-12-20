@@ -153,7 +153,7 @@ proto.create = function(id, p){
 
 	
 	
-	this.frame=$(document.createElement('div')).addClass('jGo_app jGo_myapp default_toolbar').attr('id', prefix+'toolbar').css({'position':'fixed','z-index':jGo.config.max_z_index,'visibility':(this.isVisible?'visible':'hidden'),top:top+'px',left:left+'px'}).html(content);
+	this.frame=$(document.createElement('div')).addClass('jGo_app jGo_myapp default_toolbar').attr('id', prefix+'toolbar').css({'position':(jGo.mobile&&FCChatConfig.toolbar_banner_mode?'absolute':'fixed'),'z-index':jGo.config.max_z_index,'visibility':(this.isVisible?'visible':'hidden'),top:top+'px',left:left+'px'}).html(content);
 	this.parent.append(this.frame);
 	this.windowEventsHandler(this.track_window_events);
 	$("a."+prefix+"toggle_toolbar").onEvent('click', this, 'toggle', '');
