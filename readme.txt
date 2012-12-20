@@ -545,6 +545,12 @@ Temporarily removed the Whiteboard icon. We are currently searching for a replac
 = 3.3.0.4 =
 updates the chat login panel display.
 
+Two new configuration options are available:
+
+1) login_redirect: Lets you link the chat to your sign in page. (If you integrated your site accounts)
+
+2) change_avatar: Enables/disables the change avatar option.
+
 = 3.3.0.5 =
 Changes the display of the toolbar from "fixed" positioning to "absolute" for mobile with top banner activated.
 
