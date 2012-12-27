@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 3.3.0.6
+Stable tag: 3.3.0.7
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -556,6 +556,9 @@ Changes the display of the toolbar from "fixed" positioning to "absolute" for mo
 
 = 3.3.0.6 =
 The width of the options panel has been reduced to fit within mobile displays.
+
+= 3.3.0.7 =
+Added an option to skip opening the chat room list and proceed directly to the default room.
 
 == Upgrade Notice ==
 
