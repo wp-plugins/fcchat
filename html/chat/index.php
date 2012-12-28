@@ -69,12 +69,16 @@ function getQuerystring(key, default_){
 	return default_;
 }
 var fcchat_room_transfer = getQuerystring("rmid");
+var fcchat_embed = getQuerystring("embed");
+var fcchat_width = getQuerystring("width");
+var fcchat_room_offset = getQuerystring("room_offset");
+var fcchat_show_toolbar = getQuerystring("toolbar");
 
 document.documentElement.style.overflow= 'hidden';
 
 FCChatConfig.default_on=true;
 FCChatConfig.window_height_offset=0;
-FCChatConfig.chat_room_height_offset=0;
+FCChatConfig.chat_room_height_offset=(fcchat_room_offset | 0);
 FCChatConfig.absolute_positioning=true;
 FCChatConfig.styles.widget.control.top=0;
 FCChatConfig.styles.widget.control.left=0;

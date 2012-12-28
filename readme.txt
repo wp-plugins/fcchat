@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 3.3.0.7
+Stable tag: 3.3.0.8
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -15,6 +15,7 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 MOST RECENT FEATURES
 
+Version 3.3.0.8 allows the full page chat to be embedded in an iframe.
 
 Version 3.3.0.4 updates the chat login panel display.
 
@@ -559,6 +560,9 @@ The width of the options panel has been reduced to fit within mobile displays.
 
 = 3.3.0.7 =
 Added an option to skip opening the chat room list and proceed directly to the default room.
+
+= 3.3.0.8 =
+The full page chat may now be embedded in an iframe.
 
 == Upgrade Notice ==
 
