@@ -559,7 +559,9 @@ Changes the display of the toolbar from "fixed" positioning to "absolute" for mo
 The width of the options panel has been reduced to fit within mobile displays.
 
 = 3.3.0.7 =
-Added an option to skip opening the chat room list and proceed directly to the default room.
+Added 2 new options:
+skip_roomlist: an option to skip opening the chat room list and proceed directly to the default room.
+default_room_index: index of the default room.
 
 = 3.3.0.8 =
 The full page chat may now be embedded in an iframe.
