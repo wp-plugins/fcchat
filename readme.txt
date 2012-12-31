@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 3.3.0.8
+Stable tag: 3.3.0.9
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -565,6 +565,9 @@ default_room_index: index of the default room.
 
 = 3.3.0.8 =
 The full page chat may now be embedded in an iframe.
+
+= 3.3.0.9 =
+Made a few adjustments so that the chat can fit within a smaller width, when embedded in an iframe.
 
 == Upgrade Notice ==
 
