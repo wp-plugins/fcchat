@@ -3,6 +3,7 @@ jGo.browser = {
 		this.browser=this.searchString(this.dataBrowser) ||"An unknown browser";
 		this.version=this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "an unknown version";
 		this.OS=this.searchString(this.dataOS) || "an unknown OS";
+		this.webkit = (navigator.userAgent.toLowerCase().indexOf("webkit")!=-1);
 	},
 	searchString:function(data){
 		for(var i=0;i<data.length;i++){
@@ -49,6 +50,11 @@ jGo.browser = {
 			string:navigator.userAgent,
 			subString:"Firefox",
 			identity:"Firefox"
+		},
+		{
+			string:navigator.userAgent,
+			subString:"Chrome",
+			identity:"Chrome"
 		},
 		{
 			string:navigator.vendor,

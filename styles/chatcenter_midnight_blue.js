@@ -98,7 +98,12 @@ FCChatConfig.styles={
 					msgcenter_background_image:"chat_window_background.jpg",
 					background_color:"#000000",
 					border:"2px solid #666666",
-					css:{opacity:.5}
+					css:{opacity:.5},
+					msg_interrupt:{
+						background:"#adadbf",
+						respond_css:"font-size:8pt;color:#528DC4;text-decoration:none;",
+						close_css:"color:white;font-stretch:wider;font-size:8pt;font-weight:bold;text-decoration:none;"
+					}
 				},
 				user_icon:{
 					online_css:"-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;background-color:#54FD74;border:1px solid white",

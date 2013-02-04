@@ -90,7 +90,7 @@ proto.create = function(id, p){
 		this.min_width=style.icon_tray.restore.width+style.icon_tray.width+10+this.calculateWidth(hiddenItemStart);
 	}
 	var width=this.getCurrentWidth();
-	var top =  (this.placement.indexOf('top')!=-1?-1:jGo.util.getInnerHeight()-style.height)+(p[5]?p[5]:0);
+	var top =  (this.placement.indexOf('top')!=-1?-1-style.border_height:jGo.util.getInnerHeight()-style.height-style.border_height)+(p[5]?p[5]:0);
 	var left = (this.placement.indexOf('left')!=-1?5:jGo.util.getSWidth()-(width+this.left_offset));
 	
 	//workarounds for browser idiosyncrasies 
@@ -223,12 +223,12 @@ proto.reposition = function(){
 			this.frame.css("display","none");
 			elem=$("#"+this.app_prefix+"toolbar_inner");
 			if(this.placement.substr(0,1)=='b'){
-				elem.css('top',($(document).scrollTop()+jGo.util.getInnerHeight()-this.style.height)+'px');
+				elem.css('top',($(document).scrollTop()+jGo.util.getInnerHeight()-this.style.height-this.style.border_height)+'px');
 			}else{
-				elem.css('top',$(document).scrollTop()+'px');
+				elem.css('top',($(document).scrollTop()-1-this.style.border_height)+'px');
 			}
 		}else if(this.placement.substr(0,1)=='b'){
-			elem.css('top',(jGo.util.getInnerHeight()-this.style.height)+'px');
+			elem.css('top',(jGo.util.getInnerHeight()-this.style.height-this.style.border_height)+'px');
 		}
 		if(this.placement.indexOf('right')!=-1){
 			elem.css('left',(jGo.util.getSWidth()-(this.getCurrentWidth()+this.left_offset))+'px');
@@ -284,12 +284,12 @@ proto.toggle_dialog = function(dialog,position,render,fade){
  */
 proto.position_dialog = function(dialog,left,width,height){
 	var elem = (this.IE6Mode?"#"+this.app_prefix+"toolbar_inner":"#"+this.app_prefix+"toolbar");
-	var pos = (this.IE6Mode?"absolute":"fixed");
+	var pos = (this.IE6Mode||(jGo.mobile&&FCChatConfig.toolbar_banner_mode)?"absolute":"fixed");
 	var basepos = Math.max(3,jGo.util.eN($(elem).css("left"))+left);
 	var subtract = Math.min(0,this.getCurrentWidth()-left-(width+3));
 	dialog.css({
 		position:pos,
-		top:(jGo.util.eN($(elem).css("top"))-(this.placement.substr(0,1)=='t'?-this.style.height-4:7+height))+'px',
+		top:(jGo.util.eN($(elem).css("top"))-(this.placement.substr(0,1)=='t'?-this.style.height-this.style.border_height-4:7+height-this.style.border_height))+'px',
 		left:basepos+(basepos+subtract>3?subtract:0)+"px"});
 };
 

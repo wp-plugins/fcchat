@@ -49,10 +49,13 @@ if($request==0){
 	} else {
     		// Logged in.
 		$t1 = time();
-		if(USERNAMES_ENCODED){
-			$username = htmlspecialchars_decode($current_user->display_name);
+		if(strtotime($current_user->user_registered) > strtotime('2013-02-03 12:00')){
+			$username = $current_user->user_login;
 		}else{
-			$username = $current_user->display_name;
+			$username = $current_user->display_name!=''?$current_user->display_name:$current_user->user_login;
+		}
+		if(USERNAMES_ENCODED){
+			$username = htmlspecialchars_decode($username);
 		}
 		$name_length = strlen(str_decode_utf8($username));
 		if($name_length<10){

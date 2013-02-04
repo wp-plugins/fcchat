@@ -62,7 +62,7 @@ FCChatConfig.txt={
 	t17: "Friends",
 	
 	//Tooltips
-	t18: "Clear",
+	t18: "Clear All",
 	t19: "Room Alerts On",
 	t20: "Room Alerts Off",
 	t21: "Delete All",
@@ -581,7 +581,7 @@ FCChatConfig.txt={
 	t412:"Video chat is disabled for guest accounts.",
 	t413:"Guests cannot video chat. Please sign in.",
 	t414:"Connection lost... Trying again in 5 secs. <a href='javascript:fc_chat.stop()'>Stop</a>",
-	t415:"Open Your messages inbox.",
+	t415:"Open inbox.",
 	t416:"Open Full Chat",
 	t417:"This user is chating in room: ",
 		
@@ -592,5 +592,17 @@ FCChatConfig.txt={
 	t419:"Enter your nickname",
 	t420:"Edit nickname",
 	t421:"Nickname Set",
-	t422:"Set Nickname"
+	t422:"Set Nickname",
+	
+	//added 3.4
+	t423:"Respond",
+	t424:"Conversation with ",
+	t425:"All Conversations",
+	t426:"Filter on",
+	t427:"Filter off",
+	t428:" is no longer available for private chat.",
+	t429:"Conversation selected",
+	t430:"Selected for chat",
+	t431:"Not Available"
+		
 };

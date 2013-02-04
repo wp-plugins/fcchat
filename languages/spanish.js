@@ -64,7 +64,7 @@ FCChatConfig.txt = {
 	t17: "Amigos",
 	
 	// Información sobre herramientas
-	t18: "Borrar",
+	t18: "Borrar todas",
 	t19: "Alertas de sala.",
 	t20: "Alertas de sala.",
 	t21: "Eliminar todas",
@@ -582,7 +582,7 @@ FCChatConfig.txt = {
 	t412:"Video chat está deshabilitado para las cuentas de invitados.",
 	t413:"Los invitados no pueden video chat. Por favor inicie sesión.",
 	t414:"Conn. Perdido... Intentar de nuevo en 5 segs. <a href='javascript:fc_chat.stop()'>Parar</a>",
-	t415:"Abrir tu casilla de mensajes.",
+	t415:"Abrir inbox.",
 	t416:"Abrir Chat Completo",
 	t417:"Este usuario está charlando en la sala: ",
 	
@@ -590,10 +590,16 @@ FCChatConfig.txt = {
 	t418:"YouTube video",
 	
 	//added 3.2
-	t419:"Apodo",
-	t420:"Apodo",
-	t421:"Apodo se establece",
-	t422:"Apodo"
+	t423:"Responder",
+	t424:"Conversation con ",
+	t425:"Todas las Conversationes",
+	t426:"Filtro I",
+	t427:"Filtro O",
+	t428:" ya no está disponible para el chat privado.",
+	t429:"Conversación Seleccionado",
+	t430:"Seleccionado para chat",
+	t431:"No disponible"
+		
 };
 
 //Language style overrides

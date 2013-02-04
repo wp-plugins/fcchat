@@ -98,7 +98,12 @@ FCChatConfig.styles={
 					msgcenter_background_image:"chat_window_light_background.jpg",
 					background_color:"#f6f6f6",
 					border:"2px solid #a1a1a1",
-					css:{opacity:.65,"box-shadow":"inset 5px 5px 10px 0px rgba(0,0,0,0.2)","-webkit-box-shadow": "inset 5px 5px 10px 0px rgba(0,0,0,0.2)"}
+					css:{opacity:.65,"box-shadow":"inset 5px 5px 10px 0px rgba(0,0,0,0.2)","-webkit-box-shadow": "inset 5px 5px 10px 0px rgba(0,0,0,0.2)"},
+					msg_interrupt:{
+						background:"#ededff;",
+						respond_css:"font-size:8pt;color:#528DC4;text-decoration:none;",
+						close_css:"color:gray;font-stretch:wider;font-size:8pt;font-weight:bold;text-decoration:none;"
+					}
 				},
 				user_icon:{
 					online_css:"-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;background-color:#44FD64;border:1px solid white",

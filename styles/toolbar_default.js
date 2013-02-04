@@ -22,21 +22,28 @@
 
 (function(){
 	
-
 jGo.fcchat_toolbar.style={
 		height:35,
-		css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);background-color:gray;-moz-border-radius: 4px;-webkit-border-radius: 2px;border-radius:4px;border: 1px solid #b0b0b0;",
+		border_height:1,
+		css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);background-color:gray;-moz-border-radius: 4px;-webkit-border-radius: 2px;border-radius:4px;border: 1px solid #b0b0b0;triangle-color:gray;",
+		alt_css:"",
 		text:"color:white;font-size:8pt;font-family:arial;font-weight:bold;",
 		dialog_box:{
-			css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:1px solid #b0b0b0;background-color:#eeeeee;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;",
+			css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:1px solid #b0b0b0;background-color:#eeeeee;",
+			alt_css:"",
 			title_box_css:"top:0px;left:0px;height:40px;background-color:gray;",
-			list_divider_css:"border-bottom:1px solid #dddddd;",
+			list_divider_css:"border-bottom:1px solid #eeeeee;",
+			select_user:{
+				over_color:"#f0f9ff",
+				off_color:"transparent",
+				selected_color:"#d3ffd3"
+			},
 			text:{
 				css:"font-family:arial;font-size:12px;color:#444444;",
 				title_css:"font-weight:bold;color:white;",
 				link_css:"color:lightblue;",
 				disabled_css:"color:#dddddd;",
-				secondary_link_css:"color:#163663;",
+				secondary_link_css:"color:#528DC4;text-decoration:none;",
 				screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700;text-decoration:none;",
 				user_info_css:"color:#888888;",
 				offline_css:"font-style:italic;color:green;"
@@ -66,7 +73,7 @@ jGo.fcchat_toolbar.style={
 					disabled_link_color:"#999999",
 					hover_color:"#fff",
 					hide_icon:{
-						css:"color:#444444;font-stretch:wider;font-size:10px;font-weight:bold;text-decoration:none"
+						css:"color:#444444;font-stretch:wider;font-size:14px;font-weight:bold;text-decoration:none"
 					}
 				}
 			},

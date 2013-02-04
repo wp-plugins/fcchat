@@ -18,6 +18,7 @@ function fcchat_includes(){
 	}else{
 			template = template.alldomains;
 	}
+	
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "languages/" + FCChatConfig.language_template + "'></script>");
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + template.application_window + "'></script>");
 	document.write("<script language='JavaScript' src='" + FCChatConfig.dir + "styles/" + template.toolbar + "'></script>");

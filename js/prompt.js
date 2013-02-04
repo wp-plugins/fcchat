@@ -10,10 +10,11 @@ jGo.fcchat_toolbar.prompt = {};
 jGo.fcchat_toolbar.prompt.style={
 	dialog_box:{
 		width:330,
+		left_shift:110,
 		height:85,
 		bubble:{
 			css:jGo.fcchat_toolbar.style.css+";margin:12px;",
-			triangle_color:jGo.util.extractFromCSSString("background-color",jGo.fcchat_toolbar.style.css),
+			triangle_color:jGo.util.extractFromCSSString("triangle-color",jGo.fcchat_toolbar.style.css),
 			text:jGo.fcchat_toolbar.style.text+";font-size:12px",
 			link_text:FCChatConfig.styles.widget.toolbar_item.text.link_css+";font-size:12px",
 			hide_icon:{
@@ -45,8 +46,8 @@ jGo.fcchat_toolbar.prompt.style={
 	};
 	var create_dialog = function(){
 		  config.dialog_box.width+=fc_chat.textSetter(0,0,'promo_width_offset');
-		  dialog= "<div class='jGo_app jGo_myapp jGo_dialog ' id='fc_prompt_dialog' style='display: none;visibility: visible;width:"+config.dialog_box.width+"px;top: 113px; left:210px; z-index:" + (z_b) + ";overflow:hidden;'>" +
-		  		  "<div class='fc-triangle-right"+(FCChatConfig.toolbar_position.substr(0,1)=='t'?' top':'')+"' style='"+config.dialog_box.bubble.css+"'>" +
+		  dialog= "<div class='jGo_app jGo_myapp jGo_dialog ' id='fc_prompt_dialog' style='border:0px solid black;display: none;visibility: visible;width:"+config.dialog_box.width+"px;top: 113px; left:210px; z-index:" + (z_b) + ";overflow:hidden;'>" +
+		  		  "<div class='fc_prompt_cont fc-triangle-right"+(FCChatConfig.toolbar_position.substr(0,1)=='t'?' top':'')+"' style='"+config.dialog_box.bubble.css+"'>" +
 		  		  "<div id='fc_prompt_content' style='"+config.dialog_box.bubble.text+"'></div>"+ 
 		  		  "</div>"+
 		  	      "</div>";
@@ -66,7 +67,7 @@ jGo.fcchat_toolbar.prompt.style={
 		jGo.fcchat_toolbar.control.toggle_dialog(jQ("#fc_prompt_dialog"),position_dialog,null,2000)
 	};
 	var position_dialog = function(){
-		jGo.fcchat_toolbar.control.position_dialog(jQ("#fc_prompt_dialog"),jGo.fcchat_toolbar.control.getCurrentWidth(),config.dialog_box.width,config.dialog_box.height)
+		jGo.fcchat_toolbar.control.position_dialog(jQ("#fc_prompt_dialog"),jGo.fcchat_toolbar.control.getCurrentWidth()-(FCChatConfig.toolbar_position.indexOf('left')!=-1?config.dialog_box.left_shift:0),config.dialog_box.width,config.dialog_box.height)
 	};
 })();
 

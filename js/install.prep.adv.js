@@ -9,14 +9,14 @@ if(document.getElementsByTagName("head")[0]){
 	fc_style.type = 'text/css';
 	document.getElementsByTagName("head")[0].appendChild(fc_style);
 	if (fc_style.styleSheet) {
-		fc_style.styleSheet.cssText = FCChatConfig.dynamicStyles;
+		fc_style.styleSheet.cssText = jGo.fcchat_toolbar.getDynamicStyles();
 	} else {
-		var fc_tt1 = document.createTextNode(FCChatConfig.dynamicStyles);
+		var fc_tt1 = document.createTextNode(jGo.fcchat_toolbar.getDynamicStyles());
 		fc_style.appendChild(fc_tt1);
 	}
 }else{
 	document.write("<link rel='stylesheet' href='" + FCChatConfig.dir + "css/fcchat.css' type='text/css'>");
-	document.write("<style>"+FCChatConfig.dynamicStyles+"</style>");
+	document.write("<style>"+jGo.fcchat_toolbar.getDynamicStyles()+"</style>");
 }
 if(FCChatConfig.show_flags){
 	document.write("<div><div id='fc_geo_locator' style=''><script type='text/javascript' src='http://www.seocentro.com/geo/geocc.pl'></script>hello</div></div>");
