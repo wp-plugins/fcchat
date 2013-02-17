@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.5
-Stable tag: 3.4.0.0
+Stable tag: 3.4.1.0
 
 An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -15,12 +15,9 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 MOST RECENT FEATURES
 
-Version 3.4 features an updated look for the toolbar, with a new, all white theme. The toolbar now supports one touch conversation switching and conversation filtering. A few bugs have been fixed from the previous version as well.
+Version 3.4.1 adds better integration for mobile browsers, with 2 new mobile layouts. In addition, a full width banner toolbar is now available.
 
 The next series of updates, we will be adding a "Contacts" button to the toolbar, which will replace the existing "Friends" button. The contacts panel will consist of both the friends list, and a new feature - "Recent Conversations".
-
-We will also be adding a simplified toolbar which intended for use in mobile environments.
-
 
 The video chat now supports Flash player 11's h264 streaming capability. This represents a significant enhancement, in terms of video resolution and bandwidth usage. There are now 2 different layouts available for the chat window: Chatcenter and MsgCenter. The new MsgCenter layout is for those of you wish to use the Instant Messanger feature exclusively. 
 
@@ -574,6 +571,9 @@ Made a few adjustments so that the chat can fit within a smaller width, when emb
 
 = 3.4.0.0 =
 Version 3.4 features an updated look for the toolbar. The toolbar now supports one touch conversation switching and conversation filtering. A bug which was causing the toolbar dialogs to close unexpectedly in mobile browsers was fixed. A bug causing incorrect placement of toolbar dialogs on ios6 was fixed. A bug causing the improper rendering of dialog windows on webkit based browsers was fixed. A bug causing the malfunction of the in bold, italic, and underline buttons in the user dialog box was fixed.
+
+= 3.4.1.0 =
+Version 3.4.1 adds better integration for mobile browsers, with 2 new mobile layouts. In addition, a full width banner toolbar is now available.
 
 == Upgrade Notice ==
 

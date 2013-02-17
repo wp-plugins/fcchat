@@ -71,6 +71,20 @@ var fcchat_show_toolbar = getQuerystring("toolbar");
 
 document.documentElement.style.overflow= 'hidden';
 
+jGo.fcchat_toolbar.config.show=true;
+jGo.fcchat_toolbar.config.layout=1;
+
+if(jGo.mobile){
+	jGo.fcchat_toolbar.config.fixed=0;
+	jGo.fcchat_toolbar.config.mode=0;
+	jGo.fcchat_toolbar.config.position='topleft';
+	jGo.fcchat_toolbar.config.noclose=true;
+}else{
+	jGo.fcchat_toolbar.config.position='bottomright';
+}
+			  
+FCChatConfig.toolbar_default_display=1;   
+
 FCChatConfig.default_on=true;
 FCChatConfig.window_height_offset=0;
 FCChatConfig.chat_room_height_offset=(fcchat_room_offset | 0);
@@ -78,9 +92,6 @@ FCChatConfig.absolute_positioning=true;
 FCChatConfig.styles.widget.control.top=0;
 FCChatConfig.styles.widget.control.left=0;
 FCChatConfig.styles.widget.control.css="display:none;";
-FCChatConfig.toolbar_mode=2;   
-FCChatConfig.toolbar_default_display=1; 
-FCChatConfig.toolbar_position="bottomright";  
 
 
 

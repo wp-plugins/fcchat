@@ -67,11 +67,22 @@ document.write("<script type='text/javascript' src='../proxies/" + FCChatConfig[
 <script type="text/javascript">
 <!--
 	//Page Level Configuration
+	jGo.fcchat_toolbar.config.show=true;
+	jGo.fcchat_toolbar.config.layout=0;
+	
+	if(jGo.mobile){
+		jGo.fcchat_toolbar.config.fixed=0;
+		jGo.fcchat_toolbar.config.mode=0;
+		jGo.fcchat_toolbar.config.position='topleft';
+		jGo.fcchat_toolbar.config.noclose=true;
+	}else{
+		jGo.fcchat_toolbar.config.position='bottomright';
+	}
+	
 	FCChatConfig.default_on=true;
 	FCChatConfig.control_visible=false;
-	FCChatConfig.toolbar_mode=2;
 	FCChatConfig.toolbar_default_display=1; 
-	FCChatConfig.toolbar_position="bottomright";
+	FCChatConfig.static_banner_offset_top=0;
 	FCChatConfig.alignment="left";
 	FCChatConfig.startText="&nbsp;Please exit the administration panel and sign in again.&nbsp;&nbsp; <a href='"+FCChatConfig.dir+"html/ChatHelp.html'>Chat Help</a></b>";
 //-->
@@ -93,9 +104,9 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 <script type="text/javascript" src="../js/install.prep.adv.js"></script><script type="text/javascript" src="../js/embed.js"></script>
 <!-- /End Fastcat Body Insert -->
 
-<div style='position:absolute;top:5px;left:15px;font-weight:bold'><img src='../current_skin/fastcatlogo.gif'>&nbsp;FCChat Administration</div>
+<div style='margin-top:5px;margin-left:15px;font-weight:bold'><img src='../current_skin/fastcatlogo.gif'>&nbsp;FCChat Administration</div>
 <table><tr><td><div style='position:relative;width:430px'>
-<div style='position:absolute;left:5px;top:15px;padding:5px;height:650px;border:2px solid gray;background-color:#F3F0Dc;box-shadow: 1px 1px 2px 1px #aaaaaa;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
+<div style='position:absolute;left:5px;top:5px;padding:5px;height:650px;border:2px solid gray;background-color:#F3F0Dc;box-shadow: 1px 1px 2px 1px #aaaaaa;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
 	<table border=0 style="font-family:arial;font-size:9pt;width:400px">
 		<tr><td colspan=2>
 			<span style='color:darkblue;font-weight:bold;font-style:italic;margin-top:10px'>
@@ -144,11 +155,11 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 </div>
 		</td></tr>
 	</table></div>
-	<div id='leftframecover' style='position:absolute;background-color:gray;display:none;left:5px;top:15px;width:416px;height:571px;filter:alpha(opacity=1); -moz-opacity:.01; opacity:.01;'>
+	<div id='leftframecover' style='position:absolute;background-color:gray;display:none;left:5px;top:5px;width:416px;height:571px;filter:alpha(opacity=1); -moz-opacity:.01; opacity:.01;'>
 	</div>
 	</div>
 	</td><td><div style='position:relative;width:422px'>
-<div style='position:absolute;left:5px;top:15px;height:650px;padding:5px;border:2px solid gray;background-color:#F3F0Dc;box-shadow: 1px 1px 2px 1px #aaaaaa;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
+<div style='position:absolute;left:5px;top:5px;height:650px;padding:5px;border:2px solid gray;background-color:#F3F0Dc;box-shadow: 1px 1px 2px 1px #aaaaaa;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
 <table border=0 style='top:10px;width:400px;font-family:arial;font-size:9pt'>
 	<tr>
 		<td colspan=4>
@@ -359,7 +370,7 @@ td.d { FONT-SIZE: 9pt; font-family:Arial,  Helvetica; COLOR: #000000; BORDER-bot
 </div>
 </div>
 </td><td><div style='position:relative;width:680px'>
-<div style='position:absolute;left:5px;top:15px;width:650px;height:650px;padding:5px;border:2px solid gray;background-color:#F3F0Dc;box-shadow: 1px 1px 2px 1px #aaaaaa;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
+<div style='position:absolute;left:5px;top:5px;width:650px;height:650px;padding:5px;border:2px solid gray;background-color:#F3F0Dc;box-shadow: 1px 1px 2px 1px #aaaaaa;-moz-border-radius: 5px;-webkit-border-radius:5px;border-radius:5px'>
 	<table border=0 style="font-family:arial;font-size:9pt;width:640px;">
 		<tr><td colspan=3>
 			<div style='color:darkblue;font-weight:bold;font-style:italic;'>

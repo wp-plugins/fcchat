@@ -67,7 +67,7 @@
 		fc_rule+"*.fc_d4 span.fc_info_text, "+fc_rule2+"*.fc_d4 span.fc_info_text{"+fc_tb_ab.text.info_css+"}"+
 		
 		//Toolbar
-		//fc_rule+"*.fc_d5, "+fc_rule2+"*.fc_d5{"+fc_fr_tb.css+"}"+
+		//fc_rule+"*.fc_d5, "+fc_rule2+"*.fc_d5{"+fc_fr_tb.text_size+"}"+
 		fc_rule+"*.fc_d5 *, "+fc_rule2+"*.fc_d5 *{"+fc_tb_pl.text.css+"}"+
 		fc_rule+"*.fc_d5 a.fc_link, "+fc_rule2+"*.fc_d5 a.fc_link{"+fc_tb_pl.text.link_css+"}"+
 		fc_rule+"*.fc_d5 span.fc_alert_text, "+fc_rule2+"*.fc_d5 span.fc_alert_text{"+fc_tb_pl.text.alert_css+"}"+

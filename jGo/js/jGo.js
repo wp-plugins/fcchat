@@ -502,6 +502,13 @@ jGo.config = {
 				var n = parseInt(value);
 				return (n == null || isNaN(n) ? 0 : n);
 			},
+			returnElementCoordinates:function(el,fixed) {
+		        var coords = {};
+		        coords.x = coords.y = 0;
+		        coords.x = jGo.$(el).offset().left - (fixed?jGo.$(document).scrollLeft():0);
+		        coords.y = jGo.$(el).offset().top - (fixed?jGo.$(document).scrollTop():0);
+		        return coords;
+		    },
 			trim : function(s) {
 		        return s.replace(/^\s+|\s+$/g,"");
 		    },

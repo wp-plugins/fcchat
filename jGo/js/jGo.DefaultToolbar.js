@@ -18,6 +18,7 @@ jGo.DefaultToolbar = function() {
     this.isVisible;
     this.minimized;
     this.parent;
+    this.config;
     
     //ie6 doesnt support fixed elements
     this.IE6Mode=false;
@@ -51,7 +52,7 @@ var proto = jGo.DefaultToolbar.prototype;
  	Args:
  	    context, -for instance jGo.fcchat_toolbar, the context may contain a style object ie. jGo.fcchat_toolbar.style
 		items, - the a list of items to placed in the toolbar, the items objects (when created) should be appended to the context in the object hierarchy
-		placement, -topright, bottomleft etc.
+		placement, - bottomright 0 topright 1 bottomleft 2 topleft 3
 		minimized_text, -something to say when the toolbar is minimized
 		hiddenItemStart, - the rightmost item that will be hidden when the toolbar is minimized, (along with all items to the left of it)
 		top offset,
@@ -61,6 +62,7 @@ var proto = jGo.DefaultToolbar.prototype;
 		parent, -where to append
 		app_prefix, -something to add before class names
 		track_window_events -will the toolbar track window events
+		config - //object containing config parames for desktop,mobile,etc
 		
 */
 
@@ -80,18 +82,16 @@ proto.create = function(id, p){
     this.parent= p[9] || $(document.body);
     this.track_window_events = (p[11]!=null?p[11]:true);
     this.left_offset=p[6]||26;
-    
+    this.config=p[12];
+
     //dim
-	
+	this.placement=(this.placement.indexOf('top')!=-1?1:0)+(this.placement.indexOf('left')!=-1?2:0);
 	this.width=this.calculateWidth(0)+style.icon_tray.width;
 	this.min_width=this.width-(this.calculateWidth(hiddenItemStart)+this.context[hiddenItemStart].style.menu_item.width)+style.icon_tray.restore.width+20;
-	var align_right = (this.placement.indexOf('right')!=-1);
+	var align_right = (this.placement<2);
 	if(!align_right){
 		this.min_width=style.icon_tray.restore.width+style.icon_tray.width+10+this.calculateWidth(hiddenItemStart);
 	}
-	var width=this.getCurrentWidth();
-	var top =  (this.placement.indexOf('top')!=-1?-1-style.border_height:jGo.util.getInnerHeight()-style.height-style.border_height)+(p[5]?p[5]:0);
-	var left = (this.placement.indexOf('left')!=-1?5:jGo.util.getSWidth()-(width+this.left_offset));
 	
 	//workarounds for browser idiosyncrasies 
     var ie_offset=0;
@@ -106,9 +106,13 @@ proto.create = function(id, p){
             ie_offset = -1;
         }     
     }catch(e){}
+    var layout = this.config.layout;
+	var width=this.getCurrentWidth();
+	var top =  (this.IE6Mode?(this.placement%2!=0?-style.border_height:jGo.util.getInnerHeight()-style.height-style.border_height):0)+(p[5]?p[5]:0);
+	var left = (this.placement>1?5:jGo.util.getSWidth()-(width+this.left_offset));
 	
     var inner_top=0;
-    var inner_left=(this.IE6Mode?left:0);
+    var inner_left=(this.IE6Mode||layout==1?left:0);
     //end dim
     
     var tbd = 'display:' + (this.minimized?'none':'block') + ';';
@@ -117,7 +121,7 @@ proto.create = function(id, p){
 	var content="<div class='"+prefix+"toolbar' id='"+prefix+"toolbar_inner' style='position: absolute; display: block; " +
 					"top: "+inner_top+"px;" +
 					"left: "+inner_left+"px;" +
-					"width:"+width+"px;height:"+style.height+"px;z-index: " + (z_b + 104) + ";"+style.css+"'>";
+					"width:"+width+"px;height:"+style.height+"px;z-index: " + (z_b + 104) + ";"+(layout==1?"":style.css)+"'>";
 				
 	//Add all toolbar items
 	var hidden_marker=(align_right?0:1);
@@ -143,18 +147,32 @@ proto.create = function(id, p){
 	content+="<div id='"+prefix+"os_start' style='position: absolute;"+tbdo+"top: "+(style.icon_tray.hide_icon.top+ie_offset) + "px; left: "+(!align_right?this.min_width-style.icon_tray.minimize_icon.offset-style.icon_tray.restore.width:7)+"px;z-index: " + (z_b + 102) + ";'>" +
 			"<a class='"+prefix+"toggle_toolbar' style='"+style.icon_tray.hide_icon.css+"' href='JavaScript:void(0);'>"+(!align_right?this.minimized_text+"&raquo;&raquo;":"&laquo;&laquo;"+this.minimized_text)+"</a>" +
 			"</div>" +
+			(this.config.layout==0?
 			"<div id='"+prefix+"os_min' style='position: absolute;"+tbd+"top: "+(style.icon_tray.minimize_icon.top+ie_offset) + "px; left: "+(this.width-style.icon_tray.minimize_icon.offset)+"px;z-index: " + (z_b + 102) + ";'>" +
 			"<a class='"+prefix+"toggle_toolbar' style='"+style.icon_tray.minimize_icon.css+"' href='JavaScript:void(0);'>"+(!align_right?"&laquo;&laquo;":"&raquo;&raquo;")+"</a>" +
-			"</div>" +
+			"</div>":"") +
 			"<div id='"+prefix+"xxx' style='position: absolute; display: block; top: "+(style.icon_tray.hide_icon.top+ie_offset) + "px; left: "+(width-style.icon_tray.hide_icon.offset)+"px;z-index: " + (z_b + 102) + ";'>" +
 				"<a id='"+prefix+"close_toolbar' style='"+style.icon_tray.hide_icon.css+"' href='JavaScript:void(0);'>x</a>" +
 			"</div>" +
 			"</div>";
 
-	
-	
-	this.frame=$(document.createElement('div')).addClass('jGo_app jGo_myapp default_toolbar').attr('id', prefix+'toolbar').css({'position':(jGo.mobile&&FCChatConfig.toolbar_banner_mode?'absolute':'fixed'),'z-index':jGo.config.max_z_index,'visibility':(this.isVisible?'visible':'hidden'),top:top+'px',left:left+'px'}).html(content);
-	this.parent.append(this.frame);
+	var banner_border_correction={'border-top':'0px'};
+	var vert_loc={top:top+'px'};
+	if(layout==0){
+		vert_loc={top:(top-style.border_height)+'px'};
+	}
+	if(this.placement%2==0){
+		banner_border_correction={'border-bottom':'0px'};
+		if(!this.IE6Mode)vert_loc={bottom:'0px'};
+	}
+	this.frame=$(document.createElement('div')).addClass('jGo_app jGo_myapp default_toolbar').attr('id', prefix+'toolbar').css({'position':(this.config.fixed==0?'absolute':'fixed'),'z-index':jGo.config.max_z_index,'display':(this.isVisible?'block':'none')}).css(vert_loc);
+	if(layout>=1){
+		
+		this.frame.css({left:'0px','height':style.height+'px',width:(this.config.fixed==0&&this.config.mobile?$(document).width()+'px':'100%')}).css(style.banner_css).css(banner_border_correction);
+	}else{
+		this.frame.css({left:left+'px','height':(style.height+style.border_height)+'px'});
+	}
+	this.parent.prepend(this.frame.html((layout==2||this.config.mode==0?"":content)));
 	this.windowEventsHandler(this.track_window_events);
 	$("a."+prefix+"toggle_toolbar").onEvent('click', this, 'toggle', '');
 	$("#"+prefix+"close_toolbar").onEvent('click', this, 'hide', '');
@@ -184,7 +202,7 @@ proto.toggle = function(){
 	var _n = 'none';
 	var _b = 'block';
 	$("div."+prefix+"toolbar_item,img."+prefix+"toolbar_divider,#"+prefix+"os_min").css({"display":(!minimized?_b:_n)});
-	if(this.placement.indexOf('right')!=-1){
+	if(this.placement<2){
 		$("div."+prefix+"toolbar_item2,img."+prefix+"toolbar_divider2").each(function(){
 			$(this).css({"left":jGo.util.eN($(this).css("left"))+(!minimized?width_dif:-width_dif)+"px"})
 		});
@@ -217,20 +235,19 @@ proto.windowEventsHandler = function(track){
 
 proto.reposition = function(){
 	if(this.reposition_enabled){
-		var elem = this.frame;
-		this.close_dialogs();
+		var elem = (this.IE6Mode||this.config.layout==1?$("#"+this.app_prefix+"toolbar_inner"):this.frame);
+
 		if(this.IE6Mode){
 			this.frame.css("display","none");
-			elem=$("#"+this.app_prefix+"toolbar_inner");
-			if(this.placement.substr(0,1)=='b'){
+			if(this.placement%2==0){
 				elem.css('top',($(document).scrollTop()+jGo.util.getInnerHeight()-this.style.height-this.style.border_height)+'px');
 			}else{
 				elem.css('top',($(document).scrollTop()-1-this.style.border_height)+'px');
 			}
-		}else if(this.placement.substr(0,1)=='b'){
-			elem.css('top',(jGo.util.getInnerHeight()-this.style.height-this.style.border_height)+'px');
+		}else{
+				this.close_dialogs();
 		}
-		if(this.placement.indexOf('right')!=-1){
+		if(this.placement<2){
 			elem.css('left',(jGo.util.getSWidth()-(this.getCurrentWidth()+this.left_offset))+'px');
 		}
 		this.frame.css("display","block");
@@ -238,12 +255,12 @@ proto.reposition = function(){
 };
 
 proto.show = function() {
-	this.frame.css("visibility","visible");
+	this.frame.css("display","block");
    	this.isVisible=true;
 };
 proto.hide = function() {
 	this.close_dialogs();
-    this.frame.css("visibility","hidden");
+    this.frame.css("display","none");
     this.isVisible=false;
 };
 proto.close = function() {
@@ -283,13 +300,15 @@ proto.toggle_dialog = function(dialog,position,render,fade){
  *  	height - height of the dialog
  */
 proto.position_dialog = function(dialog,left,width,height){
-	var elem = (this.IE6Mode?"#"+this.app_prefix+"toolbar_inner":"#"+this.app_prefix+"toolbar");
-	var pos = (this.IE6Mode||(jGo.mobile&&FCChatConfig.toolbar_banner_mode)?"absolute":"fixed");
-	var basepos = Math.max(3,jGo.util.eN($(elem).css("left"))+left);
+	var elem = "#"+this.app_prefix+"toolbar_inner";
+	var use_abs = this.IE6Mode||this.config.mobile||this.fixed==0;
+	var bot_offset = (this.config.layout==0?8:10);
+	var pos = (use_abs?"absolute":"fixed");
+	var basepos = Math.max(3,jGo.util.eN(jGo.util.returnElementCoordinates(elem,!(use_abs)).x)+left);
 	var subtract = Math.min(0,this.getCurrentWidth()-left-(width+3));
 	dialog.css({
 		position:pos,
-		top:(jGo.util.eN($(elem).css("top"))-(this.placement.substr(0,1)=='t'?-this.style.height-this.style.border_height-4:7+height-this.style.border_height))+'px',
+		top:((jGo.util.returnElementCoordinates(elem,!(use_abs)).y)-(this.placement%2!=0?-this.frame.height()-4:bot_offset+height-this.style.border_height))+'px',
 		left:basepos+(basepos+subtract>3?subtract:0)+"px"});
 };
 

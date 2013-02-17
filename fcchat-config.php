@@ -106,19 +106,39 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		"control_visible"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Do you want to display the sidebar widget?"),
 		"control_padding"=>array("value"=>"0px","type"=>"text","quote"=>"1","sz"=>"20","desc"=>"Puts some spacing around your widget. In 'px' (pixels)."),
 		
-		"cmntool"=>array("value"=>"","type"=>"comment","desc"=>"TOOLBAR OPTIONS (options for the fixed toolbar)"),
-		"toolbar_mode"=>array("value"=>"2","type"=>"radio2","ops"=>array(array("value"=>"0","desc"=>"Hidden"),array("value"=>"1","desc"=>"Visible for message alerts only"),array("value"=>"2","desc"=>"Always visible")), "quote"=>"0","desc"=>""),
-		"toolbar_default_display"=>array("value"=>"1","type"=>"radio2","ops"=>array(array("value"=>"0","desc"=>"Minimized"),array("value"=>"1","desc"=>"Normal")), "quote"=>"0","desc"=>""),
+		"cmnttool"=>array("value"=>"","type"=>"comment","desc"=>"GENERAL TOOLBAR OPTIONS (options for the fixed toolbar)"),
+		"show_toolbar"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Display the fixed toolbar?"),
+		
+		"cmntdesktool"=>array("value"=>"","type"=>"comment","desc"=>"DESKTOP/LAPTOP TOOLBAR OPTIONS"),
+		"toolbar_layout"=>array("value"=>"0","type"=>"radio2","ops"=>array(array("value"=>"0","desc"=>"Compact"),array("value"=>"1","desc"=>"Full width")), "quote"=>"0","desc"=>""),
 		"toolbar_position"=>array("value"=>"bottomright","type"=>"radio2","ops"=>array(array("value"=>"bottomright","desc"=>"Bottom right"),array("value"=>"bottomleft","desc"=>"Bottom left"),array("value"=>"topright","desc"=>"Top right"),array("value"=>"topleft","desc"=>"Top left")), "quote"=>"1","desc"=>""),
+		"toolbar_insert_top_spacer"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Add a spacer at the top of the page to shift page elements down. For use when the toolbar is displayed at the top of the page."),
 		"toolbar_items"=>array("value"=>"['friendscenter','social_media']","type"=>"text","quote"=>"0","sz"=>"80","desc"=>"A list of items to place in the toolbar. The list MUST include 'friendscenter'. Refer to the User Guide or Product Manual for available items. Place brackets around the list. Each item must be in single quotes."),
+		"toolbar_default_display"=>array("value"=>"1","type"=>"radio2","ops"=>array(array("value"=>"0","desc"=>"Minimized"),array("value"=>"1","desc"=>"Normal")), "quote"=>"0","desc"=>""),
 		"custom_buttons"=>array("value"=>"","type"=>"textarea","desc"=>"Allows you to add your own customized buttons to the toolbar. Read the tutorial in the User Guide on adding custom buttons before editing this field."),
 		
-		"cmntmob"=>array("value"=>"","type"=>"comment","desc"=>"MOBILE BROWSER OPTIONS"),
-		"toolbar_banner_mode"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Run floating toolbar in banner mode for mobile apps."),
-		"toolbar_banner_height"=>array("value"=>"35","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"Height of the banner."),
-		"toolbar_banner_left_offset"=>array("value"=>"50","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"Placement of the toolbar with respect to the left edge of the banner."),
-		"toolbar_banner_top_offset"=>array("value"=>"0","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"Placement of the banner with respect to the top of the page."),
-		"toolbar_mobile_hidden"=>array("value"=>"/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i","type"=>"text","quote"=>"0","sz"=>"100","desc"=>"Hide floating toolbar for these mobile apps (support for fixed positioned elements is spotty in mobile apps). This directive is ignored if toolbar_banner_mode is set to true, above.The format below uses the syntax of regular expressions."),
+		"cmntmob"=>array("value"=>"","type"=>"comment","desc"=>"MOBILE TOOLBAR OPTIONS"),
+		"mobile_toolbar_mode"=>array("value"=>"2","type"=>"radio2","ops"=>array(array("value"=>"0","desc"=>"Simplified"),array("value"=>"1","desc"=>"Regular"),array("value"=>"2","desc"=>"Auto choose, based on device width.")), "quote"=>"0","desc"=>""),
+		
+		"use_mobile_banner"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Enable the resizable toolbar mode customized for small screen devices."),
+		"mobile_banner_position"=>array("value"=>"topleft","type"=>"radio2","ops"=>array(array("value"=>"bottomleft","desc"=>"Bottom left"),array("value"=>"topleft","desc"=>"Top left")), "quote"=>"1","desc"=>""),
+		"mobile_banner_exclude"=>array("value"=>"/none/i","type"=>"text","quote"=>"0","sz"=>"100","desc"=>"A regex containing a list of devices to exclude from this mode. ie. /iphone|ipad|ipod/i"),
+		
+		"use_fixed_toolbar"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Enable the fixed toolbar mode for mobile devices."),
+		"fixed_toolbar_position"=>array("value"=>"topleft","type"=>"radio2","ops"=>array(array("value"=>"bottomleft","desc"=>"Bottom left"),array("value"=>"topleft","desc"=>"Top left")), "quote"=>"1","desc"=>""),
+		"fixed_toolbar_insert_top_spacer"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Add a spacer at the top of the page to shift page elements down. For use when the toolbar is displayed at the top of the page."),
+		"fixed_toolbar_exclude"=>array("value"=>"/none/i","type"=>"text","quote"=>"0","sz"=>"100","desc"=>"A regex containing a list of devices to exclude from this mode. ie. /iphone|ipad|ipod/i"),
+		
+		"use_static_banner"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Enable a fallback mode for mobile devices that do not fully support fixed positioning. In this mode, the toobar will be inserted at the top of the page, and will scroll with the page."),
+		"static_banner_height"=>array("value"=>"35","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"Height of the banner."),
+		"static_banner_offset_top"=>array("value"=>"0","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"Placement of the banner with respect to the top of the page."),
+		"static_banner_exclude"=>array("value"=>"/none/i","type"=>"text","quote"=>"0","sz"=>"100","desc"=>"A regex containing a list of devices to exclude from this mode. ie. /iphone|ipad|ipod/i"),
+		
+		"cmntmoblarge"=>array("value"=>"","type"=>"comment","desc"=>"MOBILE TABLET/LARGE DISPLAY OPTIONS"),
+		"large_device_toolbar_items"=>array("value"=>"['friendscenter','social_media']","type"=>"text","quote"=>"0","sz"=>"80","desc"=>"A list of items to place in the toolbar. The list MUST include 'friendscenter'. Refer to the User Guide or Product Manual for available items. Place brackets around the list. Each item must be in single quotes."),
+		
+		"cmntmobsmall"=>array("value"=>"","type"=>"comment","desc"=>"MOBILE PHONE/SMALL DISPLAY"),
+		"small_device_toolbar_items"=>array("value"=>"['friendscenter','social_media']","type"=>"text","quote"=>"0","sz"=>"80","desc"=>"A list of items to place in the toolbar. The list MUST include 'friendscenter'. Refer to the User Guide or Product Manual for available items. Place brackets around the list. Each item must be in single quotes."),
 		
 		"cmntwmodes"=>array("value"=>"","type"=>"comment","desc"=>"CHATCENTER WINDOW MODES"),
 		"chatcenter_layout"=>array("value"=>"0","type"=>"radio2","ops"=>array(array("value"=>"0","desc"=>"Chat rooms and messages"),array("value"=>"1","desc"=>"Messages only")), "quote"=>"0","desc"=>""),
@@ -150,6 +170,9 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		"showTyping"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Display the word 'typing' when a user is typing a message."),
 		"display_timestamp"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Show the date and time of new chat messages by default."),
 		"sounds_on"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Use sound effects by default."),
+		"mobile_regex"=>array("value"=>"/iphone|ipod|android|mobile|blackberry|bb10|mini|windows\sce|palm/i","type"=>"text","quote"=>"0","sz"=>"100","desc"=>"A regex containing a list of known mobile identifiers. This regex is matched against the browsers useragent string."),
+		"tablet_regex"=>array("value"=>"/ipad|tablet/i","type"=>"text","quote"=>"0","sz"=>"100","desc"=>"A regex containing a list of known tablet identifiers. This regex is matched against the browsers useragent string."),
+		"fixed_support_regex"=>array("value"=>"/cpu os [6-9]|iphone os [6-9]|android [4-9]|bb10|(?=.*blackberry)(?=.*version\/[7-9])/i","type"=>"text","quote"=>"0","sz"=>"100","desc"=>"A regex which attempts to match devices with full support for fixed positioning. This regex is matched against the browsers useragent string."),
 		
 		"cmntpromo"=>array("value"=>"","type"=>"comment","desc"=>"USER PROMPT"),
 		"prompt_user"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Prompt user to sign in to the chat when they first come to your site."),

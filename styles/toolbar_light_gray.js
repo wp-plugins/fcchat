@@ -26,7 +26,10 @@ jGo.fcchat_toolbar.style={
 		height:35,
 		border_height:1,
 		css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);background-color:gray;-moz-border-radius: 4px;-webkit-border-radius: 2px;border-radius:4px;border: 1px solid #b0b0b0;triangle-color:gray;",
+		banner_css:{"background-color":"gray","border-bottom":"1px solid gray","border-top":"1px solid gray"},
+		mobile_banner_links_css:"background-color:darkblue;color:#fff;",
 		alt_css:"",
+		text_size:"font-size:8pt",
 		text:"color:white;font-size:8pt;font-family:arial;font-weight:bold;",
 		dialog_box:{
 			css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:1px solid #b0b0b0;background-color:#eeeeee;",
@@ -189,6 +192,8 @@ function applyQuickStyles(){
 	x(s+".text.title_css",c.title_css);
 	x(s+".text.link_css",c.link_css);
 };
+
+if(jGo.fcchat_toolbar.config.layout==2)jGo.util.mergeOption("jGo.fcchat_toolbar.style.text","font-size:100%;");
 		
 applyQuickStyles();	
 

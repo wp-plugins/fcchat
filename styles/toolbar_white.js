@@ -21,13 +21,14 @@
  */
 
 (function(){
-jGo.browser.init();
-
 jGo.fcchat_toolbar.style={
 		height:35,
 		border_height:2,
 		css:"-webkit-box-shadow:0px 0px 8px 2px rgba(0,0,0,0.4);box-shadow:0px 0px 8px 2px rgba(0,0,0,0.4);background-color:#fefefe;border-top: 2px solid darkblue;border-bottom: 2px solid darkblue;triangle-color:darkblue;",
+		banner_css:{"background-color":"#ffffff","border-bottom":"2px solid darkblue","border-top":"2px solid darkblue"},
+		mobile_banner_links_css:"background-color:darkblue;color:#fff;",
 		alt_css:"border-right:1px solid #cccccc;border-left:1px solid #cccccc;",
+		text_size:"font-size:8pt",
 		text:"color:#444444;font-size:8pt;font-family:arial;font-weight:bold;",
 		dialog_box:{
 			css:"-webkit-box-shadow:0px 0px 6px 2px rgba(0,0,0,0.4);box-shadow:0px 0px 6px 2px rgba(0,0,0,0.4);background-color:#fefefe;",
@@ -190,6 +191,8 @@ function applyQuickStyles(){
 	x(s+".text.title_css",c.title_css);
 	x(s+".text.link_css",c.link_css);
 };
+
+if(jGo.fcchat_toolbar.config.layout==2)jGo.util.mergeOption("jGo.fcchat_toolbar.style.text","font-size:100%;");
 		
 applyQuickStyles();	
 
