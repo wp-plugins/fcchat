@@ -5,9 +5,9 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.5
-Stable tag: 3.4.1.0
+Stable tag: 3.4.1.1
 
-An interface for real time chat, video conferencing, instant messaging, and more.
+PLEASE READ UPGRADE NOTICE FOR 3.4.1.1 before updating. An interface for real time chat, video conferencing, instant messaging, and more.
 
 == Description ==
 
@@ -23,6 +23,8 @@ The video chat now supports Flash player 11's h264 streaming capability. This re
 
 
 UPGRADE NOTICE
+
+Version 3.4.1.1: If you have changed the default location of the full page chat, you will need to copy the new  fcchat/html/chat/index.php file to this location, and set the $FCCHAT_BASE_URL once again.
 
 When you upgrade to a new version, any customizations you made to the chat files will be erased. In order to save those changes, do the following:
 
@@ -574,6 +576,9 @@ Version 3.4 features an updated look for the toolbar. The toolbar now supports o
 
 = 3.4.1.0 =
 Version 3.4.1 adds better integration for mobile browsers, with 2 new mobile layouts. In addition, a full width banner toolbar is now available.
+
+= 3.4.1.1 =
+Changed the default location of the login box for mobile devices.
 
 == Upgrade Notice ==
 
