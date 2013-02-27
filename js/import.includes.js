@@ -1,6 +1,5 @@
 function fcchat_includes(){
 	var cnf = FCChatConfig;
-	
 	//Set up toolbar
 	jGo.fcchat_toolbar = {
 			config:{

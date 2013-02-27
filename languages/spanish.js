@@ -45,7 +45,7 @@ FCChatConfig.txt = {
 	t5: "Apagar",
 	t6: "Página Completa",
 	t7: "Ayuda?",
-	help_offset:1,
+	help_offset:11,
 	t8: "Cerrar",
 	close_offset:0,
 	t9: "Opciones",
@@ -55,10 +55,10 @@ FCChatConfig.txt = {
 	
 	// Sección de Títulos
 	t12: "Salas de Chat",
-	chat_room_width: 72,
+	chat_room_width: 75,
 	t13: "Volver",
 	t14: "Mensajes",
-	private_chat_width: 57,
+	private_chat_width: 55,
 	t15: "Quién está en línea",
 	t16: "Miembros de la Sala",
 	t17: "Amigos",
@@ -619,7 +619,7 @@ if(FCChatConfig.quickstyling.alldomains.toolbar.width_prop_offsets=="0:0:0"){
 }
 FCChatConfig.language_template_overrides=function(){
 	//Changes width of Send to Room button
-	FCChatConfig.styles.chat_window.main_panel.send_to_room_button.default_css+=";padding:2px 64px;";
+	FCChatConfig.styles.chat_window.main_panel.send_to_room_button.default_css+=";padding:2px 62px;";
 	//Moves the Off Button over by 5px
 	FCChatConfig.styles.widget.toolbar_item.chatcenter_layout.off_button.left+=5;
 	FCChatConfig.styles.widget.toolbar_item.msgcenter_layout.off_button.left+=5;

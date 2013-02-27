@@ -5,9 +5,9 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.5
-Stable tag: 3.4.1.1
+Stable tag: 3.4.2.1
 
-PLEASE READ UPGRADE NOTICE FOR 3.4.1.1 before updating. An interface for real time chat, video conferencing, instant messaging, and more.
+PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
 
 == Description ==
 
@@ -15,7 +15,7 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 MOST RECENT FEATURES
 
-Version 3.4.1 adds better integration for mobile browsers, with 2 new mobile layouts. In addition, a full width banner toolbar is now available.
+Version 3.4.2.1 updates the styling of the application window, and continues to add better support for mobile devices. 
 
 The next series of updates, we will be adding a "Contacts" button to the toolbar, which will replace the existing "Friends" button. The contacts panel will consist of both the friends list, and a new feature - "Recent Conversations".
 
@@ -24,7 +24,7 @@ The video chat now supports Flash player 11's h264 streaming capability. This re
 
 UPGRADE NOTICE
 
-Version 3.4.1.1: If you have changed the default location of the full page chat, you will need to copy the new  fcchat/html/chat/index.php file to this location, and set the $FCCHAT_BASE_URL once again.
+Versions 3.4.1.1-3.4.2.0: If you have changed the default location of the full page chat, you will need to copy the new  fcchat/html/chat/index.php file to this location, and set the $FCCHAT_BASE_URL once again.
 
 When you upgrade to a new version, any customizations you made to the chat files will be erased. In order to save those changes, do the following:
 
@@ -579,6 +579,9 @@ Version 3.4.1 adds better integration for mobile browsers, with 2 new mobile lay
 
 = 3.4.1.1 =
 Changed the default location of the login box for mobile devices.
+
+= 3.4.2.1 =
+Version 3.4.2.1 pdates the styling of the application window, and continues to add better support for mobile devices.
 
 == Upgrade Notice ==
 

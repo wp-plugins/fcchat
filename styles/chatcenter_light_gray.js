@@ -86,7 +86,7 @@ FCChatConfig.styles={
 				chat_room_panel:{
 					background_image:"chat_window_light_background.jpg",
 					background_color:"#ffffff",
-					border:"2px solid #a1a1a1",
+					border_css:{"border":"1px solid #aaaaaa","border-top":"2px solid gray"},
 					css:{opacity:.65,"box-shadow":"inset 5px 5px 10px 0px rgba(0,0,0,0.2)","-webkit-box-shadow": "inset 5px 5px 10px 0px rgba(0,0,0,0.2)"},
 					infobox:{
 						border:"4px solid silver",
@@ -97,7 +97,7 @@ FCChatConfig.styles={
 					background_image:"private_chat_light_background.jpg",
 					msgcenter_background_image:"chat_window_light_background.jpg",
 					background_color:"#f6f6f6",
-					border:"2px solid #a1a1a1",
+					border_css:{"border":"1px solid #aaaaaa","border-top":"2px solid gray"},
 					css:{opacity:.65,"box-shadow":"inset 5px 5px 10px 0px rgba(0,0,0,0.2)","-webkit-box-shadow": "inset 5px 5px 10px 0px rgba(0,0,0,0.2)"},
 					msg_interrupt:{
 						background:"#ededff;",
@@ -148,13 +148,13 @@ FCChatConfig.styles={
 				}
 			},
 			side_panels:{
-				background_color:"#DaDfE8",
-				border:"2px solid #a0a0a0",
+				background_color:"#cccccc",
+				border_css:{"border-top":"2px solid gray","border-bottom":"1px solid #bbbbbb"},
 				opacity:.7,
 				screen_name_dividers:{
 					background_color:"transparent",
 					hover_color:"#f3f3f3",
-					border:"1px solid #cccccc"
+					border:"0px solid #cccccc"
 				},
 				room_display_panel:{
 					background_color:"transparent",
@@ -228,7 +228,7 @@ FCChatConfig.styles={
 				opacity:.8,
 				font:{
 					screen_name_css:"font-weight:bold;font-size:9pt;color:lightblue;font-style:italic;",
-					links_css:"font-family:arial;font-size:9pt;color:white;",
+					links_css:"text-decoration:none;font-family:arial;font-size:9pt;color:white;",
 					functions_css:"font-family:arial;color:lightblue;font-size:9pt;",
 					smalltext_css:"font-family:arial;color:white;font-size:7pt;"
 				},
@@ -266,7 +266,7 @@ FCChatConfig.styles={
 					border:"1px solid silver"
 				},
 				selectors:{
-					border:"3px solid silver",
+					border:{"border":"3px solid silver"},
 					background_color:"#aaaaaa",
 					hover_color:"#b0b0b0",
 					selected_color:"#aaaa77",

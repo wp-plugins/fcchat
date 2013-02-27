@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<meta name="viewport" content="width=500, initial-scale=.8, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script>
 var fc_chat_path = "";
@@ -117,7 +117,7 @@ function set_popup_header(top,txt){
 	var v = jGo.$('#popup_box_header')[0];
 	v.style.display="block";
 	v.innerHTML=txt;
-	jGo.$(v).css({"top": top + "px","left": ( jGo.$(window).width() - jGo.$(v).width() ) / 2+jGo.$(window).scrollLeft() + "px"});
+	jGo.$(v).css({"top": top + "px","left": ( Math.max(20,Math.round(jGo.$(window).width() - jGo.$(v).width() ) / 2))+jGo.$(window).scrollLeft() + "px"});
 }
 set_popup_header((jGo.util.getInnerHeight())/2,(FCChatConfig.big_logo!=''?"<img align=absmiddle height=80px style='height:80px;width:80px;' src="+FCChatConfig.big_logo+">":"")+ " " + FCChatConfig.full_page_loading + "&nbsp;<img height='24px' onload='this.style.visibility=\"visible\";' style='visibility:hidden;width:24px;height:24px' ALIGN='absmiddle' src='../../current_skin/ajax-loader.gif'>");
 </script>

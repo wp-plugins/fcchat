@@ -53,7 +53,7 @@ FCChatConfig.txt={
 	
 	//Section Headings
 	t12: "Chat Rooms",
-	chat_room_width: 65,
+	chat_room_width: 66,
     t13: "Back",
 	t14: "Messages",
 	private_chat_width: 57,

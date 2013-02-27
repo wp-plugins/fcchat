@@ -41,7 +41,7 @@
 		
 		var firstPart = "" +
 		//Chat panels
-		fc_rule +"*.fc_d1, "+fc_rule2+"*.fc_d1{font-family:"+fc_cw_mp_cp.font.family+";font-size:"+fc_cw_mp_cp.font.size+"pt;font-weight:"+fc_cw_mp_cp.font.weight+";color:"+fc_cwtmc+";-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px}"+
+		fc_rule +"*.fc_d1, "+fc_rule2+"*.fc_d1{font-family:"+fc_cw_mp_cp.font.family+";font-size:"+fc_cw_mp_cp.font.size+"pt;font-weight:"+fc_cw_mp_cp.font.weight+";color:"+fc_cwtmc+";}"+
 		fc_rule+"*.fc_d1 *, "+fc_rule2+"*.fc_d1 *{font-family:"+fc_cw_mp_cp.font.family+";font-size:"+fc_cw_mp_cp.font.size+"pt;font-weight:"+fc_cw_mp_cp.font.weight+";color:"+fc_cwtmc+";}"+
 		fc_rule+"*.fc_d1 div, "+fc_rule2+"*.fc_d1 div{border:0px;}"+
 		fc_rule+"*.fc_d1 a, "+fc_rule2+"*.fc_d1 a{color:"+fc_cw_mp_cp.font.color.link_color+"}"+
@@ -50,7 +50,7 @@
 		fc_rule+"*.fc_d1 i.fc_aside, "+fc_rule2+"*.fc_d1 i.fc_aside{font-size:"+(fc_cw_mp_cp.font.timestamp_size)+"pt;}" +
 		
 		//Side panels
-		fc_rule+"*.fc_d2, "+fc_rule2+"*.fc_d2{font-family:"+fc_cw_mp_sp.font.family+";font-size:"+fc_cw_mp_sp.font.size+"pt;font-weight:"+fc_cw_mp_sp.font.weight+";color:black;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px}"+
+		fc_rule+"*.fc_d2, "+fc_rule2+"*.fc_d2{font-family:"+fc_cw_mp_sp.font.family+";font-size:"+fc_cw_mp_sp.font.size+"pt;font-weight:"+fc_cw_mp_sp.font.weight+";color:black;}"+
 		fc_rule+"*.fc_d2 *, "+fc_rule2+"*.fc_d2 *{font-family:"+fc_cw_mp_sp.font.family+";font-size:"+fc_cw_mp_sp.font.size+"pt;font-weight:"+fc_cw_mp_sp.font.weight+";}"+
 		fc_rule+"*.fc_d2 small a, "+fc_rule2+"*.fc_d2 small a{font-size:"+(fc_cw_mp_sp.font.size+1)+"pt;}"+
 		
@@ -226,7 +226,7 @@
 		fc_rule+"*.fc_ublko2:visited, "+fc_rule2+"*.fc_ublko2:visited{"+fc_cwsnc.offline.blocked.visited_css+"}"+
 		fc_rule+"*.fc_ublko2:hover, "+fc_rule2+"*.fc_ublko2:hover{"+fc_cwsnc.offline.blocked.hover_css+"}"+
 		
-		fc_rule+"*.fc_txt, "+fc_rule2+"*.fc_txt{"+fc_sc_css+";-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px}"+
+		fc_rule+"*.fc_txt, "+fc_rule2+"*.fc_txt{"+fc_sc_css+";}"+
 		fc_rule+"*.fc_table, "+fc_rule2+"*.fc_table{}"+
 		fc_rule+"*.fc_table td, "+fc_rule2+"*.fc_table td{font-family:"+fc_df+";font-size:9px;color:black}"+
 		fc_rule+"*.fc_table div, "+fc_rule2+"*.fc_table div{font-family:"+fc_df+";font-size:9px;color:black}"+
