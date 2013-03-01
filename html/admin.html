@@ -41,7 +41,8 @@ function getQuerystring(key, default_){
 }
 FCChatConfig.chat_id = getQuerystring("chatid") || FCChatConfig.chat_id;
 FCChatConfig.host = getQuerystring("host") || FCChatConfig.host;
-FCChatConfig.forum_proxy="";
+FCChatConfig.user_integration_bridge="";
+FCChatConfig.require_login=true;
 FCChatConfig.window_height_offset=0;
 FCChatConfig.chat_room_height_offset=0;
 FCChatConfig.absolute_positioning=true;

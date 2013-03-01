@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.5
-Stable tag: 3.4.2.1
+Stable tag: 3.4.2.2
 
 PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -15,7 +15,7 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 MOST RECENT FEATURES
 
-Version 3.4.2.1 updates the styling of the application window, and continues to add better support for mobile devices. 
+Version 3.4.2.1-2 updates the styling of the application window, and continues to add better support for mobile devices. 
 
 The next series of updates, we will be adding a "Contacts" button to the toolbar, which will replace the existing "Friends" button. The contacts panel will consist of both the friends list, and a new feature - "Recent Conversations".
 
@@ -581,7 +581,16 @@ Version 3.4.1 adds better integration for mobile browsers, with 2 new mobile lay
 Changed the default location of the login box for mobile devices.
 
 = 3.4.2.1 =
-Version 3.4.2.1 pdates the styling of the application window, and continues to add better support for mobile devices.
+Version 3.4.2.1 updates the styling of the application window, and continues to add better support for mobile devices.
+
+= 3.4.2.2 =
+Bug fix - the online indicator was not displaying properly in firefox.
+Bug fix - Some of the chat window panels, such as the userlist panel, were not aligned properly.
+Bug fix - in chrome, removed the border around the change avatar panel.
+Bug fix - hover color for user's screen name sometimes incorrectly turned to the "active" color.
+Bug fix - In the change admin panel, the login box was not centered properly.
+Bug fix - In the change admin panel, the connection was not being established with the server.
+
 
 == Upgrade Notice ==
 

@@ -177,7 +177,7 @@ FCChatConfig.styles={
 					blocked_css:"-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;background-color:#FF8380;border:1px solid white"
 				},	
 				profile_star:{
-					css:"font-size:16px;font-family:courier;font-weight:bold;color:yellow;"
+					css:"font-size:16px;font-family:courier;font-weight:bold;color:gold;"
 				},
 				font:{
 					family:"arial",
