@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.5
-Stable tag: 3.4.2.3
+Stable tag: 3.4.2.4
 
 PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -15,7 +15,7 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 MOST RECENT FEATURES
 
-Versions 3.4.2.1-3 updates the styling of the application window, and continues to add better support for mobile devices. 
+Versions 3.4.2.1-4 updates the styling of the application window, and continues to add better support for mobile devices. 
 
 The next series of updates, we will be adding a "Contacts" button to the toolbar, which will replace the existing "Friends" button. The contacts panel will consist of both the friends list, and a new feature - "Recent Conversations".
 
@@ -24,7 +24,7 @@ The video chat now supports Flash player 11's h264 streaming capability. This re
 
 UPGRADE NOTICE
 
-Versions 3.4.1.1 and higher: If you have changed the default location of the full page chat, you will need to copy the new  fcchat/html/chat/index.php file to this location, and set the $FCCHAT_BASE_URL once again.
+Upgrading from a version prior to 3.4.2.1: If you have changed the default location of the full page chat, you will need to copy the new  fcchat/html/chat/index.php file to this location, and set $FCCHAT_BASE_URL once again.
 
 When you upgrade to a new version, any customizations you made to the chat files will be erased. In order to save those changes, do the following:
 
@@ -591,8 +591,11 @@ Bug fix - hover color for user's screen name sometimes incorrectly turned to the
 Bug fix - In the change admin panel, the login box was not centered properly.
 Bug fix - In the change admin panel, the connection was not being established with the server.
 
-= 3.4.2.2 =
+= 3.4.2.3 =
 Added a new video icon.
+
+= 3.4.2.4 =
+Updated the FCChat/config/global.config.js file
 
 == Upgrade Notice ==
 

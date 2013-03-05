@@ -1,7 +1,7 @@
 /*
 * GLOBAL CONFIGURATION FILE
 * 
-* Refer to tutorial: http://www.fastcatsoftware.com/wp3.3/?p=7 
+* Refer to tutorial: http://www.fastcatsoftware.com/chat/userguide/globalconfig.asp 
 * 
 */
 (function(){
