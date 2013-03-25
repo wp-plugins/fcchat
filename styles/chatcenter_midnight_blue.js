@@ -162,6 +162,12 @@ FCChatConfig.styles={
 					text_css:"font-family:arial;font-size:8pt;font-weight:500;color:white;"
 				},
 				private_group_panel:{
+					header:{
+						background_color:"transparent",
+						divider:"0px solid gray",
+						css:"font-family:arial;font-size:12px;color:#fefefe;",
+						link_css:"color:#528DC4;text-decoration:none;"
+					},
 					selected_user:{
 						background_color:"#96a3b1",
 						arrow:{
@@ -358,6 +364,17 @@ FCChatConfig.styles={
 				}
 			}
 		}
+	},
+	profile:{
+		background:"#eeeeee",
+		textColor:{
+			title:"black",
+			main:"#666666",
+			loading:"green",
+			saving:"red",
+			saved:"green"
+		},
+		separator:"2px solid #A91905;"
 	},
 	split_screen:{
 		background_color:"#555555"

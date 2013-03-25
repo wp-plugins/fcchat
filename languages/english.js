@@ -59,7 +59,7 @@ FCChatConfig.txt={
 	private_chat_width: 57,
 	t15: "Who's Online",
 	t16: "Chat Room Members",
-	t17: "Friends",
+	t17: "Contacts",
 	
 	//Tooltips
 	t18: "Clear All",
@@ -386,7 +386,7 @@ FCChatConfig.txt={
 	//Floating toolbar
 	t266: "Messages",
 	t267: "new",
-	t269: "Friends",
+	t269: "Contacts",
 	t271: "New Messages",
 	
 	//New Messages box
@@ -403,7 +403,7 @@ FCChatConfig.txt={
 	t282: "Click to send a message",
 	
 	//Friends Box
-	t283: "Friends",
+	t283: "Contacts",
 	t284: "Close",
 	t285: "Users with green indicators are available for chat.<br>Click user's name for chat and other options.",
 	t286: "Remove from friends",
@@ -603,6 +603,12 @@ FCChatConfig.txt={
 	t428:" is no longer available for private chat.",
 	t429:"Conversation selected",
 	t430:"Selected for chat",
-	t431:"Not Available"
+	t431:"Not Available",
+	
+	//added 3.5
+	t432:"Remove from Recents",
+	t433:"Recents",
+	t434:"Friends List",
+	t435:"Recent Contacts"
 		
 };

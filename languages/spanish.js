@@ -61,7 +61,7 @@ FCChatConfig.txt = {
 	private_chat_width: 55,
 	t15: "Quién está en línea",
 	t16: "Miembros de la Sala",
-	t17: "Amigos",
+	t17: "Contactos",
 	
 	// Información sobre herramientas
 	t18: "Borrar todas",
@@ -387,7 +387,7 @@ FCChatConfig.txt = {
 	// Barra de herramientas flotante
 	t266: "Mensajes",
 	t267: "nuevo",
-	t269: "Amigos",
+	t269: "Contactos",
 	t271: "Nuevos mensajes",
 
 	// El nuevo cuadro de mensajes
@@ -404,7 +404,7 @@ FCChatConfig.txt = {
 	t282: "Haga clic aquí para enviar un mensaje",
 
 	// Amigos Caja
-	t283: "Amigos",
+	t283: "Contactos",
 	t284: "Cerrar",
 	t285: "Los usuarios con indicadores verdes están disponibles para chat.<br> su nombre de chat. Clic nombre para chatear y otras opciones.",
 	t286: "Eliminar de amigos",
@@ -590,6 +590,12 @@ FCChatConfig.txt = {
 	t418:"YouTube video",
 	
 	//added 3.2
+	t419:"Introduce tu nick",
+	t420:"Editar tu nick",
+	t421:"Apodo se establece",
+	t422:"Establezca su apodo",
+	
+	//added 3.4
 	t423:"Responder",
 	t424:"Conversation con ",
 	t425:"Todas las Conversationes",
@@ -598,7 +604,13 @@ FCChatConfig.txt = {
 	t428:" ya no está disponible para el chat privado.",
 	t429:"Conversación Seleccionado",
 	t430:"Seleccionado para chat",
-	t431:"No disponible"
+	t431:"No disponible",
+	
+	//added 3.5
+	t432: "Eliminar de las recientes",
+	t433: "Más reciente",
+	t434: "Lista de amigos",
+	t435: "Contactos recientes"
 		
 };
 

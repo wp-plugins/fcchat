@@ -1,6 +1,7 @@
-//Load jQuery
-if (!window["jGo"] && (!window.jQuery || (window.jQuery.fn.jquery.substr(0,3)-0)<1.6)) {
-	google.load("jquery", FCChatConfig.jQuery_stable);
+if (!window["jGo"] && (!window.jQuery || (window.jQuery.fn.jquery.substr(0,3)-0)<1.8 || (window.jQuery.fn.jquery.substr(0,3)-0)>=1.9)) {
+	//document.write("<script type='text/javascript' src='http://www.google.com/jsapi'></script>");
+	//As of fcchat version 3.5 load jquery directly
+	document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/'+FCChatConfig.jQuery_stable+'/jquery.min.js"></script>');
 }
 
 // Load jGo css and js

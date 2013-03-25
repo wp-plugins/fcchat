@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.5
-Stable tag: 3.4.2.6
+Stable tag: 3.5.0.1
 
 PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -15,9 +15,9 @@ FCChat connects your web site users with chat, video conferencing, instant messa
 
 MOST RECENT FEATURES
 
-Versions 3.4.2.1-6 updates the styling of the application window, and continues to add better support for mobile devices. 
+Versions 3.5. adds a "Contacts" button to the toolbar, which replaces the old "Friends" button. The contacts panel now consists of both the friends list, and a new feature - "Recent Conversations".
 
-The next series of updates, we will be adding a "Contacts" button to the toolbar, which will replace the existing "Friends" button. The contacts panel will consist of both the friends list, and a new feature - "Recent Conversations".
+In the next version, we will be updating the administration panel a little bit, and adding some convenience admin functions to the main chat, such as 'kick and ban'.
 
 The video chat now supports Flash player 11's h264 streaming capability. This represents a significant enhancement, in terms of video resolution and bandwidth usage. There are now 2 different layouts available for the chat window: Chatcenter and MsgCenter. The new MsgCenter layout is for those of you wish to use the Instant Messanger feature exclusively. 
 
@@ -602,6 +602,9 @@ Critical bug fix for ie8. Fixed a bug causing the chat to crash whenever the onl
 
 = 3.4.2.6 =
 Bug fix: The mobile banner mode was causing some sites to display with an improper width.
+
+= 3.5.0.1 = 
+Adds a "Contacts" button to the toolbar, which replaces the old "Friends" button. The contacts panel now consists of both the friends list, and a new feature - "Recent Conversations".
 
 == Upgrade Notice ==
 

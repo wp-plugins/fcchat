@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
 <TITLE>Profile Page</TITLE>
 <style>
-BODY {background-color: #b0b0b0;font-family:arial; font-size:12;color:white}
+BODY {background-color: #eeeeee;font-family:arial; font-size:12}
 div.infobox {
 padding:10px;margin-top:3px;width:360px;border:1px solid gray;color:#444444;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;
 background: #ccc; /* for non-css3 browsers */
@@ -15,11 +15,13 @@ background: -moz-linear-gradient(top,  #eee,  #ccc); /* for firefox 3.6+ */
 </style>
 
 <script>
+var style = window.parent.FCChatConfig.styles.profile;
 var insave=false;
 
 function $(u){
 	return document.getElementById(u)
 };
+
 function escapeChars(s){
 	s = s.replace(/%/g, '%25');
     s = s.replace(/&/g, '%26amp;');
@@ -70,7 +72,7 @@ function numbersonly(myfield, e, dec){
 	   return false;
 };
 function saveProfile(){
-	$('saving').style.color='red';
+	$('saving').style.color=style.textColor.saving;
 	$('saving').innerHTML=window.parent.fc_chat.textSetter(221);
 	var age = parseInt($('agetxt').value.substr(0,3));
 	if(isNaN(age))age=0;
@@ -96,7 +98,7 @@ function saveProfile(){
 };
 function finishedSaving(user){
 	if(insave){
-		$('saving').style.color='green';
+		$('saving').style.color=style.textColor.saved;
 		$('saving').innerHTML=window.parent.fc_chat.textSetter(222);
 		insave=false;
 	}
@@ -164,13 +166,13 @@ function getArgs() {
 var args = getArgs();
 </script>
 </HEAD>
-<BODY>
+<BODY id='body1'>
 <br>
-<div style="border-bottom: #A91905 2px solid;font-size:16;color:black"><b><i><script>document.write(window.parent.fc_chat.textSetter(207))</script></i></b></div>
+<script>document.write('<div style="border-bottom: '+style.separator+';font-size:16px;color:'+style.textColor.title+'"><b><i>'+window.parent.fc_chat.textSetter(207)+'</i></b></div>')</script>
 <br>
 <script>
 document.write("<div style='width:360px'><img src='" + args['loc'].replace(/\|\|period\|\|/g, '.').replace(/\|\|protocol\|\|/g, 'http') + "' border=0>&nbsp;")
-document.write("<b>" + args['nm'] + "&nbsp;&nbsp;&nbsp;" +(args['g']=='0'?"<span id='loading' style='color:green;font-style:italic'>("+window.parent.fc_chat.textSetter(208)+")</span>":"") + "</b></div><br>");
+document.write("<b>" + args['nm'] + "&nbsp;&nbsp;&nbsp;" +(args['g']=='0'?"<span id='loading' style='color:"+style.textColor.loading+";font-style:italic'>("+window.parent.fc_chat.textSetter(208)+")</span>":"") + "</b></div><br>");
 </script>
 
 <div id='displayprofile' style='display:none'>
@@ -222,19 +224,23 @@ document.write("<b>" + args['nm'] + "&nbsp;&nbsp;&nbsp;" +(args['g']=='0'?"<span
 <br>
 <input id='saveprofile' type='button' name='saveprofile' value='' Onclick='saveProfile()'>
 <script>document.getElementById("saveprofile").value=window.parent.fc_chat.textSetter(220)</script>
-&nbsp;&nbsp;<span id='saving' style='color:red;font-weight:bold;font-style:italic'></span>
+&nbsp;&nbsp;<span id='saving' style='font-weight:bold;font-style:italic'></span>
 <br><br><center><a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.fc_chat.textSetter(223))</script></a></center>
 </div>
 
 <div id='guest' style='display:none'>
-<br><br><span style='color:black'><script>document.write(window.parent.fc_chat.textSetter(210))</script>.</span> &nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.fc_chat.textSetter(223))</script></a>
+<br><br><span ><script>document.write(window.parent.fc_chat.textSetter(210))</script>.</span> &nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.fc_chat.textSetter(223))</script></a>
 </div>
 
 <div id='ownguest' style='display:none'>
-<br><br><span style='color:black'><script>document.write(window.parent.fc_chat.textSetter(211))</script>.</span> &nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.fc_chat.textSetter(223))</script></a>
+<br><br><span ><script>document.write(window.parent.fc_chat.textSetter(211))</script>.</span> &nbsp;<a href='javascript:window.parent.fc_chat.rem()'><script>document.write(window.parent.fc_chat.textSetter(223))</script></a>
 </div>
 
 <script>
+$('body1').style.backgroundColor=style.background;
+$('body1').style.color=style.textColor.main;
+
+
 if(args['g']=='0'){
 	var profile = window.parent.fc_chat.loadUP(args['u'],writeProfile);
 	writeProfile(args['u'],profile);

@@ -193,7 +193,9 @@
 			height:343,
 			css:jGo.fcchat_toolbar.style.dialog_box.css,
 			title_box_css:jGo.fcchat_toolbar.style.dialog_box.title_box_css,
-			list_box_css:"top:40px;left:0px;height:233px;border-top:1px solid #cccccc;",
+			greeting_box_css:"top:40px;left:0px;height:40px;background-color:#eeeeee;border-top:1px solid #cccccc;border-bottom:1px dotted #444444;",
+			greeting_box_link:jGo.fcchat_toolbar.style.dialog_box.text.secondary_link_css,
+			list_box_css:"top:80px;left:0px;height:193px;",
 			list_divider_css:jGo.fcchat_toolbar.style.dialog_box.list_divider_css,
 			info_box_css:"top:273px;left:0px;height:70px;background-color:#eeeeee;border-top:1px dotted #444444;",
 			text:jGo.fcchat_toolbar.style.dialog_box.text
