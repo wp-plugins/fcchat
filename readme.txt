@@ -24,6 +24,10 @@ The video chat now supports Flash player 11's h264 streaming capability. This re
 
 UPGRADE NOTICE
 
+Upgrading to version 3.5.0.1 will automatically switch your chat to the new chat server (v2.3). This process takes 1-2 min. During this time, your chat will not function properly. Keep trying to reconnect for a few minutes until the transfer is complete.
+
+After upgrading, make sure you clear your browser cache and refresh the page.
+
 Upgrading from a version prior to 3.4.2.1: If you have changed the default location of the full page chat, you will need to copy the new  fcchat/html/chat/index.php file to this location, and set $FCCHAT_BASE_URL once again.
 
 When you upgrade to a new version, any customizations you made to the chat files will be erased. In order to save those changes, do the following:
@@ -32,7 +36,7 @@ When you upgrade to a new version, any customizations you made to the chat files
 1. Next install the new version. 
 1. Finally, manually copy the changes you made to the old files into the current version's files. Do not replace the new files with the old files, as the structure of the new files may have changed; but instead, use the wordpress file editor to make the changes line by line.
 
-After upgrading, make sure you clear your browser cache and refresh the page.
+
 
 FEATURE LIST:
 
