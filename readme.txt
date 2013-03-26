@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.5
-Stable tag: 3.5.0.1
+Stable tag: 3.5.0.3
 
 PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -24,7 +24,7 @@ The video chat now supports Flash player 11's h264 streaming capability. This re
 
 UPGRADE NOTICE
 
-Upgrading to version 3.5.0.1 will automatically switch your chat to the new chat server (v2.3). This process takes 1-2 min. During this time, your chat will not function properly. Keep trying to reconnect for a few minutes until the transfer is complete.
+Upgrading to version 3.5.x.x will automatically switch your chat to the new chat server (v2.3). This process takes 1-2 min. During this time, your chat will not function properly. Keep trying to reconnect for a few minutes until the transfer is complete.
 
 After upgrading, make sure you clear your browser cache and refresh the page.
 
@@ -609,6 +609,9 @@ Bug fix: The mobile banner mode was causing some sites to display with an improp
 
 = 3.5.0.1 = 
 Adds a "Contacts" button to the toolbar, which replaces the old "Friends" button. The contacts panel now consists of both the friends list, and a new feature - "Recent Conversations".
+
+= 3.5.0.3 = 
+A bug was fixed that was causing the improper display of the login box
 
 == Upgrade Notice ==
 

@@ -103,7 +103,7 @@ FCChatConfig.styles.widget.control.css="display:none;";
 //-->
 </script>
 </head>
-<body style='background-color:#dddddd;font-family:arial;font-size:20px;font-weight:bold;'>
+<body style='background-color:#eeeeee;font-family:arial;font-size:20px;font-weight:bold;'>
 <script>
 jGo.$(document.body).css(FCChatConfig.quickstyling.alldomains.full_page_css_obj);
 </script>

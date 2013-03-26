@@ -234,7 +234,7 @@ proto.windowEventsHandler = function(track){
 };
 
 proto.reposition = function(){
-	if(this.reposition_enabled){
+	if(this.reposition_enabled&&this.frame.css("display")=="block"){
 		var elem = (this.IE6Mode||this.config.layout==1?$("#"+this.app_prefix+"toolbar_inner"):this.frame);
 
 		if(this.IE6Mode){
