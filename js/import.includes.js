@@ -136,8 +136,10 @@ function fcchat_includes(){
 	
 	if(cnf.flashEnabled){
 		document.write("<script type='text/javascript' src='" + cnf.dir + "js/flash.tag.min.js'></script>");
-	}else{
+	}else if(cnf.websocketEnabled){
 		document.write("<script type='text/javascript' src='" + cnf.dir + "js/fcchat.websocket.min.js'></script>");
+	}else{
+		cnf.no_support=true;
 	}
 	document.write("<script type='text/javascript' src='" + cnf.dir + "js/jquery.sound.min.js'></script>");
 	document.write("<script language='JavaScript' src='" + cnf.dir + "js/css.vars.js'></script>");

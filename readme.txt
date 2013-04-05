@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.5
-Stable tag: 3.5.0.4
+Stable tag: 3.5.0.5
 
 PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -615,6 +615,9 @@ A bug was fixed that was causing the improper display of the login box
 
 = 3.5.0.4 = 
 Updated the chat for compatibility with jquery 1.9.x
+
+= 3.5.0.5 = 
+Added a courtesy notice for mobile browsers not supported by the chat.
 
 == Upgrade Notice ==
 

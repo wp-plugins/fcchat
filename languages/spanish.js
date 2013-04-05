@@ -610,8 +610,11 @@ FCChatConfig.txt = {
 	t432: "Eliminar de las recientes",
 	t433: "Más reciente",
 	t434: "Lista de amigos",
-	t435: "Contactos recientes"
-		
+	t435: "Contactos recientes",
+	
+	//added 3.5.0.5
+	t436: "Lo sentimos, este navegador no soporta chat en tiempo real."
+	
 };
 
 //Language style overrides

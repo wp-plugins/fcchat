@@ -609,6 +609,9 @@ FCChatConfig.txt={
 	t432:"Remove from Recents",
 	t433:"Recents",
 	t434:"Friends List",
-	t435:"Recent Contacts"
+	t435:"Recent Contacts",
+	
+	//added 3.5.0.5
+	t436: "Sorry, this browser does not support real time chat."
 		
 };
