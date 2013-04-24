@@ -121,14 +121,16 @@ function is_bad_environment($index) {
    sort($files);
    while (strlen($file=next($files))) {
       if (ereg("^\.{1,2}$", $file)) continue;
-	$this->Language_files[] = $file;
       $my_fullname = "{$data_dir_obj->path}/$file";
-      chmod ($my_fullname, 0777);
-      if (!($FH_SAVEAS = @fopen ("{$my_fullname}", "a"))){
-      	$error = "Some files within FCChat/languages do not have write permission set. ".$std_error;
-	break;     
-      }else{
-		fclose ($FH_SAVEAS);
+      if(is_file($my_fullname)){
+      	$this->Language_files[] = $file;
+      	chmod ($my_fullname, 0777);
+      	if (!($FH_SAVEAS = @fopen ("{$my_fullname}", "a"))){
+      		$error = "<br>Some files within FCChat/languages (".$my_fullname.") do not have write permission set. ".$std_error;
+			break;     
+      	}else{
+			fclose ($FH_SAVEAS);
+      	}
       }
    }
    $data_dir_obj->close();
@@ -138,14 +140,16 @@ function is_bad_environment($index) {
    sort($files2);
    while (strlen($file=next($files2))) {
       if (ereg("^\.{1,2}$", $file)) continue;
-	$this->Style_files[] = $file;
       $my_fullname = "{$data_dir_obj->path}/$file";
-      chmod ($my_fullname, 0777);
-      if (!($FH_SAVEAS = @fopen ("{$my_fullname}", "a"))){
-      	$error = "Some files within FCChat/styles do not have write permission set. ".$std_error;
-	break;     
-      }else{
-		fclose ($FH_SAVEAS);
+      if(is_file($my_fullname)){
+      	$this->Style_files[] = $file;
+      	chmod ($my_fullname, 0777);
+      	if (!($FH_SAVEAS = @fopen ("{$my_fullname}", "a"))){
+      		$error = "<br>Some files within FCChat/styles (".$my_fullname.") do not have write permission set. ".$std_error;
+			break;     
+      	}else{
+			fclose ($FH_SAVEAS);
+      	}
       }
    }
    $data_dir_obj->close();
@@ -155,14 +159,16 @@ function is_bad_environment($index) {
    sort($files5);
    while (strlen($file=next($files5))) {
       if (ereg("^\.{1,2}$", $file)) continue;
-	$this->Toolbar_files[] = $file;
       $my_fullname = "{$data_dir_obj->path}/$file";
-      chmod ($my_fullname, 0777);
-      if (!($FH_SAVEAS = @fopen ("{$my_fullname}", "a"))){
-      	$error = "Some files within FCChat/toolbar_items do not have write permission set. ".$std_error;
-	break;     
-      }else{
-		fclose ($FH_SAVEAS);
+      if(is_file($my_fullname)){
+      	$this->Toolbar_files[] = $file;
+     	 chmod ($my_fullname, 0777);
+     	 if (!($FH_SAVEAS = @fopen ("{$my_fullname}", "a"))){
+      		$error = "<br>Some files within FCChat/toolbar_items (".$my_fullname.") do not have write permission set. ".$std_error;
+			break;     
+      	}else{
+			fclose ($FH_SAVEAS);
+      	}
       }
    }
    $data_dir_obj->close();
@@ -403,7 +409,7 @@ function send_mail($file,$code){
 		$message = "The following file has been edited: {$html_file}<br><br>Here are the new contents:<br><br>{$html_contents}";
 
 		$message = wordwrap($message, 70);
-
+		date_default_timezone_set('America/New_York');
 		// Send
 		mail($email, 'FCChat File Editor Report', $message, $headers);
 	}
