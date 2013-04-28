@@ -42,7 +42,7 @@ FCChatConfig.styles={
 				single_button_css:"padding:5px 45px;font:14px arial;font-weight:bold;",
 				states:{
 					link_css:"color:white",
-					hover_css:"color:lightblue",
+					hover_css:"color:lightblue;text-decoration:none;border:1px solid #666666; border-top:1px solid #797979;",
 					disabled_css:"color:#bbbbbb;border:1px solid #666666"
 				}
 			},
@@ -51,15 +51,19 @@ FCChatConfig.styles={
 				single_button_css:"padding:5px 45px;font:14px arial;font-weight:bold;",
 				states:{
 					link_css:"color:white",
-					hover_css:"color:lightblue",
+					hover_css:"color:lightblue;text-decoration:none;border:1px solid #666666; border-top:1px solid #797979;",
 					disabled_css:"color:#bbbbbb;border:1px solid #666666"
 				}
+			},
+			options_button:{
+				icon:"options_light_blue.png",
+				color:"#42C0FB"
 			},
 			other_buttons:{
 				default_css:"border:1px solid #666666; border-top:1px solid #797979;padding:2px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
 					link_css:"color:white",
-					hover_css:"color:lightblue",
+					hover_css:"color:lightblue;text-decoration:none;border:1px solid #666666; border-top:1px solid #797979;",
 					disabled_css:"color:#bbbbbb;border:1px solid #666666"
 				}
 			},
@@ -260,7 +264,7 @@ FCChatConfig.styles={
 			options_panel:{
 				outer_border:"1px solid #444444",
 				inner_border:"1px solid silver",
-				background_color:"gray",
+				background_color:"#777",
 				panel_font_css: "color:lightblue;font-family:arial;font-weight:bold;font-style:italic;font-size:12px",
 				infobox:{
 					font_css:"color:white;font-size:12px;text-decoration:none",
@@ -292,7 +296,7 @@ FCChatConfig.styles={
 				color_selector:{
 					color_values:["#fff","black","blue","red","purple","green","yellow","orange","white"]
 				},
-				remove_block_button:{
+				buttons:{
 					default_css:"border:1px solid silver; padding:2px 12px 2px 11px; font:10px arial;",
 					states:{
 						link_css:"color:white",
@@ -303,7 +307,7 @@ FCChatConfig.styles={
 			},
 			tools_panel:{
 				border:"1px solid #444444",
-				background_color:"gray",
+				background_color:"#777",
 				smileys:{
 					width:250,
 					height:200

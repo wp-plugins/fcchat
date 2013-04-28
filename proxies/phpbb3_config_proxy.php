@@ -15,8 +15,8 @@ global $fcchat_plugin_url, $fcchat_store;
 $fcchat_store=array();
 $fcchat_plugin_url=$phpbb_root_path . 'FCChat/';
 
-include('fcchat-config.php'); 
-include('./../config/proxy_functions.php');
+include('./../config/fcchat-config.php'); 
+include('proxy_functions.php');
 	
 if(fcchat_phpbb3_table_exists()){
 	fcchat_phpbb3_get_store();

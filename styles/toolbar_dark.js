@@ -63,8 +63,8 @@ jGo.fcchat_toolbar.style={
 				css:{
 					width:"200px",
 					height:"230px",
-					"-webkit-box-shadow": "2px 2px 2px 2px rgba(0,0,0,0.5)",
-					"box-shadow": "2px 2px 2px 2px rgba(0,0,0,0.5)",
+					"-webkit-box-shadow": "2px 2px 2px 1px rgba(0,0,0,0.5)",
+					"box-shadow": "2px 2px 2px 1px rgba(0,0,0,0.5)",
 					"background-color":"#eeeeee",
 					border:"1px solid silver"
 				},
@@ -90,15 +90,42 @@ jGo.fcchat_toolbar.style={
 				css:{
 					width:"200px",
 					height:"80px",
-					"-webkit-box-shadow": "2px 2px 2px 2px rgba(0,0,0,0.5)",
-					"box-shadow": "2px 2px 2px 2px rgba(0,0,0,0.5)",
+					"-webkit-box-shadow": "2px 2px 2px 1px rgba(0,0,0,0.5)",
+					"box-shadow": "2px 2px 2px 1px rgba(0,0,0,0.5)",
 					"background-color":"#eeeeee",
 					border:"1px solid silver"
 				},
 				menu_item:{
-					css:"padding:9px;font:10pt arial;",
+					css:"padding:8px;font:10pt arial;",
 					hide_icon:{
 						css:"color:#444444;font-stretch:wider;font-size:10px;font-weight:bold;text-decoration:none"
+					}
+				}
+			},
+			mod_menu:{
+				position:{
+					left:null,
+					top:null,
+					offsetLeft:40,
+					offsetTop:30
+				},
+				css:{
+					width:"200px",
+					height:"200px",
+					"-webkit-box-shadow": "2px 2px 2px 1px rgba(0,0,0,0.5)",
+					"box-shadow": "2px 2px 2px 1px rgba(0,0,0,0.5)",
+					"background-color":"#eeeeee",
+					border:"1px solid silver"
+				},
+				menu_item:{
+					dim:"width:200px;height:30px;",
+					css:"padding:8px;font:10pt arial;font-weight:bold;",
+					link_color:"#444444",
+					link_css:"text-decoration:none",
+					disabled_link_color:"#999999",
+					hover_color:"#fff",
+					hide_icon:{
+						css:"color:#444444;font-stretch:wider;font-size:14px;font-weight:bold;text-decoration:none"
 					}
 				}
 			},
@@ -112,8 +139,8 @@ jGo.fcchat_toolbar.style={
 				css:{
 					width:"200px",
 					height:"85px",
-					"-webkit-box-shadow": "2px 2px 2px 2px rgba(0,0,0,0.5)",
-					"box-shadow": "2px 2px 2px 2px rgba(0,0,0,0.5)",
+					"-webkit-box-shadow": "2px 2px 2px 1px rgba(0,0,0,0.5)",
+					"box-shadow": "2px 2px 2px 1px rgba(0,0,0,0.5)",
 					"background-color":"#eeeeee",
 					border:"1px solid silver"
 				},

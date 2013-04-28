@@ -22,7 +22,6 @@
 
 (function(){
 	
-
 FCChatConfig.styles={
 	chat_window:{
 		frame:{
@@ -42,7 +41,7 @@ FCChatConfig.styles={
 				single_button_css:"padding:5px 45px;font:14px arial;font-weight:bold;",
 				states:{
 					link_css:"color:#163663",
-					hover_css:"color:black",
+					hover_css:"color:black;text-decoration:none;background-color:#e3e3e3;border:1px solid #bcbcbc; border-bottom:1px solid #a9a9a9;",
 					disabled_css:"color:#c3c3c3;border:1px solid #acacac;background-color:#fefefe;"
 				}
 			},
@@ -51,15 +50,19 @@ FCChatConfig.styles={
 				single_button_css:"padding:5px 45px;font:14px arial;font-weight:bold;",
 				states:{
 					link_css:"color:#163663",
-					hover_css:"color:black",
+					hover_css:"color:black;text-decoration:none;background-color:#e3e3e3;border:1px solid #bcbcbc; border-bottom:1px solid #a9a9a9;",
 					disabled_css:"color:#c3c3c3;border:1px solid #acacac;background-color:#fefefe;"
 				}
+			},
+			options_button:{
+				icon:"options_dark_blue.png",
+				color:"#4169E1"
 			},
 			other_buttons:{
 				default_css:"background-color:#e3e3e3;border:1px solid #bcbcbc; border-bottom:1px solid #a9a9a9;padding:2px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
 					link_css:"color:#163663",
-					hover_css:"color:black",
+					hover_css:"color:black;text-decoration:none;background-color:#e3e3e3;border:1px solid #bcbcbc; border-bottom:1px solid #a9a9a9;",
 					disabled_css:"color:#c3c3c3;border:1px solid #acacac;background-color:#fefefe;"
 				}
 			},
@@ -230,15 +233,15 @@ FCChatConfig.styles={
 			},
 			user_pop_up_panel:{
 				border:"1px solid silver",
-				background_color:"#444444",
-				opacity:.8,
+				background_color:"#fff",
+				opacity:1,
 				font:{
-					screen_name_css:"font-weight:bold;font-size:9pt;color:lightblue;font-style:italic;",
-					links_css:"text-decoration:none;font-family:arial;font-size:9pt;color:white;",
-					functions_css:"font-family:arial;color:lightblue;font-size:9pt;",
-					smalltext_css:"font-family:arial;color:white;font-size:7pt;"
+					screen_name_css:"font-weight:bold;font-size:9pt;color:green;font-style:italic;",
+					links_css:"text-decoration:none;font-family:arial;font-size:9pt;color:#528DC4;",
+					functions_css:"font-family:arial;color:#4444444;font-size:9pt;",
+					smalltext_css:"font-family:arial;color:#444444;font-size:7pt;"
 				},
-				dividing_line:"1px solid gray",
+				dividing_line:"1px dotted black",
 				widgets:{
 					border:{
 						link_css:"border:1px solid #666666",
@@ -246,36 +249,36 @@ FCChatConfig.styles={
 					}
 				},
 				send_chat_panel:{
-					css:"font-size:9pt;font-family:arial;color:black;background-color:#aaaaaa;border:1px solid silver;"
+					css:"font-size:9pt;font-family:arial;color:black;background-color:#f3f3f3;border:1px solid #aaaaaa;"
 				},
 				send_private_button:{
-					default_css:"border:1px solid silver; padding:2px 12px 2px 11px; font:10px arial;",
+					default_css:"background-color:#e3e3e3;border:1px solid #bcbcbc; border-bottom:1px solid #a9a9a9;padding:2px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 					states:{
-						link_css:"color:white",
-						hover_css:"color:lightblue",
-						disabled_css:"color:#bbbbbb;border:1px solid #bbbbbb;"
+						link_css:"color:#163663",
+						hover_css:"color:black;text-decoration:none;background-color:#e3e3e3;border:1px solid #bcbcbc; border-bottom:1px solid #a9a9a9;",
+						disabled_css:"color:#c3c3c3;border:1px solid #acacac;background-color:#fefefe;"
 					}
 				}
 			},
 			options_panel:{
-				outer_border:"1px solid #444444",
+				outer_border:"1px solid silver",
 				inner_border:"1px solid silver",
-				background_color:"gray",
-				panel_font_css: "color:lightblue;font-family:arial;font-weight:bold;font-style:italic;font-size:12px",
+				background_color:"#fff",
+				panel_font_css: "color:#528DC4;font-family:arial;font-weight:bold;font-style:italic;font-size:12px",
 				infobox:{
-					font_css:"color:white;font-size:12px;text-decoration:none",
+					font_css:"color:#444;font-size:12px;text-decoration:none",
 					border:"4px solid silver",
 					triangle_color:"silver"
 				},
 				functions:{
-					font_css:"color:white;font-size:12px;text-decoration:none",
+					font_css:"color:#444;font-size:12px;text-decoration:none",
 					border:"1px solid silver"
 				},
 				selectors:{
-					border:{"border":"3px solid silver"},
-					background_color:"#aaaaaa",
-					hover_color:"#b0b0b0",
-					selected_color:"#aaaa77",
+					border:{"border":"4px solid lightblue"},
+					background_color:"#fff",
+					hover_color:"lightblue",
+					selected_color:"#ddd",
 					font_css:"color:#333333;font-family:arial;font-weight:normal;font-size:10px",
 					separator:"1px solid silver"
 				},
@@ -292,18 +295,18 @@ FCChatConfig.styles={
 				color_selector:{
 					color_values:["#444444","black","blue","red","purple","green","yellow","orange","white"]
 				},
-				remove_block_button:{
-					default_css:"border:1px solid silver; padding:2px 12px 2px 11px; font:10px arial;",
+				buttons:{
+					default_css:"background-color:#e3e3e3;border:1px solid #bcbcbc; border-bottom:1px solid #a9a9a9;padding:2px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 					states:{
-						link_css:"color:white",
-						hover_css:"color:lightblue",
-						disabled_css:"color:#bbbbbb;border:1px solid #bbbbbb;"
+						link_css:"color:#163663",
+						hover_css:"color:black;text-decoration:none;background-color:#e3e3e3;border:1px solid #bcbcbc; border-bottom:1px solid #a9a9a9;",
+						disabled_css:"color:#c3c3c3;border:1px solid #acacac;background-color:#fefefe;"
 					}
 				}
 			},
 			tools_panel:{
-				border:"1px solid #444444",
-				background_color:"gray",
+				border:"1px solid silver",
+				background_color:"white",
 				smileys:{
 					width:250,
 					height:200
@@ -376,7 +379,7 @@ FCChatConfig.styles={
 		separator:"2px solid #A91905;"
 	},
 	split_screen:{
-		background_color:"lightgray"
+		background_color:"#fff"
 	}
 };
 

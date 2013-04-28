@@ -17,7 +17,7 @@ function fcchat_phpbb3_table_exists(){
 
 function fcchat_phpbb3_init_table(){
 	global $table_prefix, $db;
-	$sql = "CREATE TABLE ".$table_prefix."fcchat_config (name varchar(255) NOT NULL default '',value text default '')";
+	$sql = "CREATE TABLE ".$table_prefix."fcchat_config (name varchar(255) NOT NULL default '',value text)";
 	$db->sql_query($sql);
 }
 

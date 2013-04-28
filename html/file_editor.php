@@ -36,7 +36,7 @@ function is_bad_environment($index) {
 			/FCChat/languages/<BR>
 			/FCChat/toolbar_items/<BR>
 			/FCChat/styles/<BR>
-			/FCChat/html/config<BR><BR><br>To ensure security, you should also set up a notification email in /FCChat/html/file_editor_config.php. This will notify you when any changes are made to the filesystem. Also, you should always click on 'Lock File Editor' when you are done using it.";
+			/FCChat/html/config<BR><BR><br>To ensure security, you should also set up a notification email in /FCChat/html/file_editor_config.php. This will notify you when any changes are made to the filesystem. Also, you should always click on 'Lock File Editor' when you are done using it.<br><br><b>Warning:</b> The changes you make to files using this editor will <b>not</b> carry over when you update the chat. When you upgrade, you must manually transfer any file changes to the new version.";
        	if($error!=""){
 		return $error;
    	}
@@ -421,7 +421,7 @@ function html_top() {
 			<script type='text/javascript' src='../jGo/js/jGo.MD5.min.js'></script>
 			<script type='text/javascript' src='../jGo/js/jGo.c.min.js'></script>
 			</HEAD>
-			<BODY style='font-family:arial;font-size:12px;background-color:#F3F0Dc'>\n";
+			<BODY style='font-family:arial;font-size:12px;background-color:#F3F3F3'>\n";
 }
 
 function html_bottom() {
