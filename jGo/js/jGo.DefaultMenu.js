@@ -68,7 +68,7 @@ TMp.mouseOff = function(e){
 };
 
 //Manipulation
-TMp.position = function(target){
+TMp.position = function(){
 	var s = this.style.position,
  	t = this.target,
 	p = this.parent,

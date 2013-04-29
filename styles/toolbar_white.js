@@ -75,7 +75,7 @@ jGo.fcchat_toolbar.style={
 					disabled_link_color:"#999999",
 					hover_color:"#f0f9ff",
 					hide_icon:{
-						css:"color:#444444;font-stretch:wider;font-size:14px;font-weight:bold;text-decoration:none"
+						css:"color:#444444;font-stretch:wider;font-size:16px;font-weight:bold;text-decoration:none"
 					}
 				}
 			},
@@ -97,7 +97,7 @@ jGo.fcchat_toolbar.style={
 				menu_item:{
 					css:"padding:8px;font:10pt arial;",
 					hide_icon:{
-						css:"color:#444444;font-stretch:wider;font-size:10px;font-weight:bold;text-decoration:none"
+						css:"color:#444444;font-stretch:wider;font-size:16px;font-weight:bold;text-decoration:none"
 					}
 				}
 			},
@@ -124,7 +124,7 @@ jGo.fcchat_toolbar.style={
 					disabled_link_color:"#999999",
 					hover_color:"#f0f9ff",
 					hide_icon:{
-						css:"color:#444444;font-stretch:wider;font-size:14px;font-weight:bold;text-decoration:none"
+						css:"color:#444444;font-stretch:wider;font-size:16px;font-weight:bold;text-decoration:none"
 					}
 				}
 			},
@@ -149,7 +149,7 @@ jGo.fcchat_toolbar.style={
 						css:"color:green;font-weight:bold;font-style:italic"
 					},
 					hide_icon:{
-						css:"color:#444444;font-stretch:wider;font-size:10px;font-weight:bold;text-decoration:none"
+						css:"color:#444444;font-stretch:wider;font-size:16px;font-weight:bold;text-decoration:none"
 					}
 				}
 			},
