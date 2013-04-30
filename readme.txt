@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.5
-Stable tag: 3.5.1.1
+Stable tag: 3.5.1.2
 
 PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -630,6 +630,9 @@ Added a new mod menu, and a new censor chat feature. Changed the styling of dial
 
 = 3.5.1.1 = 
 Fixed a few bugs with the mobile display in version 3.5.1.
+
+= 3.5.1.2 = 
+Added a feature which enables you to resize the smileys for presentation in the smiley panel.
 
 == Upgrade Notice ==
 
