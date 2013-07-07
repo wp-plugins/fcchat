@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.5
-Stable tag: 3.5.1.3
+Stable tag: 3.5.1.4
 
 PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -636,6 +636,10 @@ Added a feature which enables you to resize the smileys for presentation in the 
 
 = 3.5.1.3 = 
 Corrected an error with the rendering of default avatars.
+
+= 3.5.1.4 = 
+Fixed a bug that was preventing the transliteration service from initializing.
+
 
 == Upgrade Notice ==
 
