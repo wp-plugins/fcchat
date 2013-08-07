@@ -163,7 +163,7 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		"cmntchatbox"=>array("value"=>"","type"=>"comment","desc"=>"CHATBOX"),
 		"chatbox"=>array(
 "value"=>"enabled:true,
-		mode:0, // 0 - sitewide, 1 - page discussion
+		mode:0, /*0 - sitewide, 1 - page discussion*/
 		dialog_width:500,
 		require_tag:true,
 		sitewide:{
