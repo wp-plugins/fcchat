@@ -160,6 +160,33 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		"min_room_messages"=>array("value"=>"50","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The number of messages left in the room after an auto-adjust."),
 		"max_chat_size"=>array("value"=>"2000","type"=>"text","quote"=>"0","sz"=>"20","desc"=>"The maximum size of a single chat message."),
 		
+		"cmntchatbox"=>array("value"=>"","type"=>"comment","desc"=>"CHATBOX"),
+		"chatbox"=>array(
+"value"=>"enabled:true,
+		mode:0, // 0 - sitewide, 1 - page discussion
+		dialog_width:500,
+		require_tag:true,
+		sitewide:{
+			full_page:true,
+			topic:'',
+			desc:'',
+			button_width:120,
+			button_text:'ChatBox',
+			title_text:'ChatBox',
+			connected_text:'Connected: ',
+			viewing_text:'Viewing'
+		},
+		page_discussion:{
+			button_width:130,
+			button_text:'BlogChat',
+			title_text:'Chat about this page',
+			connected_text:'Viewing this page: ',
+			viewing_text:'Active',
+			use_querystring_in_url:false,
+			use_page_title:true,
+			lock_all_discussions:false
+		}","type"=>"textarea","desc"=>"Settings for the chatbox. Refer to http://http://www.fastcatsoftware.com/chat/userguide/chatbox.asp"),
+
 		"cmntfpu"=>array("value"=>"","type"=>"comment","desc"=>"FULL PAGE URL"),
 		"full_page_url"=>array("value"=>"","type"=>"text","quote"=>"1","sz"=>"60","desc"=>"Changes the location of the full page chat. Read the tutorial in the User Guide on changing the location of the chat page before editing."),
 		

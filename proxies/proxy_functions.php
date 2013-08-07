@@ -69,7 +69,7 @@ function fcchat_add_configuration(){
 	$fcchat_options = fcchat_get_widget_options();
 	$header= 'if(!window["FCChatConfig"]){window["FCChatConfig"] = {}}(function(){var a = window["FCChatConfig"];';
 	foreach($fcchat_options as $key => $value){
-		if($key=='custom_buttons'||$key=='templates'||$key=='quickstyling'){
+		if($key=='custom_buttons'||$key=='templates'||$key=='quickstyling'||$key=='chatbox'){
 			$header.= 'a.' . $key . '=' . '{' . $fcchat_options[$key]['value'] . '};';
 		}else if($fcchat_options[$key]['type']!='hidden'&&$fcchat_options[$key]['type']!='comment'&&$key!='template_overrides'){
 			if($fcchat_options[$key]['quote']=='1'||($fcchat_options[$key]['quote']=='2'&&$fcchat_options[$key]['value']!='true'&&$fcchat_options[$key]['value']!='false')){

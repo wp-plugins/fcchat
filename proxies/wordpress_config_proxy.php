@@ -16,7 +16,7 @@ $fcchat_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dir
 $fcchat_options = get_fcchat_widget_options();
 	echo 'if(!window["FCChatConfig"]){window["FCChatConfig"] = {}}(function(){var a = window["FCChatConfig"];';
 	foreach($fcchat_options as $key => $value){
-		if($key=='custom_buttons'||$key=='templates'||$key=='quickstyling'){
+		if($key=='custom_buttons'||$key=='templates'||$key=='quickstyling'||$key=='chatbox'){
 			echo 'a.' . $key . '=' . '{' . $fcchat_options[$key]['value'] . '};';
 		}else if($fcchat_options[$key]['type']!='hidden'&&$fcchat_options[$key]['type']!='comment'&&$key!='template_overrides'){
 			if($fcchat_options[$key]['quote']=='1'||($fcchat_options[$key]['quote']=='2'&&$fcchat_options[$key]['value']!='true'&&$fcchat_options[$key]['value']!='false')){

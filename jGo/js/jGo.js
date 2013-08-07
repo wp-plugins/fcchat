@@ -214,6 +214,8 @@ jGo.config = {
 						} ] ]
 			}
 		},
+		
+		hooks : {},
 
 		// Methods
 		checkTemplate : function(w, template, group) {
@@ -638,6 +640,45 @@ jGo.config = {
 	//Version 2.0 prefered method of attaching application wide event handler
 	jGo.onEvent = function(type, name, obj, method, scope, pos){
 			jGo.UI.addEventHandler(type, name, obj, method, scope, pos);
+	};
+	
+	//Hooks
+	jGo.hooks = {
+		addHook : function(type, name, obj, method) {
+			var h = OS.hooks;
+			
+			if(h[type]){
+				for ( var fn in h[type]) {
+					if(h[type].hasOwnProperty(fn)){
+						if (h[type][fn][0] == name) {
+							return false;
+						}
+					}
+				}
+			}else{
+				h[type]=[];
+			}
+			
+			h[type].splice(h[type].length, 0, [name, jGo.util.bind(obj, obj[method]) ]);
+		},
+		removeHook : function(type, name) {
+			var h = OS.hooks[type];
+			for ( var fn in h) {
+				if(h.hasOwnProperty(fn)){
+					if (h[fn][0] == name) {
+						h.splice(fn, 1);
+					}
+				}
+			}
+		},
+		doHooks:function(type,args) {
+			var h = OS.hooks[type];
+			if(h){
+				for ( var fn = h.length-1; fn >= 0; fn--) {
+					h[fn][1](args);
+				}
+			}
+		}
 	};
 	
 	// scripts

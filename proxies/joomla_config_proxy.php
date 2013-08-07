@@ -66,7 +66,7 @@ jimport( 'joomla.html.parameter' );
 	$plugin_url = JURI::base() . '../';
 	$javascript = 'if(!window["FCChatConfig"]){window["FCChatConfig"] = {}}(function(){var a = window["FCChatConfig"];a.delay_import=false;';
 	foreach($options as $key => $value){
-		if($key=='custom_buttons'||$key=='templates'||$key=='quickstyling'){
+		if($key=='custom_buttons'||$key=='templates'||$key=='quickstyling'||$key=='chatbox'){
 				$javascript .= 'a.' . $key . '=' . '{' . $options[$key]['value'] . '};';
 		}else if($options[$key]['type']!='hidden'&&$options[$key]['type']!='comment'&&$key!='template_overrides'){
 			if($options[$key]['quote']=='1'||($options[$key]['quote']=='2'&&$options[$key]['value']!='true'&&$options[$key]['value']!='false')){

@@ -26,7 +26,10 @@ jGo.fcchat_toolbar.style={
 		border_height:2,
 		css:"-webkit-box-shadow:0px 0px 8px 2px rgba(0,0,0,0.4);box-shadow:0px 0px 8px 2px rgba(0,0,0,0.4);background-color:#fefefe;border-top: 2px solid darkblue;border-bottom: 2px solid darkblue;triangle-color:darkblue;",
 		banner_css:{"background-color":"#ffffff","border-bottom":"2px solid darkblue","border-top":"2px solid darkblue"},
-		mobile_banner_links_css:"background-color:darkblue;color:#fff;",
+		mobile_banner:{
+			title:"color:green;",
+			links:"background-color:darkblue;color:#fff;"
+		},
 		alt_css:"border-right:1px solid #cccccc;border-left:1px solid #cccccc;",
 		text_size:"font-size:8pt",
 		text:"color:#444444;font-size:8pt;font-family:arial;font-weight:bold;",
@@ -47,6 +50,8 @@ jGo.fcchat_toolbar.style={
 				disabled_css:"color:#dddddd;",
 				secondary_link_css:"color:#528DC4;text-decoration:none;",
 				screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700;text-decoration:none;",
+				timestamp_css:"color:green;",
+				info:"color:gray;font-style:italic;",
 				user_info_css:"color:#888888;",
 				offline_css:"font-style:italic;color:green;"
 			}

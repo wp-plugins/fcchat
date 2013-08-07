@@ -62,7 +62,7 @@ FCChatConfig.styles={
 			other_buttons:{
 				default_css:"border:1px solid #666666; border-top:1px solid #797979;padding:2px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
-					link_css:"color:white",
+					link_css:"color:lightgray;text-decoration:none;",
 					hover_css:"color:lightblue;text-decoration:none;border:1px solid #666666; border-top:1px solid #797979;",
 					disabled_css:"color:#bbbbbb;border:1px solid #666666"
 				}
@@ -129,13 +129,13 @@ FCChatConfig.styles={
 					},
 					screen_name_states:{
 						online:{
-							link_css:"color:#33ffff;",
-							visited_css:"color:#FDF5E6;",
-							hover_css:"color:#FFFF00;",
+							link_css:"color:#33ffff;text-decoration:none;",
+							visited_css:"color:#FDF5E6;text-decoration:none;",
+							hover_css:"color:#FFFF00;text-decoration:none;",
 							blocked:{
-								link_css:"color:#FFB6C1;",
-								visited_css:"color:red;",
-								hover_css:"color:#cc0000;"
+								link_css:"color:#FFB6C1;text-decoration:none;",
+								visited_css:"color:red;text-decoration:none;",
+								hover_css:"color:#cc0000;text-decoration:none;"
 							}
 						},
 						offline:{
@@ -194,9 +194,9 @@ FCChatConfig.styles={
 					size:8,
 					weight:500,
 					style:{
-						user_info_css:"color:#eeeeee",
-						mod_css:"color:#eeeeee",
-						title_css:"color:#eeeeee"
+						user_info_css:"color:#b6b6b6",
+						mod_css:"color:#b6b6b6",
+						title_css:"color:#b6b6b6"
 					},
 					screen_name_states:{
 						online:{
@@ -338,7 +338,9 @@ FCChatConfig.styles={
 			info_panel:{
 				background_color:"transparent",
 				font_css:"color:white",
-				user_info_css:"color:#eeeeee;",
+				link_css:"color:#528DC4",
+				url_css:"color:lightblue",
+				info_css:"color:gray",
 				screen_name_css:"font-family:arial;font-size:10pt;color:cyan;font-weight:700;text-decoration:none;",
 				list_divider_css:"border-bottom:1px solid #999999;"
 			},

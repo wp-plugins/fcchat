@@ -38,6 +38,8 @@ if(mobile){
 
 //toolbar items
 FCChatConfig.toolbar_items=["fullpage:logo","friendscenter",(mobile?"":"fullpage:spacer")];
+FCChatConfig.large_device_toolbar_items=["friendscenter"];
+FCChatConfig.small_device_toolbar_items=["friendscenter"];
 
 </script>
 <script type="text/javascript" src="<?php echo $FCCHAT_BASE_URL;?>js/import.includes.js"></script>

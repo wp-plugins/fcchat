@@ -51,6 +51,7 @@ FCChatConfig.txt = {
 	t10: "Enviar a la Sala",
 	t11: "Enviar a amigo",
 	functions_bar_width: 255, //sign in, user list, help etc. 
+	admin_functions_bar_width: 360,
 	
 	// Sección de Títulos
 	t12: "Salas de Chat",
@@ -83,7 +84,7 @@ FCChatConfig.txt = {
 	
 	// Inserta cuadro de texto
 	t35: " Escriba mensaje aquí!",
-	t36: "nombre de la imágen",
+	t36: "nombre de la imágen o URL",
 	t37: "=b=",
 	t38: "=i=",
 	t39: "=u=",
@@ -610,6 +611,7 @@ FCChatConfig.txt = {
 	t433: "Más reciente",
 	t434: "Lista de amigos",
 	t435: "Contactos recientes",
+	clear_recents_offset:19,
 	
 	//added 3.5.0.5
 	t436: "Lo sentimos, este navegador no soporta chat en tiempo real.",
@@ -621,6 +623,34 @@ FCChatConfig.txt = {
 	t440: "Bloquear IP (30 min)",
 	t441: "Lo siento, ha sido desconectado.",
 	t442: "Lo siento, ha sido prohibidos durante 30 minutos.",
+	
+	//Added 3.6
+	t443: "Viendo esta página:",
+	t444: "Página ID:",
+	t445: "Cargando Más Chats...",
+	t446: "La página de discusión ha sido despejado",
+	t447: "Activo",
+	t448: "yo",
+	t449: "Páginas despejado",
+	t450: "Páginas de Disc.",
+	t451: "Chatbox Monitor",
+	t452: "Todos los chats entrantes (excluyendo los mensajes privados) se canalizan aquí.",
+	t453: "Manager del Chatbox",
+	t454: "Borrar Página (ID va aquí)",
+	t455: "Borrar todas las páginas",
+	t456: "Más",
+	t457: "Chats",
+	t458: "Requiere privilegios administrativos",
+	t459: "¿Está usted seguro de que quiere borrar esta página?",
+	t460: "¿Está usted seguro de que quiere borrar todas las páginas?",
+	t461: "Borrando página(s)...",
+	t462: "Entrada no válida",
+	t463: "Chat:",
+	t464: "No especificada",
+	t465: "Descripción",
+	t466: "Tema",
+	t467: "Info",
+	t468: "Este tema de chat está cerrado",
 	
 	//added 3.5.1 administrative language starts at t1000
 	t1006: "Title Updated.",
@@ -676,7 +706,10 @@ FCChatConfig.txt = {
 	t1056: "mins.",
 	t1057: "has created a new room",
 	t1058: "has edited room",
-	t1059: "has deleted room"		
+	t1059: "has deleted room",
+	t1060: "has cleared the page discussion",
+	t1061: "has cleared all page discussions",
+	t1062: "has censored a page discussion message by"
 	
 };
 

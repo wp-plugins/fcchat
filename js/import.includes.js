@@ -63,7 +63,7 @@ function fcchat_includes(){
 		}
 	}
     //End set up toolbar
-	
+
 	//iphone/iPod mods
 	jGo.istuff=/iphone|ipad|ipod/i;
 	jGo.iphone = (jGo.istuff.test(navigator.userAgent.toLowerCase()));
@@ -94,9 +94,15 @@ function fcchat_includes(){
 	document.write("<script language='JavaScript' src='" + cnf.dir + "styles/" + template.application_window + "'></script>");
 	document.write("<script language='JavaScript' src='" + cnf.dir + "styles/" + template.toolbar + "'></script>");
 	document.write("<script language='JavaScript' src='" + cnf.dir + "styles/" + template.widget + "'></script>");
-	document.write("<script language='JavaScript' src='" + cnf.dir + "js/template_overrides.js'></script>");
-	
-	
+    
+	if(cnf.chatbox.enabled&&(!((window['fcchat_domain']=="fullpage"||window['fcchat_domain']=="admin")&&cnf.chatbox.mode==1))){
+		for(var i = 0;i<tcon.items.length;i++){
+			if(tcon.items[i]=="friendscenter"){
+				tcon.items.splice(i,0,"chat:chatbox");
+				break;
+			}
+		}
+	}
 	var buttons_loaded=false;
 	for(var i = 0;i<tcon.items.length;i++){
 		if(tcon.items[i]!="friendscenter"){
@@ -116,6 +122,9 @@ function fcchat_includes(){
 	if(cnf.prompt_user){
 		document.write("<script language='JavaScript' src='" + cnf.dir + "js/prompt.js'></script>");
 	}
+	
+	document.write("<script language='JavaScript' src='" + cnf.dir + "js/template_overrides.js'></script>");
+	
 	if(cnf.flashEnabled=='test'){
 		cnf.flashEnabled=false;
 		if (navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"])

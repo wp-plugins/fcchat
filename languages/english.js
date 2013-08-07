@@ -49,6 +49,7 @@ FCChatConfig.txt={
 	t10: "Send to Room",
 	t11: "Send to Friend",
 	functions_bar_width: 170, //sign in, user list, help etc. 
+	admin_functions_bar_width: 340,
 	
 	//Section Headings
 	t12: "Chat Rooms",
@@ -81,7 +82,7 @@ FCChatConfig.txt={
 	
 	//Textbox inserts
 	t35: " Type Message Here!",
-	t36: "image name",
+	t36: "image name or URL",
 	t37: "=b=",
 	t38: "=i=",
 	t39: "=u=",
@@ -609,6 +610,7 @@ FCChatConfig.txt={
 	t433:"Recents",
 	t434:"Friends List",
 	t435:"Recent Contacts",
+	clear_recents_offset:0,
 	
 	//added 3.5.0.5
 	t436: "Sorry, this browser does not support real time chat.",
@@ -620,6 +622,34 @@ FCChatConfig.txt={
 	t440:"Block IP (30 min)",
 	t441:"Sorry, you have been booted.",
 	t442:"Sorry, you have been banned for 30 min.",
+	
+	//Added 3.6
+	t443:"Viewing this page: ",
+	t444:"Page ID: ",
+	t445:"Loading More Chats...",
+	t446:"The Page Discussion has been Cleared",
+	t447:"Active",
+	t448:"me",
+	t449:"Pages Cleared",
+	t450:"Chatbox Manager",
+	t451:"Message Monitor",
+	t452:"All incoming chats (excluding private messages) are funnelled here.",	
+	t453:"Chatbox Manager",	
+	t454:"Clear Page (ID goes here)",
+	t455:"Clear all pages",
+	t456:"More",
+	t457:"Chats",
+	t458:"Requires administrative privileges",
+	t459:"Are you sure you want to clear this page?",
+	t460:"Are you sure you want to clear all pages?",
+	t461:"Clearing page(s)...",
+	t462:"Invalid entry",
+	t463:"Chat:",
+	t464:"Not Specified",
+	t465:"Description",
+	t466:"Topic",
+	t467:"Info",
+	t468:"This chat topic is closed",
 	
 	//added 3.5.1 administrative language starts at t1000
 	t1006: "Title Updated.",
@@ -675,5 +705,8 @@ FCChatConfig.txt={
 	t1056: "mins.",
 	t1057: "has created a new room",
 	t1058: "has edited room",
-	t1059: "has deleted room"	
+	t1059: "has deleted room",
+	t1060: "has cleared the page discussion",
+	t1061: "has cleared all page discussions",
+	t1062: "has censored a page discussion message by"
 };

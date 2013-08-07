@@ -92,12 +92,14 @@ var file = getQuerystring("file");
 var error = getQuerystring("error");
 var uid = window.opener.fc_chat.uid;	
 var uid2 = getQuerystring("uid");
+var dest = getQuerystring("dest");
+
 if(error||file){
 	if(error){
 		alert(window.opener.fc_chat.textSetter(302,'Sorry, there was an error saving your note'));
 	}
 	if(file){
-		window.opener.fc_chat.p_note((uid==uid2?'1':'0'),uid2,file);
+		window.opener.fc_chat.p_note(dest,uid2,file);
 	}
 	window.close();
 }
@@ -182,11 +184,22 @@ $(document).ready(function() {
 if(!supports_html5()||!supports_canvas()){
 	document.write('<center><div style="padding:15px;margin-top:190px;font-family:arial">' + window.opener.fc_chat.textSetter(301,'You have been caught using an outdated browser. Please upgrade to a modern browser in order to use the doodlepad') + '</div></center>');
 }else{
+	var sendMsg='';
+	var sendMsgAfter='';
+	if(dest==0){
+		sendMsg = window.opener.fc_chat.textSetter(300,'to Room');
+		sendMsgAfter=window.opener.fc_chat.textSetter(305,'Your doodle will be sent to the chat room. To send a doodle to a user, click on the user\'s name, and then click on the "Send a doodle" icon.');
+	}
+	if(dest==1){
+		sendMsg = window.opener.fc_chat.textSetter(600,'to the Page Discussion');
+		sendMsgAfter=window.opener.fc_chat.textSetter(600,'Your doodle will be sent to the page discussion. To send a doodle to a user, click on the user\'s name, and then click on the "Send a doodle" icon.');
+	}
+	
 	document.write('<center><div id="snd" style="display:none;padding:15px;margin-top:190px;font-family:arial"><b>' + window.opener.fc_chat.textSetter(306,'Sending...') + '</b></div></center>'+
 				'<canvas id="can" width="648" height="370" style="position:absolute;top:0px;left:0px;border:1px solid black">'+
 				'</canvas>'+
 				'<div style="position:absolute;top:390px;left:10px">'+
-				'<a id="save" href="#">' + window.opener.fc_chat.textSetter(297,'Send') + (uid==uid2?' '+window.opener.fc_chat.textSetter(300,'to Room'):"")+'</a>'+
+				'<a id="save" href="#">' + window.opener.fc_chat.textSetter(297,'Send') +' '+ sendMsg +'</a>'+
 				'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+
 				'<a href="#" id="clear" >' + window.opener.fc_chat.textSetter(298,'Clear') + '</a>'+
 				'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+
@@ -212,11 +225,11 @@ if(!supports_html5()||!supports_canvas()){
 				'<div style="background-color:#ff00ff;"> </div>'+
 				'</div>' +
 				'<div style="position:absolute;top:420px;left:10px;font-family:arial">'+
-				(uid==uid2?window.opener.fc_chat.textSetter(305,'Your doodle will be sent to the chat room. To send a doodle to a user, click on the user\'s name, and then click on the "Send a doodle" icon.'):'')+
+				sendMsgAfter +
 				'</div>'+
 				'<br /><br />'+
 				
-				'<form action="http://www.fastcatsoftware.com/plugins/notepad/savenote.aspx?uid='+uid+'&uid2='+uid2+'&host='+host+'" method="post" id="frm"/>'+
+				'<form action="http://www.fastcatsoftware.com/plugins/notepad/savenote.aspx?dest='+dest+'&uid='+uid+'&uid2='+uid2+'&host='+host+'" method="post" id="frm"/>'+
 				'<input type="hidden" name="data" id="data" />'+
 				'</form>');
 }

@@ -137,7 +137,7 @@ proto.create = function(id, p){
 			hidden_marker=0;
 		}
 		var container="<div class='"+(!hidden_marker?prefix+"toolbar_item":prefix+"toolbar_item2")+"' id='"+prefix+this.items[i]+"_toolbar_item' style='position:absolute;"+(!hidden_marker?tbd:"display:block;")+"top:0px;left:"+_width+"px'>";
-		content+=container+this.context[this.items[i]].create();
+		content+=container+this.context[this.items[i]].create('default_toolbar'+id);
 		if(this.items[i]==hiddenItemStart){
 			hidden_marker=(align_right?1:0);
 		}
@@ -280,7 +280,8 @@ proto.close = function() {
 proto.toggle_dialog = function(dialog,position,render,fade){
 	fade = fade|| this.dialbog_fade_interval;
 	if(dialog.css("display")!="none"){
-		$("div.jGo_dialog").fadeOut(fade)
+		$("div.jGo_dialog").fadeOut(fade);
+		return 0;
 	}else{
 		//all dialogs should have class jGo_dialog
 		this.close_dialogs();
@@ -288,7 +289,8 @@ proto.toggle_dialog = function(dialog,position,render,fade){
 		if(render){
 			render();
 		}
-		dialog.fadeIn(fade)
+		dialog.fadeIn(fade);
+		return 1;
 	}
 };
 
@@ -318,6 +320,7 @@ proto.position_dialog = function(dialog,left,width,height){
  *  all dialogs should have class jGo_dialog
  */
 proto.close_dialogs = function(){
+	jGo.hooks.doHooks('default_toolbar'+this.id+'_close_dialogs');
 	$("div.jGo_dialog").css("display","none");
 };
 

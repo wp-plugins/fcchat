@@ -62,7 +62,7 @@ FCChatConfig.styles={
 			other_buttons:{
 				default_css:"background-color:#cfcfcf;border:1px solid #bcbcbc; border-bottom:1px solid #a9a9a9;padding:2px 8px; font:12px arial;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;",
 				states:{
-					link_css:"color:#163663",
+					link_css:"color:#427DB4;text-decoration:none;",
 					hover_css:"color:white;text-decoration:none;background-color:#cfcfcf;border:1px solid #bcbcbc; border-bottom:1px solid #a9a9a9;",
 					disabled_css:"color:#aaaaaa;border:1px solid #acacac;background-color:#c3c3c3;"
 				}
@@ -123,19 +123,19 @@ FCChatConfig.styles={
 					color:{
 						default_text_color:"#444444",
 						timestamp_color:"green",
-						link_color:"#528DC4",
+						link_color:"#427DB4",
 						censored_color:"red",
 						offline_css:"color:green"
 					},
 					screen_name_states:{
 						online:{
-							link_css:"color:#528DC4;",
-							visited_css:"color:purple;",
-							hover_css:"color:darkblue;",
+							link_css:"color:#528DC4;text-decoration:none;",
+							visited_css:"color:purple;text-decoration:none;",
+							hover_css:"color:darkblue;text-decoration:none;",
 							blocked:{
-								link_css:"color:red;",
-								visited_css:"color:red;",
-								hover_css:"color:#FFB6C1;"
+								link_css:"color:red;text-decoration:none;",
+								visited_css:"color:red;text-decoration:none;",
+								hover_css:"color:#FFB6C1;text-decoration:none;"
 							}
 						},
 						offline:{
@@ -170,7 +170,7 @@ FCChatConfig.styles={
 						background_color:"transparent",
 						divider:"0px solid gray",
 						css:"font-family:arial;font-size:12px;color:#444444;",
-						link_css:"color:#528DC4;text-decoration:none;"
+						link_css:"color:#427DB4;text-decoration:none;"
 					},
 					selected_user:{
 						background_color:"#e6e9f0",
@@ -338,6 +338,9 @@ FCChatConfig.styles={
 			info_panel:{
 				background_color:"transparent",
 				font_css:"color:#444444",
+				link_css:"color:#528DC4",
+				url_css:"color:lightblue",
+				info_css:"color:gray",
 				screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700;text-decoration:none;",
 				list_divider_css:"border-bottom:1px solid #dddddd;"
 			},
