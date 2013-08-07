@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.5
-Stable tag: 3.6.0.2
+Stable tag: 3.6.0.3
 
 PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -639,8 +639,11 @@ Corrected an error with the rendering of default avatars.
 = 3.5.1.4 = 
 Fixed a bug that was preventing the transliteration service from initializing.
 
-= 3.6.0.1 = 
+= 3.6.0.1-2 = 
 Introduces the chatbox - including BlogChat.
+
+= 3.6.0.3 = 
+Fixed a bug related to the improper spacing of items in the toolbar, caused by the presence of the chatbox item.
 
 == Upgrade Notice ==
 

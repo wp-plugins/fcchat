@@ -218,7 +218,6 @@ jGo.fcchat_toolbar.chatbox.style={
 		__=fc_chat.textSetter;
 		basedir = FCChatConfig.dir;
 		page_tags = fc_chat.chat_params;
-		config.menu_item.width=page_tags.button_width;
 		_h = basedir + "current_skin/";
 	};
 	
