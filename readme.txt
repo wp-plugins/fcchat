@@ -13,6 +13,11 @@ PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, vid
 
 FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
 
+DEMO
+
+http://www.fastcatsoftware.com/wp3.3/
+
+
 MOST RECENT FEATURES
 
 Versions 3.6 introduces BlogChat. Just as you have a comments section for each topic on your blog, BlogChat gives you a dedicated chat room for each of your blog entries. To learn more about BlogChat, visit this page:http://www.fastcatsoftware.com/chat/userguide/chatbox.asp
