@@ -25,6 +25,7 @@ function fcchat_widget_options() {
 		"require_login"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Guests are required to login to gain access to the chat."),
 		"guests_can_chat"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"If no, guests may not send chats in the rooms (they can still observe)."),
 		"guests_can_video_chat"=>array("value"=>"true","type"=>"radio","quote"=>"0","desc"=>"Allow guest accounts to use the video chat."),
+		"show_guests"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Show guest accounts by default."),
 		"videoconerence_only_in_designated_rooms"=>array("value"=>"false","type"=>"radio","quote"=>"0","desc"=>"Videoconferencing can be accessed only in rooms designated for video chat."),
 		
 		"cmntcms"=>array("value"=>"","type"=>"comment","desc"=>"USER ACCOUNT INTEGRATION"),

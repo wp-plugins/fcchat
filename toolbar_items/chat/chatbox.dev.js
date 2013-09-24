@@ -285,7 +285,10 @@ jGo.fcchat_toolbar.chatbox.style={
 		    		"<a title='" + __(311,"Share a document") + "' id='fc_doc' style='margin-left:2px;' "+_hrf+"doc(2)'>" +
 		    				"<img src='" + _h + "document.png'>" +
 		    		"</a>" +
-					
+		    		
+		    		"<a id='fc_vid' style='margin-left:1px" + (fc_chat.vidAcc>1?"":disabled) + "' "+_hrf+"launchVideoChat(0)'>" +
+		    		"<img title='" + __(31) + (fc_chat.vidAcc>1 ? '': ' ' +__(32)) + "' id='fc_e_vid' src='"+_h+"webcam.png'>" +
+	    		    "</a>" +
 					" <input id='fc_sendpagechat' class='fc_input' onKeyPress='fc_chat.oKD(event)' onKeyDown='fc_chat.oKD2(event)' type=text style='"+config.dialog_box.input_css+";width:"+(config.dialog_box.width-(mobile?30:20))+"px !important'><br>") +
 			"</div></div>";
 			jQ("#fc_page_discussion_dialog").html(content);

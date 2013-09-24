@@ -4,8 +4,8 @@ Contributors: rdbeach
 Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
-Tested up to: 3.5
-Stable tag: 3.6.0.3
+Tested up to: 3.6
+Stable tag: 3.6.0.4
 
 PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -649,6 +649,9 @@ Introduces the chatbox - including BlogChat.
 
 = 3.6.0.3 = 
 Fixed a bug related to the improper spacing of items in the toolbar, caused by the presence of the chatbox item.
+
+= 3.6.0.4 = 
+Video chat has been added to the chatbox. An option to hide guest users has also been added.
 
 == Upgrade Notice ==
 

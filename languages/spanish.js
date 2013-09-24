@@ -651,6 +651,10 @@ FCChatConfig.txt = {
 	t466: "Tema",
 	t467: "Info",
 	t468: "Este tema de chat está cerrado",
+	t469: "+",
+	t470: "mas invitados.",
+	t471: "Mostrar",
+	t472: "Esconder Invitados",
 	
 	//added 3.5.1 administrative language starts at t1000
 	t1006: "Title Updated.",

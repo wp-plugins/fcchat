@@ -650,6 +650,10 @@ FCChatConfig.txt={
 	t466:"Topic",
 	t467:"Info",
 	t468:"This chat topic is closed",
+	t469: "+",
+	t470: "more guests.",
+	t471: "Show",
+	t472: "Hide Guests",
 	
 	//added 3.5.1 administrative language starts at t1000
 	t1006: "Title Updated.",

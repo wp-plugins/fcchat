@@ -195,6 +195,8 @@ FCChatConfig.styles={
 					weight:500,
 					style:{
 						user_info_css:"color:#b6b6b6",
+						info:"color:#b6b6b6;font-style:italic;",
+						secondary_link_css:"color:#b6b6b6;text-decoration:none;",
 						mod_css:"color:#b6b6b6",
 						title_css:"color:#b6b6b6"
 					},
