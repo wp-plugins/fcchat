@@ -64,8 +64,6 @@ User profiles
 
 Country Flags
 
-Collaborative whiteboard
-
 Coloaborative document
 
 Doodlepad
