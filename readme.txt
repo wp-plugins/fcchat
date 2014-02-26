@@ -4,7 +4,7 @@ Contributors: rdbeach
 Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
-Tested up to: 3.6
+Tested up to: 3.8
 Stable tag: 3.6.0.6
 
 PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
