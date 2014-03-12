@@ -311,9 +311,8 @@ function useimagelink(){
 	tester.src=imagelink
 }function isGood(){".$ref.".fc_chat.newAvatar('/'+imagelink,4,'".$ref2."','".$flext."','".$rspln."','".$rspln2."')}
 function isBad(){alert('Cannot load image');return false}
-</script><style>BODY {background-color: #DDDDDD;font-family:arial; font-size:12}</style><body><br><div style='border-bottom: #A91905 0px solid;font-size:16;color:#44444
 
-</script><style>BODY {background-color: #dddddd;font-family:arial; font-size:12}</style><body onload=\"setTimeout('relayAvatar()',1000);\"><br><div style='border-bottom: #A91905 2px solid;font-size:16'><script>document.write(".$ref.".fc_chat.textSetter(183))</script></div><div id='wait1' style='margin-top:100px'><center><script>document.write(".$ref.".fc_chat.textSetter(185))</script></center></div><div id='content1' style='display:none'>";
+</script><style>BODY {background-color: #dddddd;font-family:arial; font-size:12}</style><body onload=\"setTimeout('relayAvatar()',1000);\"><br><div style='border-bottom: #A91905 2px solid;font-size:16;color:#44444'><script>document.write(".$ref.".fc_chat.textSetter(183))</script></div><div id='wait1' style='margin-top:100px'><center><script>document.write(".$ref.".fc_chat.textSetter(185))</script></center></div><div id='content1' style='display:none'>";
 						}else{
 							$deleted=user_avatar_delete($newname);
 							$errorstring='<br><font face=arial><b><script>document.write('.$ref.'.fc_chat.textSetter(187))</script>'.MAX_WIDTH.'<script>document.write(window.parent.fc_chat.textSetter(188))</script> '.MAX_HEIGHT.'<script>document.write('.$ref.'.fc_chat.textSetter(189))</script></font><br><br>';
@@ -332,7 +331,7 @@ function isBad(){alert('Cannot load image');return false}
 //If no errors registred, print the success message
  if(isset($_POST['Submit']) && !$errors) 
  {
- 	echo $startdoc."<br><font face=arial><b>".$filename."</font><font face=arial> <script>document.write(".$ref.".fc_chat.textSetter(186))</script></b></font><br><br><a href='javascript:this.location.replace(".$ref.".FCChatConfig.alt_dir+\"html/Avatars.php?id=".$id."\")'><script>document.write(".$ref.".fc_chat.textSetter(181))</script></a>&nbsp;<a href='javascript:".$ref.".fc_chat.rem()'><script>document.write(".$ref.".fc_chat.textSetter(182))</script></a><br><br>";
+ 	echo $startdoc."<br><b><font face=arial> <script>document.write(".$ref.".fc_chat.textSetter(186))</script></b></font><br><br><a href='javascript:this.location.replace(".$ref.".FCChatConfig.alt_dir+\"html/Avatars.php?id=".$id."\")'><script>document.write(".$ref.".fc_chat.textSetter(181))</script></a>&nbsp;<a href='javascript:".$ref.".fc_chat.rem()'><script>document.write(".$ref.".fc_chat.textSetter(182))</script></a><br><br>";
  }else{
 	$arr = array(1 => "190", 2 => "191" ,3 => "192", 4 => "193");
 	$i=1;
