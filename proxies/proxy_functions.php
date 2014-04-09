@@ -42,7 +42,7 @@ function fcchat_phpbb3_save_form($Arr1){
 	fcchat_phpbb3_reset_store();
 	foreach($Arr1 as $key => $Value){
 		if(isset($_POST["fcchat-".$key])){
-			$sql = "Insert into ".$table_prefix."fcchat_config set name='".$key."',value='".$db->sql_escape($_POST["fcchat-".$key])."'";
+			$sql = "Insert into ".$table_prefix."fcchat_config set name='".$key."',value='". (get_magic_quotes_gpc() ? $db->sql_escape(stripslashes($_POST["fcchat-".$key])) : $db->sql_escape($_POST["fcchat-".$key]))."'";
 			$db->sql_query($sql);
 		}
 	}

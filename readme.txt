@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.8
-Stable tag: 3.6.0.7
+Stable tag: 3.6.0.8
 
 PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
 
@@ -659,6 +659,9 @@ Fixed a bug in the chatbox.
 
 = 3.6.0.7 = 
 Fixed a bug in the html/avatars.php and html/avatars.asp files.
+
+= 3.6.0.8 = 
+Improved the smileys and image upload interface.
 
 == Upgrade Notice ==
 

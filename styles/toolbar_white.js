@@ -24,8 +24,8 @@
 jGo.fcchat_toolbar.style={
 		height:35,
 		border_height:2,
-		css:"-webkit-box-shadow:0px 0px 8px 2px rgba(0,0,0,0.4);box-shadow:0px 0px 8px 2px rgba(0,0,0,0.4);background-color:#fefefe;border-top: 2px solid darkblue;border-bottom: 2px solid darkblue;triangle-color:darkblue;",
-		banner_css:{"background-color":"#ffffff","border-bottom":"2px solid darkblue","border-top":"2px solid darkblue"},
+		css:"-webkit-box-shadow:0px 0px 8px 2px rgba(0,0,0,0.4);box-shadow:0px 0px 8px 2px rgba(0,0,0,0.4);background-color:#fefefe;border-top: 2px solid #2E9FFF;border-bottom: 2px solid #2E9FFF;triangle-color:#2E9FFF;",
+		banner_css:{"background-color":"#ffffff","border-bottom":"2px solid #2E9FFF","border-top":"2px solid #2E9FFF"},
 		mobile_banner:{
 			title:"color:green;",
 			links:"background-color:darkblue;color:#fff;"
@@ -35,8 +35,8 @@ jGo.fcchat_toolbar.style={
 		text:"color:#444444;font-size:8pt;font-family:arial;font-weight:bold;",
 		dialog_box:{
 			css:"-webkit-box-shadow:0px 0px 6px 2px rgba(0,0,0,0.4);box-shadow:0px 0px 6px 2px rgba(0,0,0,0.4);background-color:#fefefe;",
-			alt_css:"border:1px solid darkblue;",
-			title_box_css:"top:0px;left:0px;height:40px;background-color:darkblue;border-bottom:1px solid #cccccc;",
+			alt_css:"border:1px solid #2E9FFF;",
+			title_box_css:"top:0px;left:0px;height:40px;background-color:#2E9FFF;border-bottom:1px solid #cccccc;",
 			list_divider_css:"border-bottom:1px solid #fefefe;",
 			select_user:{
 				over_color:"#f0f9ff",

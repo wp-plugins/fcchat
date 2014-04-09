@@ -331,7 +331,7 @@ function isBad(){alert('Cannot load image');return false}
 //If no errors registred, print the success message
  if(isset($_POST['Submit']) && !$errors) 
  {
- 	echo $startdoc."<br><b><font face=arial> <script>document.write(".$ref.".fc_chat.textSetter(186))</script></b></font><br><br><a href='javascript:this.location.replace(".$ref.".FCChatConfig.alt_dir+\"html/Avatars.php?id=".$id."\")'><script>document.write(".$ref.".fc_chat.textSetter(181))</script></a>&nbsp;<a href='javascript:".$ref.".fc_chat.rem()'><script>document.write(".$ref.".fc_chat.textSetter(182))</script></a><br><br>";
+ 	echo $startdoc."<br><b><font face=arial> <script>document.write(".$ref.".fc_chat.textSetter(186))</script></b></font><br><br><a href='javascript:this.location.replace(".$ref.".fc_chat.html_dir+\"Avatars.php?id=".$id."\")'><script>document.write(".$ref.".fc_chat.textSetter(181))</script></a>&nbsp;<a href='javascript:".$ref.".fc_chat.rem()'><script>document.write(".$ref.".fc_chat.textSetter(182))</script></a><br><br>";
  }else{
 	$arr = array(1 => "190", 2 => "191" ,3 => "192", 4 => "193");
 	$i=1;

@@ -165,7 +165,7 @@ proto.create = function(id, p){
 		banner_border_correction={'border-bottom':'0px'};
 		if(!this.IE6Mode)vert_loc={bottom:'0px'};
 	}
-	this.frame=$(document.createElement('div')).addClass('jGo_app jGo_myapp default_toolbar').attr('id', prefix+'toolbar').css({'position':(this.config.fixed==0?'absolute':'fixed'),'z-index':jGo.config.max_z_index,'display':(this.isVisible?'block':'none')}).css(vert_loc);
+	this.frame=$(document.createElement('div')).addClass('jGo_app jGo_myapp default_toolbar').attr('id', prefix+'toolbar').css({'position':(this.config.fixed==0?'absolute':'fixed'),'z-index':jGo.config.max_z_index-2,'display':(this.isVisible?'block':'none')}).css(vert_loc);
 	if(layout>=1){
 		
 		this.frame.css({left:'0px','height':style.height+'px',width:(this.config.fixed==0&&this.config.mobile?$(document).width()+'px':'100%')}).css(style.banner_css).css(banner_border_correction);
@@ -277,9 +277,9 @@ proto.close = function() {
  *  	position- callback function to set the position of the dialog relative to the toolbar
  *  	render- (optional) callback function to render the contents of the box on toggle on
  */
-proto.toggle_dialog = function(dialog,position,render,fade){
-	fade = fade|| this.dialbog_fade_interval;
-	if(dialog.css("display")!="none"){
+proto.toggle_dialog = function(dialog,position,render,fade,blogmode){
+	fade = fade || this.dialbog_fade_interval;
+	if(dialog.css("display")!="none"&&!blogmode){
 		$("div.jGo_dialog").fadeOut(fade);
 		return 0;
 	}else{

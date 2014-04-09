@@ -26,7 +26,7 @@ FCChatConfig.styles={
 	chat_window:{
 		frame:{
 			logo:"fastcatlogo.gif",
-			color:"darkblue",
+			color:"#2E9FFF",
 			title_css:"font-size:12px;font-weight:bold;color:white;",
 			opacity:.90
 		},
@@ -310,7 +310,7 @@ FCChatConfig.styles={
 				border:"1px solid silver",
 				background_color:"white",
 				smileys:{
-					width:250,
+					width:300,
 					height:200
 				},
 				icons:{

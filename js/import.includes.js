@@ -63,7 +63,7 @@ function fcchat_includes(){
 		}
 	}
     //End set up toolbar
-
+	
 	//iphone/iPod mods
 	jGo.istuff=/iphone|ipad|ipod/i;
 	jGo.iphone = (jGo.istuff.test(navigator.userAgent.toLowerCase()));
