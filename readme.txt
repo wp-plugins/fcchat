@@ -25,6 +25,10 @@ Versions 3.6 introduces BlogChat. Just as you have a comments section for each t
 
 The video chat now supports Flash player 11's h264 streaming capability. This represents a significant enhancement, in terms of video resolution and bandwidth usage. There are now 2 different layouts available for the chat window: Chatcenter and MsgCenter. The new MsgCenter layout is for those of you wish to use the Instant Messanger feature exclusively. 
 
+NEWS
+
+We have a new widget made specifically for Wordpress Blogs. Check it out here: http://wordpress.org/plugins/blogchat-chat-system/
+
 
 UPGRADE NOTICE
 
