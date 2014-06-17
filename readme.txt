@@ -8,14 +8,12 @@ Tested up to: 3.9.1
 Stable tag: 3.6.0.8.1
 
 
-IMPORTANT UPDATE: Please update your host value to 'chat.fastcatsoftware.com'.
-
 An interface for real time chat, video conferencing, instant messaging, and more.
 
 
 == Description ==
 
-FCChat connects your web site users with chat, video conferencing, instant messaging and more. 
+IMPORTANT UPDATE: Existing users, Please update your host value to 'chat.fastcatsoftware.com'. 
 
 DEMO
 
