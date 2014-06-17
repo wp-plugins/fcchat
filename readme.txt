@@ -13,7 +13,10 @@ An interface for real time chat, video conferencing, instant messaging, and more
 
 == Description ==
 
-IMPORTANT UPDATE: Existing users, Please update your host value to 'chat.fastcatsoftware.com'. 
+IMPORTANT UPDATE:
+
+Existing users, please update your host value to 'chat.fastcatsoftware.com'. 
+
 
 DEMO
 
