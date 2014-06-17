@@ -7,7 +7,11 @@ Requires at least: 2.7
 Tested up to: 3.9.1
 Stable tag: 3.6.0.8.1
 
-PLEASE READ UPGRADE NOTICE before updating. An interface for real time chat, video conferencing, instant messaging, and more.
+
+IMPORTANT UPDATE: Please update your host value to 'chat.fastcatsoftware.com'.
+
+An interface for real time chat, video conferencing, instant messaging, and more.
+
 
 == Description ==
 
