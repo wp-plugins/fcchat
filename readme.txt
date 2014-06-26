@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.9.1
-Stable tag: 3.6.0.9
+Stable tag: 3.6.1.0
 
 
 An interface for real time chat, video conferencing, instant messaging, and more.
@@ -674,6 +674,10 @@ Improved the smileys and image upload interface.
 
 = 3.6.0.9 = 
 Updated the url to the shared document plugin.
+
+= 3.6.1.0 = 
+
+Added an option to remove the Online Panel from the ChatCenter. Removed the send buttons.
 
 == Upgrade Notice ==
 
