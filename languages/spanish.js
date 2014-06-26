@@ -656,6 +656,9 @@ FCChatConfig.txt = {
 	t471: "Mostrar",
 	t472: "Esconder Invitados",
 	
+	//added 3.6.1.0
+	t473: "Configuración de mi cuenta",
+	
 	//added 3.5.1 administrative language starts at t1000
 	t1006: "Title Updated.",
 	t1007: "You don't have enough privileges to do that.",
