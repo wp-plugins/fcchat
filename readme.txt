@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.9.1
-Stable tag: 3.6.1.1
+Stable tag: 3.6.1.2
 
 
 An interface for real time chat, video conferencing, instant messaging, and more.
@@ -680,6 +680,10 @@ Added an option to remove the Online Panel from the ChatCenter. Removed the send
 
 = 3.6.1.1 = 
 Corrected an issue with the language files pertaining to the last update.
+
+= 3.6.1.2 = 
+
+Fixed an issue with the sidebar tabs when option show_online_panel is false. Corrected width of chatcenter panel in mobile.
 
 == Upgrade Notice ==
 
