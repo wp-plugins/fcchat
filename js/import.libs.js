@@ -1,4 +1,4 @@
-if (!window["jGo"] && (!window.jQuery || (window.jQuery.fn.jquery.substr(0,3)-0)<1.6 || (window.jQuery.fn.jquery.substr(0,3)-0)>=1.9)) {
+if (!window["jGo"] && (!window.jQuery || (window.jQuery.fn.jquery.substr(0,2)-0)<2.1)) {
 	//document.write("<script type='text/javascript' src='http://www.google.com/jsapi'></script>");
 	//As of fcchat version 3.5 load jquery directly
 	document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/'+FCChatConfig.jQuery_stable+'/jquery.min.js"></script>');

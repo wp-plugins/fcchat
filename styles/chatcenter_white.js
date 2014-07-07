@@ -76,10 +76,11 @@ FCChatConfig.styles={
 			},
 			text:{
 				font:{
+					css:"font-style:italic;",
 					family:"arial",
-					color:"#444444",
+					color:"gray",
 					size:12,
-					weight:700
+					weight:500
 				}
 			},
 			links:{
@@ -87,21 +88,21 @@ FCChatConfig.styles={
 			},
 			chat_panels:{
 				chat_room_panel:{
-					background_image:"private_chat_light_background.jpg",
-					background_color:"#f3f3f3",
-					border_css:{"border":"1px solid lightgray","border-top":"2px solid gray"},
-					css:{opacity:.65,"box-shadow":"inset 5px 5px 10px 0px rgba(0,0,0,0.2)","-webkit-box-shadow": "inset 5px 5px 10px 0px rgba(0,0,0,0.2)"},
+					background_image:"",
+					background_color:"#fbfbff",
+					border_css:{"border-bottom":"1px dotted #444444","border-top":"2px solid gray"},
+					css:{},
 					infobox:{
 						border:"4px solid silver",
 						triangle_color:"silver"
 					}
 				},
 				private_chat_panel:{
-					background_image:"private_chat_light_background.jpg",
-					msgcenter_background_image:"chat_window_light_background.jpg",
-					background_color:"#f3f3f3",
-					border_css:{"border":"1px solid lightgray","border-top":"2px solid gray"},
-					css:{opacity:.65,"box-shadow":"inset 5px 5px 10px 0px rgba(0,0,0,0.2)","-webkit-box-shadow": "inset 5px 5px 10px 0px rgba(0,0,0,0.2)"},
+					background_image:"",
+					msgcenter_background_image:"",
+					background_color:"#fbfbff",
+					border_css:{"border-bottom":"1px dotted #444444","border-top":"2px solid gray"},
+					css:{},
 					msg_interrupt:{
 						background:"#ededff",
 						respond_css:"font-size:8pt;color:#528DC4;text-decoration:none;",
@@ -152,7 +153,8 @@ FCChatConfig.styles={
 			},
 			side_panels:{
 				background_color:"#fff",
-				border_css:{"border-top":"2px solid gray","border-bottom":"1px solid #dedede"},
+				divider_border:"1px dotted #444",
+				border_css:{"border-bottom":"1px dotted #444444","border-top":"2px solid gray"},
 				opacity:.7,
 				screen_name_dividers:{
 					background_color:"transparent",
@@ -172,7 +174,7 @@ FCChatConfig.styles={
 						link_css:"color:#528DC4;text-decoration:none;"
 					},
 					selected_user:{
-						background_color:"#e6e9f0",
+						background_color:"#e3ffd3",
 						arrow:{
 							color:"green",
 							hover_color:"red"
@@ -225,8 +227,8 @@ FCChatConfig.styles={
 			},
 			send_chat_panel:{
 				width_offset:-1,
-				height:30,
-				css:"font-size:9pt;font-family:arial;color:black;background-color:#f3f3f3;border:1px solid #aaaaaa;"
+				height:20,
+				css:"font-size:9pt;font-family:arial;color:black;background-color:#fff;border:1px solid #2E9FFF;"
 			},
 			send_to_panel:{
 				css:"background-color:#d3d3d3;padding-top:1px;padding-bottom:0px;border:1px solid gray;box-shadow: 0px 5px 9px #bbbbbb inset;-moz-box-shadow: 0px 5px 9px #bbbbbb inset;-webkit-box-shadow: 0px 5px 9px #bbbbbb inset;",
@@ -320,10 +322,10 @@ FCChatConfig.styles={
 			},
 			chatrooms_panel:{
 				selected_color:"lightblue",
-				hover_color:"#e6e6e6",
+				hover_color:"#eeeeee",
 				background_color:"transparent",
 				horizontal_rule:"font-weight:bold;font-size:16px;border-bottom:2px solid silver;",
-				separator:"1px solid silver;",
+				separator:"1px solid #eeeeee;",
 				room_name_font_css:"font-size:14px;font-weight:bold;color:#444444;",
 				font_css:"color:#444444;font-family:arial;font-weight:normal;font-size:12px;",
 				count_font_css:"font-size:14px;color:blue;font-weight:bold;",

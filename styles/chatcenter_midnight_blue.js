@@ -153,6 +153,7 @@ FCChatConfig.styles={
 			},
 			side_panels:{
 				background_color:"#555555",
+				divider_border:"0px dotted #444",
 				border_css:{"border-top":"2px solid gray","border-bottom":"1px solid #777777"},
 				opacity:.5,
 				screen_name_dividers:{
