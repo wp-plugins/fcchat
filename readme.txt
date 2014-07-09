@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.9.1
-Stable tag: 3.6.1.4
+Stable tag: 3.6.1.5
 
 
 An interface for real time chat, video conferencing, instant messaging, and more.
@@ -692,6 +692,10 @@ Fixed a small issue with the spacing of the messages only layout.
 = 3.6.1.4 = 
 
 Fixed an issue with the initial height of the user list window. Fixed an issue with the display of links arising from a faulty link discovery regex. Added support for EasySocial user integration in Joomla
+
+= 3.6.1.5 = 
+
+Updated the upload panel.
 
 == Upgrade Notice ==
 
