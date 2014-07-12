@@ -104,7 +104,7 @@ FCChatConfig.styles={
 					border_css:{"border-bottom":"1px dotted #444444","border-top":"2px solid gray"},
 					css:{},
 					msg_interrupt:{
-						background:"#ededff",
+						background:"#ededff;",
 						respond_css:"font-size:8pt;color:#528DC4;text-decoration:none;",
 						close_css:"color:gray;font-stretch:wider;font-size:8pt;font-weight:bold;text-decoration:none;"
 					}
@@ -154,7 +154,7 @@ FCChatConfig.styles={
 			side_panels:{
 				background_color:"#fff",
 				divider_border:"1px dotted #444",
-				border_css:{"border-bottom":"1px dotted #444444","border-top":"2px solid gray"},
+				border_css:{"border-bottom":"1px dotted #444","border-top":"2px solid gray"},
 				opacity:.7,
 				screen_name_dividers:{
 					background_color:"transparent",
@@ -343,7 +343,7 @@ FCChatConfig.styles={
 				font_css:"color:#444444",
 				link_css:"color:#528DC4",
 				url_css:"color:lightblue",
-				info_css:"color:gray",
+				user_info_css:"color:gray",
 				screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700;text-decoration:none;",
 				list_divider_css:"border-bottom:1px solid #dddddd;"
 			},
@@ -386,8 +386,14 @@ FCChatConfig.styles={
 		separator:"2px solid #A91905;"
 	},
 	uploads:{
-		body:"background-color:#fff;color:#888;line-height:1.4;font-size:12px;font-family:arial;",
+		body:"background-color:#fbfbff;color:#666;line-height:1.4;font-size:12px;font-family:arial;",
 		container:"border-bottom: #2E9FFF 2px solid;"
+	},
+	avatars:{
+		body:"background-color:#fbfbff;color:#666;line-height:1.4;font-size:12px;font-family:arial;",
+		link:"color:blue",
+		container:"border-bottom: #2E9FFF 2px solid;",
+		option:"background-color:#f6f6fb;border:0px solid #dddddd;padding:6px;box-shadow:0px 0px 3px 1px rgba(0,0,0,0.2)"
 	},
 	split_screen:{
 		background_color:"#fff"

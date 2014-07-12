@@ -77,10 +77,11 @@ FCChatConfig.styles={
 			},
 			text:{
 				font:{
+					css:"font-style:italic;",
 					family:"arial",
 					color:"lightblue",
 					size:12,
-					weight:700
+					weight:500
 				}
 			},
 			links:{
@@ -88,21 +89,21 @@ FCChatConfig.styles={
 			},
 			chat_panels:{
 				chat_room_panel:{
-					background_image:"chat_window_background.jpg",
-					background_color:"#000000",
-					border_css:{"border":"1px solid #666666","border-top":"2px solid #222222"},
-					css:{opacity:.5},
+					background_image:"",
+					background_color:"#5e5e5e",
+					border_css:{"border-bottom":"1px dotted gray","border-top":"2px solid #222222"},
+					css:{},
 					infobox:{
 						border:"4px solid silver",
 						triangle_color:"silver"
 					}
 				},
 				private_chat_panel:{
-					background_image:"chat_window_background.jpg",
-					msgcenter_background_image:"chat_window_background.jpg",
-					background_color:"#000000",
-					border_css:{"border":"1px solid #666666","border-top":"2px solid #333333"},
-					css:{opacity:.5},
+					background_image:"",
+					msgcenter_background_image:"",
+					background_color:"#5e5e5e",
+					border_css:{"border":"1px dotted gray","border-top":"2px solid #333333"},
+					css:{},
 					msg_interrupt:{
 						background:"#adadbf",
 						respond_css:"font-size:8pt;color:#528DC4;text-decoration:none;",
@@ -153,8 +154,8 @@ FCChatConfig.styles={
 			},
 			side_panels:{
 				background_color:"#555555",
-				divider_border:"0px dotted #444",
-				border_css:{"border-top":"2px solid gray","border-bottom":"1px solid #777777"},
+				divider_border:"1px dotted gray",
+				border_css:{"border-top":"2px solid gray","border-bottom":"1px dotted gray"},
 				opacity:.5,
 				screen_name_dividers:{
 					background_color:"transparent",
@@ -227,8 +228,8 @@ FCChatConfig.styles={
 			},
 			send_chat_panel:{
 				width_offset:-1,
-				height:30,
-				css:"font-size:9pt;font-family:arial;color:black;background-color:#aaaaaa;border:1px solid silver;"
+				height:20,
+				css:"font-size:9pt;font-family:arial;color:black;background-color:#aaaaaa;border:1px solid #2E9FFF;"
 			},
 			send_to_panel:{
 				css:"background-color:#d3d3d3;padding-top:1px;padding-bottom:0px;border:1px solid gray;box-shadow: 0px 5px 9px #bbbbbb inset;-moz-box-shadow: 0px 5px 9px #bbbbbb inset;-webkit-box-shadow: 0px 5px 9px #bbbbbb inset;",
@@ -312,7 +313,7 @@ FCChatConfig.styles={
 				border:"1px solid #444444",
 				background_color:"#777",
 				smileys:{
-					width:250,
+					width:300,
 					height:200
 				},
 				icons:{
@@ -325,7 +326,7 @@ FCChatConfig.styles={
 				hover_color:"#888888",
 				background_color:"transparent",
 				horizontal_rule:"font-weight:bold;font-size:16px;border-bottom:2px solid silver;",
-				separator:"1px solid #999999;",
+				separator:"1px solid #737373;",
 				room_name_font_css:"font-size:14px;font-weight:bold;color:white;",
 				font_css:"color:white;font-family:arial;font-weight:normal;font-size:12px;",
 				count_font_css:"font-size:14px;color:cyan;font-weight:bold;",
@@ -343,9 +344,9 @@ FCChatConfig.styles={
 				font_css:"color:white",
 				link_css:"color:#528DC4",
 				url_css:"color:lightblue",
-				info_css:"color:gray",
+				user_info_css:"color:#b6b6b6;",
 				screen_name_css:"font-family:arial;font-size:10pt;color:cyan;font-weight:700;text-decoration:none;",
-				list_divider_css:"border-bottom:1px solid #999999;"
+				list_divider_css:"border-bottom:1px solid #737373;"
 			},
 			login_panel:{
 				box_shadow:"0px 0px 12px 2px rgba(0,0,0,0.5)",
@@ -386,8 +387,14 @@ FCChatConfig.styles={
 		separator:"2px solid #A91905;"
 	},
 	uploads:{
-		body:"background-color:#ddd;color:#888;line-height:1.4;font-size:12px;font-family:arial;",
+		body:"background-color:#5e5e5e;color:#f6f6f9;line-height:1.4;font-size:12px;font-family:arial;",
 		container:"border-bottom: #2E9FFF 2px solid;"
+	},
+	avatars:{
+		body:"background-color:#5e5e5e;color:#f6f6f9;line-height:1.4;font-size:12px;font-family:arial;",
+		link:"color:#72aDe4",
+		container:"border-bottom: #30a3FF 2px solid;",
+		option:"background-color:#696969;border:0px solid #dddddd;padding:6px;"
 	},
 	split_screen:{
 		background_color:"#555555"

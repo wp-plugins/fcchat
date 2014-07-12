@@ -51,6 +51,7 @@ jGo.fcchat_toolbar.style={
 				disabled_css:"color:#dddddd;",
 				secondary_link_css:"color:#528DC4;text-decoration:none;",
 				screen_name_css:"font-family:arial;font-size:10pt;color:green;font-weight:700;text-decoration:none;",
+				timestamp_css:"color:green;",
 				info:"color:gray;font-style:italic;",
 				user_info_css:"color:#888888;",
 				offline_css:"font-style:italic;color:green;"
