@@ -349,12 +349,12 @@ function fcchat_activate() {
 		$fcchat_options['updates']='update 3.0;';
 	}else{
 		if(!$updated){
-			$fcchat_options['updates']+='update 3.0;';
+			$fcchat_options['updates'].='update 3.0;';
 		}
 	}
 
 	// apply 3.0 updates
-	if($updates_found&&!$updated){
+	if(!$updated){
 		foreach($fcchat_options as $key => $value){
 	 		if($key=='forum_proxy'){
 				$proxy="";
