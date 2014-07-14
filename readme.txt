@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.9.1
-Stable tag: 3.6.1.6
+Stable tag: 3.6.2.0
 
 
 An interface for real time chat, video conferencing, instant messaging, and more.
@@ -700,6 +700,10 @@ Updated the upload panel.
 = 3.6.1.6 = 
 
 Updated the avatars panel. Updated the ChatCenter styles. Fixed a bug with the resizing of the send chat input. Fixed a bug with the display colors in the user list panel.
+
+= 3.6.2.0 = 
+
+Added two tone styling option
 
 == Upgrade Notice ==
 

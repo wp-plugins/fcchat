@@ -38,7 +38,7 @@ jGo.fcchat_toolbar.style={
 			css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:1px solid #eeeeee;background-color:#cccccc;",
 			alt_css:"",
 			title_box_css:"top:0px;left:0px;height:40px;background-color:#444444;",
-			list_divider_css:"border-bottom:1px solid #cccccc;",
+			list_divider_css:"border-bottom:1px solid transparent;",
 			select_user:{
 				over_color:"#d3d3d3",
 				off_color:"transparent",
@@ -191,42 +191,6 @@ jGo.fcchat_toolbar.style={
 			}
 		}
 	};
-
-function applyQuickStyles(){
-	var d = FCChatConfig.quickstyling;
-	if(window["fcchat_domain"]&&d[window["fcchat_domain"]]){
-		d = d[window["fcchat_domain"]];
-	}else{
-		d = d.alldomains;
-	}
-	var c = d.toolbar;
-	var s = "jGo.fcchat_toolbar.style";
-	var x = jGo.util.mergeOption;
-	var w = c.width_prop_offsets.split(':');
-	
-	w[0]-=0;
-	w[1]-=0;
-	w[2]-=0;
-	x(s+".css",c.background_css);
-	x(s+".text",c.base_font_css);
-	x(s+".divider_css",c.divider_css);
-	x(s+".icon_tray.minimize_icon.css",c.base_font_css);
-	x(s+".icon_tray.hide_icon.css",c.base_font_css);
-	x(s+".icon_tray.minimize_icon.top",c.text_top_offset);
-	x(s+".icon_tray.hide_icon.top",c.text_top_offset);
-	x(s+".icon_tray.restore.width",w[2]);
-	
-	c = d.dialog;
-
-	s = "jGo.fcchat_toolbar.style.dialog_box";
-	x(s+".css",c.border_css);
-	x(s+".title_box_css",c.title_background_css);
-	x(s+".text.title_css",c.title_css);
-	x(s+".text.link_css",c.link_css);
-};
-
-if(jGo.fcchat_toolbar.config.layout==2)jGo.util.mergeOption("jGo.fcchat_toolbar.style.text","font-size:100%;");
-		
-applyQuickStyles();	
-
+/*Apply style overrides*/
+FCChatConfig.overrides.toolbar_overrides();
 }());

@@ -155,7 +155,7 @@ FCChatConfig.styles={
 				background_color:"silver",
 				divider_border:"1px dotted #777",
 				border_css:{"border-top":"2px solid gray","border-bottom":"1px dotted #777"},
-				opacity:.7,
+				opacity:1,
 				screen_name_dividers:{
 					background_color:"transparent",
 					hover_color:"#D9DEE5",
@@ -399,21 +399,6 @@ FCChatConfig.styles={
 		background_color:"lightgray"
 	}
 };
-
-function applyQuickStyles(){
-	var c = FCChatConfig.quickstyling;
-	if(window["fcchat_domain"]&&c[window["fcchat_domain"]]){
-			c = c[window["fcchat_domain"]];
-	}else{
-			c = c.alldomains;
-	}
-	c=c.application_window;
-	var s = "FCChatConfig.styles.chat_window.frame";
-	var x = jGo.util.mergeOption;
-	if(c.frame_color!="")jGo.util.setOption(s+".color",c.frame_color);
-	x(s+".title_css",c.title_css);
-	
-};
-applyQuickStyles();
-
+/*Apply style overrides*/
+FCChatConfig.overrides.application_overrides();
 }());

@@ -89,12 +89,12 @@ function fcchat_includes(){
 	}else{
 			template = template.alldomains;
 	}
-	
+	document.write("<script language='JavaScript' src='" + cnf.dir + "js/template_overrides.js'></script>");
 	document.write("<script language='JavaScript' src='" + cnf.dir + "languages/" + cnf.language_template + "'></script>");
 	document.write("<script language='JavaScript' src='" + cnf.dir + "styles/" + template.application_window + "'></script>");
 	document.write("<script language='JavaScript' src='" + cnf.dir + "styles/" + template.toolbar + "'></script>");
 	document.write("<script language='JavaScript' src='" + cnf.dir + "styles/" + template.widget + "'></script>");
-    
+	
 	if(cnf.chatbox.enabled&&(!((window['fcchat_domain']=="fullpage"||window['fcchat_domain']=="admin")&&cnf.chatbox.mode==1))){
 		for(var i = 0;i<tcon.items.length;i++){
 			if(tcon.items[i]=="friendscenter"){
@@ -123,7 +123,8 @@ function fcchat_includes(){
 		document.write("<script language='JavaScript' src='" + cnf.dir + "js/prompt.js'></script>");
 	}
 	
-	document.write("<script language='JavaScript' src='" + cnf.dir + "js/template_overrides.js'></script>");
+	document.write("<script language='JavaScript' src='" + cnf.dir + "js/template_overrides2.js'></script>");
+	if(FCChatConfig.global)FCChatConfig.global.template_overrides();
 	
 	if(cnf.flashEnabled=='test'){
 		cnf.flashEnabled=false;

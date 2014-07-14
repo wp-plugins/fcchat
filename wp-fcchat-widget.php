@@ -3,7 +3,7 @@
 Plugin Name: FCChat Widget
 Plugin URI: http://www.fastcatsoftware.com
 Description: Add full featured chat to the sidebar.
-Version: 3.6.1.6
+Version: 3.6.2.0
 Author: Fastcat Software
 Author URI: http://www.fastcatsoftware.com
 License: GPL2
@@ -74,8 +74,13 @@ function fcchat_add_header_js(){
 				}
 			}
 		}
-		echo '})();</script>';
-
+		//Global Config
+		if ($fcchat_options['template_overrides']['value']!=""){
+			echo 'function getObj(a,b,d){var c=window;for(var i=0;i<b.length-d;i++){c=c[b[i]]}return c};function setOption(a,d){try{var b=a.split(".");var c= getObj(a,b,1);c[b[b.length-1]]=d}catch(e){}};function mergeOption(a,d){try{var b=a.split(".");var c = getObj(a,b,1);c[b[b.length-1]]+=d}catch(e){}};function mergeBlock(a,d){try{var b=a.split(".");var c=getObj(a,b,0);jGo.$.extend(true,c,d)}catch(e){}};';
+			echo 'function getCSSProp(a,d,g){try{var b=a.split(".");var c;c=getObj(a,b,1);var f=((c[b[b.length-1]].split(d+":"))[1].split(";"))[0];return (g?jGo.util.eN(f):f)}catch(e){}};';
+			echo 'a.global = {template_overrides:function(){'.$fcchat_options['template_overrides']['value'].'}}';
+		}
+		echo '}())</script>';
         }
 }
 
@@ -96,17 +101,7 @@ function fcchat_add_header_scripts(){
         }
 }
 
-//widget header js
-function fcchat_add_header_js_after(){
-	global $fcchat_options,$fcchat_plugin_url;
-        if (!is_admin()&&$fcchat_options['template_overrides']['value']!=""){
-		echo '<script type="text/javascript">(function(){function getObj(a,b,d){var c=window;for(var i=0;i<b.length-d;i++){c=c[b[i]]}return c};function setOption(a,d){try{var b=a.split(".");var c= getObj(a,b,1);c[b[b.length-1]]=d}catch(e){}};function mergeOption(a,d){try{var b=a.split(".");var c = getObj(a,b,1);c[b[b.length-1]]+=d}catch(e){}};function mergeBlock(a,d){try{var b=a.split(".");var c=getObj(a,b,0);jGo.$.extend(true,c,d)}catch(e){}};';
-		echo 'function getCSSProp(a,d,g){try{var b=a.split(".");var c;c=getObj(a,b,1);var f=((c[b[b.length-1]].split(d+":"))[1].split(";"))[0];return (g?jGo.util.eN(f):f)}catch(e){}};';
-		echo $fcchat_options['template_overrides']['value'];
-		echo '})();</script>';
 
-        }
-}
 function fcchat_add_footer_script(){
         $fcchat_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );
         if (!is_admin()){
@@ -117,7 +112,6 @@ function fcchat_add_footer_script(){
 // Inserts scripts into page
 add_action( 'wp_print_scripts', 'fcchat_add_header_js' );
 add_action('wp_enqueue_scripts', 'fcchat_add_header_scripts');
-add_action('wp_head','fcchat_add_header_js_after');
 add_action('wp_footer','fcchat_add_footer_script');
 
 //the widget
@@ -335,7 +329,6 @@ function fcchat_activate() {
 	$updates_found=false;
 	$updated=false;
 
-
 	// look for 3.0 updates
     	foreach($fcchat_options as $key => $value){
 	 	if($key=='updates'){
@@ -390,9 +383,44 @@ function fcchat_activate() {
 		$fcchat_options['window_height_offset']="-160";
 		$fcchat_options['chat_room_height_offset']="105";
 	}
+
+	// look for 3.2 updates
+	$updated=false;
+	$quickstyling='';
+    	foreach($fcchat_options as $key => $value){
+	 	if($key=='updates'){
+			if(strpos($value , "update 3.2;") !== false){
+				$updated=true;
+			}
+         	}
+		if($key=='quickstyling'){
+			$quickstyling=$value;
+         	}
+    	}
+
+	// apply 3.2 updates
+	if(!$updated){
+		if($quickstyling!=''){
+			$quickstyling = str_replace('border_css','background_css',$quickstyling);
+			$pos = strpos($quickstyling,'application_window');
+			if($pos !== false){
+				$pos = strpos($quickstyling,'frame_color',$pos);
+			}
+			if ($pos !== false) {
+				$pos = strpos($quickstyling,'title_css',$pos);
+			}
+			if ($pos !== false) {
+				$quickstyling = substr($quickstyling,0,$pos)."background_color:'',
+	panel_color:'',
+	".substr($quickstyling,$pos);
+			}
+			$blogchat_options['quickstyling']=$quickstyling;
+		}
+		$blogchat_options['updates'].='update 3.2;';
+	}
     }else{
 	$fcchat_options = array();
-	$fcchat_options['updates']='update 3.0;';
+	$fcchat_options['updates']='update 3.0;update 3.2';
 	
     }
     // Save changes

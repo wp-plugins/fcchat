@@ -5,7 +5,7 @@
 var FCChatConfig_wp = {
 	port:443,
 	policy_port:443,
-	version:"3.6.1.6",
+	version:"3.6.2.0",
 	subversion:"2",
 	jQuery_stable:"2.1.1",
 	use_global_configuration:false,
