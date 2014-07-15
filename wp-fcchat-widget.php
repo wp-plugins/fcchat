@@ -325,17 +325,14 @@ function fcchat_add_pages() {
 }
 
 function fcchat_update() {
+    $current_revision=1;
     if(($fcchat_options = get_option('fcchat_widget')) !== FALSE){
-	$current_revision=1;
 	$revision=0;
 	if(isset($fcchat_options['revision'])){
 		$revision = $fcchat_options['revision'];
 	}
 	if($revision>=$current_revision){
 		return false;
-	}else{
-		$fcchat_options['revision']=$current_revision;
-		update_option('fcchat_widget', $fcchat_options);
 	}
 	$updates_found=false;
 	$updated=false;
@@ -435,6 +432,7 @@ function fcchat_update() {
 	
     }
     // Save changes
+    $fcchat_options['revision']=$current_revision;
     update_option('fcchat_widget', $fcchat_options);
 }
 add_action('init','fcchat_update',1);
