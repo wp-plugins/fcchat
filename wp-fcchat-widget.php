@@ -414,9 +414,9 @@ function fcchat_activate() {
 	panel_color:'',
 	".substr($quickstyling,$pos);
 			}
-			$blogchat_options['quickstyling']=$quickstyling;
+			$fcchat_options['quickstyling']=$quickstyling;
 		}
-		$blogchat_options['updates'].='update 3.2;';
+		$fcchat_options['updates'].='update 3.2;';
 	}
     }else{
 	$fcchat_options = array();
