@@ -3,7 +3,7 @@
 Plugin Name: FCChat Widget
 Plugin URI: http://www.fastcatsoftware.com
 Description: Add full featured chat to the sidebar.
-Version: 3.6.2.2
+Version: 3.6.2.3
 Author: Fastcat Software
 Author URI: http://www.fastcatsoftware.com
 License: GPL2
@@ -224,7 +224,7 @@ function fcchat_settings_page() {
         // Put an settings updated message on the screen
 
 ?>
-<div class="updated"><p><strong><?php _e('Settings Saved.', 'menu-test' ); ?></strong></p></div>
+<div class="updated"><p><strong><?php _e('Settings Saved.', 'menu-fcchat' ); ?></strong></p></div>
 <?php
 
     	}
@@ -252,7 +252,7 @@ function fcchat_settings_page() {
         // Put an settings updated message on the screen
 
 ?>
-<div class="updated"><p><strong><?php _e('Settings Reset.', 'menu-test' ); ?></strong></p></div>
+<div class="updated"><p><strong><?php _e('Settings Reset.', 'menu-fcchat' ); ?></strong></p></div>
 <?php
 
     	}
@@ -262,7 +262,7 @@ function fcchat_settings_page() {
 
     // header
 
-    echo "<h2>" . __( 'FCChat Plugin Settings', 'menu-test' ) . "</h2>";
+    echo "<h2>" . __( 'FCChat Plugin Settings', 'menu-fcchat' ) . "</h2>";
 
     // settings form
     
@@ -272,29 +272,29 @@ function fcchat_settings_page() {
 <input type="hidden" id="fcchat-settings-submit" name="fcchat-settings-submit" value="1" />
 
 <?php
-_e('This page is an HTML implemention of the FCChat configuration file (fcchat/config/config.js). For a complete description of the functions and usage of the variables below, refer to the <a href="http://www.fastcatsoftware.com/chat/Manual3.html" TARGET="_blank" >FCChat Manual</a>. Some additional tutorials are found in the <a href="http://www.fastcatsoftware.com/chat/userguide/index.html" TARGET="_blank" >User Guide</a>. You can restore all the settings to their default values by pressing the reset button below.', 'menu-test' );
+_e('This page is an HTML implemention of the FCChat configuration file (fcchat/config/config.js). For a complete description of the functions and usage of the variables below, refer to the <a href="http://www.fastcatsoftware.com/chat/Manual3.html" TARGET="_blank" >FCChat Manual</a>. Some additional tutorials are found in the <a href="http://www.fastcatsoftware.com/chat/userguide/index.html" TARGET="_blank" >User Guide</a>. You can restore all the settings to their default values by pressing the reset button below.', 'menu-fcchat' );
 echo '<br /><br />';
 foreach($fcchat_options as $key => $value){
 	if($fcchat_options[$key]['type']=='comment'){
 		echo '<br /><br /><div style="color:blue;font-weight:bold"><big>';
-		_e($fcchat_options[$key]['desc'], 'menu-test' ); 
+		_e($fcchat_options[$key]['desc'], 'menu-fcchat' ); 
 		echo '</big></div><br>';
 	}else if($fcchat_options[$key]['type']=='text'){
-		echo '<p>' . _e($fcchat_options[$key]['desc'], 'menu-test' ); 
+		echo '<p>' . _e($fcchat_options[$key]['desc'], 'menu-fcchat' ); 
 		echo '<b>' . $key . '</b>&nbsp; <input type="text" name="fcchat-' . $key . '" value="' . $fcchat_options[$key]['value'] . '" size="' . $fcchat_options[$key]['sz'] . '">';
 		echo '</p><hr />';
 	}else if($fcchat_options[$key]['type']=='radio'){
-		echo '<p><b>' . $key . '</b>&nbsp; ' . _e($fcchat_options[$key]['desc'], 'menu-test' ); 
+		echo '<p><b>' . $key . '</b>&nbsp; ' . _e($fcchat_options[$key]['desc'], 'menu-fcchat' ); 
 		echo '<input type="radio"  name="fcchat-' . $key . '" value="true" ' . ($fcchat_options[$key]['value'] == "true"? 'checked="checked"':'') . ' /> Yes&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"  name="fcchat-' . $key . '" value="false" ' . ($fcchat_options[$key]['value'] == "false"? 'checked="checked"':'') . ' /> no ';
 		echo '</p><hr />';
 	}else if($fcchat_options[$key]['type']=='textarea'){
-		echo '<p>' . _e($fcchat_options[$key]['desc'], 'menu-test' ); 
+		echo '<p>' . _e($fcchat_options[$key]['desc'], 'menu-fcchat' ); 
 		echo '&nbsp;&nbsp;<b>' . $key . '</b><br>&nbsp; <textarea style="font-size:16px;font-family:arial;width:100%;height:300px" name="fcchat-' . $key . '">' . $fcchat_options[$key]['value'] . '</textarea>';
 		echo '</p><hr />';
 	}else if($fcchat_options[$key]['type']=='hidden'){
 		
 	}else{
-		echo '<p><b>' . $key . '</b>&nbsp; ' . _e($fcchat_options[$key]['desc'], 'menu-test' ); 
+		echo '<p><b>' . $key . '</b>&nbsp; ' . _e($fcchat_options[$key]['desc'], 'menu-fcchat' ); 
 		foreach($fcchat_options[$key]['ops'] as $op => $val){
 			echo '<input type="radio"  name="fcchat-' . $key . '" value="' . $fcchat_options[$key]['ops'][$op]['value'] . '" ' . ($fcchat_options[$key]['value'] == $fcchat_options[$key]['ops'][$op]['value']? 'checked="checked"':'') . ' /> ' . $fcchat_options[$key]['ops'][$op]['desc'] . '&nbsp;&nbsp;&nbsp;';
 		}
@@ -321,7 +321,7 @@ add_action('admin_menu', 'fcchat_add_pages');
 // action function for above hook
 function fcchat_add_pages() {
     // Add a new submenu under Settings:
-    add_options_page(__('FCChat Settings','menu-test'), __('FCChat Settings','menu-test'), 'manage_options', 'testsettings', 'fcchat_settings_page');
+    add_options_page(__('FCChat Settings','menu-fcchat'), __('FCChat Settings','menu-fcchat'), 'manage_options', 'fcchatsettings', 'fcchat_settings_page');
 }
 
 function fcchat_update() {
@@ -437,5 +437,15 @@ function fcchat_update() {
 }
 add_action('init','fcchat_update',1);
 register_activation_hook( __FILE__, 'fcchat_update' );
+
+// Add settings link on plugin page
+function fcchat_settings_link($links) { 
+  $settings_link = '<a href="options-general.php?page=fcchatsettings">Settings</a>'; 
+  array_unshift($links, $settings_link); 
+  return $links; 
+}
+ 
+$plugin = plugin_basename(__FILE__); 
+add_filter("plugin_action_links_$plugin", 'fcchat_settings_link' );
 
 ?>
