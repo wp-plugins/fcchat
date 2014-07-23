@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.9.1
-Stable tag: 3.7
+Stable tag: 3.7.1
 
 
 An interface for real time chat, video conferencing, instant messaging, and more.
@@ -716,6 +716,10 @@ Error in plugin file in previous version.
 Fixed scrolling divs in mobile.
 Fixed the mobile banner resizing issue in ios7.
 Added icons to the mobile banner.
+
+= 3.7.1 = 
+
+Added more touch and gesture events for a more fluid mobile experience.
 
 
 == Upgrade Notice ==
