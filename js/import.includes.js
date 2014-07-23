@@ -122,9 +122,8 @@ function fcchat_includes(){
 	if(cnf.prompt_user){
 		document.write("<script language='JavaScript' src='" + cnf.dir + "js/prompt.js'></script>");
 	}
-	
+
 	document.write("<script language='JavaScript' src='" + cnf.dir + "js/template_overrides2.js'></script>");
-	if(FCChatConfig.global)FCChatConfig.global.template_overrides();
 	
 	if(cnf.flashEnabled=='test'){
 		cnf.flashEnabled=false;

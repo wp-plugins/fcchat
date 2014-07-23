@@ -22,8 +22,7 @@
 (function(){
 
 	var widget_base_font = "font-family:arial;font-size:12px;color:#444444;";
-	var toolbar_base_font = jGo.fcchat_toolbar.style.text;
-	
+	var mobile_scrolling = "-moz-overflow-scrolling: touch;-webkit-overflow-scrolling: touch;overflow-scrolling: touch;";
 	FCChatConfig.styles.widget={
 		control:{
 			top:0, //for absolute positioning
@@ -82,85 +81,17 @@
 				}
 			}	
 	    },
-		toolbar_item:{
-			text:{
-				css:toolbar_base_font+"color:white;",
-				alert_css:toolbar_base_font+"color:pink;",
-				link_css:toolbar_base_font+"color:white;",
-				info_css:toolbar_base_font+"color:#BFEFFF;"
-			},
-			buttons:{
-				default_css:toolbar_base_font+"text-decoration:none;",
-				states:{
-					link_css:"color:white;",
-					hover_css:"color:yellow;",
-					disabled_css:"color:lightgray;"
-				}
-			},
-			chatcenter_layout:{
-				width:610,
-				info_box:{
-					width:420,
-					css:"height:35px;left:10px;top:0px;",
-					padding_top:11
-				},
-				open_chat_button:{
-					top:10,
-					left:465
-				},
-				off_button:{
-					top:10,
-					left:560
-				},
-				status:{
-					top:15,
-					left:438,
-					css:""
-				},
-				divider:{
-					top:0,
-					left:455,
-					css:"width:1px;height:35px;background-color:#aaaaaa;"
-				}
-			},
-			msgcenter_layout:{
-				width:490,
-				info_box:{
-					width:300,
-					css:"height:30px;left:10px;top:0px;",
-					padding_top:11
-				},
-				open_chat_button:{
-					top:10,
-					left:345
-				},
-				off_button:{
-					top:10,
-					left:440
-				},
-				status:{
-					top:15,
-					left:318,
-					css:""
-				},
-				divider:{
-					top:0,
-					left:335,
-					css:"width:1px;height:30px;background-color:#aaaaaa;"
-				}
-			}
-		},
 		online_box:{
 			top:43,
 			left:180,
 			toolbar_offset:3,
-			width:230,
-			height:343,
+			width:(jGo.mobile?300:230),
+			height:(jGo.mobile?348:343),
 			css:jGo.fcchat_toolbar.style.dialog_box.css,
 			title_box_css:jGo.fcchat_toolbar.style.dialog_box.title_box_css,
 			greeting_box_css:"top:40px;left:0px;height:40px;border-top:1px solid #cccccc;border-bottom:1px dotted #444444;",
 			greeting_box_link:jGo.fcchat_toolbar.style.dialog_box.text.secondary_link_css,
-			list_box_css:"top:82px;left:0px;height:193px;",
+			list_box_css:"top:82px;left:0px;height:193px;"+mobile_scrolling,
 			list_divider_css:jGo.fcchat_toolbar.style.dialog_box.list_divider_css,
 			info_box_css:"top:275px;left:0px;height:67px;border-top:1px dotted #444444;",
 			text:jGo.fcchat_toolbar.style.dialog_box.text
@@ -170,12 +101,12 @@
 			left:0,
 			toolbar_offset:3,
 			width:300,
-			height:343,
+			height:(jGo.mobile?348:343),
 			css:jGo.fcchat_toolbar.style.dialog_box.css,
 			title_box_css:jGo.fcchat_toolbar.style.dialog_box.title_box_css,
 			greeting_box_css:"top:40px;left:0px;height:40px;border-top:1px solid #cccccc;border-bottom:1px dotted #444444;",
 			greeting_box_link:jGo.fcchat_toolbar.style.dialog_box.text.secondary_link_css,
-			view_msg_box_css:"top:82px;left:0px;height:193px;margin-top:4px;",
+			view_msg_box_css:"top:82px;left:0px;height:193px;margin-top:4px;"+mobile_scrolling,
 			send_msg_box_css:"top:275px;left:0px;height:67px;border-top:1px dotted #444444;",
 			input_css:"height:18px !important;background-color:white !important;border:1px solid silver !important;margin-left:2px !important;color:#44444 !important;",
 			text:jGo.fcchat_toolbar.style.dialog_box.text,
@@ -189,13 +120,13 @@
 			top:43,
 			left:180,
 			toolbar_offset:3,
-			width:230,
-			height:343,
+			width:(jGo.mobile?300:230),
+			height:(jGo.mobile?348:343),
 			css:jGo.fcchat_toolbar.style.dialog_box.css,
 			title_box_css:jGo.fcchat_toolbar.style.dialog_box.title_box_css,
 			greeting_box_css:"top:40px;left:0px;height:40px;border-top:1px solid #cccccc;border-bottom:1px dotted #444444;",
 			greeting_box_link:jGo.fcchat_toolbar.style.dialog_box.text.secondary_link_css,
-			list_box_css:"top:82px;left:0px;height:193px;",
+			list_box_css:"top:82px;left:0px;height:193px;"+mobile_scrolling,
 			list_divider_css:jGo.fcchat_toolbar.style.dialog_box.list_divider_css,
 			info_box_css:"top:275px;left:0px;height:67px;border-top:1px dotted #444444;",
 			text:jGo.fcchat_toolbar.style.dialog_box.text
@@ -204,10 +135,10 @@
 			top:43,
 			left:240,
 			width:(jGo.mobile?300:400),
-			height:343,
+			height:(jGo.mobile?348:343),
 			css:jGo.fcchat_toolbar.style.dialog_box.css,
 			title_box_css:jGo.fcchat_toolbar.style.dialog_box.title_box_css,
-			list_box_css:"top:93px;left:0px;height:180px;border-top:1px solid #cccccc;",
+			list_box_css:"top:93px;left:0px;height:180px;border-top:1px solid #cccccc;"+mobile_scrolling,
 			text:jGo.fcchat_toolbar.style.dialog_box.text,
 			selected_color:"lightblue",
 			hover_color:"#dddddd",

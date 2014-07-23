@@ -21,6 +21,7 @@
  */
 
 (function(){
+	var toolbar_base_font = "color:white;font-size:8pt;font-family:arial;font-weight:bold;";
 	
 jGo.fcchat_toolbar.style={
 		height:35,
@@ -33,7 +34,8 @@ jGo.fcchat_toolbar.style={
 		},
 		alt_css:"",
 		text_size:"font-size:8pt",
-		text:"color:white;font-size:8pt;font-family:arial;font-weight:bold;",
+		text:toolbar_base_font,
+		logo_css:"font-size:16px;color:#ccc;font-weight:normal;",
 		dialog_box:{
 			css:"-webkit-box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);box-shadow:0px 0px 12px 2px rgba(0,0,0,0.5);border:1px solid #eeeeee;background-color:#cccccc;",
 			alt_css:"",
@@ -174,6 +176,9 @@ jGo.fcchat_toolbar.style={
 		icons_16px:{
 			top:10
 		},
+		icons_24px:{
+			top:6
+		},
 		icon_tray:{
 			width:35,
 			minimize_icon:{
@@ -188,6 +193,74 @@ jGo.fcchat_toolbar.style={
 				top:10,
 				offset:15,
 				css:"color:white;font-stretch:wider;font-size:8pt;font-weight:bold;text-decoration:none;"
+			}
+		},
+		toolbar_item:{
+			text:{
+				css:toolbar_base_font+"color:white;",
+				alert_css:toolbar_base_font+"color:pink;",
+				link_css:toolbar_base_font+"color:white;",
+				info_css:toolbar_base_font+"color:#BFEFFF;"
+			},
+			buttons:{
+				default_css:toolbar_base_font+"text-decoration:none;",
+				states:{
+					link_css:"color:white;",
+					hover_css:"color:yellow;",
+					disabled_css:"color:lightgray;"
+				}
+			},
+			chatcenter_layout:{
+				width:610,
+				info_box:{
+					width:420,
+					css:"height:35px;left:10px;top:0px;",
+					padding_top:11
+				},
+				open_chat_button:{
+					top:10,
+					left:465
+				},
+				off_button:{
+					top:10,
+					left:560
+				},
+				status:{
+					top:15,
+					left:438,
+					css:""
+				},
+				divider:{
+					top:0,
+					left:455,
+					css:"width:1px;height:35px;background-color:#aaaaaa;"
+				}
+			},
+			msgcenter_layout:{
+				width:490,
+				info_box:{
+					width:300,
+					css:"height:30px;left:10px;top:0px;",
+					padding_top:11
+				},
+				open_chat_button:{
+					top:10,
+					left:345
+				},
+				off_button:{
+					top:10,
+					left:440
+				},
+				status:{
+					top:15,
+					left:318,
+					css:""
+				},
+				divider:{
+					top:0,
+					left:335,
+					css:"width:1px;height:30px;background-color:#aaaaaa;"
+				}
 			}
 		}
 	};
