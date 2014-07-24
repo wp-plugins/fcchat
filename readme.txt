@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.9.1
-Stable tag: 3.7.1
+Stable tag: 3.7.2
 
 
 An interface for real time chat, video conferencing, instant messaging, and more.
@@ -720,6 +720,10 @@ Added icons to the mobile banner.
 = 3.7.1 = 
 
 Added more touch and gesture events for a more fluid mobile experience.
+
+= 3.7.2 = 
+
+Added -webkit-transform: translate3d(0,0,0) support.
 
 
 == Upgrade Notice ==
