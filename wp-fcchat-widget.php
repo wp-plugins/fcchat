@@ -3,7 +3,7 @@
 Plugin Name: FCChat Widget
 Plugin URI: http://www.fastcatsoftware.com
 Description: Add full featured chat to the sidebar.
-Version: 3.7.2
+Version: 3.7.3
 Author: Fastcat Software
 Author URI: http://www.fastcatsoftware.com
 License: GPL2
@@ -429,26 +429,26 @@ function fcchat_update() {
 
 	// look for 3.7.3 updates
 	$updated=false;
-	$quickstyling='';
+	$chatbox='';
     	if(isset($fcchat_options['updates'])){
 		if(strpos($fcchat_options['updates'] , "update 3.7.3;") !== false){
 			$updated=true;
 		}
          }
-    	if(isset($fcchat_options['quickstyling'])){
-		$quickstyling=$fcchat_options['updates'];
+    	if(isset($fcchat_options['chatbox'])){
+		$chatbox=$fcchat_options['chatbox'];
     	}
 
 	// apply 3.7.3 updates
 	if(!$updated){
-		if($quickstyling!=''){
-			$pos = strpos($quickstyling,'dialog_width');
+		if($chatbox!=''){
+			$pos = strpos($chatbox,'dialog_width');
 			if ($pos !== false) {
-				$quickstyling = substr($quickstyling,0,$pos)."layout:1,  /* 0 - horizontal, 1 - vertical */
+				$chatbox = substr($chatbox,0,$pos)."layout:1,  /* 0 - horizontal, 1 - vertical */
 		dialog_height:384,
-		".substr($quickstyling,$pos);
+		".substr($chatbox,$pos);
 			}
-			$fcchat_options['quickstyling']=$quickstyling;
+			$fcchat_options['chatbox']=$chatbox;
 		}
 		$fcchat_options['updates'].='update 3.7.3;';
 	}

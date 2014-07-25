@@ -105,20 +105,20 @@ function fcchat_phpbb3_updates(){
 	// apply 3.7.3 updates
 	$insert2=true;
 	if(!$updated2){
-		$quickstyling='';
-		if(isset($fcchat_store['quickstyling'])){
+		$chatbox='';
+		if(isset($fcchat_store['chatbox'])){
 			$insert2=false;
-			$quickstyling = $fcchat_store['quickstyling'];
+			$chatbox = $fcchat_store['chatbox'];
 		}
-		if($quickstyling!=''){
-			$pos = strpos($quickstyling,'dialog_width');
+		if($chatbox!=''){
+			$pos = strpos($chatbox,'dialog_width');
 			if ($pos !== false) {
-				$quickstyling = substr($quickstyling,0,$pos)."layout:1,  /* 0 - horizontal, 1 - vertical */
+				$chatbox = substr($chatbox,0,$pos)."layout:1,  /* 0 - horizontal, 1 - vertical */
 		dialog_height:384,
-		".substr($quickstyling,$pos);
+		".substr($chatbox,$pos);
 			}
-			$fcchat_store['quickstyling']=$quickstyling;
-			fcchat_phpbb3_save_field('quickstyling',$quickstyling,$insert2);
+			$fcchat_store['chatbox']=$chatbox;
+			fcchat_phpbb3_save_field('chatbox',$chatbox,$insert2);
 		}
 	}
 	if(!$updated||!$updated2){
