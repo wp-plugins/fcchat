@@ -325,7 +325,7 @@ function fcchat_add_pages() {
 }
 
 function fcchat_update() {
-    $current_revision=1;
+    $current_revision=2;
     if(($fcchat_options = get_option('fcchat_widget')) !== FALSE){
 	$revision=0;
 	if(isset($fcchat_options['revision'])){
@@ -397,7 +397,7 @@ function fcchat_update() {
 	$quickstyling='';
     	foreach($fcchat_options as $key => $value){
 	 	if($key=='updates'){
-			if(strpos($value , "update 3.2;") !== false){
+			if(strpos($value , "update 3.2") !== false){
 				$updated=true;
 			}
          	}
@@ -426,9 +426,35 @@ function fcchat_update() {
 		}
 		$fcchat_options['updates'].='update 3.2;';
 	}
+
+	// look for 3.7.3 updates
+	$updated=false;
+	$quickstyling='';
+    	if(isset($fcchat_options['updates'])){
+		if(strpos($fcchat_options['updates'] , "update 3.7.3;") !== false){
+			$updated=true;
+		}
+         }
+    	if(isset($fcchat_options['quickstyling'])){
+		$quickstyling=$fcchat_options['updates'];
+    	}
+
+	// apply 3.7.3 updates
+	if(!$updated){
+		if($quickstyling!=''){
+			$pos = strpos($quickstyling,'dialog_width');
+			if ($pos !== false) {
+				$quickstyling = substr($quickstyling,0,$pos)."layout:1,  /* 0 - horizontal, 1 - vertical */
+		dialog_height:384,
+		".substr($quickstyling,$pos);
+			}
+			$fcchat_options['quickstyling']=$quickstyling;
+		}
+		$fcchat_options['updates'].='update 3.7.3;';
+	}
     }else{
 	$fcchat_options = array();
-	$fcchat_options['updates']='update 3.0;update 3.2';
+	$fcchat_options['updates']='update 3.0;update 3.2;update 3.7.3;';
 	
     }
     // Save changes

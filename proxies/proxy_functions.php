@@ -65,12 +65,16 @@ function fcchat_phpbb3_updates(){
 	$insert=true;
 	$insert2=true;
 	$updated=false;
+	$updated2=false;
 	$updates='';
 	if(isset($fcchat_store['updates'])){
 		$insert=false;
 		$updates = $fcchat_store['updates'];
 		if(strpos($updates , "update 3.2;") !== false){
 				$updated=true;
+		}
+		if(strpos($updates , "update 3.7.3;") !== false){
+				$updated2=true;
 		}
 	}
 	// apply 3.2 updates
@@ -94,14 +98,36 @@ function fcchat_phpbb3_updates(){
 	panel_color:'',
 	".substr($quickstyling,$pos);
 			}
+			$fcchat_store['quickstyling']=$quickstyling;
 			fcchat_phpbb3_save_field('quickstyling',$quickstyling,$insert2);
 		}
+	}
+	// apply 3.7.3 updates
+	$insert2=true;
+	if(!$updated2){
+		$quickstyling='';
+		if(isset($fcchat_store['quickstyling'])){
+			$insert2=false;
+			$quickstyling = $fcchat_store['quickstyling'];
+		}
+		if($quickstyling!=''){
+			$pos = strpos($quickstyling,'dialog_width');
+			if ($pos !== false) {
+				$quickstyling = substr($quickstyling,0,$pos)."layout:1,  /* 0 - horizontal, 1 - vertical */
+		dialog_height:384,
+		".substr($quickstyling,$pos);
+			}
+			$fcchat_store['quickstyling']=$quickstyling;
+			fcchat_phpbb3_save_field('quickstyling',$quickstyling,$insert2);
+		}
+	}
+	if(!$updated||!$updated2){
 		fcchat_phpbb3_save_field('updates',fcchat_phpbb3_get_update_string(),$insert);
 	}
 }
 
 function fcchat_phpbb3_get_update_string(){
-	return 'update 3.2;';
+	return 'update 3.2;update 3.7.3;';
 }
 
 //END PHPBB3 FUNCTIONS

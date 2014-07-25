@@ -169,7 +169,9 @@ To effectively use template overrides, you will need to read this tutorial: <a t
 		"chatbox"=>array(
 "value"=>"enabled:true,
 		mode:0, /*0 - sitewide, 1 - page discussion*/
+		layout:1,  /* 0 - horizontal, 1 - vertical */
 		dialog_width:500,
+		dialog_height:384,
 		require_tag:true,
 		sitewide:{
 			full_page:true,
