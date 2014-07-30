@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.9.1
-Stable tag: 3.7.3
+Stable tag: 3.8
 
 
 An interface for real time chat, video conferencing, instant messaging, and more.
@@ -25,7 +25,7 @@ http://www.fastcatsoftware.com/wp3.3/
 
 MOST RECENT FEATURES
 
-Version 3.7 Continues to improve the mobile experience. Styling has also been updated.
+Version 3.8 Continues to improve the mobile experience. Styling has also been updated.
 
 Versions 3.6 introduces BlogChat. Just as you have a comments section for each topic on your blog, BlogChat gives you a dedicated chat room for each of your blog entries. To learn more about BlogChat, visit this page:http://www.fastcatsoftware.com/chat/userguide/chatbox.asp
 
@@ -728,6 +728,10 @@ Added -webkit-transform: translate3d(0,0,0) support.
 = 3.7.2.1 = 
 
 Added horizontal layout for the chatbox.
+
+= 3.8 = 
+
+A variety of mobile enhancements introduced. New light gray style template.
 
 
 == Upgrade Notice ==

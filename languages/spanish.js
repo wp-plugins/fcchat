@@ -196,7 +196,7 @@ FCChatConfig.txt = {
 	t116: "Historia Pagina",
 	t117: "Chat actual",
 	t118: "Auto-borrar. Sobrepasado el límite de mensajes.",
-	t119: "*@$*^",
+	t119: "=L=Comentario Eliminado=L=",
 	t120: "Chat cargando ... Espere, por favor...",
 	t121: "Pagina cargando... Espere, por favor...",
 	t122: "Sala cargando... Espere, por favor...",
@@ -658,6 +658,9 @@ FCChatConfig.txt = {
 	
 	//added 3.6.1.0
 	t473: "Configuración de mi cuenta",
+	
+	//added 3.8
+	t474: "=L=",
 	
 	//added 3.5.1 administrative language starts at t1000
 	t1006: "Title Updated.",

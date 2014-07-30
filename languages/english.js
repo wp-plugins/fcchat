@@ -194,7 +194,7 @@ FCChatConfig.txt={
 	t116: "History Page",
 	t117: "Current Chat",
 	t118: "Autoclear. Room message limit exceded.",
-	t119: "*@$*^",
+	t119: "=L=Comment Removed=L=",
 	t120: "Loading Chat...Please wait...",
 	t121: "Loading Page...Please wait...",
 	t122: "Loading Room...Please wait...",
@@ -657,6 +657,9 @@ FCChatConfig.txt={
 	
 	//added 3.6.1.0
 	t473: "My Account Settings",
+	
+	//added 3.8
+	t474: "=L=",
 	
 	//added 3.5.1 administrative language starts at t1000
 	t1006: "Title Updated.",
