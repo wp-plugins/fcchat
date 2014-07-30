@@ -376,7 +376,7 @@ jGo.fcchat_toolbar.chatbox.style={
 		}
 	};
 	var position_dialog = function(){
-		jGo.fcchat_toolbar.control.position_dialog(jQ("#fc_page_discussion_dialog"),EN(jQ("#fc_chatbox_toolbar_item").css("left")),config.dialog_box.width,config.dialog_box.height*(jGo._['scalefactor']||1))
+		jGo.fcchat_toolbar.control.position_dialog(jQ("#fc_page_discussion_dialog"),EN(jQ("#fc_chatbox_toolbar_item").css("left")),config.dialog_box.width,config.dialog_box.height*(jGo._['scalefactor']||1),(jGo.fcchat_toolbar.config.layout==2))
 	};
 
 })();
