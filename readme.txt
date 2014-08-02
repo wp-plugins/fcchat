@@ -118,8 +118,8 @@ When you install the FCChat Widget, you will only be installing the chat client 
 
 1. Old-school: upload the `FCChat` folder to the `/wp-content/plugins/` directory via FTP.  Hipster: Add the FCChat Widget via the WordPress Plugins menu.
 1. Activate the Plugin
-1. Add the Widget to the desired sidebar in the WordPress Widgets menu.
-1. Open the `FCChat Widget' options dialog by clicking on the widget once added to the sidebar.
+1. Add the Widget to your site (sidebar,footer,etc) by going to Appearance -> Widgets and dragging the FCChat Widget to the apporpriate area (YOu MUST DO THIS FOR THE PLUGIN TO WORK - you can always hide the widget box if you don't want it to appear, by setting control_visible to "no" in the FCChat Settings).
+1. Once you have added it to an area, open the `FCChat Widget' options dialog by clicking on the widget.
 1. Follow the Steps listed in the dialog in order to activate the chat service. This will include signing up for a subscription to the service on www.fastcatsoftware.com.
 1. Rate the plugin and verify that it works at wordpress.org.
 1. Leave a comment regarding bugs, feature request, cocktail recipes at http://www.fastcatsoftware.com
