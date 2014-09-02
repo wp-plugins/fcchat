@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.9.2
-Stable tag: 3.8.2.0
+Stable tag: 3.8.2.1
 
 
 An interface for real time chat, video conferencing, instant messaging, and more.
@@ -33,7 +33,7 @@ Versions 3.6 introduces BlogChat. Just as you have a comments section for each t
 Up Next
 
 We are currently working on WebRTC video chat, which does not require Flash, and which would run on a variety of mobile devices.
-
+We are also programmable interface so that you can add your own custom features to the chat.
 
 NEWS
 
