@@ -5,7 +5,7 @@ Donate link: http://www.fastcatsoftware.com
 Tags: chat, instant messaging, widget
 Requires at least: 2.7
 Tested up to: 3.9.2
-Stable tag: 3.8.2.1
+Stable tag: 3.8.3
 
 
 An interface for real time chat, video conferencing, instant messaging, and more.
@@ -736,6 +736,9 @@ Added horizontal layout for the chatbox.
 
 A variety of mobile enhancements introduced. New light gray style template.
 
+= 3.8.3 = 
+
+Fixed a bug in the html/Avatars.php file
 
 == Upgrade Notice ==
 
