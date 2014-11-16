@@ -94,12 +94,16 @@ function fcchat_includes(){
 	document.write("<script language='JavaScript' src='" + cnf.dir + "styles/" + template.application_window + "'></script>");
 	document.write("<script language='JavaScript' src='" + cnf.dir + "styles/" + template.toolbar + "'></script>");
 	document.write("<script language='JavaScript' src='" + cnf.dir + "styles/" + template.widget + "'></script>");
-	
 	if(cnf.chatbox.enabled&&(!((window['fcchat_domain']=="fullpage"||window['fcchat_domain']=="admin")&&cnf.chatbox.mode==1))){
-		for(var i = 0;i<tcon.items.length;i++){
-			if(tcon.items[i]=="friendscenter"){
-				tcon.items.splice(i,0,"chat:chatbox");
-				break;
+		if(cnf.chatbox.pos){
+			tcon.items.splice(cnf.chatbox.pos,0,"chat:chatbox");
+		}else{
+			for(var i = 0;i<tcon.items.length;i++){
+			
+				if(tcon.items[i]=="friendscenter"){
+					tcon.items.splice(i,0,"chat:chatbox");
+					break;
+				}
 			}
 		}
 	}
