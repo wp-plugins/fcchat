@@ -15,10 +15,12 @@ font-size: 100%;
 width:auto;
 height:auto;
 line-height:normal;
+box-sizing:content-box;
 }
 #jGo_app.jGo_myapp textarea,.jGo_app.jGo_myapp textarea{
 padding:0px;
 margin:0px;
+box-sizing:content-box;
 }
 
 
